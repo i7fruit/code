@@ -1,0 +1,116 @@
+/* IDs */
+#name
+{
+    background-color: lavenderblush;
+    margin-top: 4em;
+    margin-bottom: 5px;
+    text-align: center;
+    font-family: Arial, Verdana, Helvetica;
+    color: green;
+}
+
+#top
+{
+    margin-top: 2em;
+    margin-bottom: 5px;
+    background-color: lavenderblush;
+    font-size: 2em;
+    font-family: Arial, Verdana, Helvetica;
+}
+
+#txt-0
+{
+    background-color: lavender;
+    font-size: 2em;
+}
+
+#txt-1
+{
+    background-color: lavenderblush;
+    font-size: 2em;
+}
+
+#for-pix
+{
+    width: 500px;
+    height: 450px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.p-next
+{
+    text-align: center;
+    border: solid red 2px;
+    border-radius: 5px;
+    font-size: 1.4em;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
+
+#next
+{
+    text-align: center;
+    margin-top: 10px;
+}
+
+#embed
+{
+    background-color: lavender;
+}
+
+/* Tags */
+h1
+{
+    font-size: 5em;
+}
+
+small
+{
+    font-size: 2em;
+    color: gray;
+}
+
+mark
+{
+    background-color: yellow;
+}
+
+object
+{
+    display: inline-block;
+    width: 400px;
+    height: 390px;
+    margin: 30px;
+}
+
+/* Class */
+.visitor
+{
+    background-color: orange;
+    font-family: Arial, Helvetica, Verdana;
+}
+
+ /* The animation code */
+@keyframes chamelion
+{
+    from
+    {
+        color: gray;
+    }
+
+    to
+    {
+        color: red;
+    }
+}
+
+/* The element to apply the animation to */
+small
+{
+    width: 100px;
+    height: 100px;
+    animation-name: chamelion;
+    animation-duration: 60s;
+}

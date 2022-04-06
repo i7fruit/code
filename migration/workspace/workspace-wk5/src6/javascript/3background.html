@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <title>Background</title>
+    </head>
+    <body>
+        <button id="r">Red</button>
+        <button id="g">Green</button>
+        <button id="b">Blue</button>
+        <script>
+            let my_var = document.querySelector("body");
+
+            document.querySelector("#r").onclick =
+            function()
+            {
+                my_var.style.backgroundColor = "red";
+            };
+
+            document.querySelector("#g").onclick =
+            function()
+            {
+                my_var.style.backgroundColor = "green";
+            };
+
+            document.querySelector("#b").onclick =
+            function()
+            {
+                my_var.style.backgroundColor = "blue";
+            };
+        </script>
+    </body>
+</html>

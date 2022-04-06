@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>hello2</title>
+        <script>
+            function greet()
+            {
+                let my_var = document.querySelector("#l_name").value;
+                alert("Hello, " + my_var);
+            }
+        </script>
+    </head>
+    <body>
+        <p style="font-size: medium">Enter Your Name Below:</p>
+        <form onsubmit="greet(); return false">
+            <input id="l_name" placeholder="Last Name" type="text" />
+            <input id="f_name" placeholder="First Name" type="text" /><br />
+            <input type="submit" value="Enter" />
+        </form>
+    </body>
+</html>

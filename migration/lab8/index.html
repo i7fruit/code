@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+
+            /* This function changes the color of the button clicked
+               and displays text underneath the trivia question */
+            function answer(button_id)
+            {
+                if (button_id == "pope")
+                {
+                    document.getElementById("notify-0").innerHTML = "Correct";
+                    // Sets right button to green
+                    document.getElementById("pope").style.backgroundColor = "#bfff00";
+                    // Sets other buttons to blue
+                    var x = ["mom", "duke", "benin"];
+                    var n = x.length;
+                    for (var m = 0; m < n; m++)
+                        document.getElementById(x[m]).style.backgroundColor = "#d9edff";
+                }
+
+                else
+                {
+                    document.getElementById("notify-0").innerHTML = "Inorrect";
+                    var x = ["pope", "mom", "duke", "benin"];
+                    var n = x.length;
+
+                    for (var m = 0; m < n; m++)
+                    {
+                        // Sets wrong button to red
+                        if (x[m] == button_id)
+                        {
+                            document.getElementById(button_id).style.backgroundColor = "#ffb3b3";
+                            continue;
+                        }
+
+                        // Sets other buttons to blue
+                        document.getElementById(x[m]).style.backgroundColor = "#d9edff";
+
+                    }
+                }
+            }
+
+            // Function to confirm Part 2 Answer
+            function confirm()
+            {
+                var text = "accra";
+                var check = document.getElementById("response").value.toLowerCase();
+                if (text == check)
+                {
+                     document.getElementById("notify-1").innerHTML = "Correct";
+                     document.getElementById("response").style.backgroundColor = "#bfff00";
+                }
+
+                else
+                {
+                    document.getElementById("notify-1").innerHTML = "Inorrect";
+                    document.getElementById("response").style.backgroundColor = "#ffb3b3";
+                }
+            }
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <!-- Multiple choice question here -->
+                <h3>
+                    Who was Karol Jozef Wojtyla?
+                </h3>
+                <p id="notify-0"></p>
+                <!-- Options to choose from -->
+                <button type="button" id="pope" onclick="answer(this.id);">
+                    Pope John Paul II
+                </button>
+                <button type="button" id="mom" onclick="answer(this.id);">
+                    Mother Theresa
+                </button>
+                <button type="button" id="duke" onclick="answer(this.id);">
+                    The Duke of York
+                </button>
+                <button type="button" id="benin" onclick="answer(this.id);">
+                    The Oba of Benin
+                </button>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <!-- TODO: Add free response question here -->
+                <h3>What is the capital city of Ghana?</h3>
+                <p id="notify-1"></p>
+                <input type="text" id="response" placeholder="Answer" value=""/>
+                <button type="button" onclick="confirm()">Confirm Answer</button>
+
+            </div>
+
+        </div>
+    </body>
+</html>

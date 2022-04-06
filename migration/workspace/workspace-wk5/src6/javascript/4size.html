@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Size</title>
+    </head>
+    <body>
+        <p>The size of this text will change</p>
+        <select>
+            <option value="xx-large">Biggest</option>
+            <option value="x-large">Bigger</option>
+            <option value="large">Big</option>
+            <option selected value="initial">Initial</option>
+            <option value="small">Small</option>
+            <option value="x-small">Smaller</option>
+            <option value="xx-small">Smallest</option>
+        </select>
+        <script>
+            document.querySelector("select").onchange =
+            function()
+            {
+                document.querySelector("body").style.fontSize = this.value;
+            }
+        </script>
+    </body>
+</html>
