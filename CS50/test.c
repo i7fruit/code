@@ -1,20 +1,32 @@
 /**
- * 4_will_equal_a.c
- * Wed, Jan 12, 2022 12:09hrs
- * The following expression will
- * always equal the value of the
- * first variable
+ * 6_reverse_digits_1.c
+ * Tuesday, April 12 2022 00:15hrs
+ *
+ * This program uses a while to save
+ * the digits of an integer to a variable
+ * in reverse order
  */
 #include <stdio.h>
-#include <cs50.h>
 
 int main(void)
 {
-    short value0 = 1, value1 = 2, result = 0;
+    unsigned number = 0;
 
-    result = value0 / value1 * value1 + value0 % value1;
+    printf("Enter a positive integer to reverse: ");
+    scanf("%u", &number);
 
-    printf("%i\n", result);
+    unsigned reversed_digits = 0;
+
+    while (number != 0)
+    {
+        // Computes last digit and saves it to the reversed_digits variable
+        reversed_digits = reversed_digits * 10 + (number % 10);
+
+        // Updates the number
+        number /= 10;
+    }
+
+    printf("%u\n", reversed_digits);
 
     return 0;
 }
