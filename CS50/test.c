@@ -1,32 +1,16 @@
-/**
- * 6_reverse_digits_1.c
- * Tuesday, April 12 2022 00:15hrs
- *
- * This program uses a while to save
- * the digits of an integer to a variable
- * in reverse order
- */
 #include <stdio.h>
 
 int main(void)
 {
     unsigned number = 0;
 
-    printf("Enter a positive integer to reverse: ");
-    scanf("%u", &number);
-
-    unsigned reversed_digits = 0;
-
-    while (number != 0)
+    do
     {
-        // Computes last digit and saves it to the reversed_digits variable
-        reversed_digits = reversed_digits * 10 + (number % 10);
+        printf("Enter a positive integer to reverse: ");
+        scanf("%u", &number);
+    } while (number <= 0);
 
-        // Updates the number
-        number /= 10;
-    }
-
-    printf("%u\n", reversed_digits);
+    printf("%i\n", number);
 
     return 0;
 }
