@@ -9,12 +9,12 @@
 
 int main(void)
 {
-    unsigned number = 0;
+    signed number = 0;
 
     do
     {
         printf("Enter a positive integer to reverse: ");
-        scanf("%u", &number);
+        scanf("%i", &number);
     } while (number == 0);
 
     unsigned reversed_digits = 0;
@@ -28,7 +28,7 @@ int main(void)
         number /= 10;
     }
 
-    printf("%u\n", reversed_digits);
+    printf("%i\n", reversed_digits);
 
     return 0;
 }
