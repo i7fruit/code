@@ -2,15 +2,10 @@
 
 int main(void)
 {
-    unsigned number = 0;
+    unsigned number = -23;
 
-    do
-    {
-        printf("Enter a positive integer to reverse: ");
-        scanf("%u", &number);
-    } while (number <= 0);
-
-    printf("%i\n", number);
-
-    return 0;
+    if (number < 0)
+        printf("true\n");
+    else
+        printf("false\n");
 }
