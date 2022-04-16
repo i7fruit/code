@@ -10,10 +10,10 @@
 
 int main(void)
 {
-    unsigned number = 0;
+    signed number = 0;
 
     printf("Enter a positive integer to reverse: ");
-    scanf("%u", &number);
+    scanf("%i", &number);
 
     // Returns zero if user entered zero
     if (number == 0)
@@ -25,7 +25,7 @@ int main(void)
     while (number != 0)
     {
         // Computes last digit and prints it to the screen
-        printf("%u", number % 10);
+        printf("%i", number % 10);
 
         // Updates the number
         number /= 10;

@@ -15,21 +15,20 @@ int main(void)
     {
         printf("Enter a positive integer to reverse: ");
         scanf("%i", &number);
-    } while (number == 0);
+    } while (number <= 0);
 
-    signed reversed_digits = 0;
+    unsigned reversed_digits = 0;
 
     while (number != 0)
     {
         // Computes last digit and saves it to the reversed_digits variable
-        int x = number % 10;
-        reversed_digits = reversed_digits * 10 + x;
+        reversed_digits = reversed_digits * 10 + (number % 10);
 
         // Updates the number
         number /= 10;
     }
 
-    printf("%i\n", reversed_digits);
+    printf("%u\n", reversed_digits);
 
     return 0;
 }
