@@ -17,7 +17,7 @@ int main(void)
         scanf("%i", &number);
     } while (number == 0);
 
-    unsigned reversed_digits = 0;
+    signed reversed_digits = 0;
 
     while (number != 0)
     {
