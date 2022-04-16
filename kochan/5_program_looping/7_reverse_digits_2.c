@@ -22,7 +22,8 @@ int main(void)
     while (number != 0)
     {
         // Computes last digit and saves it to the reversed_digits variable
-        reversed_digits = reversed_digits * 10 + (number % 10);
+        int x = number % 10;
+        reversed_digits = reversed_digits * 10 + x;
 
         // Updates the number
         number /= 10;
