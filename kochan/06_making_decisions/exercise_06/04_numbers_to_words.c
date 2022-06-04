@@ -15,7 +15,7 @@ int main(void)
     printf("Enter an integer: ");
     scanf("%i", &value);
 
-    while (value > 10)
+    while (value >= 10)
     {
         short digit = value / 10;
         value %= 10;
