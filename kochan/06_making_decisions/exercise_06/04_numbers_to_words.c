@@ -16,7 +16,8 @@ int main(void)
     scanf("%i", &value);
 
     // Counts digits in integer
-    short count = 0, copy = value;
+    short count = 0;
+    int copy = value;
     while (copy != 0)
     {
         short i = copy % 10;
