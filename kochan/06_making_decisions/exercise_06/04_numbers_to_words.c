@@ -57,7 +57,7 @@ int main(void)
         }
     }
 
-    switch (digit)
+    switch (value)
     {
         case 0:
             printf("Zero ");
