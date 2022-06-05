@@ -33,7 +33,7 @@ int main(void)
         divisor *= 10;
     }
 
-    while (value > 0)
+    while (value >= 0)
     {
         short digit = value / divisor;
         // Resets the value
@@ -76,12 +76,8 @@ int main(void)
                 printf("Invalid entry\n");
                 break;
         }
-        if (value == 0)
-        {
-            printf("Zero ");
-            break;
-        }
     }
+
     putchar('\n');
 
     return 0;
