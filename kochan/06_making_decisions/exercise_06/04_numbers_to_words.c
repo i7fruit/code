@@ -76,6 +76,11 @@ int main(void)
                 printf("Invalid entry\n");
                 break;
         }
+        if (value == 0)
+        {
+            printf("Zero ");
+            break;
+        }
     }
     putchar('\n');
 
