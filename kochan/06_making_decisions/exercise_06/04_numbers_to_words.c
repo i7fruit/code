@@ -78,7 +78,7 @@ int main(void)
         }
     }
 
-    if (divisor == 1 && value == 0)
+    if (divisor > 1 && value == 0)
         printf("Zero ");
 
     putchar('\n');
