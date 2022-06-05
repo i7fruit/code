@@ -33,7 +33,7 @@ int main(void)
         divisor *= 10;
     }
 
-    while (value > 0)
+    while (value >= 0)
     {
         if (value != 0)
         {
