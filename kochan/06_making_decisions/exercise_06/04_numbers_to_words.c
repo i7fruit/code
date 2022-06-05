@@ -20,10 +20,10 @@ int main(void)
 
     // Counts digits in integer
     short count = 0;
-
+    
     while (copy != 0)
     {
-        copy % 10;
+        short i = copy % 10;
         count++;
         copy /= 10;
     }
@@ -39,11 +39,14 @@ int main(void)
     while (value >= 0 && divisor > 0)
     {
         short digit = value / divisor;
+
         // Resets the value
         value %= divisor;
+
         // Resets the divisor
         divisor /= 10;
-    
+        
+        // Prints the digit in words
         switch (digit)
         {
             case 0:
@@ -80,9 +83,7 @@ int main(void)
                 break;
         }
     }
-
     
-
     putchar('\n');
 
     return 0;
