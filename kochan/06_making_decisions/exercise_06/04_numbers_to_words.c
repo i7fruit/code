@@ -15,12 +15,15 @@ int main(void)
     printf("Enter an integer: ");
     scanf("%i", &value);
 
+    // Makes a copy of the value so it is not altered
+    int copy = value;
+
     // Counts digits in integer
     short count = 0;
-    int copy = value;
+
     while (copy != 0)
     {
-        short i = copy % 10;
+        copy % 10;
         count++;
         copy /= 10;
     }
