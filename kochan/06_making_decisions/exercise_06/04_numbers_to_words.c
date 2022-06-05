@@ -76,8 +76,6 @@ int main(void)
                 printf("Invalid entry\n");
                 break;
         }
-        //if (divisor > 1 && value == 0)
-        //    printf("Zero ");
     }
 
     
