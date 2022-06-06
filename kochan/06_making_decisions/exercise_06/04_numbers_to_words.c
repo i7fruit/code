@@ -83,6 +83,7 @@ int main(void)
                     printf("Invalid entry\n");
                     break;
             }
+            count--;
         }
         else
             break;
