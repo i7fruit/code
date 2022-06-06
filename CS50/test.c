@@ -2,9 +2,9 @@
 
 int main(void)
 {
-    unsigned number = -23;
+    signed number = -23;
 
-    if (number < 0)
+    if (number < 60)
         printf("true\n");
     else
         printf("false\n");
