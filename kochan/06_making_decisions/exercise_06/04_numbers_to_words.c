@@ -15,6 +15,8 @@ int main(void)
     printf("Enter an integer: ");
     scanf("%i", &value);
 
+    printf("%i\n", value);
+
     if (value == 0)
     {
         printf("Zero\n");
