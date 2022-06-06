@@ -81,6 +81,7 @@ int main(void)
                     break;
                 case 5:
                     printf("Five ");
+                    break;
                 case 6:
                     printf("Six ");
                     break;
