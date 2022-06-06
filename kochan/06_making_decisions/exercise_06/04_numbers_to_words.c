@@ -89,7 +89,7 @@ int main(void)
             break;
     }
 
-    if (count > 0)
+    while (count > 0)
     {
         printf("Zero ");
         count--;
