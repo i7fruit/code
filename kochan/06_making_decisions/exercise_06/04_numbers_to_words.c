@@ -15,6 +15,12 @@ int main(void)
     printf("Enter an integer: ");
     scanf("%i", &value);
 
+    if (value == 0)
+    {
+        printf("Zero\n");
+        return 0;
+    }
+
     // Makes a copy of the value so it is not altered
     int copy = value;
 
