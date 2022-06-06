@@ -88,7 +88,10 @@ int main(void)
             break;
     }
 
-    
+    if (count > 0)
+    {
+        printf("Zero ");
+        count--;
     }
 
     putchar('\n');
