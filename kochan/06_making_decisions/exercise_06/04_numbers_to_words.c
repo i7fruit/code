@@ -23,6 +23,12 @@ int main(void)
         return 0;
     }
 
+    if (value < 0)
+    {
+        printf("Minus ");
+        value = -(value);
+    }
+
     // Makes a copy of the value so it is not altered
     int copy = value;
 
