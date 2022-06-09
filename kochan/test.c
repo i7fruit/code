@@ -19,12 +19,14 @@ int main(void)
         for (i = 1; is_prime && p / primes[i] >= primes[i]; i += 1)
         {
             if (p % primes[i] == 0)
-                is_primes = false;
+                is_prime = false;
         }
 
         if (is_prime)
         {
-            
+            primes[++i] = p;
         }
     }
+
+    return 0;
 }
