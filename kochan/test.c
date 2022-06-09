@@ -10,7 +10,7 @@ int main(void)
     primes[0] = 2;
     primes[1] = 3;
 
-    int i = 2;
+    int i = 1;
 
     for (int p = 5; p < 10; p += 2)
     {
