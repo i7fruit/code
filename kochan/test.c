@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    int primes[10];
+    int primes[20];
 
     bool is_prime;
 
@@ -12,7 +12,7 @@ int main(void)
 
     int i = 2;
 
-    for (int p = 5; p < 10; p += 2)
+    for (int p = 5; p < 20; p += 2)
     {
         is_prime = true;
 
