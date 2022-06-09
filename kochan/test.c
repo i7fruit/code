@@ -16,7 +16,7 @@ int main(void)
     {
         is_prime = true;
 
-        for (int j = 1; is_prime && p / primes[j] >= primes[j]; i++)
+        for (int j = 1; is_prime && p / primes[j] >= primes[j]; j++)
         {
             if (p % primes[j] == 0)
                 is_prime = false;
