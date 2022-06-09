@@ -10,15 +10,15 @@ int main(void)
     primes[0] = 2;
     primes[1] = 3;
 
-    int i = 0;
+    int i = 2;
 
     for (int p = 5; p < 10; p += 2)
     {
         is_prime = true;
 
-        for (i = 1; is_prime && p / primes[i] >= primes[i]; i += 1)
+        for (int j = 1; is_prime && p / primes[j] >= primes[j]; i += 1)
         {
-            if (p % primes[i] == 0)
+            if (p % primes[j] == 0)
                 is_prime = false;
         }
 
