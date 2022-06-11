@@ -32,8 +32,19 @@ int main(void)
     {
         bool is_prime = true;
 
+        /** 
+         * p / primes[i] >= primes[i] tests to make sure that
+         * primes[i] is not greater than the square root of p
+         */
+        
         for (short j = 1; is_prime && (p / primes[j] >= primes[j]); j++)
         {
+            /** 
+             * Sets the prime flag to false if the integer
+             * is evenly divisible by any previously generated
+             * prime number.
+             */
+
             if (p % primes[j] == 0)
             {
                 is_prime = false;
