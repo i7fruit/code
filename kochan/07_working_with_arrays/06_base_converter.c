@@ -1,8 +1,8 @@
-/** 
+/**
  * 06_base_converter.c
- * 
+ *
  * Saturday, June 11 2022 11:16hrs
- * 
+ *
  * This program prompts a user for a number and a base
  * to convert that number to.
  */
@@ -21,11 +21,19 @@ int main(void)
     int base = 0, number = 0;
 
     // Prompts user for input
-    printf("Enter a number to convert: ");
-    scanf("%i", &number);
+    do
+    {
+        printf("Enter a number to convert: ");
+        scanf("%i", &number);
+    }
+    while (number < 0);
 
-    printf("Enter base to convert number to: ");
-    scanf("%i", &base);
+    do
+    {
+        printf("Enter base to convert number to: ");
+        scanf("%i", &base);
+    }
+    while (base < 1);
 
     int i = 0;
 
@@ -44,6 +52,6 @@ int main(void)
     }
 
     putchar('\n');
-    
+
     return 0;
 }
