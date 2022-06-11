@@ -35,6 +35,12 @@ int main(void)
     }
     while (base < 1);
 
+    if (number == 0)
+    {
+        printf("0\n");
+        return 0;
+    }
+
     int i = 0;
 
     while (number != 0)
