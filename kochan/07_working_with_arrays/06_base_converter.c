@@ -33,7 +33,7 @@ int main(void)
         printf("Enter base to convert number to: ");
         scanf("%i", &base);
     }
-    while (base < 1);
+    while (base < 2 || base > 16);
 
     if (number == 0)
     {
