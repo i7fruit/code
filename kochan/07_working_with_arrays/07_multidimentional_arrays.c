@@ -11,7 +11,7 @@
 int main(void)
 {
     /**
-     * Declares a two-dimentional array
+     * Declares and initializes a two-dimentional array
      * with two rows and three columes.
      */
     int values[2][3] =
@@ -22,6 +22,14 @@ int main(void)
 
     // Prints 6
     printf("%i\n", values[1][2]);
+
+    // Three-dimentional array
+    int numbers[3][2][4] =
+    {
+        {},
+        {},
+        {}
+    };
 
     return 0;
 }
