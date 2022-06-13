@@ -34,5 +34,17 @@ int main(void)
     // Prints 13
     printf("%i\n", numbers[1][1][0]);
 
+    // Some array elements can be left uninitialized
+    int values[4][5] =
+    {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+
+    for (short i = 0; i < 4; i++)
+        for (short j = 0; j < 5; j++)
+            printf("%i ", values[i][j]);
+
     return 0;
 }
