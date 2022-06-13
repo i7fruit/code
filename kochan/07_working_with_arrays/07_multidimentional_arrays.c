@@ -35,7 +35,7 @@ int main(void)
     printf("%i\n", numbers[1][1][0]);
 
     // Some array elements can be left uninitialized
-    int values[4][5] =
+    int arr[4][5] =
     {
         {1, 2, 3},
         {4, 5, 6},
@@ -43,8 +43,12 @@ int main(void)
     };
 
     for (short i = 0; i < 4; i++)
+    {
         for (short j = 0; j < 5; j++)
-            printf("%i ", values[i][j]);
+            printf("%i ", arr[i][j]);
+
+        putchar('\n');
+    }
 
     return 0;
 }
