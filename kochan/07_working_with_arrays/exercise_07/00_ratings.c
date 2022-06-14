@@ -42,7 +42,7 @@ int main(void)
         else
             ratings_counter[responses]++;
     }
-    while (responses > 0 && responses < SIZE);
+    while (responses != 999);
 
     printf("\n\nRating    Number of responses\n");
     printf("---------------------------------\n");
