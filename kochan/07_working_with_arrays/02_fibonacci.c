@@ -1,32 +1,40 @@
-/** 
+/**
  * 02_fibonacci.c
- * 
+ *
  * Tuesday, June 07 2022 23:20hrs
- * 
+ *
  * This program generates the first twenty fibonacci numbers.
  */
 #include <stdio.h>
 
-#define SIZE 20
-
 int main(void)
 {
-    // Array to store the twenty numbers
-    int fibonacci[SIZE];
+    // Prompts the user for number of numbers to generate
+    int size = 0;
 
-    for (short i = 0; i < SIZE; i++)
+    do
+    {
+        printf("How many fibonacci numbers do you want to generate? ");
+        scanf("%i", &size);
+    }
+    while (size < 1 || size > 75);
+
+    // Array to store the twenty numbers
+    long fibonacci[size];
+
+    for (short i = 0; i < size; i++)
         fibonacci[i] = 0;
 
     // The first two numbers
     fibonacci[0] = 0, fibonacci[1] = 1;
 
     // Computes the rest of the series
-    for (short i = 2; i < SIZE; i++)
+    for (short i = 2; i < size; i++)
         fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
 
     // Prints the numbers
-    for (short i = 0; i < SIZE; i++)
-        printf("%i ", fibonacci[i]);
+    for (short i = 0; i < size; i++)
+        printf("%li ", fibonacci[i]);
 
     putchar('\n');
 
