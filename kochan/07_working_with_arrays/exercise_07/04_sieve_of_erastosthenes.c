@@ -26,15 +26,13 @@ int main(void)
 
     for (short i = 2; i < size; i++)
     {
+        // i is prime if element contains a zero
         if (P[i] == 0)
-        {
             printf("%i ", i);
-        }
 
+        // Stores a 1 in element-positions that are multiples of i
         for (short j = 0; (i*j) < size; j++)
-        {
             P[i*j] = 1;
-        }
     }
 
     putchar('\n');
