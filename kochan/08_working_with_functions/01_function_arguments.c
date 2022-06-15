@@ -1,8 +1,8 @@
-/** 
+/**
  * 01_function_arguments.c
- * 
+ *
  * Tuesday, June 14 2022 23:37hrs
- * 
+ *
  * Creates a function that calculates
  * a triangular number.
  */
@@ -17,8 +17,8 @@ int main(void)
     {
         printf("What triangular number do you want to find? ");
         scanf("%hi", &size);
-    } 
-    while (size < 1 || size > 20);
+    }
+    while (size < 1 || size > 50);
 
     triangular_number(size);
 
