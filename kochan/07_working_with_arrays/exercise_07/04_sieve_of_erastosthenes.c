@@ -1,11 +1,11 @@
-/** 
+/**
  * 04_sieve_of_erastosthenes.c
- * 
+ *
  * Tuesday, June 14 2022 18:05hrs
- * 
+ *
  * Generates prime numbers using the sieve
  * of erastosthenes
- * 
+ *
  * 1. Define an array of integers P. Set all elements P[i] to 0, 2 <= i <= n.
  * 2. Set i to 2.
  * 3. If i > n, the algorithm terminates.
@@ -17,7 +17,7 @@
 
 int main(void)
 {
-    const size = 150;
+    const short size = 150;
 
     // Defines an array P and initializes its elements to 0
     int P[size];
