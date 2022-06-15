@@ -1,5 +1,5 @@
 /**
- * 4_greatest_common_divisor.c
+ * 4_greatest_common_divisor_0.c
  *
  * Monday, April 11 2022 19:59hrs
  *
