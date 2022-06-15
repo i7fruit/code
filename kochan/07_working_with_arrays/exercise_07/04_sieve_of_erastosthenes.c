@@ -31,7 +31,7 @@ int main(void)
             printf("%i ", i);
         }
 
-        for (short j = 0; j < size; j++)
+        for (short j = 0; (i*j) < size; j++)
         {
             P[i*j] = 1;
         }
