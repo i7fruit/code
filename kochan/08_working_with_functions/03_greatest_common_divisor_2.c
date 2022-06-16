@@ -1,18 +1,21 @@
 /**
  * 03_greatest_common_divisor_2.c
  *
- * Monday, June 15 2022 21:41hrs
+ * Wednesday, June 15 2022 22:25hrs
  *
  * The greatest common divisor (gcd)
  * of two integers is the greatest
  * integer that can divide them evenly.
  * This program use's Euclid's algorithm
  * to achieve this.
+ *
+ * The gcd() function returns an integer
+ * to the main() function.
  */
 #include <stdio.h>
 
 // Function prototype
-void gcd(int u, int v);
+int gcd(int u, int v);
 
 int main(void)
 {
@@ -21,13 +24,13 @@ int main(void)
     printf("Enter two integers to find their gcd\n");
     scanf("%i%i", &value0, &value1);
 
-    gcd(value0, value1);
+    printf("%i\n", gcd(value0, value1));
 
     return 0;
 }
 
 // Function definition
-void gcd(int u, int v)
+int gcd(int u, int v)
 {
     int temp = 0;
 

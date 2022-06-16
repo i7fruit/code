@@ -1,7 +1,7 @@
 /**
  * 02_greatest_common_divisor_1.c
  *
- * Monday, June 15 2022 21:41hrs
+ * Tuesday, June 14 2022 21:41hrs
  *
  * The greatest common divisor (gcd)
  * of two integers is the greatest
