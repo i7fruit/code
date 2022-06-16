@@ -24,6 +24,8 @@ int main(void)
     printf("Enter two integers to find their gcd\n");
     scanf("%i%i", &value0, &value1);
 
+    printf("The gcd of %i and %i is ", value0, value1);
+
     printf("%i\n", gcd(value0, value1));
 
     return 0;
@@ -34,7 +36,7 @@ int gcd(int u, int v)
 {
     int temp = 0;
 
-    printf("The gcd of %i and %i ", u, v);
+
 
     while (v != 0)
     {
@@ -43,5 +45,5 @@ int gcd(int u, int v)
         v = temp;
     }
 
-    printf("= %i\n", u);
+    return u;
 }
