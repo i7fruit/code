@@ -60,6 +60,7 @@ float get_square_root(float number)
     while (square_of_guess - number >= E)
     {
          guess = (number / guess + guess) / 2;
+         square_of_guess = guess * guess;
     }
 
     return guess;
