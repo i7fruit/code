@@ -24,7 +24,7 @@ int main(void)
 
     square_root = get_square_root(value);
 
-     printf("The square root of %.3f is ", value);
+    printf("The square root of %.3f is ", value);
     printf("%.3f\n", square_root);
 
     return 0;
