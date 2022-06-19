@@ -51,7 +51,13 @@ float get_number(float number)
  */
 float get_square_root(float number)
 {
-    // Epsilon
+    /**
+     * Epsilon E, is used to determine when to end
+     * the interation process, while the guess variable
+     * is the user's initial guess of what the square root
+     * is.
+     */
+
     float E = 0000.1, guess = 1.0;
 
     guess = (number / guess + guess) / 2;
