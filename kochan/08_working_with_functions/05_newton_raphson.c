@@ -53,5 +53,9 @@ float get_square_root(float number)
     // Epsilon
     float E = 0000.1, guess = 1.0;
 
-    guess = number / guess;
+    guess = (number / guess + guess) / 2;
+
+    float square_of_guess = guess * guess;
+
+    if (square_of_guess)
 }
