@@ -30,8 +30,12 @@ int main(void)
  */
 int get_integer(int number)
 {
-    printf("Enter a value to find its square root: ");
-    scanf("%i", &number);
+    do
+    {
+        printf("Enter a positive value to find its square root: ");
+        scanf("%i", &number);
+    }
+    while (number < 1);
 
-    return 
+    return
 }
