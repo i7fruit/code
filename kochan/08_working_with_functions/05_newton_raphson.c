@@ -60,8 +60,15 @@ float get_square_root(float number)
 
     float E = 0000.1, guess = 1.0;
 
+    /**
+     * Divides the number by the initial value of guess: 1.0, the
+     * result of which is added to the same initial value of 1.0,
+     * this next result is then divided by 2, to get a new value
+     * for guess.
+     */
     guess = (number / guess + guess) / 2;
 
+    // Computes the square of the guess
     float square_of_guess = guess * guess;
 
     /**
@@ -72,6 +79,7 @@ float get_square_root(float number)
      */
     while (absolute_value(square_of_guess - number) >= E)
     {
+         // Repeats calculation of guess as above and finds its square.
          guess = (number / guess + guess) / 2;
          square_of_guess = guess * guess;
     }
