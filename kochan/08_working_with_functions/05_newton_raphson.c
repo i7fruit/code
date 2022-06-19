@@ -11,35 +11,47 @@
 #include <stdio.h>
 
 // Function prototypes
-int get_integer(int number);
+float get_number(int number);
+float get_square_root(float number);
 
 int main(void)
 {
-    int value = 0, square_root = 0;
+    float value = 0, square_root = 0;
 
     // Prompts the user for a number to find its square root
     value = get_integer(value);
 
-    printf("The square root of %i is ");
+    printf("The square root of %.3f is ");
 
     square_root = get_square_root(value);
 
-    printf("%i\n", square_root);
+    printf("%.3f\n", square_root);
 
     return 0;
 }
 
 /***********************************
- * get_integer()
+ * get_number()
  */
-int get_integer(int number)
+float get_number(int number)
 {
     do
     {
         printf("Enter a non-negative value to find its square root: ");
-        scanf("%i", &number);
+        scanf("%f", &number);
     }
     while (number < 0);
 
     return number;
+}
+
+/************************************
+ * get_square_root()
+ */
+float get_square_root(float number)
+{
+    // Epsilon
+    float E = 0000.1, guess = 1.0;
+
+    guess = number / guess;
 }
