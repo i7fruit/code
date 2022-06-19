@@ -24,9 +24,6 @@ int main(void)
 
     square_root = get_square_root(value);
 
-
-    printf("%.3f\n", square_root);
-
     return 0;
 }
 
@@ -49,7 +46,7 @@ float get_square_root(float number)
     // Terminates if the number is negative
     if (number < 0)
     {
-        printf("Invalid input.");
+        printf("Invalid input.\n");
         return -1.0;
     }
 
@@ -87,6 +84,8 @@ float get_square_root(float number)
          guess = (number / guess + guess) / 2;
          square_of_guess = guess * guess;
     }
+
+    printf("%.3f\n", guess);
 
     return guess;
 }
