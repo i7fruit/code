@@ -36,12 +36,8 @@ int main(void)
  */
 float get_number(float number)
 {
-    do
-    {
-        printf("Enter a non-negative value to find its square root: ");
-        scanf("%f", &number);
-    }
-    while (number < 0);
+    printf("Enter a value to find its square root: ");
+    scanf("%f", &number);
 
     return number;
 }
@@ -51,6 +47,13 @@ float get_number(float number)
  */
 float get_square_root(float number)
 {
+    // Terminates if the number is negative
+    if (number < 0)
+    {
+        printf("Invalid input.");
+        return -1.0;
+    }
+
     /**
      * Epsilon E, is used to determine when to end
      * the interation process, while the guess variable
