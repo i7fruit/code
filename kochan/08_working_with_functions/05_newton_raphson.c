@@ -13,6 +13,7 @@
 // Function prototypes
 float get_number(float number);
 float get_square_root(float number);
+float absolute_value(float number);
 
 int main(void)
 {
@@ -64,4 +65,15 @@ float get_square_root(float number)
     }
 
     return guess;
+}
+
+/*****************************************
+ * absolute_value()
+ */
+float absolute_value(float number)
+{
+    if (number < 0)
+        number = -(number);
+
+    return number;
 }
