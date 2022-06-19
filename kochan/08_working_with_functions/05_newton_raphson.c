@@ -64,6 +64,12 @@ float get_square_root(float number)
 
     float square_of_guess = guess * guess;
 
+    /**
+     * This while loop terminates when the absolute difference
+     * between the square of the guess and the number for which the
+     * user's trying to find its square root, becomes less than the
+     * epsilon, E.
+     */
     while (absolute_value(square_of_guess - number) >= E)
     {
          guess = (number / guess + guess) / 2;
