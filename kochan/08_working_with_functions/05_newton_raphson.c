@@ -10,9 +10,28 @@
  */
 #include <stdio.h>
 
+// Function prototypes
+int get_integer(int number);
+
 int main(void)
 {
     int value = 0;
 
     // Prompts the user for a number to find its square root
+    value = get_integer(value);
+
+    print("%i\n", value);
+
+    return 0;
+}
+
+/***********************************
+ * get_integer()
+ */
+int get_integer(int number)
+{
+    printf("Enter a value to find its square root: ");
+    scanf("%i", &number);
+
+    return 
 }
