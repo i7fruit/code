@@ -15,12 +15,16 @@ int get_integer(int number);
 
 int main(void)
 {
-    int value = 0;
+    int value = 0, square_root = 0;
 
     // Prompts the user for a number to find its square root
     value = get_integer(value);
 
-    print("%i\n", value);
+    printf("The square root of %i is ");
+
+    square_root = get_square_root(value);
+
+    printf("%i\n", square_root);
 
     return 0;
 }
@@ -32,10 +36,10 @@ int get_integer(int number)
 {
     do
     {
-        printf("Enter a positive value to find its square root: ");
+        printf("Enter a non-negative value to find its square root: ");
         scanf("%i", &number);
     }
-    while (number < 1);
+    while (number < 0);
 
-    return
+    return number;
 }
