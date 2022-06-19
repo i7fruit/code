@@ -24,7 +24,7 @@ int main(void)
 
     square_root = get_square_root(value);
 
-    printf("The square root of %.3f is ", value);
+
     printf("%.3f\n", square_root);
 
     return 0;
@@ -52,6 +52,8 @@ float get_square_root(float number)
         printf("Invalid input.");
         return -1.0;
     }
+
+    printf("The square root of %.3f is ", number);
 
     /**
      * Epsilon E, is used to determine when to end
