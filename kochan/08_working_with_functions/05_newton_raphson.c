@@ -22,10 +22,9 @@ int main(void)
     // Prompts the user for a number to find its square root
     value = get_number(value);
 
-    printf("The square root of %.3f is ", value);
-
     square_root = get_square_root(value);
 
+     printf("The square root of %.3f is ", value);
     printf("%.3f\n", square_root);
 
     return 0;
