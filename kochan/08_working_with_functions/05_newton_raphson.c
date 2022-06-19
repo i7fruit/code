@@ -9,3 +9,10 @@
  * a number.
  */
 #include <stdio.h>
+
+int main(void)
+{
+    int value = 0;
+
+    // Prompts the user for a number to find its square root
+}
