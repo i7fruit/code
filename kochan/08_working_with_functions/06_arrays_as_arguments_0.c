@@ -1,8 +1,8 @@
-/** 
- * 06_arrays_as_arguments.c
- * 
+/**
+ * 06_arrays_as_arguments_0.c
+ *
  * Wednesday, June 22, 2022 01:30hrs
- * 
+ *
  * This program illustrates how arrays
  * can be arguments to a function.
  */
