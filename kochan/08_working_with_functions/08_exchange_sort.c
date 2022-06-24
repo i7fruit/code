@@ -1,8 +1,8 @@
-/** 
+/**
  * 08_exchange_sort.c
- * 
+ *
  * Friday, June 24 2022 11:41hrs
- * 
+ *
  * This program sorts an array of integers
  * by comparing the values of each element
  * with every other element and swaping them
@@ -51,7 +51,7 @@ int get_integer(void)
     {
         printf("How many numbers do you want to sort? ");
         scanf("%i", &i);
-    } 
+    }
     while (i < 1 || i > 7);
 
     return i;
@@ -94,7 +94,7 @@ void print_array(int arr[], int size)
 void exchange_sort(int arr[], int n)
 {
     for (short i = 0; i < (n - 1); i++)
-        for (short j = 1; j < n; j++)
+        for (short j = i + 1; j < n; j++)
             if (arr[i] > arr[j])
             {
                 int temp = arr[i];
