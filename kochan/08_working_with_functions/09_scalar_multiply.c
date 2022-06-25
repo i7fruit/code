@@ -1,8 +1,8 @@
-/** 
+/**
  * 09_scalar_multiply.c
- * 
+ *
  * Saturday, June 25 2022 12:49hrs
- * 
+ *
  * This program illustrates how a multidimentional
  * array can be used as an argument to a function.
  */
@@ -12,7 +12,7 @@
 #define COLUME 5
 
 // Function prototype
-void display_matrix(int m, int n, int arr[][n]);
+void display_matrix(int arr[][n]);
 
 int main(void)
 {
@@ -23,7 +23,7 @@ int main(void)
         {-2, 1, 2, 4, 9}
     };
 
-    display_matrix(ROW, COLUME, sample_matrix);
+    display_matrix(sample_matrix);
 
     return 0;
 }
@@ -33,7 +33,7 @@ int main(void)
  * a nested forloop to print the contents
  * of the array to standard output.
  */
-void display_matrix(int m, int n, int arr[][n])
+void display_matrix(int arr[m][n])
 {
     for (short i = 0; i < m; i++)
     {
