@@ -45,7 +45,7 @@ void display_matrix(int arr[ROW][COLUME])
     for (short i = 0; i < ROW; i++)
     {
         for (short j = 0; j < COLUME; j++)
-            printf("%2i ", arr[i][j]);
+            printf("%3i ", arr[i][j]);
 
         putchar('\n');
     }
