@@ -12,7 +12,7 @@
 #define COLUME 5
 
 // Function prototype
-void display_matrix(int arr[][n]);
+void display_matrix(int arr[m][n]);
 
 int main(void)
 {
