@@ -10,9 +10,11 @@
 
 #define ROW 3
 #define COLUME 5
+#define SCALAR 4
 
 // Function prototype
-void display_matrix(int arr[m][n]);
+void display_matrix(int arr[ROW][COLUME]);
+void scalar_matrix(int arr[ROW][COLUME], int s);
 
 int main(void)
 {
@@ -24,6 +26,11 @@ int main(void)
     };
 
     display_matrix(sample_matrix);
+    putchar('\n');
+
+    scalar_matrix(sample_matrix, SCALAR);
+
+    display_matrix(sample_matrix);
 
     return 0;
 }
@@ -33,13 +40,27 @@ int main(void)
  * a nested forloop to print the contents
  * of the array to standard output.
  */
-void display_matrix(int arr[m][n])
+void display_matrix(int arr[ROW][COLUME])
 {
-    for (short i = 0; i < m; i++)
+    for (short i = 0; i < ROW; i++)
     {
-        for (short j = 0; j < n; j++)
+        for (short j = 0; j < COLUME; j++)
             printf("%2i ", arr[i][j]);
 
         putchar('\n');
     }
+}
+
+/**************************************
+ * The scalar_matrix() function, takes
+ * an array argument and multiplies the
+ * value in each of the elements in the
+ * array, by a scalar number earlier
+ * specified.
+ */
+void scalar_matrix(int arr[ROW][COLUME], int s)
+{
+    for (short i = 0; i < ROW; i++)
+        for (short j = 0; j < COLUME; j++)
+            arr[i][j] *= SCALAR;
 }
