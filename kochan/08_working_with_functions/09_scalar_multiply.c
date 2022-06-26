@@ -8,7 +8,7 @@
  */
 #include <stdio.h>
 
-#define ROW 5
+#define ROW 3
 #define COLUME 5
 #define SCALAR 4
 
