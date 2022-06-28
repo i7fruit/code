@@ -20,7 +20,7 @@ int main(void)
     // Calls the function five times
     for (short i = 0; i < five; i++)
     {
-        printf("Round %hi\n", i + 1);
+        printf("Round %i\n", i + 1);
         auto_static();
     }
 
