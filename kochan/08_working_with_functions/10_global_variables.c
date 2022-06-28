@@ -1,8 +1,8 @@
-/** 
+/**
  * 10_global_variables.c
- * 
+ *
  * Tuesday, June 28 2022 00:31hrs
- * 
+ *
  * This program converts a number
  * to a base specified by the user.
  * It illustrates the use of global variables.
@@ -23,8 +23,8 @@ void convert_number(void);
 int main(void)
 {
     get_base_and_number();
-    
-    printf("%%i, i, %lu, %i\n", index, base, number, converted[2]);
+
+    printf("%%i, %i, %lu, %i\n", index, base, number, converted[2]);
 
     return 0;
 }
