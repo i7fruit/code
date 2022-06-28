@@ -24,8 +24,6 @@ int main(void)
         auto_static();
     }
 
-    putchar('\n');
-
     return 0;
 }
 
