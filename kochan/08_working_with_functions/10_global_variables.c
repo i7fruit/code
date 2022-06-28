@@ -24,7 +24,7 @@ int main(void)
 {
     get_base_and_number();
 
-    printf("%%i, %i, %lu, %i\n", index, base, number, converted[2]);
+    printf("%i, %i, %lu, %i\n", index, base, number, converted[2]);
 
     return 0;
 }
