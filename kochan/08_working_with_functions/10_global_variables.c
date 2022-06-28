@@ -65,8 +65,7 @@ void convert_number(void)
 {
     while (number != 0)
     {
-        converted[index] = number % base;
+        converted[index++] = number % base;
         number /= base;
-        index++;
     }
 }
