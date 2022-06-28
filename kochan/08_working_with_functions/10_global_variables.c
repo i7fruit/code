@@ -64,6 +64,12 @@ void get_base_and_number(void)
  */
 void convert_number(void)
 {
+    if (number == 0)
+    {
+        converted[index++] = 0;
+        return;
+    }
+
     while (number != 0)
     {
         converted[index++] = number % base;
