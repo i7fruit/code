@@ -19,6 +19,7 @@ unsigned long number;
 // Function prototypes
 void get_base_and_number(void);
 void convert_number(void);
+void display_converted(void);
 
 int main(void)
 {
@@ -26,7 +27,7 @@ int main(void)
 
     convert_number();
 
-    printf("%i, %i, %lu, %i\n", index, base, number, converted[2]);
+    display_converted();
 
     return 0;
 }
@@ -68,4 +69,22 @@ void convert_number(void)
         converted[index++] = number % base;
         number /= base;
     }
+}
+
+/*********************************************
+ * The display_converted() function uses
+ * a forloop to read the contents of the
+ * converted[] array from right to left and
+ * displays the converted number in the right
+ * order using the printf() function.
+ */
+void display_converted(void)
+{
+    const char base_digits[] = {'0', '1', '2', '3', '4', '5', '6', '7',\
+    '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+
+    for (--index; index >= 0; index--)
+        printf("%c", base_digits[converted[index]]);
+
+    putchar('\n');
 }
