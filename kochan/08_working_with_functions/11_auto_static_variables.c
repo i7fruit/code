@@ -1,8 +1,8 @@
-/** 
+/**
  * 11_auto_static_variables.c
- * 
+ *
  * Tuesday, June 28 2022 18:03hrs
- * 
+ *
  * This program illustrates the use of automatic
  * and static variables.
  */
@@ -19,7 +19,10 @@ int main(void)
 
     // Calls the function five times
     for (short i = 0; i < five; i++)
+    {
+        printf("Round %hi\n", i + 1);
         auto_static();
+    }
 
     putchar('\n');
 
@@ -31,10 +34,9 @@ int main(void)
  */
 void auto_static(void)
 {
-    auto auto_var = 100;
-    static static_var = 1;
+    auto short auto_var = 100;
+    static short static_var = 1;
 
     // Increments each variable at each function call
-    auto_var++;
-    static_var++;
+   printf("auto_var = %hi\nstatic_var = %hi\n\n", auto_var++, static_var++);
 }
