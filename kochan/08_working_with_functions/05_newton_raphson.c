@@ -22,7 +22,11 @@ int main(void)
     // Prompts the user for a number to find its square root
     value = get_number(value);
 
+    printf("The square root of %.3f is ", value);
+
     square_root = get_square_root(value);
+
+    printf("%.3f\n", square_root);
 
     return 0;
 }
@@ -49,8 +53,6 @@ float get_square_root(float number)
         printf("Invalid input.\n");
         return -1.0;
     }
-
-    printf("The square root of %.3f is ", number);
 
     /**
      * Epsilon E, is used to determine when to end
@@ -84,8 +86,6 @@ float get_square_root(float number)
          guess = (number / guess + guess) / 2;
          square_of_guess = guess * guess;
     }
-
-    printf("%.3f\n", guess);
 
     return guess;
 }
