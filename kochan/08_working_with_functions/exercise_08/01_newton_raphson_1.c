@@ -73,7 +73,7 @@ float get_square_root(float number, float epsilon)
     }
 
     // Terminates if epsilon is less than one
-    if (epsilon < 1)
+    if (epsilon <= 0)
     {
         printf("Invalid input for epsilon\n");
         return -2.0;
