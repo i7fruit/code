@@ -24,7 +24,18 @@ int main(void)
     float value = 0, square_root = 0;
 
     // Prompts the user for a number to find its square root
+    printf("Enter number to find its square root: ");
     value = get_number(value);
+
+    /**
+     * Prompts the user to enter a value for Epsilon
+     *
+     * Epsilon E, is used to determine when to end
+     * the interation process, while the guess variable
+     * is the user's initial guess of what the square root
+     * is.
+     */
+    float E = get_number()
 
     printf("The square root of %.3f is ", value);
 
@@ -40,7 +51,6 @@ int main(void)
  */
 float get_number(float number)
 {
-    printf("Enter a value to find its square root: ");
     scanf("%f", &number);
 
     return number;
@@ -58,12 +68,7 @@ float get_square_root(float number)
         return -1.0;
     }
 
-    /**
-     * Epsilon E, is used to determine when to end
-     * the interation process, while the guess variable
-     * is the user's initial guess of what the square root
-     * is.
-     */
+
 
     float E = 0000.1, guess = 1.0;
 
