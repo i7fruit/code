@@ -35,6 +35,7 @@ int main(void)
      * is the user's initial guess of what the square root
      * is.
      */
+    printf("Enter a value for Epsilon: ");
     float E = get_number();
 
     printf("The square root of %.3f is ", value);
