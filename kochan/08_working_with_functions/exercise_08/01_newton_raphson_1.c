@@ -42,7 +42,7 @@ int main(void)
 
     square_root = get_square_root(value, E);
 
-    if (square_root >)
+    if (square_root != -1.0 || square_root == -2.0)
 
     printf("%.3f\n", square_root);
 
@@ -77,7 +77,7 @@ float get_square_root(float number, float epsilon)
     if (epsilon < 1)
     {
         printf("Invalid input for epsilon\n");
-        return -2;
+        return -2.0;
     }
 
     // The initial guess at the square root
