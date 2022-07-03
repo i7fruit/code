@@ -41,7 +41,7 @@ int main(void)
     square_root = get_square_root(value, E);
 
     if (square_root != -1.0 && square_root != -2.0)
-        printf("Square root of %.4f = %.4f\n", value, square_root);
+        printf("Square root of %.10f = %.10f\n", value, square_root);
     else
         printf("%.1f\n", square_root);
 
