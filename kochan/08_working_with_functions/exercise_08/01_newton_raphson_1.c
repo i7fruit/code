@@ -53,7 +53,12 @@ int main(void)
 float get_number(void)
 {
     float number = 0;
-    scanf("%f", &number);
+
+    do
+    {
+        scanf("%f", &number);
+    }
+    while (number < 1);
 
     return number;
 }
