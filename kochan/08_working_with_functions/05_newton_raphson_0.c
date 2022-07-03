@@ -11,7 +11,7 @@
 #include <stdio.h>
 
 // Function prototypes
-float get_number(float number);
+float get_number(void);
 float get_square_root(float number);
 float absolute_value(float number);
 
@@ -20,7 +20,8 @@ int main(void)
     float value = 0, square_root = 0;
 
     // Prompts the user for a number to find its square root
-    value = get_number(value);
+    printf("Enter a value to find its square root: ");
+    value = get_number();
 
     printf("The square root of %.3f is ", value);
 
@@ -34,9 +35,9 @@ int main(void)
 /***********************************
  * get_number()
  */
-float get_number(float number)
+float get_number(void)
 {
-    printf("Enter a value to find its square root: ");
+    float number = 0.0;
     scanf("%f", &number);
 
     return number;
