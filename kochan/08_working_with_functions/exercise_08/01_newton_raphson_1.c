@@ -54,11 +54,7 @@ float get_number(void)
 {
     float number = 0;
 
-    do
-    {
-        scanf("%f", &number);
-    }
-    while (number < 1);
+    scanf("%f", &number);
 
     return number;
 }
@@ -74,6 +70,8 @@ float get_square_root(float number, float epsilon)
         printf("Invalid input.\n");
         return -1.0;
     }
+
+    
 
     // The initial guess at the square root
     float guess = 1.0;
