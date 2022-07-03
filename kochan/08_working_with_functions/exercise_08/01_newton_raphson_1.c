@@ -89,7 +89,7 @@ float get_square_root(float number, float epsilon)
      * user's trying to find its square root, becomes less than the
      * epsilon, E.
      */
-    while (absolute_value(square_of_guess - number) >= E)
+    while (absolute_value(square_of_guess - number) >= epsilon)
     {
          // Repeats calculation of guess as above and finds its square.
          guess = (number / guess + guess) / 2;
