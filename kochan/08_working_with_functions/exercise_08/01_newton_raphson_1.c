@@ -67,11 +67,16 @@ float get_square_root(float number, float epsilon)
     // Terminates if the number is negative
     if (number < 0)
     {
-        printf("Invalid input.\n");
+        printf("Invalid input for value.\n");
         return -1.0;
     }
 
-    
+    // Terminates if epsilon is less than zero
+    if (epsilon < 0)
+    {
+        printf("Invalid input for epsilon\n");
+        return -2;
+    }
 
     // The initial guess at the square root
     float guess = 1.0;
