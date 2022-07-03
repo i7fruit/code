@@ -38,6 +38,7 @@ int main(void)
 float get_number(void)
 {
     float number = 0.0;
+
     scanf("%f", &number);
 
     return number;
