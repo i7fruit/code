@@ -38,13 +38,12 @@ int main(void)
     printf("Enter a value for Epsilon: ");
     float E = get_number();
 
-    printf("The square root of %.3f is ", value);
-
     square_root = get_square_root(value, E);
 
-    if (square_root != -1.0 || square_root == -2.0)
-
-    printf("%.3f\n", square_root);
+    if (square_root != -1.0 && square_root != -2.0)
+        printf("Square root of %.4f = %.4f\n", value, square_root);
+    else
+        printf("%.1f\n", square_root);
 
     return 0;
 }
