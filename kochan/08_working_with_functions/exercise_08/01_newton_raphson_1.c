@@ -1,12 +1,16 @@
 /**
- * 05_newton_raphson.c
+ * 01_newton_raphson_1.c
  *
- * Saturday, June 18 2022 21:49hrs
+ * Saturday, July 02 2022 21:59hrs
  *
  * This program uses the Newton Raphson
  * iteration technique to arrive at an
  * approximation of the square root of
  * a number.
+ *
+ * Here the user gets to pass in different
+ * values of Epsilon to see the effect it has
+ * on the value of the square root.
  */
 #include <stdio.h>
 
