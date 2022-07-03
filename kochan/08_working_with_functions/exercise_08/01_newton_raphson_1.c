@@ -15,8 +15,8 @@
 #include <stdio.h>
 
 // Function prototypes
-float get_number(float number);
-float get_square_root(float number);
+float get_number(void);
+float get_square_root(float number, float epsilon);
 float absolute_value(float number);
 
 int main(void)
@@ -25,7 +25,7 @@ int main(void)
 
     // Prompts the user for a number to find its square root
     printf("Enter number to find its square root: ");
-    value = get_number(value);
+    value = get_number();
 
     /**
      * Prompts the user to enter a value for Epsilon
@@ -35,11 +35,11 @@ int main(void)
      * is the user's initial guess of what the square root
      * is.
      */
-    float E = get_number()
+    float E = get_number();
 
     printf("The square root of %.3f is ", value);
 
-    square_root = get_square_root(value);
+    square_root = get_square_root(value, E);
 
     printf("%.3f\n", square_root);
 
@@ -49,8 +49,9 @@ int main(void)
 /***********************************
  * get_number()
  */
-float get_number(float number)
+float get_number(void)
 {
+    float number = 0;
     scanf("%f", &number);
 
     return number;
@@ -59,7 +60,7 @@ float get_number(float number)
 /************************************
  * get_square_root()
  */
-float get_square_root(float number)
+float get_square_root(float number, float epsilon)
 {
     // Terminates if the number is negative
     if (number < 0)
@@ -68,9 +69,8 @@ float get_square_root(float number)
         return -1.0;
     }
 
-
-
-    float E = 0000.1, guess = 1.0;
+    // The initial guess at the square root
+    float guess = 1.0;
 
     /**
      * Divides the number by the initial value of guess: 1.0, the
