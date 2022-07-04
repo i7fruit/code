@@ -108,6 +108,12 @@ float get_square_root(float number, float epsilon)
      * of the square of the guess and the number for which the
      * user is trying to find its square root, becomes less than the
      * epsilon, E.
+     *
+     * This while loop executes as long as the comparison between
+     * the absolute ratio of guess^2 and the number to which the user
+     * wishes to find its square root, and 1, is less than the value of
+     * the epsilon. The closer the value of this comparison is to 1, the
+     * more accurate the square root approximation.
      */
     while (absolute_value(square_of_guess - number) >= epsilon)
     {
