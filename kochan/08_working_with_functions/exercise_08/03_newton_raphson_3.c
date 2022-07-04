@@ -13,6 +13,13 @@
  * of guess is also printed each time through
  * the while loop showing how quickly the value
  * of guess converges to the square root.
+ *
+ * For a more accurate approximation of the square root,
+ * it is better to compare the ratio of guess^2 and x to 1
+ * inside the condition of the while loop. The closer the ratio
+ * gets to 1, the more accurate the approximation of the square root.
+ * This change is suitable for calculating the square root of very
+ * large or very small numbers.
  */
 #include <stdio.h>
 
