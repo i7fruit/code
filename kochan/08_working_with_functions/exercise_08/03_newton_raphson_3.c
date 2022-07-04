@@ -115,7 +115,7 @@ float get_square_root(float number, float epsilon)
      * the epsilon. The closer the value of this comparison is to 1, the
      * more accurate the square root approximation.
      */
-    while (absolute_value(square_of_guess - number) >= epsilon)
+    while (absolute_value(1 - square_of_guess / number) >= epsilon)
     {
         // Tracks number of iterations
         static short iteration;
