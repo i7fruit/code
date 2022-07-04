@@ -1,7 +1,7 @@
 /**
  * 03_newton_raphson_3.c
  *
- * Sunday, July 03 2022 :25hrs
+ * Sunday, July 03 2022 21:01hrs
  *
  * This program uses the Newton Raphson
  * iteration technique to arrive at an
