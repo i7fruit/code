@@ -117,6 +117,8 @@ float get_square_root(float number, float epsilon)
      */
     while (absolute_value(1 - square_of_guess / number) >= epsilon)
     {
+        // Prints result of comparison of the ratio to 1
+        printf("Ratio of guess^2 and number, to 1: %.10f\n", 1 - square_of_guess / number);
         // Tracks number of iterations
         static short iteration;
 
