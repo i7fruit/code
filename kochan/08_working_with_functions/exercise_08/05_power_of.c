@@ -43,8 +43,17 @@ int get_integer(void)
  */
 long int power_function(int x, int y)
 {
-    for (short i = 0; i < y; i++)
-        x *= x;
+    if (y == 0)
+        return 1;
+    else if (y == 1)
+        return x;
+    else
+    {
+        int temp = 1;
+
+        for (short i = 0; i < y; i++)
+            temp *= x;
+    }
 
     return x;
 }
