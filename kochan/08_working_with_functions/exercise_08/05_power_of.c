@@ -1,8 +1,8 @@
-/** 
+/**
  * 05_power_of.c
- * 
+ *
  * Tuesday, July 05 2022 00:42hrs
- * 
+ *
  * This program computes the value
  * of an integer raised to the power
  * of another integer.
@@ -11,17 +11,17 @@
 
 // Function prototype
 int get_integer(void);
-long int power(int x, int y);
+long int power_function(int x, int y);
 
 int main(void)
 {
     printf("Enter number: ");
     int number = get_integer();
-    
+
     printf("Enter power: ");
     int power = get_integer();
 
-    printf("%i^%i = %li\n", number, power, power(number, power));
+    printf("%i^%i = %li\n", number, power, power_function(number, power));
 
     return 0;
 }
@@ -41,10 +41,10 @@ int get_integer(void)
 /*******************************
  * power()
  */
-long int power(int x, int y)
+long int power_function(int x, int y)
 {
     for (short i = 0; i < y; i++)
         x *= x;
-    
+
     return x;
 }
