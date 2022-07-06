@@ -49,9 +49,9 @@ void find_roots(double a, double b, double c)
 
     double discriminant = (b * b) - (4 * a * c);
 
-    x1 = -b + get_square_root(discriminant, epsilon) / (2 * a);
+    x1 = (-b + get_square_root(discriminant, epsilon)) / (2 * a);
 
-    x2 = -b - get_square_root(discriminant, epsilon) / (2 * a);
+    x2 = (-b - get_square_root(discriminant, epsilon)) / (2 * a);
 }
 
 /********************************
