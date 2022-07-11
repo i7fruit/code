@@ -14,7 +14,51 @@
  */
 #include <stdio.h>
 
+// Function protocols
+int gcd(int u, int v);
+int lcd(int u, int v);
+
 int main(void)
 {
     int u, v;
+
+    do
+    {
+        printf("Enter two positive values to find their lcm\n");
+        scanf("%i%i", &u, &v);
+    }
+    while (u < 1 && v < 1);
+
+    printf("The lowest common multiple of %i and %i is ", u, v);
+
+    printf("%i\n", lcd(u, v));
+
+    return 0;
+}
+
+/****************************
+ * gcd() finds the greatest
+ * common divisor between two
+ * positve integers
+ */
+int gcd(int u, int v)
+{
+    int temp = 0;
+
+    while (v != 0)
+    {
+        temp = u % v;
+        u = v;
+        v = temp;
+    }
+
+    return u;
+}
+
+/*****************************
+ * lcd()
+ */
+int lcd(int u, int v)
+{
+    return u * v / gcd(u, v);
 }
