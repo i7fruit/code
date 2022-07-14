@@ -44,7 +44,7 @@ int get_integer(void)
  */
 void fill_array(int array[])
 {
-    int size = sizeof(array[]) / sizeof(array[0]);
+    int size = sizeof(array) / sizeof(array[0]);
 
     for (short i = 0; i < size; i++)
         scanf("%i", &array[i]);
