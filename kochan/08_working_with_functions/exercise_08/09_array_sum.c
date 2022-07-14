@@ -1,8 +1,8 @@
-/** 
+/**
  * 09_array_sum.c
- * 
+ *
  * Tuesday, July 12 2022 17:59hrs
- * 
+ *
  * This program calculates the sum of the
  * values of elements of an array and returns
  * it to Main.
@@ -44,7 +44,7 @@ int get_integer(void)
  */
 void fill_array(int array[])
 {
-    int size = sizeof(array) / sizeof(array[0]);
+    int size = sizeof(array[]) / sizeof(array[0]);
 
     for (short i = 0; i < size; i++)
         scanf("%i", &array[i]);
