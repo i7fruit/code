@@ -1,8 +1,8 @@
-/**
+/** 
  * 09_array_sum.c
- *
+ * 
  * Tuesday, July 12 2022 17:59hrs
- *
+ * 
  * This program calculates the sum of the
  * values of elements of an array and returns
  * it to Main.
@@ -11,8 +11,9 @@
 
 // Function prototypes
 int get_integer(void);
-void fill_array(int array[]);
-void print_array(int array[]);
+void fill_array(int array[], int n);
+void print_array(int array[], int n);
+int array_sum(int array[], int n);
 
 int main(void)
 {
@@ -23,8 +24,9 @@ int main(void)
 
     int values[size];
 
-    fill_array(values);
-    print_array(values);
+    fill_array(values, size);
+    print_array(values, size);
+    printf("Sum of values in the array is %i\n", array_sum(values, size));
 }
 
 /***************************
@@ -42,25 +44,32 @@ int get_integer(void)
 /*************************
  * fill_array()
  */
-void fill_array(int array[])
+void fill_array(int array[], int n)
 {
-    int size = sizeof(&array) / sizeof(array[0]);
-
-    printf("Size = %i\n", size);
-
-    for (short i = 0; i < size; i++)
+    for (short i = 0; i < n; i++)
         scanf("%i", &array[i]);
 }
 
 /**************************
  * print_array()
  */
-void print_array(int array[])
+void print_array(int array[], int n)
 {
-    int size = sizeof(&array) / sizeof(array[0]);
-
-    for (short i = 0; i < size; i++)
+    for (short i = 0; i < n; i++)
         printf("%i ", array[i]);
 
     putchar('\n');
+}
+
+/*************************************
+ * array_sum()
+ */
+int array_sum(int array[], int n)
+{
+    int sum = 0;
+
+    for (short i = 0; i < n; i++)
+        sum += array[i];
+
+    return sum;
 }
