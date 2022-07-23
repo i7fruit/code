@@ -103,7 +103,7 @@ void zero_out_array(int r, int c, int array[][c])
  */
 void transpose_matrix(int r, int c, int array0[][c], int array1[][r])
 {
-    for (short i = 0; i < r; i++)
-        for (short j = 0; j < c; j++)
+    for (short i = 0; i < c; i++)
+        for (short j = 0; j < r; j++)
             array1[j][i] = array0[i][j];
 }
