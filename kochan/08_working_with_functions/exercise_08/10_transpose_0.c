@@ -60,8 +60,8 @@ void print_matrix(int array[][5])
  */
 void transpose_matrix(int array0[][5], int array1[][4])
 {
-    for (short i = 0; i < 5; i++)
-        for (short j = 0; j < 4; j++)
+    for (short i = 0; i < 4; i++)
+        for (short j = 0; j < 5; j++)
             array1[j][i] = array0[i][j];
 }
 
