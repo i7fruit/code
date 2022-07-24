@@ -1,8 +1,8 @@
-/** 
+/**
  * 11_transpose_1.c
- * 
+ *
  * Friday, July 22 2022 21:29hrs
- * 
+ *
  * This program takes a user-defined m by n matrix,
  * and transposes it.
  */
@@ -54,7 +54,11 @@ int get_integer(void)
 {
     int value = 0;
 
-    scanf("%i", &value);
+    do
+    {
+        scanf("%i", &value);
+    }
+    while (value < 1 || value > 8);
 
     return value;
 }
