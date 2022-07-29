@@ -34,5 +34,11 @@ struct date_time
 int main(void)
 {
     // Structure declaration
-    struct date_time event = { {}}
+    struct date_time event = { {12, 44, 01}, {07, 29, 2022}};
+
+    // Prints out the date and time
+    printf("%.2i.%.2i.%.2i\n%.2i:%.2i:%.2i\n", event.sdate.month, event.sdate.day, event.sdate.year % 100 \
+    , event.stime.hours, event.stime.minutes, event.stime.seconds);
+
+    return 0;
 }
