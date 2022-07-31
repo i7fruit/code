@@ -43,7 +43,7 @@ int main(void)
     print_date_time(event);
 
     // Updates the time by one second
-    event.stime.seconds = 
+    tim
 
     return 0;
 }
@@ -55,4 +55,43 @@ void print_date_time(struct date_time value)
 {
     printf("%.2i.%.2i.%.2i\n%.2i:%.2i:%.2i\n", value.sdate.month, value.sdate.day, value.sdate.year % 100 \
     , value.stime.hours, value.stime.minutes, value.stime.seconds);
+}
+
+/********************************************************************
+ * time_update()
+ */
+struct time time_update(struct time value)
+{
+    // Updates time by a second
+    value.seconds++;
+
+    if (value.seconds != 60)
+        return value;
+
+    else
+    {
+        value.seconds = 0;
+        value.minutes++;
+
+        if (value.minutes != 60)
+            return value;
+
+        else
+        {
+            value.minutes = 0;
+            value.hours++;
+
+            if (value.hours != 24)
+                return value;
+
+            else
+            {
+                value.hours = 0;
+                value.minutes = 0;
+                value.seconds = 0;
+            }
+        }
+    }
+
+    return value;
 }
