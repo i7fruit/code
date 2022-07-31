@@ -43,7 +43,7 @@ int main(void)
     print_date_time(event);
 
     // Updates the time by one second
-    tim
+    
 
     return 0;
 }
