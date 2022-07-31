@@ -43,7 +43,7 @@ int main(void)
     print_date_time(event);
 
     // Updates the time by one second
-    
+
 
     return 0;
 }
@@ -94,4 +94,68 @@ struct time time_update(struct time value)
     }
 
     return value;
+}
+
+/********************************************************************************
+ * The date_update() function takes a struct
+ * date argument and computes the value of
+ * a date incremented by one day.
+ */
+struct date date_update(struct date value)
+{
+    struct date tomorrow = {.month = 0, .day = 0, .year = 0};
+
+    // Update the day by 1
+    value.day++;
+
+    // If day is beyond month limit...
+    if (value.day > number_of_days(value))
+    {
+        tomorrow.day = 1;
+
+        // If last day of year...
+        if (value.month == 12)
+        {
+            tomorrow.month = 1;
+            tomorrow.year = value.year + 1;
+        }
+
+        // ...in february of a leap year...
+        else if (value.month == 2)
+        {
+            if (is_leap_year(value.year))
+            {
+                if (value.day == 29)
+                {
+                    tomorrow.day = 29;
+                    tomorrow.month = value.month;
+                    tomorrow.year = value.year;
+                }
+                else
+                {
+                    tomorrow.month = value.month + 1;
+                    tomorrow.year = value.year;
+                }
+            }
+            else
+            {
+                tomorrow.month = value.month + 1;
+                tomorrow.year = value.year;
+            }
+        }
+        // ...if any other month.
+        else
+        {
+            tomorrow.month = value.month + 1;
+            tomorrow.year = value.year;
+        }
+    }
+    else
+    {
+        tomorrow.day = value.day;
+        tomorrow.month = value.month;
+        tomorrow.year = value.year;
+    }
+
+    return tomorrow;
 }
