@@ -31,16 +31,28 @@ struct date_time
     struct date sdate;
 };
 
+// Function prototypes
+void print_date_time(struct date_time value);
+
 int main(void)
 {
     // Structure declaration
     struct date_time event = { {12, 44, 01}, {07, 29, 2022}};
 
     // Prints out the date and time
-    printf("%.2i.%.2i.%.2i\n%.2i:%.2i:%.2i\n", event.sdate.month, event.sdate.day, event.sdate.year % 100 \
-    , event.stime.hours, event.stime.minutes, event.stime.seconds);
+    print_date_time(event);
+
+    // Updates the time by one second
+    event.stime.seconds = 
 
     return 0;
 }
 
 /******************************************
+ * print_date_time()
+ */
+void print_date_time(struct date_time value)
+{
+    printf("%.2i.%.2i.%.2i\n%.2i:%.2i:%.2i\n", value.sdate.month, value.sdate.day, value.sdate.year % 100 \
+    , value.stime.hours, value.stime.minutes, value.stime.seconds);
+}
