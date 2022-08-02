@@ -1,30 +1,33 @@
-/** 
+/**
  * 00_days_between_dates.c
- * 
+ *
  * Tuesday, August 02 2022 12:38hrs
- * 
+ *
  * This program uses a formula to calculate
  * the number of days between two dates.
- * 
+ *
  * The value of "N" is calculated for each date:
- * 
+ *
  *     N = 1461 * f(year,month) / 4 + 153 * g(month) / 5 + day
- * 
+ *
  * after which the difference between both values are returned as
  * the number of days between the two dates.
- * 
+ *
  * The formula above works for dates after March 01 1900.
- * 
+ *
  * 1 should be added to the value of N for dates between
  * March 01 1800 and February 28 1900
- * 
+ *
  * 2 should be added to the value of N for dates between
  * March 01 1700 and February 28 1800.
  */
 #include <stdio.h>
 
-#define LIMIT_YEAR 1700
-#define LIMIT_MONTH 2
+#define SEVENTEEN_HUNDRED 1700
+#define EIGHTEEN_HUNDRED 1800
+#define NINETEEN_HUNDRED 1900
+#define FEBRUARY 2
+#define MARCH 3
 
 // Structure definition
 struct date
@@ -46,13 +49,13 @@ int main(void)
     struct date first_date, second_date;
 
     printf("Enter any dates from March 01 1700\n\n");
-    
+
     do
     {
         printf("First date\n");
         first_date = get_date();
     }
-    while (first_date.year <= LIMIT_YEAR && first_date.month <= LIMIT_MONTH);
+    while (first_date.year <= SEVENTEEN_HUNDRED && first_date.month <= FEBRUARY);
     putchar('\n');
 
     do
@@ -60,7 +63,7 @@ int main(void)
         printf("Second date\n");
         second_date = get_date();
     }
-    while (second_date.year <= LIMIT_YEAR && second_date.month <= LIMIT_MONTH);
+    while (second_date.year <= SEVENTEEN_HUNDRED && second_date.month <= FEBRUARY);
     putchar('\n');
 
     print_date(first_date);
@@ -152,10 +155,10 @@ int N(struct date value)
     n = 1461 * value.year / 4 + 153 * value.month / 5 + value.day;
 
     // Adds 1 or 2 to the value of n
-    if ((value.month >= 3 && value.year >= 1800) && (value.month <= 2 && value.year <= 1900))
+    if ((value.month >= MARCH && value.year >= EIGHTEEN_HUNDRED) && (value.month <= FEBRUARY && value.year <= NINETEEN_HUNDRED))
         n++;
-    
-    else if ((value.month >= 3 && value.year >= 1700) && (value.month <= 2 && value.year <= 1800))
+
+    else if ((value.month >= MARCH && value.year >= SEVENTEEN_HUNDRED) && (value.month <= FEBRUARY && value.year <= EIGHTEEN_HUNDRED))
         n += 2;
 
     return n;
