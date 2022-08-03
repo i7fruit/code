@@ -118,6 +118,31 @@ struct time elapsed_time(struct time start, struct time end)
             end.seconds += 60;
             temp.seconds = end.seconds - start.seconds;
         }
+        
+        // ...if minutes are not sufficient
+        else if (end.minutes == 0)
+        {
+            // ...borrow sixty minutes if hours are sufficient
+            if (end.hours > 0)
+            {
+                end.hours--;
+                end.minutes++;
+                // ...then add to seconds
+                end.seconds += 60;
+                temp.seconds = end.seconds - start.seconds;
+            }
+
+            // ...if hours not sufficient, add 24 hours
+            else if (end.hours == 0)
+            {
+                end.hours += 24;
+                end.hours--;
+                end.minutes++;
+                // ...add to seconds
+                end.seconds += 60;
+                temp.seconds = end.seconds - start.seconds;
+            }
+        }
     }
 
     else
@@ -130,6 +155,16 @@ struct time elapsed_time(struct time start, struct time end)
         // ...check if hours are sufficient
         if (end.hours > 0)
         {
+            end.hours--;
+            end.minutes += 60;
+            temp.minutes = end.minutes - start.minutes;
+        }
+
+        // ...if hours are not sufficient...
+        else if (end.hours == 0)
+        {
+            // ...add 24 hours
+            end.hours += 24;
             end.hours--;
             end.minutes += 60;
             temp.minutes = end.minutes - start.minutes;
