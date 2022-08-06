@@ -1,8 +1,8 @@
-/** 
+/**
  * 01_elapsed_time.c
- * 
+ *
  * Tuesday, August 02 2022 18:02hrs
- * 
+ *
  * This program calculates the elapsed time between
  * two time stamps.
  */
@@ -118,7 +118,7 @@ struct time elapsed_time(struct time start, struct time end)
             end.seconds += 60;
             temp.seconds = end.seconds - start.seconds;
         }
-        
+
         // ...if minutes are not sufficient
         else if (end.minutes == 0)
         {
@@ -137,8 +137,9 @@ struct time elapsed_time(struct time start, struct time end)
             {
                 end.hours += 24;
                 end.hours--;
-                end.minutes++;
+                end.minutes += 60;
                 // ...add to seconds
+                end.minutes--;
                 end.seconds += 60;
                 temp.seconds = end.seconds - start.seconds;
             }
