@@ -71,9 +71,9 @@
 int main(void)
 {
     int i;
-    char line[20];
+    char line[10];
     void readLine (char buffer[]);
-    
+
     for ( i = 0; i < 3; ++i )
     {
         readLine (line);
