@@ -63,6 +63,10 @@ int count_words(char array[])
 
     for (short i = 0; array[i] != '\0'; i++)
     {
-        if (isalpha(array[i]))
+        if (isalpha(array[i]) && !is_counting)
+        {
+            is_counting = true;
+            count++;
+        }
     }
 }
