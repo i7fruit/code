@@ -28,10 +28,6 @@ int main(void)
         readline(buffer, size - 1);
         print_array(buffer);
         printf("\n\n");
-
-        // Clears the buffer
-        //for (short j = 0; j < size; j++)
-        //    buffer[j] = '\0';
     }
 
     return 0;
