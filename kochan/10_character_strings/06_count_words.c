@@ -12,12 +12,14 @@
 
 // Function prototypes
 void readline(char arr[], int limit);
+int count_words(char array[]);
 
 int main(void)
 {
     const short size = 64;
     char string[size];
 
+    printf("Enter a string of text\n");
     readline(string, size - 1);
 
     int word_count = count_words(string);
@@ -68,5 +70,10 @@ int count_words(char array[])
             is_counting = true;
             count++;
         }
+
+        else if (!isalpha(array[i]))
+            is_counting = false;
     }
+
+    return count;
 }
