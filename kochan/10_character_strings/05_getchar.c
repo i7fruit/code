@@ -30,8 +30,8 @@ int main(void)
         printf("\n\n");
 
         // Clears the buffer
-        for (short j = 0; j < size; j++)
-            buffer[j] = '\0';
+        //for (short j = 0; j < size; j++)
+        //    buffer[j] = '\0';
     }
 
     return 0;
