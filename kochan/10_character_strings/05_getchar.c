@@ -16,7 +16,7 @@ void print_array(char arr[]);
 
 int main(void)
 {
-    const short size = 64, frequency = 3;
+    const short size = 20, frequency = 3;
 
     // An array to store text read from the keyboard
     char buffer[size];
