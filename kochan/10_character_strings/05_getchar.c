@@ -18,7 +18,7 @@ int main(void)
 {
     const short size = 64, frequency = 3;
 
-    // A buffer to store text read from the keyboard
+    // An array to store text read from the keyboard
     char buffer[size];
 
     // Reads input from the user three times
