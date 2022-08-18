@@ -9,13 +9,16 @@
  * data entry has ended.
  */
 #include <stdio.h>
+#include <stdbool.h>
 
 int main(void)
 {
     const short size = 64;
 
-    // Array to store string of text entered by the user
-    char text[size] = "";
+    bool is_reading = true;
 
-    while
+    // Array to store string of text entered by the user
+    char text[size];
+
+    while ()
 }
