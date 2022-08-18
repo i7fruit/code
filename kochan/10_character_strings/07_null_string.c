@@ -20,5 +20,8 @@ int main(void)
     // Array to store string of text entered by the user
     char text[size];
 
-    while ()
+    while (is_reading)
+    {
+        readline(text)
+    }
 }
