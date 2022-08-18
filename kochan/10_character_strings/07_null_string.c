@@ -25,14 +25,18 @@ int main(void)
     // Array to store string of text entered by the user
     char text[size];
 
+    printf("Enter text\n\n");
+    
     while (is_reading)
     {
         readline(text, size - 1);
+
         // Checks for the null string
         if (text[0] == '\0')
             is_reading = false;
 
         else
+            // Counts words in each line
             count += count_words(text);
     }
 
