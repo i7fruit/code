@@ -29,8 +29,6 @@ int main(void)
         if (text[0] == '\0')
             is_reading = false;
     }
-
-    count_words()
 }
 
 /****************************************************
