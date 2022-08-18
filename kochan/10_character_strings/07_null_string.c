@@ -10,12 +10,15 @@
  */
 #include <stdio.h>
 #include <stdbool.h>
+#include <ctype.h>
 
 void readline(char arr[], int limit);
+int count_words(char array[]);
 
 int main(void)
 {
     const short size = 64;
+    int count = 0;
 
     bool is_reading = true;
 
@@ -24,11 +27,18 @@ int main(void)
 
     while (is_reading)
     {
-        readline(text);
+        readline(text, size - 1);
         // Checks for the null string
         if (text[0] == '\0')
             is_reading = false;
+
+        else
+            count += count_words(text);
     }
+
+    printf("Count = %i\n", count);
+
+    return 0;
 }
 
 /****************************************************
@@ -50,4 +60,32 @@ void readline(char arr[], int limit)
 
     // Overwrites '\n' with '\0'
     arr[i] = '\0';
+}
+
+/*******************************************************
+ * The count_words() function iterates through an array
+ * of characters by marking the start of a word when it
+ * first encounters an alphabetic character, and marks its
+ * end when it encounters the first non-alphabetic character.
+ * It keeps track of this by updating a counter variable, and
+ * repeats the process until the end of the array is reached.
+ */
+int count_words(char array[])
+{
+    int count = 0;
+    bool is_counting = false;
+
+    for (short i = 0; array[i] != '\0'; i++)
+    {
+        if (isalpha(array[i]) && !is_counting)
+        {
+            is_counting = true;
+            count++;
+        }
+
+        else if (!isalpha(array[i]))
+            is_counting = false;
+    }
+
+    return count;
 }
