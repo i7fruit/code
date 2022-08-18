@@ -22,6 +22,11 @@ int main(void)
 
     while (is_reading)
     {
-        readline(text)
+        readline(text);
+        // Checks for the null string
+        if (text[0] == '\0')
+            is_reading = false;
     }
+
+    count_words()
 }
