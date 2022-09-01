@@ -29,7 +29,7 @@ int main(void)
     printf("2\t4\n");
     printf("3\t6\n");
 
-    // \v vertical tab
+    // \v vertical tab ie drops the cursor to the next line at the current position
     printf("Hello\vWorld!\n");
 
     return 0;
