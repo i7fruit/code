@@ -1,8 +1,8 @@
-/** 
+/**
  * 08_escape_sequences.c
- * 
+ *
  * Tuesday, August 30 2022 18:09hrs
- * 
+ *
  * This program illustrates the use of
  * some escape characters in C.
  */
@@ -14,7 +14,7 @@ int main(void)
     printf("\"Hello\"\n");
 
     // \? prints a question mark ?
-    printf("What's your name?\n");
+    printf("What's your name\?\n");
 
     return 0;
 }
