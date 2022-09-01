@@ -24,7 +24,7 @@ int main(void)
     printf("\r ... people in Ghana\n");
 
     // \t horizontal tab
-    printf("United\tStates\n");
+    printf("n\tn^2\n");
 
     return 0;
 }
