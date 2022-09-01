@@ -23,5 +23,8 @@ int main(void)
     printf("Why do you think we all do?");
     printf("\r ... people in Ghana\n");
 
+    // \t horizontal tab
+    printf("United\tStates\n");
+
     return 0;
 }
