@@ -16,5 +16,9 @@ int main(void)
     // \? prints a question mark ?
     printf("What's your name\?\n");
 
+    // \r carriage return
+    printf("How do you do?\n");
+    printf("\r in Ghana?\n");
+
     return 0;
 }
