@@ -30,7 +30,7 @@ int main(void)
     printf("3\t6\n");
 
     // \v vertical tab
-    printf("\vHello\vWorld!\n");
+    printf("Hello\vWorld!\n");
 
     return 0;
 }
