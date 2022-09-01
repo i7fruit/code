@@ -25,6 +25,9 @@ int main(void)
 
     // \t horizontal tab
     printf("n\tn^2\n");
+    printf("------------\n");
+    printf("2\t4\n");
+    printf("3\t6\n");
 
     return 0;
 }
