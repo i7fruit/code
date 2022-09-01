@@ -16,6 +16,9 @@ int main(void)
     // \? prints a question mark ?
     printf("What's your name\?\n");
 
+    // \b backspace
+    printf("The backspace character\b moves the cursor one space backwards\n");
+
     // \r carriage return
     printf("How do you do?\n");
     printf("\r in Ghana?\n");
