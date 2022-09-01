@@ -17,7 +17,7 @@ int main(void)
     printf("What's your name\?\n");
 
     // \b backspace
-    printf("The backspace character\b moves the cursor one space backwards\n");
+    printf("The backspace character\b\b deletes the character that preceeds it\n");
 
     // \r carriage return
     printf("How do you do?\n");
