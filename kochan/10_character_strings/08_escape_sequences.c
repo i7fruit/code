@@ -19,8 +19,8 @@ int main(void)
     // \b backspace
     printf("The backspace character\b\b deletes the character that preceeds it\n");
 
-    // \r carriage return
-    printf("How do you do?\n");
+    // \r carriage return positions the cursor at the beginning of the line
+    printf("How do you do?");
     printf("\r in Ghana?\n");
 
     return 0;
