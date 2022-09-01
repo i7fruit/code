@@ -29,5 +29,8 @@ int main(void)
     printf("2\t4\n");
     printf("3\t6\n");
 
+    // \v vertical tab
+    printf("\vHello\vWorld!\n");
+
     return 0;
 }
