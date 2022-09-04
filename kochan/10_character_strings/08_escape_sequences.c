@@ -30,11 +30,12 @@ int main(void)
     printf("3\t6\n");
 
     // \v vertical tab ie drops the cursor to the next line at the current position
-    printf("Hello\vWorld!\n");
+    printf("\nHello\vWorld!\n\n");
 
     // \unnnn prints unicode characters
     printf("Pound Sterling = \u00A3\n");
     printf("Dollar sign = \u0024\n");
+    printf("Copyright sign = \u00A9\n");
 
     return 0;
 }
