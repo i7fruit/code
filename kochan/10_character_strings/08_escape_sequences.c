@@ -32,6 +32,9 @@ int main(void)
     // \v vertical tab ie drops the cursor to the next line at the current position
     printf("\nHello\vWorld!\n\n");
 
+    // \nnn prints octal character values
+    printf("\n033\n");
+
     // \unnnn prints unicode characters
     printf("Pound Sterling = \u00A3\n");
     printf("Dollar sign = \u0024\n");
