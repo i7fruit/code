@@ -33,7 +33,7 @@ int main(void)
     printf("Hello\vWorld!\n");
 
     // \nnn prints octal values
-    printf("Here = \xBF\n");
+    printf("Here = \xDF\n");
 
     return 0;
 }
