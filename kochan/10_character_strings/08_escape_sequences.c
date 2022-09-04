@@ -32,5 +32,8 @@ int main(void)
     // \v vertical tab ie drops the cursor to the next line at the current position
     printf("Hello\vWorld!\n");
 
+    // \nnn prints octal values
+    printf("%s\n", \n20);
+
     return 0;
 }
