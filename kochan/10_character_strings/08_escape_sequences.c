@@ -33,7 +33,7 @@ int main(void)
     printf("Hello\vWorld!\n");
 
     // \nnn prints octal values
-    printf("%s\n", \n20);
+    printf("\033\n");
 
     return 0;
 }
