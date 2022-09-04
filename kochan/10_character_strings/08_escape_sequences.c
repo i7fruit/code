@@ -33,12 +33,15 @@ int main(void)
     printf("\nHello\vWorld!\n\n");
 
     // \nnn prints octal character values
-    printf("\n033\n");
+    printf("\010\n");
 
     // \unnnn prints unicode characters
     printf("Pound Sterling = \u00A3\n");
     printf("Dollar sign = \u0024\n");
     printf("Copyright sign = \u00A9\n");
+
+    // \xnn prints hex character values
+    printf("\xAF\n");
 
     return 0;
 }
