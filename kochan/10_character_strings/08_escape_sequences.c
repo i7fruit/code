@@ -42,6 +42,7 @@ int main(void)
 
     // \xnn prints hex character values
     printf("\x23\n"); // prints #
+    printf("\xBC\n"); // prints 1/4
 
     return 0;
 }
