@@ -33,7 +33,7 @@ int main(void)
     printf("\nHello\vWorld!\n\n");
 
     // \nnn prints octal character values
-    printf("\010\n");
+    printf("\142\n");
 
     // \unnnn prints unicode characters
     printf("Pound Sterling = \u00A3\n");
