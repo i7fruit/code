@@ -33,7 +33,7 @@ int main(void)
     printf("\nHello\vWorld!\n\n");
 
     // \nnn prints octal character values
-    printf("\142\n");
+    printf("\142\144\n"); // \142 = b, \144 = d, so line prints bd
 
     // \unnnn prints unicode characters
     printf("Pound Sterling = \u00A3\n");
