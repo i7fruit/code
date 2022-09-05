@@ -41,7 +41,7 @@ int main(void)
     printf("Copyright sign = \u00A9\n");
 
     // \xnn prints hex character values
-    printf("\x2s\n");
+    printf("\x23\n");
 
     return 0;
 }
