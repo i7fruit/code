@@ -13,7 +13,8 @@ int main(void)
     printf("If this is too long, \
 continue on a new line.\n");
 
-    // 
+    // The C compiler automatically concatenate adjacent strings
+    printf("This " "will" " be " "one string of text.\n");
 
     return 0;
 }
