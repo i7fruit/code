@@ -21,8 +21,11 @@ struct entry
 
 int main(void)
 {
+    // Size of the array of structs
+    const int size = 10;
+
     // Declares an array of struct entry structs
-    struct entry dictionary[10] =
+    const struct entry dictionary[size] =
     {
         { "aardvark", "a burrowing African mammal" },
         { "abyss", "a bottomless pit" },
@@ -35,4 +38,7 @@ int main(void)
         { "aigrette", "an ornamental cluster of feathers" },
         { "ajar", "partially opened" }
     }
+
+    // Stores the word to search for
+    char search_item[15];
 }
