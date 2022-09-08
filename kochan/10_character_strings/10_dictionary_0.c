@@ -16,10 +16,11 @@
 struct entry
 {
     char word[15];
-    char defin
-}
+    char definition[50];
+};
 
 int main(void)
 {
     // Declares an array of struct entry structs
+    struct entry dictionary[]
 }
