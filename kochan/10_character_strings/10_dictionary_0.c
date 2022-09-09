@@ -66,7 +66,7 @@ int main(void)
  * found, otherwise it returns a -1, to indicate that the word
  * was not found.
  */
-int lookup(const struct entry arr[], const char text, const int n)
+int lookup(const struct entry arr[], const char text[], const int n)
 {
     // Searches dictionary for word
     for (int i = 0; i < n; i++)
