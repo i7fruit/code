@@ -5,10 +5,9 @@
  *
  * This program searches through an array
  * of structs looking for a specific word.
- * When found, it returns an integer indicating
- * what position in the array the word is found,
- * or a -1 to indicate that the word is not located
- * in the array.
+ * When found, it prints out the meaning of the word,
+ * otherwise it returns a -1 to indicate that the word
+ * is not located in the array.
  */
 #include <stdio.h>
 #include <stdbool.h>

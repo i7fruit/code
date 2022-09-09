@@ -1,4 +1,70 @@
 /**
  * 11_dictionary_1.c
  *
- * 
+ * Friday, September 09 2022 12:31hrs
+ *
+ * This program uses binary search to search
+ * through an array of struct entry elements
+ * to find a word entered by the user to display
+ * its definition. Otherwise message is displayed
+ * letting the user know that the word could not
+ * be found.
+ */
+#include <stdio.h>
+
+struct entry
+{
+    char word[15];
+    char definition[60];
+};
+
+// Function prototype
+void get_word(char arr[]);
+
+int main(void)
+{
+    // Dictionary of words and their definitions
+    const struct entry dictionary[100] =
+    {
+        { "aardvark", "a burrowing African mammal" },
+        { "abyss", "a bottomless pit" },
+        { "acumen", "mentally sharp; keen" },
+        { "addle", "to become confused" },
+        { "aerie", "a high nest" },
+        { "affix", "to append; attach" },
+        { "agar", "a jelly made from seaweed" },
+        { "ahoy", "a nautical call of greeting" },
+        { "aigrette", "an ornamental cluster of feathers" },
+        { "ajar", "partially opened" },
+        { "babydoll", "a doll designed to look like a baby"},
+        { "cagey", "reluctant to give information owing to caution or suspicion"}
+    };
+
+    char search_item[15];
+
+    printf("Enter word to search for: ");
+    get_word(search_item);
+
+    printf("%s\n", search_item);
+
+    return 0;
+}
+
+/**************************************************
+ * This function uses the getchar() to get a word
+ * from the user.
+ */
+void get_word(char arr[])
+{
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int i = -1;
+
+    do
+    {
+        arr[++i] = getchar();
+    }
+    while (arr[i] != '\n');
+
+    // Null terminates string
+    arr[i] = '\0';
+}
