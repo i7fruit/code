@@ -11,6 +11,7 @@
  * in the array.
  */
 #include <stdio.h>
+#include <stdbool.h>
 
 // Structure definition
 struct entry
@@ -18,6 +19,9 @@ struct entry
     char word[15];
     char definition[50];
 };
+
+// Function prototypes
+bool equal_strings(const char arr_0[], const char arr_1[])
 
 int main(void)
 {
@@ -68,4 +72,22 @@ int lookup(struct entry[], char word, int n)
     {
         if ()
     }
+}
+
+/***********************************************************
+ * The equal_strings() functions compares each character in
+ * two different arrays for equality. The function returns a
+ * 1 if both strings of text are equal, and 0 if they are not.
+ */
+_Bool equal_strings(const char arr_0[], const char arr_1[])
+{
+    short i = 0;
+
+    while (arr_0[i] == arr_1[i] && arr_0[i] != '\0')
+        i++;
+
+    if (arr_0[i] == '\0' && arr_1[i] == '\0')
+        return 1;
+
+    return 0;
 }
