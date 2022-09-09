@@ -37,8 +37,23 @@ int main(void)
         { "ahoy", "a nautical call of greeting" },
         { "aigrette", "an ornamental cluster of feathers" },
         { "ajar", "partially opened" }
-    }
+    };
 
     // Stores the word to search for
     char search_item[15];
+
+    // Prompts user for word to search for
+    printf("Word: ");
+    scanf("%s", search_item);
+
+    // Searches the dictionary array for the word
+    lookup(dictionary, search_item, size);
+
+    return 0;
 }
+
+/***************************************************
+ * The lookup() function searches an array of struct entry
+ * structures comparing the word to search for, with the
+ * word member of each element of the struct entry array. If a
+ * match is found, the
