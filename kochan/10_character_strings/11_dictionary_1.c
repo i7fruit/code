@@ -66,7 +66,7 @@ void get_word(char arr[], const int n)
     {
         arr[++i] = getchar();
     }
-    while (arr[i] != '\n');
+    while (arr[i] != '\n' && i < n);
 
     // Null terminates string
     arr[i] = '\0';
