@@ -49,7 +49,7 @@ int main(void)
     printf("Enter word to search for: ");
     get_word(search_item, FIFTEEN);
 
-    printf("%s\n", search_item);
+    lookup(dictionary, search_item, HUNDRED);
 
     return 0;
 }
