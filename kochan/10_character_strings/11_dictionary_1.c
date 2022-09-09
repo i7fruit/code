@@ -23,7 +23,7 @@ struct entry
 };
 
 // Function prototype
-void get_word(char arr[], FIFTEEN);
+void get_word(char arr[], const int n);
 
 int main(void)
 {
@@ -58,9 +58,8 @@ int main(void)
  * This function uses the getchar() to get a word
  * from the user.
  */
-void get_word(char arr[], FIFTEEN)
+void get_word(char arr[], const int n)
 {
-    int size = sizeof(arr) / sizeof(arr[0]);
     int i = -1;
 
     do
