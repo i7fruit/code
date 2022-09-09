@@ -54,7 +54,11 @@ int main(void)
     // Searches the dictionary array for the word
     int index = lookup(dictionary, search_item, size);
 
-    printf("Word found on index %i.\n", index);
+    if (index == -1)
+        printf("Word not found.\n");
+
+    else
+        printf("Word found on index %i.\n", index);
 
     return 0;
 }
