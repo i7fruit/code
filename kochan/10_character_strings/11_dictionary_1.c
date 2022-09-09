@@ -12,19 +12,23 @@
  */
 #include <stdio.h>
 
+#define FIFTEEN 15
+#define SIXTY 60
+#define HUNDRED 100
+
 struct entry
 {
-    char word[15];
-    char definition[60];
+    char word[FIFTEEN];
+    char definition[SIXTY];
 };
 
 // Function prototype
-void get_word(char arr[]);
+void get_word(char arr[], FIFTEEN);
 
 int main(void)
 {
     // Dictionary of words and their definitions
-    const struct entry dictionary[100] =
+    const struct entry dictionary[HUNDRED] =
     {
         { "aardvark", "a burrowing African mammal" },
         { "abyss", "a bottomless pit" },
@@ -40,10 +44,10 @@ int main(void)
         { "cagey", "reluctant to give information owing to caution or suspicion"}
     };
 
-    char search_item[15];
+    char search_item[FIFTEEN];
 
     printf("Enter word to search for: ");
-    get_word(search_item);
+    get_word(search_item, FIFTEEN);
 
     printf("%s\n", search_item);
 
@@ -54,7 +58,7 @@ int main(void)
  * This function uses the getchar() to get a word
  * from the user.
  */
-void get_word(char arr[])
+void get_word(char arr[], FIFTEEN)
 {
     int size = sizeof(arr) / sizeof(arr[0]);
     int i = -1;
