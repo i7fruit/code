@@ -60,7 +60,7 @@ int main(void)
         printf("Word not found.\n");
 
     else
-        printf("Word found on index %i.\n", index);
+        printf("%s.\n", dictionary[index].definition);
 
     return 0;
 }
