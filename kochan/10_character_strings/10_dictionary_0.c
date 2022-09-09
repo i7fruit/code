@@ -22,7 +22,7 @@ struct entry
 
 // Function prototypes
 bool equal_strings(const char arr_0[], const char arr_1[]);
-int lookup(const struct entry arr[], const char text, const int n);
+int lookup(const struct entry arr[], const char text[], const int n);
 
 int main(void)
 {
