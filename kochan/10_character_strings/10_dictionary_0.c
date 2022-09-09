@@ -56,4 +56,16 @@ int main(void)
  * The lookup() function searches an array of struct entry
  * structures comparing the word to search for, with the
  * word member of each element of the struct entry array. If a
- * match is found, the
+ * match is found, the function returns an integer representing
+ * the element of the dictionary array where that word can be
+ * found, otherwise it returns a -1, to indicate that the word
+ * was not found.
+ */
+int lookup(struct entry[], char word, int n)
+{
+    // Searches dictionary for word
+    for (int i = 0; i < n; i++)
+    {
+        if ()
+    }
+}
