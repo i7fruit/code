@@ -22,7 +22,7 @@ struct entry
 
 // Function prototypes
 bool equal_strings(const char arr_0[], const char arr_1[]);
-int lookup(const struct entry[], const char word, const int n);
+int lookup(const struct entry arr[], const char text, const int n);
 
 int main(void)
 {
@@ -66,12 +66,12 @@ int main(void)
  * found, otherwise it returns a -1, to indicate that the word
  * was not found.
  */
-int lookup(const struct entry[], const char word, const int n)
+int lookup(const struct entry arr[], const char text, const int n)
 {
     // Searches dictionary for word
     for (int i = 0; i < n; i++)
     {
-        if ()
+        if (equal_strings(arr[i].word, text))
     }
 }
 
