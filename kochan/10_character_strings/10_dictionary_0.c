@@ -72,7 +72,10 @@ int lookup(const struct entry arr[], const char text[], const int n)
     for (int i = 0; i < n; i++)
     {
         if (equal_strings(arr[i].word, text))
+            return i;
     }
+
+    return -1;
 }
 
 /***********************************************************
