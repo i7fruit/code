@@ -17,7 +17,7 @@
 struct entry
 {
     char word[15];
-    char definition[50];
+    char definition[60];
 };
 
 // Function prototypes
@@ -27,7 +27,7 @@ int lookup(const struct entry arr[], const char text[], const int n);
 int main(void)
 {
     // Size of the array of structs
-    const int size = 11;
+    const int size = 12;
 
     // Declares an array of struct entry structs
     const struct entry dictionary[size] =
@@ -42,7 +42,8 @@ int main(void)
         { "ahoy", "a nautical call of greeting" },
         { "aigrette", "an ornamental cluster of feathers" },
         { "ajar", "partially opened" },
-        {"babydoll", "a doll designed to look like a baby"}
+        { "babydoll", "a doll designed to look like a baby"},
+        { "cagey", "reluctant to give information owing to caution or suspicion"}
     };
 
     // Stores the word to search for
