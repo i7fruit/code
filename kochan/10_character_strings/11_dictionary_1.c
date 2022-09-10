@@ -84,6 +84,6 @@ int lookup(const struct entry arr[], const char text[], const int n)
 {
     for (int i = 0; i < n; i++)
     {
-        
+        compare_string(arr[i], text)
     }
 }
