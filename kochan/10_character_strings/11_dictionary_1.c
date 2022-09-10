@@ -24,6 +24,7 @@ struct entry
 
 // Function prototype
 void get_word(char arr[], const int n);
+int lookup(const struct entry arr[], const char text[], const int n);
 
 int main(void)
 {
@@ -99,6 +100,21 @@ int lookup(const struct entry arr[], const char text[], const int n)
             lo = mid + 1;
 
         else
-
+            return mid;
     }
+
+    return -1;
+}
+
+/*****************************************************
+ * compare_strings()
+ */
+int compare_strings(char arr0[], char arr1[])
+{
+    int i = 0;
+
+    while (arr0[i] == arr1[i] && arr0[i] != '\0')
+        i++;
+
+    if (arr0[])
 }
