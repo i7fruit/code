@@ -80,4 +80,10 @@ void get_word(char arr[], const int n)
  * This function uses the Binary Search algorithm to efficiently
  * search through the array until the word is found.
  */
-int
+int lookup(const struct entry arr[], const char text[], const int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        
+    }
+}
