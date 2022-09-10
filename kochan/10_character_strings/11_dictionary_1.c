@@ -58,7 +58,7 @@ int main(void)
  * This function uses the getchar() to get a word
  * from the user.
  */
-void get_word(char arr[], const int n)
+void get_word(const char arr[], const int n)
 {
     int i = -1;
 
