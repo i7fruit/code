@@ -25,7 +25,7 @@ struct entry
 // Function prototype
 void get_word(char arr[], const int n);
 int lookup(const struct entry arr[], const char text[], const int n);
-int compare_strings(char arr0[], char arr1[]);
+int compare_strings(const char arr0[], const char arr1[]);
 
 int main(void)
 {
@@ -98,7 +98,7 @@ int lookup(const struct entry arr[], const char text[], const int n)
             hi = mid - 1;
 
         else if (position == 1)
-            lo = mid + 1;
+            low = mid + 1;
 
         else
             return mid;
@@ -110,7 +110,7 @@ int lookup(const struct entry arr[], const char text[], const int n)
 /*****************************************************
  * compare_strings()
  */
-int compare_strings(char arr0[], char arr1[])
+int compare_strings(const char arr0[], const char arr1[])
 {
     int i = 0;
 
