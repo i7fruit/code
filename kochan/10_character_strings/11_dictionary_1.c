@@ -79,11 +79,5 @@ void get_word(char arr[], const int n)
  *
  * This function uses the Binary Search algorithm to efficiently
  * search through the array until the word is found.
- *
- *
- * If a
- * match is found, the function returns an integer representing
- * the element of the dictionary array where that word can be
- * found, otherwise it returns a -1, to indicate that the word
- * was not found.
  */
+int
