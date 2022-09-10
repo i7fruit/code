@@ -14,7 +14,7 @@
 
 #define FIFTEEN 15
 #define SIXTY 60
-#define HUNDRED 100
+#define HUNDRED 12
 
 struct entry
 {
