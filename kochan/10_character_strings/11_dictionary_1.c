@@ -82,8 +82,23 @@ void get_word(char arr[], const int n)
  */
 int lookup(const struct entry arr[], const char text[], const int n)
 {
-    for (int i = 0; i < n; i++)
+    int low = 0, hi = n - 1, mid = 0;
+
+    while (low < hi)
     {
-        compare_string(arr[i], text)
+        // Calculates midpoint
+        mid = (low + hi) / 2;
+
+        // Searches left part of array
+        int position = compare_strings(arr[mid].word, text);
+
+        if (position == -1)
+            hi = mid - 1;
+
+        else if (position == 1)
+            lo = mid + 1;
+
+        else
+
     }
 }
