@@ -51,7 +51,13 @@ int main(void)
     printf("Enter word to search for: ");
     get_word(search_item, FIFTEEN);
 
-    lookup(dictionary, search_item, HUNDRED);
+    int element = lookup(dictionary, search_item, HUNDRED);
+
+    if (element == -1)
+        printf("Word not in dictionary.\n");
+
+    else
+        printf("%s\n", dictionary[element].definition);
 
     return 0;
 }
