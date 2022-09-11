@@ -94,13 +94,16 @@ int lookup(const struct entry arr[], const char text[], const int n)
         // Searches left part of array
         int position = compare_strings(arr[mid].word, text);
 
+        // If dictionary word comes before search word, adjust low element
         if (position == -1)
-            hi = mid - 1;
-
-        else if (position == 1)
             low = mid + 1;
 
+        // If dictionary word comes after search word, adjust hi element
+        else if (position == 1)
+            hi = mid - 1;
+
         else
+        // Returns mid element if dictionary word is same as search word
             return mid;
     }
 
@@ -121,7 +124,7 @@ int compare_strings(const char arr0[], const char arr1[])
         return 0;
 
     else if (arr0[i] < arr1[i])
-        return 1;
+        return -1;
 
-    return -1;
+    return 1;
 }
