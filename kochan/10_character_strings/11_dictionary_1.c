@@ -121,7 +121,7 @@ int compare_strings(const char arr0[], const char arr1[])
         return 0;
 
     else if (arr0[i] < arr1[i])
-        return -1;
+        return 1;
 
-    return 1;
+    return -1;
 }
