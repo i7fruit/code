@@ -92,7 +92,7 @@ int lookup(const struct entry arr[], const char text[], const int n)
 {
     int low = 0, hi = n - 1, mid = 0;
 
-    while (low < hi)
+    while (low <= hi)
     {
         // Calculates midpoint
         mid = (low + hi) / 2;
