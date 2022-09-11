@@ -14,7 +14,7 @@
 
 #define FIFTEEN 15
 #define SIXTY 60
-#define HUNDRED 12
+#define SIZE 12
 
 struct entry
 {
@@ -30,7 +30,7 @@ int compare_strings(const char arr0[], const char arr1[]);
 int main(void)
 {
     // Dictionary of words and their definitions
-    const struct entry dictionary[HUNDRED] =
+    const struct entry dictionary[SIZE] =
     {
         { "aardvark", "a burrowing African mammal" },
         { "abyss", "a bottomless pit" },
@@ -51,7 +51,7 @@ int main(void)
     printf("Enter word to search for: ");
     get_word(search_item, FIFTEEN);
 
-    int element = lookup(dictionary, search_item, HUNDRED);
+    int element = lookup(dictionary, search_item, SIZE);
 
     if (element == -1)
         printf("Word not in dictionary.\n");
