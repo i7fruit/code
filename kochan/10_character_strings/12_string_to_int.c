@@ -11,6 +11,7 @@
 
 // Function prototypes
 void get_digits(char arr[]);
+int string_to_int(const char arr[]);
 
 int main(void)
 {
@@ -22,6 +23,8 @@ int main(void)
     get_digits(digits);
 
     int integer = string_to_int(digits);
+
+    printf("%i\n", integer);
 
     return 0;
 }
@@ -45,13 +48,15 @@ void get_digits(char arr[])
  */
 int string_to_int(const char arr[])
 {
-    int converted = 0;
+    int converted = 0, i = 0;
     char zero = '0';
 
-    while (is_digit(arr[i]))
+    while (isdigit(arr[i]))
     {
         int digit = arr[i] - zero;
 
         converted *= 10 + (digit);
     }
+
+    return converted;
 }
