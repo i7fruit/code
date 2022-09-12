@@ -68,17 +68,19 @@ int string_to_int(char arr[])
         i++;
     }
 
+    while (isdigit(arr[i]))
+    {
+        found_digit = 1;
+        
+        int digit = arr[i++] - zero;
+
+        converted = converted * 10 + digit;
+    }
+
     if (!found_digit)
     {
         printf("No valid digit found.\n");
         return 99999;
-    }
-
-    while (isdigit(arr[i]))
-    {
-        int digit = arr[i++] - zero;
-
-        converted = converted * 10 + digit;
     }
 
     if (is_negative)
