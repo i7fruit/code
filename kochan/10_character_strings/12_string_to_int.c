@@ -10,5 +10,9 @@
 
 int main(void)
 {
-    char d
+    const int size = 64;
+
+    char digits[size] = "";
+
+    get_digits(digits);
 }
