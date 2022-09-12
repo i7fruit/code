@@ -55,7 +55,7 @@ int string_to_int(const char arr[])
     {
         int digit = arr[i] - zero;
 
-        converted *= 10 + (digit);
+        converted = converted * 10 + digit;
     }
 
     return converted;
