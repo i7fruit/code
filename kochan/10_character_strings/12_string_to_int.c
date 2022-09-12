@@ -51,7 +51,6 @@ int string_to_int(char arr[])
     int converted = 0, i = 0;
     char zero = '0';
     _Bool is_negative = 0;
-    _Bool found_digit = 1;
 
     // For negative numbers
     if (arr[0] == '-')
@@ -61,26 +60,11 @@ int string_to_int(char arr[])
         i++;
     }
 
-    // Captures non-digits before digits
-    while (!isdigit(arr[i]))
-    {
-        found_digit = 0;
-        i++;
-    }
-
     while (isdigit(arr[i]))
     {
-        found_digit = 1;
-        
         int digit = arr[i++] - zero;
 
         converted = converted * 10 + digit;
-    }
-
-    if (!found_digit)
-    {
-        printf("No valid digit found.\n");
-        return 99999;
     }
 
     if (is_negative)
