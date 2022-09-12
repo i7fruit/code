@@ -7,6 +7,7 @@
  * into integers.
  */
 #include <stdio.h>
+#include <ctype.h>
 
 // Function prototypes
 void get_digits(char arr[]);
@@ -47,7 +48,7 @@ int string_to_int(const char arr[])
     int converted = 0;
     char zero = '0';
 
-    for (int i = 0; arr[i] != '\0'; i++)
+    while (is_digit(arr[i]))
     {
         int digit = arr[i] - zero;
 
