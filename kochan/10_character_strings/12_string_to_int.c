@@ -48,10 +48,10 @@ void get_digits(char arr[])
  */
 int string_to_int(const char arr[])
 {
-    int converted = 0, i = 0;
+    int converted = 0, i = -1;
     char zero = '0';
 
-    while (isdigit(arr[i]))
+    while (isdigit(arr[++i]))
     {
         int digit = arr[i] - zero;
 
