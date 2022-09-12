@@ -67,5 +67,8 @@ int string_to_int(const char arr[])
         converted = converted * 10 + digit;
     }
 
+    if (is_negative)
+        return -converted;
+
     return converted;
 }
