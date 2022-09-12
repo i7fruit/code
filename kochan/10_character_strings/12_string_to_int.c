@@ -20,7 +20,7 @@ int main(void)
     printf("Enter numeric characters: ");
     get_digits(digits);
 
-    printf("%s\n", digits);
+    int integer = string_to_int(digits);
 
     return 0;
 }
@@ -33,4 +33,24 @@ void get_digits(char arr[])
 {
     // User is limited to 63 characters
     scanf("%63s", arr);
+}
+
+/********************************************
+ * string_to_int() This function iterates
+ * through an array of character digits
+ * and subtracts the value 48 (which represents
+ * the ascii character '0' from each digit) to
+ * give its integer equivalent.
+ */
+int string_to_int(const char arr[])
+{
+    int converted = 0;
+    char zero = '0';
+
+    for (int i = 0; arr[i] != '\0'; i++)
+    {
+        int digit = arr[i] - zero;
+
+        converted *= 10 + (digit);
+    }
 }
