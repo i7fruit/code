@@ -48,7 +48,7 @@ void get_digits(char arr[])
  */
 int string_to_int(char arr[])
 {
-    int converted = 0, i = -1;
+    int converted = 0, i = 0;
     char zero = '0';
     _Bool is_negative = 0;
 
