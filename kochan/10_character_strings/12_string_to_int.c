@@ -15,4 +15,15 @@ int main(void)
     char digits[size] = "";
 
     get_digits(digits);
+
+    return 0;
+}
+
+/********************************************
+ * The get_digits() function promts the
+ * user for characters digits '0' through '9'
+ */
+void get_digits(char arr[])
+{
+    
 }
