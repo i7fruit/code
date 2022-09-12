@@ -60,12 +60,13 @@ int string_to_int(char arr[])
         i++;
     }
 
-    while (isdigit(arr[i]))
-    {
-        int digit = arr[i++] - zero;
+    // while (isdigit(arr[i]))
+    // {
+    //     int digit = arr[i++] - zero;
 
-        converted = converted * 10 + digit;
-    }
+    //     converted = converted * 10 + digit;
+    // }
+    for (; )
 
     if (is_negative)
         return -converted;
