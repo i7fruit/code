@@ -68,6 +68,12 @@ int string_to_int(char arr[])
         i++;
     }
 
+    if (!found_digit)
+    {
+        printf("No valid digit found.\n");
+        return 99999;
+    }
+
     while (isdigit(arr[i]))
     {
         int digit = arr[i++] - zero;
