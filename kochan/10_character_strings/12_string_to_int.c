@@ -11,7 +11,7 @@
 
 // Function prototypes
 void get_digits(char arr[]);
-int string_to_int(const char arr[]);
+int string_to_int(char arr[]);
 
 int main(void)
 {
@@ -46,7 +46,7 @@ void get_digits(char arr[])
  * the ascii character '0' from each digit) to
  * give its integer equivalent.
  */
-int string_to_int(const char arr[])
+int string_to_int(char arr[])
 {
     int converted = 0, i = -1;
     char zero = '0';
