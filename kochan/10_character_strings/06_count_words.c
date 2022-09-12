@@ -71,7 +71,7 @@ int count_words(char array[])
             count++;
         }
 
-        else if (!isalpha(array[i]))
+        else if (!isalpha(array[i]) && array[i] != ''')
             is_counting = false;
     }
 
