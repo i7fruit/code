@@ -61,11 +61,11 @@ int string_to_int(char arr[])
     }
 
     // Captures non-digits before digits
-    while ()
+   // while ()
 
-    while (isdigit(arr[++i]))
+    while (isdigit(arr[i]))
     {
-        int digit = arr[i] - zero;
+        int digit = arr[i++] - zero;
 
         converted = converted * 10 + digit;
     }
