@@ -8,6 +8,9 @@
  */
 #include <stdio.h>
 
+// Function prototypes
+void get_digits(char arr[]);
+
 int main(void)
 {
     const int size = 64;
