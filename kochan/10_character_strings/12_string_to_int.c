@@ -14,7 +14,10 @@ int main(void)
 
     char digits[size] = "";
 
+    printf("Enter numeric characters: ");
     get_digits(digits);
+
+    printf("%s\n", digits);
 
     return 0;
 }
@@ -25,5 +28,5 @@ int main(void)
  */
 void get_digits(char arr[])
 {
-    
+    scanf("%5s", arr);
 }
