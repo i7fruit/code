@@ -51,6 +51,7 @@ int string_to_int(char arr[])
     int converted = 0, i = 0;
     char zero = '0';
     _Bool is_negative = 0;
+    _Bool found_digit = 1;
 
     // For negative numbers
     if (arr[0] == '-')
@@ -61,7 +62,11 @@ int string_to_int(char arr[])
     }
 
     // Captures non-digits before digits
-   // while ()
+    while (!isdigit(arr[i]))
+    {
+        found_digit = 0;
+        i++;
+    }
 
     while (isdigit(arr[i]))
     {
