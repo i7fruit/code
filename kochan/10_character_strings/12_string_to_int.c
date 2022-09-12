@@ -60,6 +60,9 @@ int string_to_int(char arr[])
         i++;
     }
 
+    // Captures non-digits before digits
+    while ()
+
     while (isdigit(arr[++i]))
     {
         int digit = arr[i] - zero;
