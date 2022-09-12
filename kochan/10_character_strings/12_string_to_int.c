@@ -50,6 +50,15 @@ int string_to_int(const char arr[])
 {
     int converted = 0, i = -1;
     char zero = '0';
+    _Bool is_negative = 0;
+
+    // For negative numbers
+    if (arr[0] == '-')
+    {
+        is_negative = 1;
+        arr[0] = '0';
+        i++;
+    }
 
     while (isdigit(arr[++i]))
     {
