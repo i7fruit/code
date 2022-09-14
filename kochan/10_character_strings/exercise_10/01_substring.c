@@ -62,9 +62,16 @@ void get_text(char arr[])
  */
 void substring(const char source[], const int start, const int count, char result[])
 {
-    if ()
-    for (int i = start, j = 0; source[i] != '\0'; i++, j++)
+    int end = sizeof(source) / sizeof(source[0]);
+
+    if (start < end)
     {
-        result[j] = source[i];
+        for (int i = start, j = 0; source[i] != '\0'; i++, j++)
+        {
+            result[j] = source[i];
+        }
     }
+
+    else
+        printf("No text to extract\n"):
 }
