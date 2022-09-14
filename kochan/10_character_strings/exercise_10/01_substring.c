@@ -74,5 +74,5 @@ void substring(const char source[], const int start, const int count, char resul
     }
 
     else
-        printf("No text to extract\n");
+        printf("No text to extract.");
 }
