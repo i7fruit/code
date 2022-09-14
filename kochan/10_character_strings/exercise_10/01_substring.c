@@ -7,6 +7,7 @@
  * another string.
  */
 #include <stdio.h>
+#include <string.h>
 
 void get_text(char arr[]);
 void substring(const char source[], const int start, const int count, char result[]);
@@ -62,7 +63,7 @@ void get_text(char arr[])
  */
 void substring(const char source[], const int start, const int count, char result[])
 {
-    int end = sizeof(source) / sizeof(source[0]);
+    int end = strlen(source);
 
     if (start < end)
     {
@@ -73,5 +74,5 @@ void substring(const char source[], const int start, const int count, char resul
     }
 
     else
-        printf("No text to extract\n"):
+        printf("No text to extract\n");
 }
