@@ -1,10 +1,13 @@
 /**
- * 06_count_words.c
+ * 00_count_words_1.c
  *
- * Wednesday, August 17 2022 00:21hrs
+ * Tuesday, September 13 2022 21:29hrs
  *
  * This program counts the number of words
- * int a line of text entered by a user.
+ * in a line of text entered by a user.
+ *
+ * It also identifies integers separated by
+ * commas
  */
 #include <stdio.h>
 #include <stdbool.h>
@@ -65,13 +68,13 @@ int count_words(char array[])
 
     for (short i = 0; array[i] != '\0'; i++)
     {
-        if (isalpha(array[i]) && !is_counting)
+        if ((isalpha(array[i]) || isdigit(array[i])) && !is_counting)
         {
             is_counting = true;
             count++;
         }
 
-        else if (!isalpha(array[i]) && array[i] != '\'')
+        else if (!isalpha(array[i]) && !isdigit(array[i]) && array[i] != '\'' && array[i] != ',')
             is_counting = false;
     }
 

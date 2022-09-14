@@ -61,12 +61,6 @@ int string_to_int(char arr[])
         i++;
     }
 
-    // while (isdigit(arr[i]))
-    // {
-    //     int digit = arr[i++] - zero;
-
-    //     converted = converted * 10 + digit;
-    // }
     for (; arr[i] != '\0'; i++)
     {
         if (isdigit(arr[i]))
