@@ -65,5 +65,8 @@ void get_text(char arr[])
  */
 void substring(const char source[], const int start, const int count, char result[])
 {
-    for
+    for (int i = start; i < count && source[i] != '\0'; i++)
+    {
+        
+    }
 }
