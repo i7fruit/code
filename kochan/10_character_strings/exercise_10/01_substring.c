@@ -32,8 +32,9 @@ int main(void)
     printf("Lenth of string: ");
     scanf("%i", &length);
 
-    substring(string, low, length, result)
+    substring(string, low, length, result);
 
+    printf("%s\n", result);
 
     return 0;
 }
@@ -65,8 +66,8 @@ void get_text(char arr[])
  */
 void substring(const char source[], const int start, const int count, char result[])
 {
-    for (int i = start; i < count && source[i] != '\0'; i++)
+    for (int i = start, j = 0; i < count && source[i] != '\0'; i++, j++)
     {
-        
+        result[j] = source[i];
     }
 }
