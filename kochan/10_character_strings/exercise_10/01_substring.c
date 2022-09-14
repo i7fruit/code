@@ -17,14 +17,10 @@ int main(void)
     int low = 0, length = 0;
 
     char string[size] = "";
-    char extract[size] = "";
     char result[size] = "";
 
     printf("Enter text: ");
     get_text(string);
-
-    printf("Enter text to extract: ");
-    get_text(extract);
 
     printf("Starting index: ");
     scanf("%i", &low);
