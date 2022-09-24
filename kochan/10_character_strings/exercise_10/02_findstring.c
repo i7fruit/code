@@ -66,5 +66,5 @@ void get_text(char arr[])
 int find_string(const char arr_0[], const char arr_1[])
 {
     // Computes length of each string
-    int 
+    int
 }
