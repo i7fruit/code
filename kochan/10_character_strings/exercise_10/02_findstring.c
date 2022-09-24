@@ -69,6 +69,8 @@ int find_string(const char arr_0[], const char arr_1[])
     int a = sizeof(arr_0) / sizeof(arr_0[0]);
     int b = sizeof(arr_1) / sizeof(arr_1[0]);
 
+    _Bool search = 1;
+
     if (a > b)
     {
         
