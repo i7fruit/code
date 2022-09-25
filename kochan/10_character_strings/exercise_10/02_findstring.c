@@ -87,8 +87,10 @@ int find_string(const char arr_0[], const char arr_1[])
                 i++, j++;
 
             else
-            
-                j = 0, break;
+            {
+                j = 0;
+                break;
+            }
         }
     }
 }
