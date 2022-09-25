@@ -92,5 +92,10 @@ int find_string(const char arr_0[], const char arr_1[])
                 break;
             }
         }
+
+        if (j == (b - 1))
+            break;
     }
+
+    
 }
