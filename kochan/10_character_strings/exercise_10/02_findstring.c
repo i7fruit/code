@@ -14,6 +14,7 @@
 
 // Function prototypes
 void get_text(char arr[]);
+int find_string(const char arr_0[], const char arr_1[]);
 
 int main(void)
 {
@@ -71,8 +72,21 @@ int find_string(const char arr_0[], const char arr_1[])
 
     _Bool search = 1;
 
-    if (a > b)
+    for (int i = 0, j = 0; i < a; i++)
     {
-        
+        // Finds starting index
+        while (arr_0[i] != arr_1[j])
+            i++;
+
+        int k = i;
+
+        while (j < b)
+        {
+            if (arr_0[i] == arr_1[j])
+                i++, j++;
+
+            else
+                j = 0, break;
+        }
     }
 }
