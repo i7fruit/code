@@ -68,7 +68,7 @@ void get_text(char arr[])
 int find_string(const char arr_0[], const char arr_1[])
 {
     int k = 0;
-    
+
     // Computes length of each string
     int a = strlen(arr_0);
     int b = strlen(arr_1);
@@ -99,7 +99,7 @@ int find_string(const char arr_0[], const char arr_1[])
             }
         }
 
-        if (j == (b - 1))
+        if (j == b)
             break;
     }
 
