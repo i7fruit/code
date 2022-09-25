@@ -84,7 +84,10 @@ int find_string(const char arr_0[], const char arr_1[])
         while (j < b)
         {
             if (arr_0[i] == arr_1[j])
+            {
                 i++, j++;
+                search = 0;
+            }
 
             else
             {
@@ -97,5 +100,5 @@ int find_string(const char arr_0[], const char arr_1[])
             break;
     }
 
-    
+
 }
