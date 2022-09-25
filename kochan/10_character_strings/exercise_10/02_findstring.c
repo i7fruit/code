@@ -14,7 +14,7 @@
 
 // Function prototypes
 void get_text(char arr[]);
-int find_string(const char arr_0[], const char arr_1[]);
+int find_string(char arr_0[], char arr_1[]);
 
 int main(void)
 {
@@ -64,7 +64,7 @@ void get_text(char arr[])
 /******************************************************
  * find_string()
  */
-int find_string(const char arr_0[], const char arr_1[])
+int find_string(char arr_0[], char arr_1[])
 {
     // Computes length of each string
     int a = sizeof(arr_0) / sizeof(arr_0[0]);
