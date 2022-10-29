@@ -78,7 +78,7 @@ int find_string(const char arr_0[], const char arr_1[])
     for (int i = 0, j = 0; i < a; i++)
     {
         // Finds starting index
-        while (arr_0[i] != arr_1[j])
+        while ((arr_0[i] != arr_1[j]) && i < a)
             i++;
 
         k = i;
