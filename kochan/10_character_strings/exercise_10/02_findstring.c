@@ -81,6 +81,9 @@ int find_string(const char arr_0[], const char arr_1[])
         while ((arr_0[i] != arr_1[j]) && i < a)
             i++;
 
+        if (i == a)
+            return -1;
+
         k = i;
 
         while (j < b)
