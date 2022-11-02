@@ -24,7 +24,7 @@ int main(void)
     // Stores string of text to search
     char string[size] = "";
 
-    // Store string of text to find in the first SOT
+    // Stores string of text to find in the first SOT
     char word[size] = "";
 
     printf("Enter a string of text\n");
