@@ -32,10 +32,12 @@ int main(void)
     printf("How many characters do you want to extract? ");
     scanf("%i", &number_of_characters);
 
+    remove_string(text, start, number_of_characters);
+
     return 0;
 }
 
-// ****************************************************************
+/*************************************************************************/
 void get_text(char arr[])
 {
     int i = -1;
@@ -49,3 +51,10 @@ void get_text(char arr[])
     // Overwrites the newline character with a null zero
     arr[i] = '\0';
 }
+
+/***************************************************************************
+ * The remove_string() function takes as arguments an array that stores a string
+ * of text, and two integers that store values for the starting indext of a string
+ * to be extracted from the array, and the number of characters that string will contain.
+*/
+void remove_string(char arr[])
