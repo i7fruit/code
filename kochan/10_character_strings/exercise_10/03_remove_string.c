@@ -57,4 +57,7 @@ void get_text(char arr[])
  * of text, and two integers that store values for the starting indext of a string
  * to be extracted from the array, and the number of characters that string will contain.
 */
-void remove_string(char arr[])
+void remove_string(char arr[], int index, int count)
+{
+    
+}
