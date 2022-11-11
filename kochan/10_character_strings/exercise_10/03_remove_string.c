@@ -28,7 +28,7 @@ int main(void)
     get_text(text);
 
     printf("With the first character position being 0, what position in the text do \
-    you want to start the extraction: ");
+you want to start the extraction: ");
     scanf("%i", &start);
 
     printf("How many characters do you want to extract? ");
