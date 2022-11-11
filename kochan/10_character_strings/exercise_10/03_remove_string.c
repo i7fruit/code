@@ -75,5 +75,6 @@ void remove_string(char arr[], int index, int count)
         }
 
         arr[i] = arr[k];
+        arr[k] = '\0';
     }
 }
