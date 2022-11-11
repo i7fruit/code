@@ -54,10 +54,11 @@ void get_text(char arr[])
 
 /***************************************************************************
  * The remove_string() function takes as arguments an array that stores a string
- * of text, and two integers that store values for the starting indext of a string
+ * of text, and two integers that store values for the starting index of a string
  * to be extracted from the array, and the number of characters that string will contain.
 */
 void remove_string(char arr[], int index, int count)
 {
-    
+    // Computes size of string to extract from
+    int size = sizeof(arr) / sizeof(arr[0]);
 }
