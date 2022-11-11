@@ -8,6 +8,7 @@
  * of the array where the string of text was extracted from.
  */
 #include <stdio.h>
+#include <string.h>
 
 // Function prototypes
 void get_text(char arr[]);
@@ -60,6 +61,6 @@ void get_text(char arr[])
 */
 void remove_string(char arr[], int index, int count)
 {
-    // Computes size of string to extract from
-    int size = sizeof(arr) / sizeof(arr[0]);
+    // Computes length of string to extract from
+    int size = strlen(arr);
 }
