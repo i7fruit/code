@@ -66,6 +66,6 @@ void remove_string(char arr[], int index, int count)
 
     for (int i = index, j = 0; i < size && j < count; i++, j++)
     {
-
+        arr[i] = arr[]
     }
 }
