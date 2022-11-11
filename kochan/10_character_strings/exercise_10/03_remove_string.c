@@ -70,7 +70,8 @@ void remove_string(char arr[], int index, int count)
     {
         if (k >= size)
         {
-            
+            arr[i] = '\0';
+            continue;
         }
 
         arr[i] = arr[k];
