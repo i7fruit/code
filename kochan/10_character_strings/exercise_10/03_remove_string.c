@@ -11,6 +11,7 @@
 
 // Function prototypes
 void get_text(char arr[]);
+void remove_string(char arr[], int index, int count);
 
 int main(void)
 {
