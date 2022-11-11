@@ -36,6 +36,8 @@ you want to start the extraction: ");
 
     remove_string(text, start, number_of_characters);
 
+    printf("%s\n", text);
+
     return 0;
 }
 
@@ -64,8 +66,8 @@ void remove_string(char arr[], int index, int count)
     // Computes length of string to extract from
     int size = strlen(arr);
 
-    for (int i = index, j = 0, k = index + count; i < size && j < count; i++, j++)
+    for (int i = index, j = 0, k = index + count + 1; i < size && j < count; i++, j++)
     {
-        arr[i] = arr[]
+        arr[i] = arr[k];
     }
 }
