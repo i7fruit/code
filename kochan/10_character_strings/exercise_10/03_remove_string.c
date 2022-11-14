@@ -67,5 +67,11 @@ void remove_string(char arr[], int index, int count)
     int size = strlen(arr);
     int j = index + count - 1;
 
-    if (j <= size)
+    if (j < size)
+    {
+        for (int i = index; i < size; i++)
+        {
+            arr[i] = 
+        }
+    }
 }
