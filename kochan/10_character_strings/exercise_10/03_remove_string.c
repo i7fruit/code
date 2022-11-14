@@ -73,9 +73,6 @@ void remove_string(char arr[], int index, int count)
         arr[i] = arr[end];
     }
 
-    while (i < size)
-    {
+    if (i < size)
         arr[i] = '\0';
-        i++;
-    }
 }
