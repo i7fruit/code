@@ -65,15 +65,17 @@ void remove_string(char arr[], int index, int count)
 {
     // Computes length of string to extract from
     int size = strlen(arr);
-    int j = index + count - 1;
+    int end = index + count - 1;
+    int i = index;
 
-    if (j < size)
+    for (; i < size && end < size; i++, end++)
     {
-        int k = j + 1;
+        arr[i] = arr[end];
+    }
 
-        for (int i = index; i < size && k < size; i++, k++)
-        {
-            arr[i] = arr[k];
-        }
+    while (i < size)
+    {
+        arr[i] = '\0';
+        i++;
     }
 }
