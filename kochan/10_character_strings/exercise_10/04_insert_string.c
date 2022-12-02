@@ -11,6 +11,7 @@
 
 // Function prototypes
 void get_text(char arr[]);
+void insert_string(char arr_0[], char arr_1[], int element);
 
 int main(void)
 {
@@ -28,6 +29,11 @@ int main(void)
 
     printf("Enter a string of text: ");
     get_text(text);
+
+    printf("Enter text to insert: ");
+    get_text(string);
+
+    insert_string(text, string, insertion_index);
 
     printf("%s\n", text);
 
@@ -51,4 +57,13 @@ void get_text(char arr[])
 
     // Overwrites newline character with an ascii 0
     arr[i] = '\0';
+}
+
+/**********************************************
+ * The insert_string() function uses a forloop
+ * to insert one string of text into another
+ */
+void insert_string(char arr_0[], char arr_1[], int element)
+{
+    
 }
