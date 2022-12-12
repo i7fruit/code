@@ -66,17 +66,13 @@ void get_text(char arr[])
  */
 void insert_string(char arr_0[], char arr_1[], int element)
 {
-    // Counts number of characters from insertion point
-    int count = 0, i = -1;
+    // Array to store full text
+    int a = strlen(arr_0), b = strlen(arr_1), c;
 
-    while (arr_0[++i] != '\0')
-        count++;
+    int c = a + b;
+    char concatenated[c] = "";
 
-    // Saves those chars in a temporary array
-    char temp[count];
-
-    for (int i = element, j = 0; arr_0[i] != '\0'; i++, j++)
-        temp[j] = arr_0[i];
+    int i = 0, j = 0;
 
     // Inserts characters before insertion
     for (; i < element; i++)
