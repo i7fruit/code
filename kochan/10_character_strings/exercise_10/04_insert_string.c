@@ -79,11 +79,11 @@ void insert_string(char arr_0[], char arr_1[], int element)
         temp[j] = arr_0[i];
 
     // Inserts characters to be inserted
-    for (int i = element, j = 0; arr_0[i] != '\0' && arr_1[j] != '\0'; i++, j++)
+    for (i = element, j = 0; arr_0[i] != '\0' && arr_1[j] != '\0'; i++, j++)
         arr_0[i] = arr_1[j];
 
     // Inserts rest of characters
-    for (
+    for (; arr_0[i] != '\0'
 
     // Resets j
     j = element;
