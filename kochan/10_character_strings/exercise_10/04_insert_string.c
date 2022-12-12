@@ -70,6 +70,8 @@ void insert_string(char arr_0[], char arr_1[], int element)
 {
     // Counts characters from insertion point to end of array
     int count = 0, i = -1, j = 0;
+    int max = 64;
+
     while (arr_0[++i] != '\0')
         count++;
 
@@ -79,13 +81,13 @@ void insert_string(char arr_0[], char arr_1[], int element)
         temp[j] = arr_0[i];
 
     // Inserts new string
-    for (i = element, j = 0; arr_0[i] != '\0' && arr_1[j] != '\0'; i++, j++)
+    for (i = element, j = 0; i != max && arr_1[j] != '\0'; i++, j++)
         arr_0[i] = arr_1[j];
 
     // Resets j
     j = 0;
 
     // Inserts rest of chars from temp array
-    for (; arr_1[i] != '\0'; i++, j++)
+    for (; i != max; i++, j++)
         arr_0[i] = temp[j];
 }
