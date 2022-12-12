@@ -34,6 +34,15 @@ int main(void)
     printf("Enter text to insert: ");
     get_text(string);
 
+    printf("Insertion point: ");
+    scanf("%i", &insertion_index);
+
+    // Array to store full text
+    int a = strlen(text), b = strlen(string), c;
+
+    int c = a + b;
+    char concatenated[c] = "";
+
     insert_string(text, string, insertion_index);
 
     printf("%s\n", text);
@@ -66,12 +75,6 @@ void get_text(char arr[])
  */
 void insert_string(char arr_0[], char arr_1[], int element)
 {
-    // Array to store full text
-    int a = strlen(arr_0), b = strlen(arr_1), c;
-
-    int c = a + b;
-    char concatenated[c] = "";
-
     int i = 0, j = 0;
 
     // Inserts characters before insertion
