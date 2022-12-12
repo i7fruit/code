@@ -34,9 +34,6 @@ int main(void)
     printf("Enter text to insert: ");
     get_text(string);
 
-    printf("Enter element to start insertion: ");
-    scanf("%i", &insertion_index);
-
     insert_string(text, string, insertion_index);
 
     printf("%s\n", text);
@@ -70,25 +67,22 @@ void get_text(char arr[])
 void insert_string(char arr_0[], char arr_1[], int element)
 {
     // Counts number of characters from insertion point
-    int count = 0, i = -1, j = 0;
+    int count = 0, i = 0;
 
-    while (arr_0[++i] != '\0')
-        count++;
+    while (arr_0[i] != '\0')
 
-    // Saves those chars in a temporary array
-    char temp[count];
-
-    for (i = element, j = 0; arr_0[i] != '\0'; i++, j++)
-        temp[j] = arr_0[i];
+    // Inserts characters before insertion
+    for (; i < element; i++)
+        concatenated[i] = arr_0[i];
 
     // Inserts characters to be inserted
-    for (i = element, j = 0; arr_0[i] != '\0' && arr_1[j] != '\0'; i++, j++)
-        arr_0[i] = arr_1[j];
+    for (; j < b; i++, j++)
+        concatenated[i] = arr_1[j];
 
     // Resets j
-    j = 0;
+    j = element;
 
-    // Inserts rest of characters
-    for (; arr_0[i] != '\0'; j++, i++)
-        arr_0[i] = temp[j];
+    // Adds rest of characters
+    for (; arr_0[j] != '\0'; i++, j++)
+        concatenated[i] = arr_0[j];
 }
