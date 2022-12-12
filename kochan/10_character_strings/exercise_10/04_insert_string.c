@@ -8,7 +8,6 @@
  * to standard output.
  */
 #include <stdio.h>
-#include <string.h>
 
 // Function prototypes
 void get_text(char arr[]);
@@ -39,6 +38,8 @@ int main(void)
 
     insert_string(text, string, insertion_index);
 
+    printf("%s\n", text);
+
     return 0;
 }
 
@@ -67,32 +68,12 @@ void get_text(char arr[])
  */
 void insert_string(char arr_0[], char arr_1[], int element)
 {
+    int count = 0, i = -1;
 
-    // Array to store full text
-    int a = strlen(arr_0), b = strlen(arr_1), c;
+    while (arr_0[++i] != '\0')
+        count++;
 
-    c = a + b;
-
-    char concatenated[c];
-
-    int i = 0, j = 0;
-
-    // Inserts characters before insertion
-    for (; i < element; i++)
-        concatenated[i] = arr_0[i];
-
-    // Inserts characters to be inserted
-    for (; j < b; i++, j++)
-        concatenated[i] = arr_1[j];
-
-    // Resets j
-    j = element;
-
-    // Adds rest of characters
-    for (; arr_0[j] != '\0'; i++, j++)
-        concatenated[i] = arr_0[j];
-
-    concatenated[i] = '\0';
-
-    printf("%s\n", concatenated);
+    // Store characters starting from insertion point into temporary array
+    char temp[count];
+    for (i = element; arr_0[i] != '\0'; i++)
 }
