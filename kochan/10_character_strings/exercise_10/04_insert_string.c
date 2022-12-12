@@ -86,6 +86,6 @@ void insert_string(char arr_0[], char arr_1[], int element)
     j = 0;
 
     // Inserts rest of chars from temp array
-    for (; arr_0[i] != '\0'; i++, j++)
+    for (; arr_1[i] != '\0'; i++, j++)
         arr_0[i] = temp[j];
 }
