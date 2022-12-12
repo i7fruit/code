@@ -67,13 +67,25 @@ void get_text(char arr[])
 void insert_string(char arr_0[], char arr_1[], int element)
 {
     // Array to store full text
-    int n = strlen(arr_0) + strlen(arr_1);
-    char concatenated[n] = "";
+    int a = strlen(arr_0), b = strlen(arr_1), c;
+
+    int c = a + b;
+    char concatenated[c] = "";
+
+    int i = 0, j = 0;
 
     // Inserts characters before insertion
-    for (int i = 0; i < element; i++)
+    for (; i < element; i++)
         concatenated[i] = arr_0[i];
 
     // Inserts characters to be inserted
-    for (int j = element;)
+    for (; j < b; i++, j++)
+        concatenated[i] = arr_1[j];
+
+    // Resets j
+    j = element;
+
+    // Adds rest of characters
+    for (; arr_0[j] != '\0'; i++, j++)
+        concatenated[i] = arr_0[j];
 }
