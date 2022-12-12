@@ -41,6 +41,7 @@ int main(void)
     int a = strlen(text), b = strlen(string), c;
 
     c = a + b;
+
     char concatenated[c];
 
     insert_string(text, string, insertion_index);
