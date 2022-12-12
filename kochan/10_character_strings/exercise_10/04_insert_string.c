@@ -34,8 +34,8 @@ int main(void)
     get_text(string);
 
     // Array to store full text
-    int n = strlen(text) + strlen(string);
-    char concatenated[n] = "";
+    //int n = strlen(text) + strlen(string);
+    //char concatenated[n] = "";
 
     insert_string(text, string, insertion_index);
 
