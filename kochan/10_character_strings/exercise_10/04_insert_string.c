@@ -34,6 +34,9 @@ int main(void)
     printf("Enter text to insert: ");
     get_text(string);
 
+    printf("Enter element to start insertion: ");
+    scanf("%i", &insertion_index);
+
     insert_string(text, string, insertion_index);
 
     printf("%s\n", text);
