@@ -73,7 +73,7 @@ void insert_string(char arr_0[], char arr_1[], int element)
         count++;
 
     // Saves those chars in a temporary array
-    char temp[count] = "";
+    char temp[count];
 
     for (i = element, j = 0; arr_0[i] != '\0'; i++, j++)
         temp[j] = arr_0[i];
