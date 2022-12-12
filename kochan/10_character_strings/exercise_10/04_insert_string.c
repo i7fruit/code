@@ -68,12 +68,24 @@ void get_text(char arr[])
  */
 void insert_string(char arr_0[], char arr_1[], int element)
 {
-    int count = 0, i = -1;
-
+    // Counts characters from insertion point to end of array
+    int count = 0, i = -1, j = 0;
     while (arr_0[++i] != '\0')
         count++;
 
     // Store characters starting from insertion point into temporary array
     char temp[count];
-    for (i = element; arr_0[i] != '\0'; i++)
+    for (i = element; arr_0[i] != '\0'; i++, j++)
+        temp[j] = arr_0[i];
+
+    // Inserts new string
+    for (i = element, j = 0; arr_0[i] != '\0' && arr_1[j] != '\0'; i++, j++)
+        arr_0[i] = arr_1[j];
+
+    // Resets j
+    j = 0;
+
+    // Inserts rest of chars from temp array
+    for (; arr_0[i] != '\0'; i++, j++)
+        arr_0[i] = temp[j];
 }
