@@ -67,7 +67,7 @@ void get_text(char arr[])
 void insert_string(char arr_0[], char arr_1[], int element)
 {
     // Counts number of characters from insertion point
-    int count = 0, i = -1;
+    int count = 0, i = -1, j = 0;
 
     while (arr_0[++i] != '\0')
         count++;
@@ -82,13 +82,10 @@ void insert_string(char arr_0[], char arr_1[], int element)
     for (i = element, j = 0; arr_0[i] != '\0' && arr_1[j] != '\0'; i++, j++)
         arr_0[i] = arr_1[j];
 
-    // Inserts rest of characters
-    for (; arr_0[i] != '\0'
-
     // Resets j
-    j = element;
+    j = 0;
 
-    // Adds rest of characters
-    for (; arr_0[j] != '\0'; i++, j++)
-        concatenated[i] = arr_0[j];
+    // Inserts rest of characters
+    for (; arr_0[i] != '\0'; j++, i++)
+        arr_0[i] = temp[j];
 }
