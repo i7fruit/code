@@ -33,6 +33,10 @@ int main(void)
     printf("Enter text to insert: ");
     get_text(string);
 
+    // Array to store full text
+    int n = strlen(text) + strlen(string);
+    char concatenated[n] = "";
+
     insert_string(text, string, insertion_index);
 
     printf("%s\n", text);
