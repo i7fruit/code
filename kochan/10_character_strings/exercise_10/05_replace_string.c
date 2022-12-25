@@ -15,14 +15,16 @@ int main(void)
     const int size = 64;
 
     char text[size] = "";
-    char str_to_delete[size] = "";
-    char str_to_insert[size] = "";
+    //char str_to_delete[size] = "";
+    //char str_to_insert[size] = "";
+    int i;
 
-    text = "Hello";
-    str_to_delete = "lo";
-    str_to_insert = "p";
+    for (i = 0; i < 10; i++)
+        text[i] = getchar();
 
-    printf("%s\n%s\n%s\n", text, str_to_delete, str_to_insert);
+    text[--i] = '\0';
+
+    printf("%s\n", text);
 
     return 0;
 }
