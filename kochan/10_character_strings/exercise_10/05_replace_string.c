@@ -10,21 +10,39 @@
  */
 #include <stdio.h>
 
+// Function prototypes
+void get_text(char arr[]);
+
 int main(void)
 {
     const int size = 64;
 
     char text[size] = "";
-    //char str_to_delete[size] = "";
-    //char str_to_insert[size] = "";
-    int i;
+    char str_to_delete[size] = "";
+    char str_to_insert[size] = "";
 
-    for (i = 0; i < 10; i++)
-        text[i] = getchar();
-
-    text[--i] = '\0';
+    // Prompts the user for input
+    get_text(text);
 
     printf("%s\n", text);
 
     return 0;
+}
+
+/***********************************************
+ * The get_text() function uses the getchar() function
+ * to get a string of text from the user and stores
+ * it in an array using a do-while loop
+ */
+void get_text(char arr[])
+{
+    int i = -1;
+
+    do
+    {
+        arr[i++] =  getchar();
+    }
+    while (arr[i] != '\n');
+
+    arr[i] = '\0';
 }
