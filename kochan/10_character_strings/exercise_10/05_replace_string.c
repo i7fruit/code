@@ -18,12 +18,18 @@ int main(void)
     const int size = 64;
 
     char text[size] = "";
-    //char str_to_delete[size] = "";
-    //char str_to_insert[size] = "";
+    char str_to_delete[size] = "";
+    char str_to_insert[size] = "";
 
     // Prompts the user for input
     printf("Enter a string of text\n");
     get_text(text);
+
+    printf("Enter text to remove\n");
+    get_text(str_to_delete);
+
+    printf("Enter text to insert\n");
+    get_text(str_to_insert);
 
     printf("%s\n", text);
 
@@ -41,7 +47,7 @@ void get_text(char arr[])
 
     do
     {
-        arr[i++] =  getchar();
+        arr[++i] =  getchar();
     }
     while (arr[i] != '\n');
 
