@@ -22,6 +22,7 @@ int main(void)
     char str_to_insert[size] = "";
 
     // Prompts the user for input
+    printf("Enter a string of text\n");
     get_text(text);
 
     printf("%s\n", text);
