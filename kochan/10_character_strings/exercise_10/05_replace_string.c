@@ -18,8 +18,8 @@ int main(void)
     const int size = 64;
 
     char text[size] = "";
-    char str_to_delete[size] = "";
-    char str_to_insert[size] = "";
+    //char str_to_delete[size] = "";
+    //char str_to_insert[size] = "";
 
     // Prompts the user for input
     printf("Enter a string of text\n");
