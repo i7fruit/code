@@ -80,28 +80,38 @@ int find_string(const char arr_0[], const char arr_1[])
     // Traverses the array to find starting index of substring
     for (int i = 0, j = 0; arr_0[i] != '\0' && arr_1[j] != '\0'; i++)
     {
+        // If both characters are equal...
         if (arr_0[i] == arr_1[j])
         {
+            // ...signal that search for starting index has stopped...
             is_searching = false;
 
+            // ...and set index if it has not been set
             if (!index_set)
             {
                 index = i;
                 index_set = true;
             }
 
+            // Progresses through substring
             j++;
         }
 
+        // If characters do not match
         else
         {
-            // Resets starting index of substring
+            // Reset starting index of substring...
             j = 0;
+
+            // ...indicate that search for starting index is ongoing...
             is_searching = true;
+
+            // ... and indicate starting index has not been set.
             index_set = false;
         }
     }
 
+    // Returns the first index of the substring if set
     if (index_set)
         return index;
 
