@@ -10,6 +10,7 @@
  */
 #include <stdio.h>
 #include <stdbool.h>
+#include <string.h>
 
 // Function prototypes
 void get_text(char arr[]);
@@ -67,6 +68,14 @@ int find_string(const char arr_0[], const char arr_1[])
 {
     bool is_searching = true, index_set = false;
     int index = 0;
+
+    // Computes length of each string
+    int n = strlen(arr_0);
+    int m = strlen(arr_1);
+
+    // Terminates if substring is longer than main string
+    if (m > n)
+        return -1;
 
     // Traverses the array to find starting index of substring
     for (int i = 0, j = 0; arr_0[i] != '\0' && arr_1[j] != '\0'; i++)
