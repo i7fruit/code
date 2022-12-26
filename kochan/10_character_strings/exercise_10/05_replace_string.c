@@ -69,7 +69,7 @@ int find_string(const char arr_0[], const char arr_1[])
     int index = 0;
 
     // Traverses the array to find starting index of substring
-    for (int i = 0, j = 0; arr_0[i] != '\0'; i++)
+    for (int i = 0, j = 0; arr_0[i] != '\0' && arr_1[j] != '\0'; i++)
     {
         if (arr_0[i] == arr_1[j])
         {
