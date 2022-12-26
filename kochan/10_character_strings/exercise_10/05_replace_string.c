@@ -9,6 +9,7 @@
  * with a new string of characters.
  */
 #include <stdio.h>
+#include <stdbool.h>
 
 // Function prototypes
 void get_text(char arr[]);
@@ -61,5 +62,20 @@ void get_text(char arr[])
 */
 int find_string(const char arr_0[], const char arr_1[])
 {
-    
+    bool is_searching = true, index_set = false;
+    int index = 0;
+
+    // Traverses the array to find starting index of substring
+    for (int i = 0, j = 0; arr_0[i] != '\0'; i++)
+    {
+        if (arr_0[i] == arr_1[j])
+        {
+            is_searching = false;
+
+            if (!index_set)
+                index = i;
+
+            j++;
+        }
+    }
 }
