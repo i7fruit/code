@@ -53,3 +53,13 @@ void get_text(char arr[])
 
     arr[i] = '\0';
 }
+
+/**************************************************
+ * The find_string() function takes two arguments. One
+ * array for a string of text, and the other array to
+ * hold a string of text to find in the first array.
+*/
+int find_string(const char arr_0[], const char arr_1[])
+{
+    
+}
