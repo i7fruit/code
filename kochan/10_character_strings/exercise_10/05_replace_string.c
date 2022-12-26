@@ -33,9 +33,9 @@ int main(void)
     printf("Enter text to insert\n");
     get_text(str_to_insert);
 
-    int index = find_string()
+    int index = find_string(text, str_to_delete);
 
-    printf("%s\n", text);
+    printf("%i\n", index);
 
     return 0;
 }
