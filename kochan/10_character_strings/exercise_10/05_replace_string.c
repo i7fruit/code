@@ -73,9 +73,20 @@ int find_string(const char arr_0[], const char arr_1[])
             is_searching = false;
 
             if (!index_set)
+            {
                 index = i;
+                index_set = true;
+            }
 
             j++;
+        }
+
+        else
+        {
+            // Resets starting index of substring
+            j = 0;
+            is_searching = true;
+            index_set = false;
         }
     }
 }
