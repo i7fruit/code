@@ -13,6 +13,7 @@
 
 // Function prototypes
 void get_text(char arr[]);
+int find_string(const char arr_0[], const char arr_1[]);
 
 int main(void)
 {
@@ -31,6 +32,8 @@ int main(void)
 
     printf("Enter text to insert\n");
     get_text(str_to_insert);
+
+    int index = find_string()
 
     printf("%s\n", text);
 
@@ -89,4 +92,10 @@ int find_string(const char arr_0[], const char arr_1[])
             index_set = false;
         }
     }
+
+    if (index_set)
+        return index;
+
+    // Returns a negative value if substring not found
+    return -1;
 }
