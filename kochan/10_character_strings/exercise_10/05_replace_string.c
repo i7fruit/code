@@ -41,7 +41,7 @@ int main(void)
     return 0;
 }
 
-/***********************************************
+/**********************************************************************************************
  * The get_text() function uses the getchar() function
  * to get a string of text from the user and stores
  * it in an array using a do-while loop
@@ -59,7 +59,7 @@ void get_text(char arr[])
     arr[i] = '\0';
 }
 
-/*****************************************************
+/**********************************************************************************************
  * The replace_string() function replaces a string of
  * characters in an array with a new string of characters.
  */
@@ -74,7 +74,7 @@ void replace_string(char source[], char remove[], char insert[])
         remove_string(source, index, count);
 }
 
-/**************************************************
+/**********************************************************************************************
  * The find_string() function takes two arguments. One
  * array for a string of text, and the other array to
  * hold a string of text to find in the first array.
@@ -134,7 +134,7 @@ int find_string(const char arr_0[], const char arr_1[])
     return -1;
 }
 
-/***************************************************************************
+/**********************************************************************************************
  * The remove_string() function takes as arguments an array that stores a string
  * of text, and two integers that store values for the starting index of a string
  * to be extracted from the array, and the number of characters that string will contain.
@@ -163,7 +163,7 @@ void remove_string(char arr[], int index, int count)
     //    arr[i] = '\0';
 }
 
-/**********************************************
+/**********************************************************************************************
  * The insert_string() function uses a forloop
  * to insert one string of text into another
  */
