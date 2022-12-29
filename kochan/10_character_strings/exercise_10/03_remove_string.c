@@ -68,11 +68,19 @@ void remove_string(char arr[], int index, int count)
     int end = index + count;
     int i = index;
 
+    /**
+     * Traverses array from the starting index (i) of the substring
+     * to the end of the array (size). Continues as long as the array
+     * is traversible, and the end of the substring (end), is within
+     * the bounds of the array (size)
+     */
     for (; i < size && end < size; i++, end++)
     {
+        // Overwrites characters to be removed with characters following removed characters
         arr[i] = arr[end];
     }
 
+    // Terminates the rest of the array when the end of the substring is reached
     if (i < size)
         arr[i] = '\0';
 }
