@@ -173,10 +173,10 @@ void insert_string(char arr_0[], char arr_1[], int element)
      * Counts characters from the end of deleted characters
      * of the array to the end
      */
-    int count = 0, i = -1, j = 0;
+    int count = 0, i = element, j = 0;
     int max = 64;
 
-    while (arr_0[++i] != '\0')
+    while (arr_0[i++] != '\0')
         count++;
 
     // Store characters starting from insertion point into temporary array
