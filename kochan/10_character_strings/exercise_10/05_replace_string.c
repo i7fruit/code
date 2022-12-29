@@ -179,7 +179,7 @@ void insert_string(char arr_0[], char arr_1[], int element)
     while (arr_0[i++] != '\0')
         count++;
 
-    // Store characters starting from insertion point into temporary array
+    // Store characters after deleted characters into temporary array
     char temp[count];
     for (i = element; arr_0[i] != '\0'; i++, j++)
         temp[j] = arr_0[i];
