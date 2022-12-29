@@ -154,8 +154,8 @@ void remove_string(char arr[], int index, int count)
      */
     for (; i < size && end < size; i++, end++)
     {
-        // Overwrites characters to be removed with a null zero
-        arr[i] = '\0';
+        // Overwrites characters to be removed with a bang sign
+        arr[i] = '!';
     }
 
     //// Terminates the rest of the array when the end of the substring is reached
