@@ -67,8 +67,11 @@ void replace_string(char source[], char remove[], char insert[])
 {
     int index = find_string(source, remove);
 
+    // Number of characters to remove from source string
+    int count = strlen(remove);
+
     if (index > 0)
-        remove_string(source, remove, index);
+        remove_string(source, index, count);
 }
 
 /**************************************************
