@@ -66,6 +66,9 @@ void get_text(char arr[])
 void replace_string(char source[], char remove[], char insert[])
 {
     int index = find_string(source, remove);
+
+    if (index > 0)
+        remove_string(source, remove, index);
 }
 
 /**************************************************
