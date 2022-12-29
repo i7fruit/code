@@ -162,3 +162,33 @@ void remove_string(char arr[], int index, int count)
     //if (i < size)
     //    arr[i] = '\0';
 }
+
+/**********************************************
+ * The insert_string() function uses a forloop
+ * to insert one string of text into another
+ */
+void insert_string(char arr_0[], char arr_1[], int element)
+{
+    // Counts characters from insertion point to end of array
+    int count = 0, i = -1, j = 0;
+    int max = 64;
+
+    while (arr_0[++i] != '\0')
+        count++;
+
+    // Store characters starting from insertion point into temporary array
+    char temp[count];
+    for (i = element; arr_0[i] != '\0'; i++, j++)
+        temp[j] = arr_0[i];
+
+    // Inserts new string
+    for (i = element, j = 0; i != max && arr_1[j] != '\0'; i++, j++)
+        arr_0[i] = arr_1[j];
+
+    // Resets j
+    j = 0;
+
+    // Inserts rest of chars from temp array
+    for (; i != max; i++, j++)
+        arr_0[i] = temp[j];
+}
