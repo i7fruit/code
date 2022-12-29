@@ -15,6 +15,7 @@
 // Function prototypes
 void get_text(char arr[]);
 int find_string(const char arr_0[], const char arr_1[]);
+void remove_string(char arr[], int index, int count);
 
 int main(void)
 {
@@ -117,4 +118,25 @@ int find_string(const char arr_0[], const char arr_1[])
 
     // Returns a negative value if substring not found
     return -1;
+}
+
+/***************************************************************************
+ * The remove_string() function takes as arguments an array that stores a string
+ * of text, and two integers that store values for the starting index of a string
+ * to be extracted from the array, and the number of characters that string will contain.
+*/
+void remove_string(char arr[], int index, int count)
+{
+    // Computes length of string to extract from
+    int size = strlen(arr);
+    int end = index + count;
+    int i = index;
+
+    for (; i < size && end < size; i++, end++)
+    {
+        arr[i] = arr[end];
+    }
+
+    if (i < size)
+        arr[i] = '\0';
 }
