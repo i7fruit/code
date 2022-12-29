@@ -169,7 +169,10 @@ void remove_string(char arr[], int index, int count)
  */
 void insert_string(char arr_0[], char arr_1[], int element)
 {
-    // Counts characters from insertion point to end of array
+    /**
+     * Counts characters from the end of deleted characters
+     * of the array to the end
+     */
     int count = 0, i = -1, j = 0;
     int max = 64;
 
