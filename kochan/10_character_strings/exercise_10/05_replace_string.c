@@ -150,7 +150,7 @@ void remove_string(char arr[], int index, int count)
     for (; i < size && end < size; i++, end++)
     {
         // Overwrites characters to be removed with a null zero
-        arr[i] = '\0'; // arr[end];
+        arr[i] = '\0';
     }
 
     // Terminates the rest of the array when the end of the substring is reached
