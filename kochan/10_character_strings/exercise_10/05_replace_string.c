@@ -64,7 +64,10 @@ void get_text(char arr[])
  * The replace_string() function replaces a string of
  * characters in an array with a new string of characters.
  */
-void replace_string()
+void replace_string(char source[], char remove[], char insert[])
+{
+    int index = find_string(source, remove);
+}
 
 /**************************************************
  * The find_string() function takes two arguments. One
