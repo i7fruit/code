@@ -169,13 +169,11 @@ void remove_string(char arr[], int index, const int count)
  */
 void insert_string(char arr_0[], char arr_1[], int element)
 {
-
-
     /**
      * Counts characters from the end of deleted characters
      * of the array to the end
      */
-    int i = element, j = 0;
+    int i = element + delete_count, j = 0;
     int max = 64;
 
     while (arr_0[i++] != '\0')
