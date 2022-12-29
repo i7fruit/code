@@ -15,7 +15,7 @@
 // Function prototypes
 void get_text(char arr[]);
 int find_string(const char arr_0[], const char arr_1[]);
-void remove_string(char arr[], int index, int count);
+void remove_string(char arr[], int index, const int count);
 void replace_string(char source[], char remove[], char insert[]);
 
 int main(void)
@@ -139,7 +139,7 @@ int find_string(const char arr_0[], const char arr_1[])
  * of text, and two integers that store values for the starting index of a string
  * to be extracted from the array, and the number of characters that string will contain.
 */
-void remove_string(char arr[], int index, int count)
+void remove_string(char arr[], int index, const int count)
 {
     // Computes length of string to extract from
     int size = strlen(arr);
