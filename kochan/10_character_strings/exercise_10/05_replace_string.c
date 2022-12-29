@@ -16,6 +16,7 @@
 void get_text(char arr[]);
 int find_string(const char arr_0[], const char arr_1[]);
 void remove_string(char arr[], int index, int count);
+void replace_string(char source[], char remove[], char insert[]);
 
 int main(void)
 {
@@ -35,9 +36,7 @@ int main(void)
     printf("Enter text to insert\n");
     get_text(str_to_insert);
 
-    int index = find_string(text, str_to_delete);
-
-    printf("%i\n", index);
+    replace_string(text, str_to_delete, str_to_insert);
 
     return 0;
 }
