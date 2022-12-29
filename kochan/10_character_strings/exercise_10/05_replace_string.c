@@ -153,7 +153,7 @@ void remove_string(char arr[], int index, int count)
         arr[i] = '\0';
     }
 
-    // Terminates the rest of the array when the end of the substring is reached
-    if (i < size)
-        arr[i] = '\0';
+    //// Terminates the rest of the array when the end of the substring is reached
+    //if (i < size)
+    //    arr[i] = '\0';
 }
