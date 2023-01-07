@@ -78,7 +78,13 @@ void replace_string(char source[], char remove[], char insert[])
     int size = strlen(source);
     int i = index + delete_count;
 
-    if (i <)
+    char temp[size] = "";
+
+    if (i < size)
+    {
+        for (int j = 0; i < size; i++, j++)
+            temp[j] = source[i];
+    }
 
     insert_string(source, insert, index);
 }
