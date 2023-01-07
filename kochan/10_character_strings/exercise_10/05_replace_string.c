@@ -72,6 +72,8 @@ void replace_string(char source[], char remove[], char insert[])
 
     if (index > 0)
         remove_string(source, index, delete_count);
+
+    insert_string(source, insert, index);
 }
 
 /**********************************************************************************************
