@@ -75,7 +75,7 @@ void replace_string(char source[], char remove[], char insert[])
         remove_string(source, index, delete_count);
 
     // Saves characters after deleted characters in a temporary array
-    
+    int i = 
 
     insert_string(source, insert, index);
 }
