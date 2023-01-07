@@ -86,6 +86,7 @@ void replace_string(char source[], char remove[], char insert[])
             temp[j] = source[i];
     }
 
+    // Inserts substring into source array
     insert_string(source, insert, index);
 }
 
