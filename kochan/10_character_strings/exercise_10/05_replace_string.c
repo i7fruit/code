@@ -156,7 +156,7 @@ void remove_string(char arr[], int index, const int count)
      * is traversible, and the end of the substring (end), is within
      * the bounds of the array (size)
      */
-    for (; i < size && end < size; i++, end++)
+    for (; i < size; i++)
     {
         // Overwrites characters to be removed with a bang sign
         arr[i] = '!';
