@@ -71,7 +71,7 @@ void replace_string(char source[], char remove[], char insert[])
     const int delete_count = strlen(remove);
 
     // Removes characters from the source string
-    if (index > 0)
+    if (index >= 0)
         remove_string(source, index, delete_count);
 
     // Saves characters after deleted characters in a temporary array
