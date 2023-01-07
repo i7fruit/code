@@ -146,6 +146,8 @@ void remove_string(char arr[], int index, const int count)
     int end = (index + count) - 1;
     int i = index;
 
+    // Ends program if word to extract 
+
     /**
      * Traverses array from the starting index (i) of the substring
      * to the end of the array (size). Continues as long as the array
