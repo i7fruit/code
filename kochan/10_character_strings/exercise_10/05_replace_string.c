@@ -12,19 +12,21 @@
 #include <stdbool.h>
 #include <string.h>
 
+// Global variables
+const int SIZE = 64;
+
 // Function prototypes
 void get_text(char arr[]);
 int find_string(const char arr_0[], const char arr_1[]);
 void remove_string(char arr[], int index, const int count);
 void replace_string(char source[], char remove[], char insert[]);
+void insert_string(char arr_0[], char arr_1[], int element);
 
 int main(void)
 {
-    const int size = 64;
-
-    char text[size] = "";
-    char str_to_delete[size] = "";
-    char str_to_insert[size] = "";
+    char text[SIZE] = "";
+    char str_to_delete[SIZE] = "";
+    char str_to_insert[SIZE] = "";
 
     // Prompts the user for input
     printf("Enter a string of text\n");
@@ -65,6 +67,10 @@ void get_text(char arr[])
  */
 void replace_string(char source[], char remove[], char insert[])
 {
+    // Computes length of source string
+    int size = strlen(source);
+
+    // Computes starting index of string to remove
     int index = find_string(source, remove);
 
     // Number of characters to remove from source string
@@ -75,10 +81,9 @@ void replace_string(char source[], char remove[], char insert[])
         remove_string(source, index, delete_count);
 
     // Saves characters after deleted characters in a temporary array
-    int size = strlen(source);
     int i = index + delete_count;
 
-    char temp[size] = "";
+    char temp[SIZE];
 
     if (i < size)
     {
@@ -170,8 +175,8 @@ void remove_string(char arr[], int index, const int count)
      */
     for (; i < size && i <= end; i++)
     {
-        // Overwrites characters to be removed with a bang sign
-        arr[i] = '!';
+        // Overwrites characters to be removed with a null zero
+        arr[i] = '\0';
     }
 
     //// Terminates the rest of the array when the end of the substring is reached
@@ -189,7 +194,7 @@ void insert_string(char arr_0[], char arr_1[], int element)
      * Counts characters from the end of deleted characters
      * of the array to the end
      */
-    int i = element + delete_count, j = 0;
+    int i = element, j = 0, count = 0;
     int max = 64;
 
     while (arr_0[i++] != '\0')
