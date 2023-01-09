@@ -96,7 +96,8 @@ void replace_string(char source[], char remove[], char insert[])
     int temp_array_size = strlen(temp);
     int limit = insert_array_size + temp_array_size;
 
-    for (int j = insert_array_size; )
+    for (int i = insert_array_size, j = 0; i < limit; i++, j++)
+        insert[i] = temp[j]
 
     // Inserts substring into source array
     insert_string(source, insert, index);
