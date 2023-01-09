@@ -91,6 +91,9 @@ void replace_string(char source[], char remove[], char insert[])
             temp[j] = source[i];
     }
 
+    // Concatenates temp[] array to the insert[] array
+    
+
     // Inserts substring into source array
     insert_string(source, insert, index);
 }
