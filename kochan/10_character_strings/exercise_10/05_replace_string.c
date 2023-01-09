@@ -92,7 +92,11 @@ void replace_string(char source[], char remove[], char insert[])
     }
 
     // Concatenates temp[] array to the insert[] array
-    
+    int insert_array_size = strlen(insert);
+    int temp_array_size = strlen(temp);
+    int limit = insert_array_size + temp_array_size;
+
+    for (int j = insert_array_size; )
 
     // Inserts substring into source array
     insert_string(source, insert, index);
