@@ -97,7 +97,7 @@ void replace_string(char source[], char remove[], char insert[])
     int limit = insert_array_size + temp_array_size;
 
     int j = 0;
-    
+
     for (i = insert_array_size, j = 0; i < limit; i++, j++)
         insert[i] = temp[j];
 
@@ -207,16 +207,16 @@ void insert_string(char arr_0[], char arr_1[], int element)
     int i = element, j = 0, count = 0;
     int max = 64;
 
-    while (arr_0[i++] != '\0')
-        count++;
+    //while (arr_0[i++] != '\0')
+    //    count++;
 
-    // Store characters after deleted characters into temporary array
-    char temp[count];
-    for (i = element; arr_0[i] != '\0'; i++, j++)
-        temp[j] = arr_0[i];
+    //// Store characters after deleted characters into temporary array
+    //char temp[count];
+    //for (i = element; arr_0[i] != '\0'; i++, j++)
+    //    temp[j] = arr_0[i];
 
     // Inserts new string
-    for (i = element, j = 0; i != max && arr_1[j] != '\0'; i++, j++)
+    for (i, j = 0; i != max && arr_1[j] != '\0'; i++, j++)
         arr_0[i] = arr_1[j];
 
     // Resets j
