@@ -40,6 +40,8 @@ int main(void)
 
     replace_string(text, str_to_delete, str_to_insert);
 
+    printf("%s\n", text);
+
     return 0;
 }
 
