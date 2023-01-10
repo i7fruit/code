@@ -215,14 +215,20 @@ void insert_string(char arr_0[], char arr_1[], int element)
     //for (i = element; arr_0[i] != '\0'; i++, j++)
     //    temp[j] = arr_0[i];
 
+    // Computes size of string to insert
+    int size = strlen(arr_1);
+
     // Inserts new string
+    for (; i < size; i++, j++)
+        arr_0[i] = arr_1[j];
+
     for (i, j = 0; i != max && arr_1[j] != '\0'; i++, j++)
         arr_0[i] = arr_1[j];
 
     // Resets j
-    j = 0;
+    //j = 0;
 
-    // Inserts rest of chars from temp array
-    for (; i != max; i++, j++)
-        arr_0[i] = temp[j];
+    //// Inserts rest of chars from temp array
+    //for (; i != max; i++, j++)
+    //    arr_0[i] = temp[j];
 }
