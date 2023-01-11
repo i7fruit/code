@@ -190,10 +190,6 @@ void remove_string(char arr[], int index, const int count)
         // Overwrites characters to be removed with a null zero
         arr[i] = '\0';
     }
-
-    //// Terminates the rest of the array when the end of the substring is reached
-    //if (i < size)
-    //    arr[i] = '\0';
 }
 
 /**********************************************************************************************
@@ -209,28 +205,10 @@ void insert_string(char arr_0[], char arr_1[], int element)
     int i = element, j = 0, count = 0;
     int max = 64;
 
-    //while (arr_0[i++] != '\0')
-    //    count++;
-
-    //// Store characters after deleted characters into temporary array
-    //char temp[count];
-    //for (i = element; arr_0[i] != '\0'; i++, j++)
-    //    temp[j] = arr_0[i];
-
     // Computes size of string to insert
     int size = strlen(arr_1);
 
     // Inserts new string
     for (; j < size; i++, j++)
         arr_0[i] = arr_1[j];
-
-    //for (i, j = 0; i != max && arr_1[j] != '\0'; i++, j++)
-    //    arr_0[i] = arr_1[j];
-
-    // Resets j
-    //j = 0;
-
-    //// Inserts rest of chars from temp array
-    //for (; i != max; i++, j++)
-    //    arr_0[i] = temp[j];
 }
