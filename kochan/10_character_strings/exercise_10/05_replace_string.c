@@ -221,7 +221,7 @@ void insert_string(char arr_0[], char arr_1[], int element)
     int size = strlen(arr_1);
 
     // Inserts new string
-    for (; i < size; i++, j++)
+    for (; j < size; i++, j++)
         arr_0[i] = arr_1[j];
 
     //for (i, j = 0; i != max && arr_1[j] != '\0'; i++, j++)
