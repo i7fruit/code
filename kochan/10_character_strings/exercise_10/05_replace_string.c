@@ -186,17 +186,6 @@ void remove_string(char arr[], int index, const int count)
 {
     // Computes length of string to extract from
     int size = strlen(arr);
-
-    if (index < 0)
-    {
-        do
-        {
-            printf("Please chose index to insert replacement string: ");
-            scanf("%i", &index);
-        }
-        while (index < 0 || index >= size);
-    }
-
     int end = (index + count) - 1;
     int i = index;
 
