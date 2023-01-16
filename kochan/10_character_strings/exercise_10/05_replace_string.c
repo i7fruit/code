@@ -90,7 +90,17 @@ void replace_string(char source[], char remove[], char insert[])
     if (i < size)
     {
         for (int j = 0; i < size; i++, j++)
+        {
+            // Stores a character in the temp array...
             temp[j] = source[i];
+
+            /**
+             * ...then overwrites the position of that character
+             * in the source array, with a binary zero
+             */
+            source[i] = '\0';
+        }
+
     }
 
     // Concatenates temp[] array to the insert[] array
