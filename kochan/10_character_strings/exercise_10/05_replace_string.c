@@ -194,9 +194,9 @@ void remove_string(char arr[], int index, const int count)
             printf("Please chose index to insert replacement string: ");
             scanf("%i", &index);
         }
-        while (index >=0 && index < size);
+        while (index < 0 || index >= size);
     }
-    
+
     int end = (index + count) - 1;
     int i = index;
 
