@@ -78,9 +78,19 @@ void replace_string(char source[], char remove[], char insert[])
     // Number of characters to remove from source string
     const int delete_count = strlen(remove);
 
+    if (index < 0 && delete_count == 0)
+    {
+        do
+        {
+            printf("Please chose index to insert replacement string: ");
+            scanf("%i", &index);
+        }
+        while (index < 0 || index >= size);
+    }
+
     // Removes characters from the source string
-    //<--- remove comment if (index >= 0)
-    remove_string(source, index, delete_count);
+    if (index >= 0)
+        remove_string(source, index, delete_count);
 
     // Saves characters after deleted characters in a temporary array
     int i = index + delete_count;
