@@ -10,7 +10,7 @@
 
 #define FIFTEEN 15
 #define SIXTY 60
-#define SIZE 12
+#define SIZE 16
 
 // Structure definition
 struct entry
@@ -25,6 +25,7 @@ int main(void)
     const struct entry dictionary[SIZE] =
     {
         { "aardvark", "a burrowing African mammal" },
+        { "ubuntu", "a quality that includes the essential human virtues"},
         { "abyss", "a bottomless pit" },
         { "turquoise", "a greenish-blue color"},
         { "acumen", "mentally sharp; keen" },
@@ -40,4 +41,6 @@ int main(void)
         { "ecotage", "sabotage carried out for ecological reasons"},
         { "cagey", "reluctant to give information owing to caution or suspicion"}
     };
+
+    
 }
