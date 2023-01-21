@@ -42,5 +42,6 @@ int main(void)
         { "cagey", "reluctant to give information owing to caution or suspicion"}
     };
 
-    
+    // Sorts the dictionary in ascending order
+    dictionary_sort(dictionary, SIZE)
 }
