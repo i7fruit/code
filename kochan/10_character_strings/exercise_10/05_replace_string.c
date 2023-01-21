@@ -66,7 +66,6 @@ void get_text(char arr[])
 /**********************************************************************************************
  * The replace_string() function replaces a string of
  * characters in an array with a new string of characters.
- * If the user doesn't provide a string to extract, th
  */
 void replace_string(char source[], char remove[], char insert[])
 {
