@@ -37,6 +37,7 @@ int main(void)
         { "ahoy", "a nautical call of greeting" },
         { "aigrette", "an ornamental cluster of feathers" },
         { "ajar", "partially opened" },
+        { "ecotage", "sabotage carried out for ecological reasons"},
         { "cagey", "reluctant to give information owing to caution or suspicion"}
     };
 }
