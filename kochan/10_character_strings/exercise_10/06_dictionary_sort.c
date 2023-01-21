@@ -4,7 +4,8 @@
  * Saturday, January 21, 2023 17:56hrs
  *
  * This program uses bubble sort to sort
- * a dictionary in ascending order.
+ * a dictionary in ascending or descending
+ * order.
 */
 #include <stdio.h>
 
@@ -42,6 +43,19 @@ int main(void)
         { "cagey", "reluctant to give information owing to caution or suspicion"}
     };
 
+    // Prompts the user for an order to sort by
+    char order = get_order();
+
     // Sorts the dictionary in ascending order
-    dictionary_sort(dictionary, SIZE)
+    // dictionary_sort(dictionary, SIZE, order);
+}
+
+/***************************************************************************
+ * The get_order() function prompts the user to key in a character a or d
+ * to indicate if they want the dictionary sorted in ascending or descending
+ * order.
+*/
+char get_order(void)
+{
+    
 }
