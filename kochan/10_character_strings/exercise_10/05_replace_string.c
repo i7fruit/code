@@ -78,6 +78,11 @@ void replace_string(char source[], char remove[], char insert[])
     // Number of characters to remove from source string
     const int delete_count = strlen(remove);
 
+    /**
+     * If the user didn't provide a string to extract, the program
+     * asks for index to insert string to insert, if insert string
+     * is provided.
+    */
     if (index < 0 && delete_count == 0)
     {
         do
@@ -95,6 +100,7 @@ void replace_string(char source[], char remove[], char insert[])
     // Saves characters after deleted characters in a temporary array
     int i = index + delete_count;
 
+    // Temporary array to store chars after last index of extracted text
     char temp[SIZE];
 
     if (i < size)
