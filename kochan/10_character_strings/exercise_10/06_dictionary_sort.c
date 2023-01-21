@@ -63,5 +63,5 @@ char get_order(void)
     {
         order = getchar();
     }
-    while (order != )
+    while (order != 'a' )
 }
