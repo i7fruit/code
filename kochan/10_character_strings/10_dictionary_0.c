@@ -12,11 +12,14 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+#define W_SIZE 15
+#define D_SIZE 60
+
 // Structure definition
 struct entry
 {
-    char word[15];
-    char definition[60];
+    char word[W_SIZE];
+    char definition[D_SIZE];
 };
 
 // Function prototypes
@@ -46,7 +49,7 @@ int main(void)
     };
 
     // Stores the word to search for
-    char search_item[15];
+    char search_item[W_SIZE];
 
     // Prompts user for word to search for
     printf("Word: ");
