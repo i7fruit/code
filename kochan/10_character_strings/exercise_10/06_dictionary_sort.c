@@ -57,5 +57,11 @@ int main(void)
 */
 char get_order(void)
 {
-    
+    char order = "";
+
+    do
+    {
+        order = getchar();
+    }
+    while (order != )
 }
