@@ -9,7 +9,7 @@
 #include <stdio.h>
 
 #define FIFTEEN 15
-#define 
+#define SIXTY
 
 // Structure definition
 struct entry
