@@ -26,6 +26,7 @@ int main(void)
     {
         { "aardvark", "a burrowing African mammal" },
         { "abyss", "a bottomless pit" },
+        { "turquoise", "a greenish-blue color"},
         { "acumen", "mentally sharp; keen" },
         { "babydoll", "a doll designed to look like a baby"},
         { "addle", "to become confused" },
