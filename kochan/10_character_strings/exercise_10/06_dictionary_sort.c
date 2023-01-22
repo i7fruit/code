@@ -63,13 +63,13 @@ int main(void)
 */
 char get_order(void)
 {
-    char order = "";
+    char order = ' ';
 
     do
     {
         order = getchar();
     }
-    while (order != 'a' && order != 'A') || (order != 'd' && order != 'D');
+    while ((order != 'a' && order != 'A') || (order != 'd' && order != 'D'));
 
     return order;
 }
