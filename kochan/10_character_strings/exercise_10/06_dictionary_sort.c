@@ -20,6 +20,9 @@ struct entry
     char definition[SIXTY];
 };
 
+// Function prototypes
+char get_order(void);
+
 int main(void)
 {
     // Declares an array of struct entry structure variables
@@ -44,7 +47,10 @@ int main(void)
     };
 
     // Prompts the user for an order to sort by
+    printf("Sort in ascending or descending order a/d?: ");
     char order = get_order();
+
+    printf("%c\n", order);
 
     // Sorts the dictionary in ascending order
     // dictionary_sort(dictionary, SIZE, order);
@@ -63,5 +69,7 @@ char get_order(void)
     {
         order = getchar();
     }
-    while (order != 'a' )
+    while (order != 'a' && order != 'A') || (order != 'd' && order != 'D');
+
+    return order;
 }
