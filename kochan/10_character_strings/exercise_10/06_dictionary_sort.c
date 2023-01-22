@@ -80,27 +80,50 @@ char get_order(void)
 void dictionary_sort(const struct entry arr[], int size, char order)
 {
     if (order == 'a' || order == 'A')
+    {
         printf("Sorting in ascending order...\n");
 
-    else
-        printf("Sorting in descending order...\n");
+        int counter = -1;
 
-    int counter = -1;
-
-    do
-    {
-        counter = 0;
-
-        for (int i = 0, j = 1; i < (size - 1); i++, j++)
+        do
         {
-            if (compare_string(arr[i], arr[j]) == 1)
-            {
-                // Swap elements
+            counter = 0;
 
-                // Increment counter
-                counter++;
+            for (int i = 0, j = 1; i < (size - 1); i++, j++)
+            {
+                if (compare_string(arr[i], arr[j]) == 1)
+                {
+                    // Swap elements
+
+                    // Increment counter
+                    counter++;
+                }
             }
         }
+        while (counter != 0);
     }
-    while (counter != 0);
+
+    else
+    {
+        printf("Sorting in descending order...\n");
+
+        int counter = -1;
+
+        do
+        {
+            counter = 0;
+
+            for (int i = 0, j = 1; i < (size - 1); i++, j++)
+            {
+                if (compare_string(arr[i], arr[j]) == -1)
+                {
+                    // Swap elements
+
+                    // Increment counter
+                    counter++;
+                }
+            }
+        }
+        while (counter != 0);
+    }
 }
