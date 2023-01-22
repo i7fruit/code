@@ -91,7 +91,7 @@ void dictionary_sort(const struct entry arr[], int size, char order)
     {
         counter = 0;
 
-        for (int i = 0; i < (size - 1); i++)
+        for (int i = 0, j = 1; i < (size - 1); i++, j++)
         {
             
         }
