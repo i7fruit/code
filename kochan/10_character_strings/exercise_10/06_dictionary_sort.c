@@ -69,7 +69,7 @@ char get_order(void)
     {
         order = getchar();
     }
-    while ((order != 'a' && order != 'A') || (order != 'd' && order != 'D'));
+    while ((order != 'a' && order != 'A') && (order != 'd' && order != 'D'));
 
     return order;
 }
