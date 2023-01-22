@@ -51,7 +51,18 @@ int main(void)
     char order = get_order();
 
     // Sorts the dictionary in order
-    dictionary_sort(dictionary, SIZE, order);
+    if (order == 'a' || order == 'A')
+    {
+        printf("Sorting in ascending order...\n");
+        dictionary_sort(dictionary, SIZE, order);
+    }
+
+    else
+    {
+        printf("Sorting in descending order...\n");
+        dictionary_sort(dictionary, SIZE, order);
+    }
+
 }
 
 /***************************************************************************
