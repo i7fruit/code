@@ -37,7 +37,7 @@ int main(void)
         { "addle", "to become confused" },
         { "aerie", "a high nest" },
         { "affix", "to append; attach" },
-        { "eatery", "a restaurant or other place where people can be served food"};
+        { "eatery", "a restaurant or other place where people can be served food"},
         { "agar", "a jelly made from seaweed" },
         { "ahoy", "a nautical call of greeting" },
         { "aigrette", "an ornamental cluster of feathers" },
