@@ -51,17 +51,7 @@ int main(void)
     char order = get_order();
 
     // Sorts the dictionary in order
-    if (order == 'a' || order == 'A')
-    {
-        printf("Sorting in ascending order...\n");
-        dictionary_sort(dictionary, SIZE, order);
-    }
-
-    else
-    {
-        printf("Sorting in descending order...\n");
-        dictionary_sort(dictionary, SIZE, order);
-    }
+    dictionary_sort(dictionary, SIZE, order);
 
 }
 
@@ -81,4 +71,24 @@ char get_order(void)
     while ((order != 'a' && order != 'A') && (order != 'd' && order != 'D'));
 
     return order;
+}
+
+/*************************************************************************
+ * The dictionary_sort() function sorts a dictionary in ascending or
+ * descending order
+*/
+void dictionary_sort(const struct entry arr[], int size, char order)
+{
+    if (order == 'a' || order == 'A')
+        printf("Sorting in ascending order...\n");
+
+    else
+        printf("Sorting in descending order...\n");
+
+    int counter = -1;
+
+    do
+    {
+        counter = 0;
+    }
 }
