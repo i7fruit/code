@@ -93,7 +93,13 @@ void dictionary_sort(const struct entry arr[], int size, char order)
 
         for (int i = 0, j = 1; i < (size - 1); i++, j++)
         {
-            
+            if (compare_string(arr[i], arr[j]) == 1)
+            {
+                // Swap elements
+
+                // Increment counter
+                counter++;
+            }
         }
     }
 }
