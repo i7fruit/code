@@ -50,10 +50,8 @@ int main(void)
     printf("Sort in ascending or descending order a/d?: ");
     char order = get_order();
 
-    printf("%c\n", order);
-
-    // Sorts the dictionary in ascending order
-    // dictionary_sort(dictionary, SIZE, order);
+    // Sorts the dictionary in order
+    dictionary_sort(dictionary, SIZE, order);
 }
 
 /***************************************************************************
