@@ -104,8 +104,12 @@ void dictionary_sort(struct entry arr[], int size, char order)
                      * Swaps the elements
                     */
                    // Stores arr[i].word in a temporary array
-                    for (int k = 0; arr[i].word[k] != '\0'; k++)
+                   int k = 0;
+                    for (; arr[i].word[k] != '\0'; k++)
                         temp[k] = arr[i].word[k];
+
+                    // Terminates string in temp array
+                    temp[k] = '\0';
 
                     // Stores arr[j].word in arr[i].word
                     for (int k = 0; arr[j].word[k] != '\0'; k++)
