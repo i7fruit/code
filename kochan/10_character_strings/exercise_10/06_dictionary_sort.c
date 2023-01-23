@@ -131,4 +131,18 @@ void dictionary_sort(const struct entry arr[], int size, char order)
 /*****************************************************
  * compare_strings()
  */
-int compare_strings()
+int compare_strings(char arr0[], char arr1[])
+{
+    int i = 0;
+
+    while (arr0[i] == arr1[] && arr0[] != '\0')
+        i++;
+
+    if (arr0[] < arr1[])
+        return -1;
+
+    else if (arr0[] > arr1[])
+        return 1;
+
+    return 0;
+}
