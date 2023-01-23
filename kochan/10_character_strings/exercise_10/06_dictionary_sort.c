@@ -23,12 +23,12 @@ struct entry
 // Function prototypes
 char get_order(void);
 int compare_strings(char arr0[], char arr1[]);
-void dictionary_sort(const struct entry arr[], int size, char order);
+void dictionary_sort(struct entry arr[], int size, char order);
 
 int main(void)
 {
     // Declares an array of struct entry structure variables
-    const struct entry dictionary[SIZE] =
+    struct entry dictionary[SIZE] =
     {
         { "aardvark", "a burrowing African mammal" },
         { "ubuntu", "a quality that includes the essential human virtues"},
@@ -79,7 +79,7 @@ char get_order(void)
  * The dictionary_sort() function sorts a dictionary in ascending or
  * descending order
 */
-void dictionary_sort(const struct entry arr[], int size, char order)
+void dictionary_sort(struct entry arr[], int size, char order)
 {
     // Temporary storage struct entry variable
     char temp[FIFTEEN];
@@ -123,26 +123,26 @@ void dictionary_sort(const struct entry arr[], int size, char order)
 
     else
     {
-        printf("Sorting in descending order...\n");
+        //printf("Sorting in descending order...\n");
 
-        int counter = -1;
+        //int counter = -1;
 
-        do
-        {
-            counter = 0;
+        //do
+        //{
+        //    counter = 0;
 
-            for (int i = 0, j = 1; i < (size - 1); i++, j++)
-            {
-                if (compare_string(arr[i], arr[j]) == -1)
-                {
-                    // Swap elements
+        //    for (int i = 0, j = 1; i < (size - 1); i++, j++)
+        //    {
+        //        if (compare_strings(arr[i].word, arr[j]) == -1)
+        //        {
+        //            // Swap elements
 
-                    // Increment counter
-                    counter++;
-                }
-            }
-        }
-        while (counter != 0);
+        //            // Increment counter
+        //            counter++;
+        //        }
+        //    }
+        //}
+        //while (counter != 0);
     }
 }
 
