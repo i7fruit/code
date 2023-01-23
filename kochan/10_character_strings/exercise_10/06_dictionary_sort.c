@@ -81,7 +81,7 @@ char get_order(void)
 void dictionary_sort(const struct entry arr[], int size, char order)
 {
     // Temporary storage struct entry variable
-    struct entry temp;
+    char temp[FIFTEEN];
 
     if (order == 'a' || order == 'A')
     {
@@ -95,7 +95,7 @@ void dictionary_sort(const struct entry arr[], int size, char order)
 
             for (int i = 0, j = 1; i < (size - 1); i++, j++)
             {
-                if (compare_string(arr[i], arr[j]) == 1)
+                if (compare_string(arr[i].word, arr[j].word) == 1)
                 {
                     /**
                      * Swaps the elements
