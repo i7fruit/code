@@ -55,6 +55,8 @@ int main(void)
     // Sorts the dictionary in order
     dictionary_sort(dictionary, SIZE, order);
 
+    printf("%s\n", dictionary[1].word);
+
 }
 
 /***************************************************************************
