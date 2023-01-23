@@ -22,7 +22,7 @@ struct entry
 
 // Function prototypes
 char get_order(void);
-int compare_strings(const char arr0[], const char arr1[]);
+int compare_strings(char arr0[], char arr1[]);
 void dictionary_sort(const struct entry arr[], int size, char order);
 
 int main(void)
@@ -149,7 +149,7 @@ void dictionary_sort(const struct entry arr[], int size, char order)
 /*****************************************************
  * compare_strings()
  */
-int compare_strings(const char arr0[], const char arr1[])
+int compare_strings(char arr0[], char arr1[])
 {
     int i = 0;
 
