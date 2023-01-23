@@ -80,6 +80,9 @@ char get_order(void)
 */
 void dictionary_sort(const struct entry arr[], int size, char order)
 {
+    // Temporary storage struct entry variable
+    struct entry temp;
+
     if (order == 'a' || order == 'A')
     {
         printf("Sorting in ascending order...\n");
@@ -94,8 +97,11 @@ void dictionary_sort(const struct entry arr[], int size, char order)
             {
                 if (compare_string(arr[i], arr[j]) == 1)
                 {
-                    // Swap elements
-                    
+                    /**
+                     * Swaps the elements
+                    */
+                   // Stores arr0[] in a temporary struct entry
+                    for (int i = 0; arr[i] != '\0'; i++)
 
                     // Increment counter
                     counter++;
