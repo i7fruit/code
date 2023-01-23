@@ -127,3 +127,8 @@ void dictionary_sort(const struct entry arr[], int size, char order)
         while (counter != 0);
     }
 }
+
+/*****************************************************
+ * compare_strings()
+ */
+int compare_strings()
