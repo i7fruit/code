@@ -157,7 +157,7 @@ int compare_strings(char arr0[], char arr1[])
      * Iterates through each string while characters in
      * corresponding elements are the same
     */
-    while (arr0[i] == arr1[] && arr0[] != '\0')
+    while (arr0[i] == arr1[i] && arr0[i] != '\0')
         i++;
 
     /**
@@ -165,7 +165,7 @@ int compare_strings(char arr0[], char arr1[])
      * comes before character in second array
      * alphabetically
      */
-    if (arr0[] < arr1[])
+    if (arr0[i] < arr1[i])
         return -1;
 
     /**
@@ -173,7 +173,7 @@ int compare_strings(char arr0[], char arr1[])
      * comes after character in second array
      * alphabetically
      */
-    else if (arr0[] > arr1[])
+    else if (arr0[i] > arr1[i])
         return 1;
 
     // Returns 0 if both characters are equal
