@@ -112,11 +112,11 @@ void dictionary_sort(struct entry arr[], int size, char order)
                     temp[k] = '\0';
 
                     // Stores arr[j].word in arr[i].word
-                    for (int k = 0; arr[j].word[k] != '\0'; k++)
+                    for (k = 0; arr[j].word[k] != '\0'; k++)
                         arr[i].word[k] = arr[j].word[k];
 
                     // Stores contents of the temp array into arr[j].word
-                    for (int k = 0; temp[k] != '\0'; k++)
+                    for (k = 0; temp[k] != '\0'; k++)
                         arr[j].word[k] = temp[k];
 
                     // Increment counter
