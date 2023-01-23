@@ -22,6 +22,7 @@ struct entry
 
 // Function prototypes
 char get_order(void);
+int compare_strings(const char arr0[], const char arr1[]);
 
 int main(void)
 {
@@ -131,18 +132,33 @@ void dictionary_sort(const struct entry arr[], int size, char order)
 /*****************************************************
  * compare_strings()
  */
-int compare_strings(char arr0[], char arr1[])
+int compare_strings(const char arr0[], const char arr1[])
 {
     int i = 0;
 
+    /**
+     * Iterates through each string while characters in
+     * corresponding elements are the same
+    */
     while (arr0[i] == arr1[] && arr0[] != '\0')
         i++;
 
+    /**
+     * Returns -1 if character in first array
+     * comes before character in second array
+     * alphabetically
+     */
     if (arr0[] < arr1[])
         return -1;
 
+    /**
+     * Returns 1 if character in first array
+     * comes after character in second array
+     * alphabetically
+     */
     else if (arr0[] > arr1[])
         return 1;
 
+    // Returns 0 if both characters are equal
     return 0;
 }
