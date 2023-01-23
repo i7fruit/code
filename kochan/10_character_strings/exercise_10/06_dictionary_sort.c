@@ -96,14 +96,14 @@ void dictionary_sort(const struct entry arr[], int size, char order)
 
             for (int i = 0, j = 1; i < (size - 1); i++, j++)
             {
-                if (compare_strings(arr0[i].word, arr1[j].word) == 1)
+                if (compare_strings(arr[i].word, arr[j].word) == 1)
                 {
                     /**
                      * Swaps the elements
                     */
                    // Stores arr0[].word in a temporary array
-                    for (int k = 0; arr0[i].word[k] != '\0'; k++)
-                        temp[k] = arr0[i].work[k];
+                    for (int k = 0; arr[i].word[k] != '\0'; k++)
+                        temp[k] = arr[i].work[k];
 
                     // Stores arr1[].word in arr0[].word
                     for (int k = 0; arr1[i].word[k] != '\0'; k++)
