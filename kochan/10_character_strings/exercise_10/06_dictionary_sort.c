@@ -23,6 +23,7 @@ struct entry
 // Function prototypes
 char get_order(void);
 int compare_strings(const char arr0[], const char arr1[]);
+void dictionary_sort(const struct entry arr[], int size, char order);
 
 int main(void)
 {
@@ -95,7 +96,7 @@ void dictionary_sort(const struct entry arr[], int size, char order)
 
             for (int i = 0, j = 1; i < (size - 1); i++, j++)
             {
-                if (compare_string(arr[i].word, arr[j].word) == 1)
+                if (compare_strings(arr[i].word, arr[j].word) == 1)
                 {
                     /**
                      * Swaps the elements
