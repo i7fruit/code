@@ -96,7 +96,7 @@ void dictionary_sort(const struct entry arr[], int size, char order)
 
             for (int i = 0, j = 1; i < (size - 1); i++, j++)
             {
-                if (compare_strings(arr[i].word, arr[j].word) == 1)
+                if (compare_strings(arr0[i].word, arr1[j].word) == 1)
                 {
                     /**
                      * Swaps the elements
