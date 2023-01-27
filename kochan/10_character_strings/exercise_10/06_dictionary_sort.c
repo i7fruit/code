@@ -11,7 +11,7 @@
 
 #define FIFTEEN 15
 #define SIXTY 60
-#define SIZE 16
+#define SIZE 17
 
 // Structure definition
 struct entry
@@ -30,6 +30,7 @@ int main(void)
     // Declares an array of struct entry structure variables
     struct entry dictionary[SIZE] =
     {
+        { "zucchini", "a green variety of smooth-skinned summer squash"},
         { "aardvark", "a burrowing African mammal" },
         { "ubuntu", "a quality that includes the essential human virtues"},
         { "abyss", "a bottomless pit" },
@@ -55,7 +56,9 @@ int main(void)
     // Sorts the dictionary in order
     dictionary_sort(dictionary, SIZE, order);
 
-    printf("%s\n", dictionary[1].word);
+    // Prints the sorted dictionary
+    for (int i = 0; i < SIZE; i++)
+        printf("%s\n", dictionary[i].word);
 
 }
 
@@ -115,9 +118,13 @@ void dictionary_sort(struct entry arr[], int size, char order)
                     for (k = 0; arr[j].word[k] != '\0'; k++)
                         arr[i].word[k] = arr[j].word[k];
 
+                    arr[i].word[k] = '\0';
+
                     // Stores contents of the temp array into arr[j].word
                     for (k = 0; temp[k] != '\0'; k++)
                         arr[j].word[k] = temp[k];
+
+                    arr[j].word[k] = '\0';
 
                     // Increment counter
                     counter++;
@@ -129,26 +136,47 @@ void dictionary_sort(struct entry arr[], int size, char order)
 
     else
     {
-        //printf("Sorting in descending order...\n");
+        printf("Sorting in descending order...\n");
 
-        //int counter = -1;
+        int counter = -1;
 
-        //do
-        //{
-        //    counter = 0;
+        do
+        {
+            counter = 0;
 
-        //    for (int i = 0, j = 1; i < (size - 1); i++, j++)
-        //    {
-        //        if (compare_strings(arr[i].word, arr[j]) == -1)
-        //        {
-        //            // Swap elements
+            for (int i = 0, j = 1; i < (size - 1); i++, j++)
+            {
+                if (compare_strings(arr[i].word, arr[j].word) == -1)
+                {
+                    /**
+                     * Swaps the elements
+                    */
+                   // Stores arr[i].word in a temporary array
+                   int k = 0;
+                    for (; arr[i].word[k] != '\0'; k++)
+                        temp[k] = arr[i].word[k];
 
-        //            // Increment counter
-        //            counter++;
-        //        }
-        //    }
-        //}
-        //while (counter != 0);
+                    // Terminates string in temp array
+                    temp[k] = '\0';
+
+                    // Stores arr[j].word in arr[i].word
+                    for (k = 0; arr[j].word[k] != '\0'; k++)
+                        arr[i].word[k] = arr[j].word[k];
+
+                    arr[i].word[k] = '\0';
+
+                    // Stores contents of the temp array into arr[j].word
+                    for (k = 0; temp[k] != '\0'; k++)
+                        arr[j].word[k] = temp[k];
+
+                    arr[j].word[k] = '\0';
+
+                    // Increment counter
+                    counter++;
+                }
+            }
+        }
+        while (counter != 0);
     }
 }
 
