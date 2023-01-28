@@ -24,7 +24,7 @@ int main(void)
 
     //int integer = string_to_int(digits);
 
-    //printf("%i\n", integer);
+    printf("%s\n", digits);
 
     return 0;
 }
@@ -36,13 +36,15 @@ int main(void)
  */
 void get_digits(char arr[])
 {
-    int i = 0;
+    int i = -1;
 
     do
     {
-        arr[i] = getchar();
+        arr[++i] = getchar();
     }
-    while (arr[i])
+    while ((arr[i] < '0' || arr[i] > '9') && (arr[i] != '-') && (arr[i] != '.'));
+
+    arr[i] = '\0';
 }
 
 /********************************************
