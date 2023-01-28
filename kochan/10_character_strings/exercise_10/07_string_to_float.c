@@ -31,12 +31,18 @@ int main(void)
 
 /********************************************
  * The get_digits() function prompts the
- * user for characters digits '0' through '9'
+ * user for character digits '0' through '9',
+ * and/or symbols '-' and, '.'
  */
 void get_digits(char arr[])
 {
-    // User is limited to 63 characters
-    scanf("%63s", arr);
+    int i = 0;
+
+    do
+    {
+        arr[i] = getchar();
+    }
+    while (arr[i])
 }
 
 /********************************************
