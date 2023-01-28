@@ -92,6 +92,8 @@ float string_to_float(char arr[])
 
     // Sets decimal point
     converted /= set_decimal_point;
+    set_decimal_point /= 10;
+    converted *= 10;
 
     if (is_negative)
         return -converted;
