@@ -67,8 +67,11 @@ int string_to_float(char arr[])
     for (; arr[i] != '\0'; i++)
     {
         if (arr[i] == '.' && found_decimal)
-            i--; continue;
-            
+        {
+            i--;
+            continue;
+        }
+
         else if (arr[i] == '.' && !found_decimal)
         {
             found_decimal = 1;
@@ -86,6 +89,9 @@ int string_to_float(char arr[])
 
     if (!found_digit)
         printf("No valid digit found.\n");
+
+    // Sets decimal point
+    converted /= set_decimal_point;
 
     if (is_negative)
         return -converted;
