@@ -91,12 +91,13 @@ float string_to_float(char arr[])
         printf("No valid digit found.\n");
 
     // Sets decimal point
-    if (found_decimal)
-    {
-        converted /= set_decimal_point;
-        set_decimal_point /= 10;
-        converted *= 10;
-    }
+    converted /= set_decimal_point;
+    //if (found_decimal)
+    //{
+    //    converted /= set_decimal_point;
+    //    set_decimal_point /= 10;
+    //    converted *= 10;
+    //}
     //else
     //{
     //    converted /= set_decimal_point;
