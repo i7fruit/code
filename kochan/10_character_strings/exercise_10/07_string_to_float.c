@@ -25,7 +25,7 @@ int main(void)
 
     float real_number = string_to_float(digits);
 
-    printf("%s\n", digits);
+    printf("%f\n", real_number);
 
     return 0;
 }
@@ -97,12 +97,12 @@ float string_to_float(char arr[])
         set_decimal_point /= 10;
         converted *= 10;
     }
-    else
-    {
-        converted /= set_decimal_point;
-        set_decimal_point /= 10;
-        converted *= 10;
-    }
+    //else
+    //{
+    //    converted /= set_decimal_point;
+    //    set_decimal_point /= 10;
+    //    converted *= 10;
+    //}
 
     if (is_negative)
         return -converted;
