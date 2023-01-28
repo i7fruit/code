@@ -12,7 +12,7 @@
 
 // Function prototypes
 void get_digits(char arr[]);
-int string_to_float(char arr[]);
+float string_to_float(char arr[]);
 
 int main(void)
 {
@@ -23,7 +23,7 @@ int main(void)
     printf("Enter numeric characters: ");
     get_digits(digits);
 
-    int real_number = string_to_float(digits);
+    float real_number = string_to_float(digits);
 
     printf("%s\n", digits);
 
@@ -47,14 +47,14 @@ void get_digits(char arr[])
  * the ascii character '0' from each digit) to
  * give its integer equivalent.
  */
-int string_to_float(char arr[])
+float string_to_float(char arr[])
 {
-    int converted = 0, i = 0;
+    float converted = 0;
     char zero = '0';
     _Bool is_negative = 0;
     _Bool found_digit = 0;
     _Bool found_decimal = 0;
-    int set_decimal_point = 1;
+    int set_decimal_point = 1, i = 0;
 
     // For negative numbers
     if (arr[0] == '-')
