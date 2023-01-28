@@ -49,12 +49,12 @@ void get_digits(char arr[])
  */
 float string_to_float(char arr[])
 {
-    float converted = 0;
+    float converted = 0, set_decimal_point = 1.0;
     char zero = '0';
     _Bool is_negative = 0;
     _Bool found_digit = 0;
     _Bool found_decimal = 0;
-    int set_decimal_point = 1, i = 0;
+    int i = 0;
 
     // For negative numbers
     if (arr[0] == '-')
@@ -91,11 +91,7 @@ float string_to_float(char arr[])
         printf("No valid digit found.\n");
 
     // Sets decimal point
-    if (!found_decimal)
-        converted *= 1.0;
-
-    else
-        converted /= set_decimal_point;
+    converted /= set_decimal_point;
 
     if (is_negative)
         return -converted;
