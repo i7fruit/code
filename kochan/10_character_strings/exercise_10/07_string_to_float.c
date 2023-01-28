@@ -36,15 +36,8 @@ int main(void)
  */
 void get_digits(char arr[])
 {
-    int i = -1;
-
-    do
-    {
-        arr[++i] = getchar();
-    }
-    while ((arr[i] < '0' || arr[i] > '9') && (arr[i] != '-') && (arr[i] != '.'));
-
-    arr[i] = '\0';
+    // User is limited to 63 characters
+    scanf("%63s", arr);
 }
 
 /********************************************
