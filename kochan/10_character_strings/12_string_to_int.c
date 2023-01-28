@@ -31,7 +31,7 @@ int main(void)
 
 /********************************************
  * The get_digits() function promts the
- * user for characters digits '0' through '9'
+ * user for characters.
  */
 void get_digits(char arr[])
 {
