@@ -91,6 +91,7 @@ float string_to_float(char arr[])
         printf("No valid digit found.\n");
 
     // Sets decimal point
+    if
     converted /= set_decimal_point;
 
     if (is_negative)
