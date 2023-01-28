@@ -54,7 +54,7 @@ int string_to_float(char arr[])
     _Bool is_negative = 0;
     _Bool found_digit = 0;
     _Bool found_decimal = 0;
-    int exponent = 1;
+    int set_decimal_point = 1;
 
     // For negative numbers
     if (arr[0] == '-')
@@ -68,11 +68,13 @@ int string_to_float(char arr[])
     {
         if (arr[i] == '.' && found_decimal)
             i--; continue;
+            
         else if (arr[i] == '.' && !found_decimal)
         {
             found_decimal = 1;
-            set = pow(10, i);
+            set_decimal_point = pow(10, i);
         }
+
         if (isdigit(arr[i]))
         {
             found_digit = 1;
