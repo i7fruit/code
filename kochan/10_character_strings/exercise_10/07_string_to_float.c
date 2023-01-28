@@ -8,6 +8,7 @@
  */
 #include <stdio.h>
 #include <ctype.h>
+#include <math.h>
 
 // Function prototypes
 void get_digits(char arr[]);
@@ -70,7 +71,7 @@ int string_to_float(char arr[])
         else if (arr[i] == '.' && !found_decimal)
         {
             found_decimal = 1;
-
+            set = pow(10, i);
         }
         if (isdigit(arr[i]))
         {
