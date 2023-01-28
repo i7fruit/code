@@ -64,6 +64,10 @@ int string_to_float(char arr[])
 
     for (; arr[i] != '\0'; i++)
     {
+        if (found_decimal)
+        {
+            
+        }
         if (isdigit(arr[i]))
         {
             found_digit = 1;
