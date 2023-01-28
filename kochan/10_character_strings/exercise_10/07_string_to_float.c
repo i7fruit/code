@@ -52,6 +52,7 @@ int string_to_float(char arr[])
     char zero = '0';
     _Bool is_negative = 0;
     _Bool found_digit = 0;
+    _Bool found_decimal = 0;
 
     // For negative numbers
     if (arr[0] == '-')
