@@ -90,7 +90,7 @@ float string_to_float(char arr[])
                 count++;
             }
 
-            else
+            if (count >= decimal_marker)
             {
                 static float multiplier = 0.1;
                 found_digit = 1;
