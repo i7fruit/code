@@ -100,6 +100,10 @@ double string_to_float(char arr[])
     // Sets decimal point
     int mark = count - decimal_marker; // Determines the power of ten to compute divisor
 
+    // Accounts for negative sign
+    if (is_negative)
+        mark += 1;
+
     set_decimal_point = pow(10, mark); // Computes value to divide converted value by, to get proper floating-point value
 
     converted /= set_decimal_point; // Computes floating-point value
