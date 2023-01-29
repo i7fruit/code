@@ -95,10 +95,10 @@ float string_to_float(char arr[])
     // Sets decimal point
     int mark = count - decimal_marker;
 
-    set_decimal_marker = pow(10, mark);
+    set_decimal_point = pow(10, mark);
 
     converted /= set_decimal_point;
-    
+
     if (is_negative)
         return -converted;
 
