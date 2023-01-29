@@ -81,22 +81,11 @@ float string_to_float(char arr[])
 
         if (isdigit(arr[i]))
         {
-            if (count < decimal_marker)
-            {
-                found_digit = 1;
+            found_digit = 1;
 
-                int digit = arr[i] - zero;
-                converted = converted * 10 + digit;
-                count++;
-            }
-
-            if (count >= decimal_marker)
-            {
-                static float multiplier = 0.1;
-                found_digit = 1;
-                int digit = arr[i] - zero;
-
-            }
+            int digit = arr[i] - zero;
+            converted = converted * 10 + digit;
+            count++;
         }
     }
 
@@ -104,25 +93,25 @@ float string_to_float(char arr[])
         printf("No valid digit found.\n");
 
     // Sets decimal point
-    //if (found_decimal)
-    //{
-    //    int count = 0;
+    if (found_decimal)
+    {
+        int count = 0;
 
-    //    while (count < decimal_marker)
-    //    {
-    //        converted /= set_decimal_point;
-    //        count++;
-    //    }
-    //    //converted /= set_decimal_point;
-    //    //set_decimal_point /= 10;
-    //    //converted *= set_decimal_point;
-    //}
-    //else
-    //{
-    //    converted /= set_decimal_point;
-    //    set_decimal_point /= 10;
-    //    converted *= set_decimal_point;
-    //}
+        while (count < decimal_marker)
+        {
+            converted /= set_decimal_point;
+            count++;
+        }
+        //converted /= set_decimal_point;
+        //set_decimal_point /= 10;
+        //converted *= set_decimal_point;
+    }
+    else
+    {
+        converted /= set_decimal_point;
+        set_decimal_point /= 10;
+        converted *= set_decimal_point;
+    }
 
     if (is_negative)
         return -converted;
