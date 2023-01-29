@@ -98,7 +98,7 @@ double string_to_float(char arr[])
         printf("No valid digit found.\n");
 
     // Sets decimal point
-    int mark = count - decimal_marker;
+    int mark = count - decimal_marker; // Determines the power of ten to divide converted integer by
 
     set_decimal_point = pow(10, mark);
 
