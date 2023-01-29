@@ -75,6 +75,7 @@ float string_to_float(char arr[])
         else if (arr[i] == '.' && !found_decimal)
         {
             found_decimal = 1;
+            decimal_marker = i;
             set_decimal_point = pow(10, i);
         }
 
@@ -93,10 +94,16 @@ float string_to_float(char arr[])
     // Sets decimal point
     if (found_decimal)
     {
-        if (decimal_marker)
-        converted /= set_decimal_point;
-        set_decimal_point /= 10;
-        converted *= set_decimal_point;
+        int count = 0;
+
+        while (count < decimal_marker)
+        {
+            converted /= set_decimal_point;
+            count++;
+        }
+        //converted /= set_decimal_point;
+        //set_decimal_point /= 10;
+        //converted *= set_decimal_point;
     }
     else
     {
