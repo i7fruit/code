@@ -89,6 +89,13 @@ float string_to_float(char arr[])
                 converted = converted * 10 + digit;
                 count++;
             }
+
+            else
+            {
+                found_digit = 1;
+                int digit = arr[i] - zero;
+                
+            }
         }
     }
 
