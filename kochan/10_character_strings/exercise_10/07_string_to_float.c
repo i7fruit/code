@@ -76,7 +76,6 @@ double string_to_float(char arr[])
         {
             found_decimal = 1;
             decimal_marker = i;
-            //set_decimal_point = pow(10, i);
         }
 
         if (isdigit(arr[i]))
