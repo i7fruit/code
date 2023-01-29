@@ -98,11 +98,11 @@ double string_to_float(char arr[])
         printf("No valid digit found.\n");
 
     // Sets decimal point
-    int mark = count - decimal_marker; // Determines the power of ten to divide converted integer by
+    int mark = count - decimal_marker; // Determines the power of ten to compute divisor
 
-    set_decimal_point = pow(10, mark);
+    set_decimal_point = pow(10, mark); // Computes value to divide converted value by, to get proper floating-point value
 
-    converted /= set_decimal_point;
+    converted /= set_decimal_point; // Computes floating-point value
 
     if (is_negative)
         return -converted;
