@@ -25,7 +25,7 @@ int main(void)
 
     float real_number = string_to_float(digits);
 
-    printf("%.3f\n", real_number);
+    printf("%.4f\n", real_number);
 
     return 0;
 }
