@@ -56,7 +56,9 @@ double string_to_float(char arr[])
     _Bool found_decimal = 0;
     int i = 0, decimal_marker = 0, count = 0;
 
-    // For negative numbers
+    /**
+     * Tracks if user typed in a negative sign
+    */
     if (arr[0] == '-')
     {
         is_negative = 1;
@@ -64,20 +66,24 @@ double string_to_float(char arr[])
         i++;
     }
 
+    // Iterates through the array of digits
     for (; arr[i] != '\0'; i++)
     {
+        // Ignores subsequent '.' characters entered by the user
         if (arr[i] == '.' && found_decimal)
         {
             i--;
             continue;
         }
 
+        // Flags the element that has the '.' char and sets the found_decimal flag to on
         else if (arr[i] == '.' && !found_decimal)
         {
             found_decimal = 1;
             decimal_marker = i;
         }
 
+        // Converts character digits found into integers
         if (isdigit(arr[i]))
         {
             found_digit = 1;
