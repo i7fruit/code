@@ -81,12 +81,14 @@ float string_to_float(char arr[])
 
         if (isdigit(arr[i]))
         {
-            if (count == decimal_marker)
-                
-            found_digit = 1;
+            if (count < decimal_marker)
+            {
+                found_digit = 1;
 
-            int digit = arr[i] - zero;
-            converted = converted * 10 + digit;
+                int digit = arr[i] - zero;
+                converted = converted * 10 + digit;
+                count++;
+            }
         }
     }
 
