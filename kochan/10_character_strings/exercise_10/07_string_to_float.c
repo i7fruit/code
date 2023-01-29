@@ -54,7 +54,7 @@ float string_to_float(char arr[])
     _Bool is_negative = 0;
     _Bool found_digit = 0;
     _Bool found_decimal = 0;
-    int i = 0;
+    int i = 0, decimal_marker = 0;
 
     // For negative numbers
     if (arr[0] == '-')
@@ -93,6 +93,7 @@ float string_to_float(char arr[])
     // Sets decimal point
     if (found_decimal)
     {
+        
         converted /= set_decimal_point;
         set_decimal_point /= 10;
         converted *= set_decimal_point;
