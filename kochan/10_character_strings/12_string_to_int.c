@@ -30,7 +30,7 @@ int main(void)
 }
 
 /********************************************
- * The get_digits() function promts the
+ * The get_digits() function prompts the
  * user for characters.
  */
 void get_digits(char arr[])
