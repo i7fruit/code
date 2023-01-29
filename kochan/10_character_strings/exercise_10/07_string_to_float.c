@@ -12,7 +12,7 @@
 
 // Function prototypes
 void get_digits(char arr[]);
-float string_to_float(char arr[]);
+double string_to_float(char arr[]);
 
 int main(void)
 {
@@ -23,7 +23,7 @@ int main(void)
     printf("Enter numeric characters: ");
     get_digits(digits);
 
-    float real_number = string_to_float(digits);
+    double real_number = string_to_float(digits);
 
     printf("%.4f\n", real_number);
 
@@ -47,7 +47,7 @@ void get_digits(char arr[])
  * the ascii character '0' from each digit) to
  * give its integer equivalent.
  */
-float string_to_float(char arr[])
+double string_to_float(char arr[])
 {
     double converted = 0.0, set_decimal_point = 1.0, fraction = 0;
     char zero = '0';
