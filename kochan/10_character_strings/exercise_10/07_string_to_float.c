@@ -49,7 +49,7 @@ void get_digits(char arr[])
  */
 float string_to_float(char arr[])
 {
-    double converted = 0.0, set_decimal_point = 1.0;
+    double converted = 0.0, set_decimal_point = 1.0, fraction = 0;
     char zero = '0';
     _Bool is_negative = 0;
     _Bool found_digit = 0;
@@ -92,9 +92,10 @@ float string_to_float(char arr[])
 
             else
             {
+                static float multiplier = 0.1;
                 found_digit = 1;
                 int digit = arr[i] - zero;
-                
+
             }
         }
     }
