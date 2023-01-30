@@ -41,7 +41,13 @@ void get_digits(char arr[])
     // User is limited to 63 characters
     scanf("%63s", temp);
 
-    
+    _Bool is_negative = 0;
+    _Bool found_decimal = 0;
+
+    for (int i = 0; temp[i] != '\0'; i++)
+    {
+        if
+    }
 }
 
 /********************************************
