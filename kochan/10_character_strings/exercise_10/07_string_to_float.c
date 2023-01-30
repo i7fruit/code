@@ -36,7 +36,7 @@ int main(void)
  */
 void get_digits(char arr[])
 {
-    int size = 64;
+    int size = 64, i = 0;
     char temp[size];
     // User is limited to 63 characters
     scanf("%63s", temp);
@@ -45,7 +45,10 @@ void get_digits(char arr[])
     _Bool found_decimal = 0;
 
     // Looks for first legit character
-    while (temp[i] != '-')
+    while (temp[i] != '-' && temp[i] != '+' && !isalpha(temp[i]) )
+        i++;
+
+    if
 
     for (int i = 0; temp[i] != '\0'; i++)
     {
