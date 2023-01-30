@@ -55,7 +55,7 @@ void get_digits(char arr[])
 
     for (; temp[i] != '\0'; i++)
     {
-        if ()
+        if (temp[i])
     }
 }
 
