@@ -45,14 +45,17 @@ void get_digits(char arr[])
     _Bool found_decimal = 0;
 
     // Looks for first legit character
-    while (temp[i] != '-' && temp[i] != '+' && !isalpha(temp[i]) )
+    while (temp[i] != '-' && temp[i] != '+' && temp[i] != '.' && !isalpha(temp[i]))
         i++;
 
-    if
+    if (temp[i] == '-')
+        is_negative = 1;
+    if (temp[i] == '.')
+        found_decimal = 1;
 
-    for (int i = 0; temp[i] != '\0'; i++)
+    for (; temp[i] != '\0'; i++)
     {
-        if
+        if ()
     }
 }
 
