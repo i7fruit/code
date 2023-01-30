@@ -49,7 +49,9 @@ void get_digits(char arr[])
         i++;
 
     if (temp[i] == '-')
+    {
         is_negative = 1;
+        
     if (temp[i] == '.')
         found_decimal = 1;
 
