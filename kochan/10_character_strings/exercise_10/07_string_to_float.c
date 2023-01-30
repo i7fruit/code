@@ -44,6 +44,9 @@ void get_digits(char arr[])
     _Bool is_negative = 0;
     _Bool found_decimal = 0;
 
+    // Looks for first legit character
+    while (temp[i] != '-')
+
     for (int i = 0; temp[i] != '\0'; i++)
     {
         if
