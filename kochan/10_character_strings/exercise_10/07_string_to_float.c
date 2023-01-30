@@ -36,8 +36,12 @@ int main(void)
  */
 void get_digits(char arr[])
 {
+    int size = 64;
+    char temp[size];
     // User is limited to 63 characters
-    scanf("%63s", arr);
+    scanf("%63s", temp);
+
+    
 }
 
 /********************************************
