@@ -20,7 +20,7 @@ int main(void)
     char text[] = "12.98";
 
     double pre_decimal = 0.0;
-     post_decimal = 0.0;
+    double post_decimal = 0.0;
 
     int i = 0;
 
