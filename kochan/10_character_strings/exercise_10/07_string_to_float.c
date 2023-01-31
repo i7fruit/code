@@ -22,12 +22,17 @@ int main(void)
     float pre_decimal = 0.0;
     float post_decimal = 0.0;
 
-    for (int i = 0; text[i] != '\0'; i++)
+    int i = 0;
+
+    for (; text[i] != '\0'; i++)
     {
         if (text[i] == '.')
+        {
+            i++;
             break;
+        }
 
-        int digit = text[i];
+        int digit = text[i] - 48;
 
         pre_decimal = pre_decimal * 10 + digit;
     }
