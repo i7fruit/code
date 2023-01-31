@@ -44,7 +44,7 @@ int main(void)
 
         int digit = text[i] - 48;
 
-        post_decimal = post_decimal * 10 + digit;
+        post_decimal = (float)(post_decimal * 10 + digit);
 
         count++;
     }
