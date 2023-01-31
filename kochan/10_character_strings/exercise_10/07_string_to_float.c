@@ -39,6 +39,8 @@ int main(void)
 
     for (; text[i] != '\0'; i++)
     {
+        static int count = 0;
+        
         int digit = text[i] - 48;
 
         post_decimal = post_decimal * 10 + digit;
