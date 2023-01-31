@@ -15,3 +15,12 @@
 #include <ctype.h>
 #include <math.h>
 
+int main(void)
+{
+    char text[] = "12.98";
+
+    float pre_decimal = 0.0;
+    float post_decimal = 0.0;
+
+    while
+}
