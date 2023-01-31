@@ -42,9 +42,9 @@ int main(void)
     for (; text[i] != '\0'; i++)
     {
 
-        int digit = text[i] - 48;
+        double digit = text[i] - 48;
 
-        post_decimal = (double)(post_decimal * 10 + digit);
+        post_decimal = (double)(post_decimal * 10.0 + digit);
 
         count++;
     }
