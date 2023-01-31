@@ -44,7 +44,7 @@ int main(void)
 
         int digit = text[i] - 48;
 
-        post_decimal = (float)(post_decimal * 10 + digit);
+        post_decimal = (double)(post_decimal * 10 + digit);
 
         count++;
     }
@@ -53,7 +53,7 @@ int main(void)
 
     post_decimal /= power;
 
-    float value = pre_decimal + post_decimal;
+    double value = pre_decimal + post_decimal;
 
     printf("%.f\n", value);
 
