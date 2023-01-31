@@ -38,7 +38,7 @@ int main(void)
     }
 
     static int count = 0;
-    
+
     for (; text[i] != '\0'; i++)
     {
 
@@ -53,7 +53,7 @@ int main(void)
 
     post_decimal /= power;
 
-    printf("%.f\n", pre_decimal + post_decimal);
+    printf("%.f\n", (pre_decimal + post_decimal));
 
     return 0;
 }
