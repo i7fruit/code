@@ -19,8 +19,8 @@ int main(void)
 {
     char text[] = "12.98";
 
-    float pre_decimal = 0.0;
-    float post_decimal = 0.0;
+    double pre_decimal = 0.0;
+     post_decimal = 0.0;
 
     int i = 0;
 
