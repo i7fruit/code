@@ -29,7 +29,7 @@ int main(void)
 
         int digit = text[i];
 
-        (pre_decimal *= 10) + digit;
+        pre_decimal = pre_decimal * 10 + digit;
     }
 
     printf("%.f\n", pre_decimal);
