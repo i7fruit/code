@@ -53,7 +53,9 @@ int main(void)
 
     post_decimal /= power;
 
-    printf("%.f\n", (pre_decimal + post_decimal));
+    float value = pre_decimal + post_decimal;
+
+    printf("%.f\n", value);
 
     return 0;
 }
