@@ -37,6 +37,13 @@ int main(void)
         pre_decimal = pre_decimal * 10 + digit;
     }
 
+    for (; text[i] != '\0'; i++)
+    {
+        int digit = text[i] - 48;
+
+        post_decimal = post_decimal * 10 + digit;
+    }
+
     printf("%.f\n", pre_decimal);
 
     return 0;
