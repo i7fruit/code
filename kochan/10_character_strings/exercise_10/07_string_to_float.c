@@ -44,12 +44,12 @@ int main(void)
 
         double digit = text[i] - 48;
 
-        post_decimal = (double)(post_decimal * 10.0 + digit);
+        post_decimal = (post_decimal * 10.0 + digit) * 1.0;
 
         count++;
     }
 
-    int power = pow(10, (count + 1));
+    int power = pow(10, count);
 
     post_decimal /= power;
 
