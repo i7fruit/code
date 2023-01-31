@@ -37,16 +37,23 @@ int main(void)
         pre_decimal = pre_decimal * 10 + digit;
     }
 
+    static int count = 0;
+    
     for (; text[i] != '\0'; i++)
     {
-        static int count = 0;
-        
+
         int digit = text[i] - 48;
 
         post_decimal = post_decimal * 10 + digit;
+
+        count++;
     }
 
-    printf("%.f\n", pre_decimal);
+    int power = pow(10, (count + 1));
+
+    post_decimal /= power;
+
+    printf("%.f\n", pre_decimal + post_decimal);
 
     return 0;
 }
