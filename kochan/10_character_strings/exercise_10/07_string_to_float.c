@@ -22,5 +22,17 @@ int main(void)
     float pre_decimal = 0.0;
     float post_decimal = 0.0;
 
-    while
+    for (int i = 0; text[i] != '\0'; i++)
+    {
+        if (text[i] == '.')
+            break;
+
+        int digit = text[i];
+
+        (pre_decimal *= 10) + digit;
+    }
+
+    printf("%.f\n", pre_decimal);
+
+    return 0;
 }
