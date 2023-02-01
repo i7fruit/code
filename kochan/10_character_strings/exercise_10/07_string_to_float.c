@@ -43,8 +43,7 @@ void get_text(char arr[])
     arr[i] = '\0';
 
     // checks for first legit char
-    for (int j = 0; arr[j] != '\0'; j++)
-    {
-        
-    }
+    int j = 0;
+
+    while (arr[j] != '-' )
 }
