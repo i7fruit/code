@@ -55,4 +55,6 @@ void get_text(char arr[])
         is_negative = 1;
     else if (arr[j] == '.')
         found_decimal = 1;
+
+    
 }
