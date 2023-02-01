@@ -56,5 +56,8 @@ void get_text(char arr[])
     else if (arr[j] == '.')
         found_decimal = 1;
 
-    
+    while (arr[j] != '\0')
+    {
+        
+    }
 }
