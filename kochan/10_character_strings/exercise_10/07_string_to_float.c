@@ -9,9 +9,11 @@
 
 #include <stdio.h>
 
+// Global variable
+const int size = 64;
+
 int main(void)
 {
-    const int size = 64;
     char text[size];
 
     // Prompts the user for a floating-point number
@@ -25,3 +27,24 @@ int main(void)
 /*********************************************
  * get_text()
 */
+void get_text(char arr[])
+{
+    int i = -1;
+
+    char temp[size];
+
+    do
+    {
+        arr[++i] = getchar();
+    }
+    while (arr[i] != '\n');
+
+    // Terminates the string
+    arr[i] = '\0';
+
+    // checks for first legit char
+    for (int j = 0; arr[j] != '\0'; j++)
+    {
+        
+    }
+}
