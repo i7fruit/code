@@ -8,6 +8,7 @@
  */
 
 #include <stdio.h>
+#include <ctype.h>
 
 // Global variable
 const int size = 64;
@@ -45,5 +46,13 @@ void get_text(char arr[])
     // checks for first legit char
     int j = 0;
 
-    while (arr[j] != '-' )
+    while ((!isdigit(arr[j]) && arr[j] != '-' && arr[j] != '.')
+        j++;
+
+    _Bool is_negative = 0, found_decimal = 0;
+
+    if (arr[j] == '-')
+        is_negative = 1;
+    else if (arr[j] == '.')
+        found_decimal = 1;
 }
