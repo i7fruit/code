@@ -59,5 +59,6 @@ void get_text(char arr[])
     while (arr[j] != '\0')
     {
         if (isdigit(arr[j]) || (arr[j] == '.' && found_decimal != 1))
+            temp[]
     }
 }
