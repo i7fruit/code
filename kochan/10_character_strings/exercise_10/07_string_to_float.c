@@ -13,11 +13,15 @@
 // Global variable
 const int size = 64;
 
+// Function prototypes
+void get_text(char arr[]);
+
 int main(void)
 {
     char text[size];
 
     // Prompts the user for a floating-point number
+    printf("Enter a floating-point value: ");
     get_text(text);
 
     printf("%s\n", text);
@@ -32,8 +36,10 @@ void get_text(char arr[])
 {
     int i = -1;
 
+    // Temporary storage array
     char temp[size];
 
+    // Populates main array with characters from user
     do
     {
         arr[++i] = getchar();
@@ -43,22 +49,97 @@ void get_text(char arr[])
     // Terminates the string
     arr[i] = '\0';
 
-    // checks for first legit char
+    i = 0;
+
+    // Iterates through array until a ligitimate character is found
     int j = 0;
 
-    while ((!isdigit(arr[j]) && arr[j] != '-' && arr[j] != '.')
+    while ((!isdigit(arr[j]) && arr[j] != '-' && arr[j] != '.'))
         j++;
 
-    _Bool is_negative = 0, found_decimal = 0;
+    // Flags for detecting a digit, decimal, or minus character
+    _Bool is_negative = 0, found_decimal = 0, is_digit = 0;
 
     if (arr[j] == '-')
         is_negative = 1;
     else if (arr[j] == '.')
         found_decimal = 1;
+    else if (isdigit(arr[j]))
+        is_digit = 1;
 
+    /**
+     * Iterates through the array and stores legitimate
+     * characters into the temporary array while skipping
+     * over alphabets and other special characters and symbols
+     * other than the decimal (if not already entered)
+    */
     while (arr[j] != '\0')
     {
-        if (isdigit(arr[j]) || (arr[j] == '.' && found_decimal != 1))
-            temp[]
+        if (isdigit(arr[j]) || (arr[j] == '.') || arr[j] == '-')
+        {
+            if (isdigit(arr[j]) && !is_digit)
+            {
+                is_digit = 1;
+            }
+
+            // Stores a minus sign if encountered for the first time
+            if (arr[j] == '-' && !is_digit && !is_negative)
+            {
+                is_negative = 1;
+                temp[i] = arr[j];
+                i++; j++;
+            }
+
+            // Adds a minus character if it appears before a digit
+            else if (arr[j] == '-' && is_negative && !is_digit)
+            {
+                temp[i] =  arr[j];
+                i++; j++;
+            }
+
+            // Skips over subsequent minus characters
+            else if (arr[j] == '-' && is_negative && is_digit)
+                j++;
+
+            // Stores the decimal if encountered for the first time
+            else if (arr[j] == '.' && !found_decimal)
+            {
+                found_decimal = 1;
+                temp[i] = arr[j];
+                i++; j++;
+            }
+
+            // Skips the decimal if already stored
+            else if (arr[j] == '.' && found_decimal)
+                j++;
+
+            // Stores digits into the temp array
+            else
+            {
+                temp[i] = arr[j];
+                i++; j++;
+            }
+        }
+        // Skips over characters not to be used
+        else
+            j++;
     }
+
+    // Terminates the temp array
+    temp[i] = '\0';
+
+    i = 0;
+
+    // Copies temp array into main array
+    for (; temp[i] != '\0'; i++)
+    {
+        arr[i] = temp[i];
+    }
+
+    // Terminates the main array
+    arr[i] = '\0';
+
+    // Prints "-" if value is negative
+    //if (is_negative)
+    //    putchar('-');
 }
