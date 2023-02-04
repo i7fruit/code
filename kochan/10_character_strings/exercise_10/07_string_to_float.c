@@ -109,6 +109,12 @@ void get_text(char arr[])
                 i++; j++;
             }
 
+            else if (arr[j] == '.' && found_decimal && !is_digit)
+            {
+                temp[i] = arr[j];
+                i++; j++;
+            }
+
             // Skips the decimal if already stored
             else if (arr[j] == '.' && found_decimal)
                 j++;
