@@ -98,7 +98,7 @@ void get_text(char arr[])
             }
 
             // Skips over subsequent minus characters
-            else if (arr[j] == '-' && is_negative && is_digit)
+            else if (arr[j] == '-' && is_digit)
                 j++;
 
             // Stores the decimal if encountered for the first time
