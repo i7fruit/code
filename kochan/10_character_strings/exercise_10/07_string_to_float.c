@@ -155,5 +155,5 @@ void get_text(char arr[])
  */
 float string_to_float(char arr[])
 {
-    
+    // Skip
 }
