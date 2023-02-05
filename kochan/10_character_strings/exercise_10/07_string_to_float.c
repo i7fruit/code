@@ -155,5 +155,14 @@ void get_text(char arr[])
  */
 float string_to_float(char arr[])
 {
-    // Skip
+    // Skips if the first character isn't a digit
+    int i = 0;
+
+    if (!isdigit(arr[i]))
+        i++;
+
+    for (; arr[i] != '\0'; i++)
+    {
+        
+    }
 }
