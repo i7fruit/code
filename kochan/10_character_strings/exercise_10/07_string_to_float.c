@@ -24,7 +24,11 @@ int main(void)
     printf("Enter a floating-point value: ");
     get_text(text);
 
-    printf("%s\n", text);
+    float converted = 0;
+
+    converted = string_to_float(text);
+
+    printf("%.f\n", converted);
 
     return 0;
 }
@@ -144,8 +148,12 @@ void get_text(char arr[])
 
     // Terminates the main array
     arr[i] = '\0';
+}
 
-    // Prints "-" if value is negative
-    //if (is_negative)
-    //    putchar('-');
+/******************************************************************
+ * string_to_float()
+ */
+float string_to_float(char arr[])
+{
+    
 }
