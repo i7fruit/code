@@ -9,6 +9,7 @@
 
 #include <stdio.h>
 #include <ctype.h>
+#include <math.h>
 
 // Global variable
 const int size = 64;
@@ -194,4 +195,5 @@ float string_to_float(char arr[])
     }
 
     // Computes decimal places
+    const int divisor = pow(10, count);
 }
