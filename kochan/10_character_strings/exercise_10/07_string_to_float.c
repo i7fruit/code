@@ -164,6 +164,7 @@ float string_to_float(char arr[])
     if (arr[0] == '-')
         is_negative = 1;
 
-    else if (arr[0] == '.')
-        
+    // Iterates through the array
+    for (int i )
+
 }
