@@ -16,6 +16,7 @@ const int size = 64;
 
 // Function prototypes
 void get_text(char arr[]);
+float string_to_float(char arr[]);
 
 int main(void)
 {
@@ -196,4 +197,11 @@ float string_to_float(char arr[])
 
     // Computes decimal places
     const int divisor = pow(10, count);
+
+    converted /= divisor;
+
+    if (is_negative)
+        return -converted;
+
+    return converted;
 }
