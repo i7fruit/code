@@ -167,6 +167,9 @@ float string_to_float(char arr[])
     if (arr[0] == '-')
         is_negative = 1;
 
+    // Saves converted value
+    float converted = 0.0;
+
     // Iterates through the array
     for (int i = 0; arr[i] != '\0'; i++)
     {
@@ -176,6 +179,8 @@ float string_to_float(char arr[])
             decimal_found = 1;
             continue;
         }
+
+        if (decimal_found)
     }
 
 }
