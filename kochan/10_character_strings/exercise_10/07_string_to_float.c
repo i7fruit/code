@@ -170,6 +170,9 @@ float string_to_float(char arr[])
     // Saves converted value
     float converted = 0.0;
 
+    // Value to subtract from character digit to convert to integer
+    const int zero_digit = 48;
+
     // Iterates through the array
     for (int i = 0; arr[i] != '\0'; i++)
     {
@@ -182,7 +185,7 @@ float string_to_float(char arr[])
 
         if (decimal_found)
         {
-            converted = converted * 10 + ()
+            converted = converted * 10 + (arr[i] - zero_digit)
         }
     }
 
