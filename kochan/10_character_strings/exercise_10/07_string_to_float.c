@@ -30,7 +30,7 @@ int main(void)
 
     converted = string_to_float(text);
 
-    printf("%.f\n", converted);
+    printf("%.10f\n", converted);
 
     return 0;
 }
