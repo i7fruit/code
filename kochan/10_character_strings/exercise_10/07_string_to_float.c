@@ -165,6 +165,12 @@ float string_to_float(char arr[])
         is_negative = 1;
 
     // Iterates through the array
-    for (int i )
+    for (int i = 0; arr[i] != '\0'; i++)
+    {
+        if (arr[i] == '.')
+        {
+            count = 0
+        }
+    }
 
 }
