@@ -158,6 +158,9 @@ float string_to_float(char arr[])
     // Tracks if converted value will be a negative number
     _Bool is_negative = 0;
 
+    // Tracks if a decimal character has been encountered
+    _Bool decimal_found = 0;
+
     // Marks where decimal point should be
     int count = 0;
 
@@ -169,7 +172,9 @@ float string_to_float(char arr[])
     {
         if (arr[i] == '.')
         {
-            count = 0
+            count = 0;
+            decimal_found = 1;
+            continue;
         }
     }
 
