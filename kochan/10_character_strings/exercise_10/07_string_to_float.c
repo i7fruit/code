@@ -193,5 +193,5 @@ float string_to_float(char arr[])
             converted = converted * 10 + (arr[i] - zero_digit);
     }
 
-    // Computes 
+    // Computes decimal places
 }
