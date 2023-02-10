@@ -188,6 +188,10 @@ float string_to_float(char arr[])
             converted = converted * 10 + (arr[i] - zero_digit);
             count++;
         }
+
+        else
+            converted = converted * 10 + (arr[i] - zero_digit);
     }
 
+    if (is_negative)
 }
