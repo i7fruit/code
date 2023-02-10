@@ -99,7 +99,7 @@ void get_text(char arr[])
             }
 
             // Adds a minus character if it appears before a digit
-            else if (arr[j] == '-' && is_negative && !is_digit)
+            else if (arr[j] == '-' && is_negative && !is_digit && !found_decimal)
             {
                 temp[i] =  arr[j];
                 i++; j++;
