@@ -155,14 +155,11 @@ void get_text(char arr[])
  */
 float string_to_float(char arr[])
 {
-    // Skips if the first character isn't a digit
-    int i = 0;
+    // Tracks if converted value will be a negative number
+    _Bool is_negative = 0;
 
-    if (!isdigit(arr[i]))
-        i++;
+    // Marks where decimal point should be
+    int count = 0;
 
-    for (; arr[i] != '\0'; i++)
-    {
-        
-    }
+    
 }
