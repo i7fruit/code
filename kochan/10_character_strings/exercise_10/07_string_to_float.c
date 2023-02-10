@@ -185,7 +185,8 @@ float string_to_float(char arr[])
 
         if (decimal_found)
         {
-            converted = converted * 10 + (arr[i] - zero_digit)
+            converted = converted * 10 + (arr[i] - zero_digit);
+            count++;
         }
     }
 
