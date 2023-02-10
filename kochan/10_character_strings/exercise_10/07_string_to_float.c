@@ -91,7 +91,7 @@ void get_text(char arr[])
             }
 
             // Stores a minus sign if encountered for the first time
-            if (arr[j] == '-' && !is_digit && !is_negative)
+            if (arr[j] == '-' && !is_digit && !is_negative && !found_decimal)
             {
                 is_negative = 1;
                 temp[i] = arr[j];
