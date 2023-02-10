@@ -161,5 +161,9 @@ float string_to_float(char arr[])
     // Marks where decimal point should be
     int count = 0;
 
-    
+    if (arr[0] == '-')
+        is_negative = 1;
+
+    else if (arr[0] == '.')
+        
 }
