@@ -14,10 +14,15 @@ long long get_integer(void);
 int main(void)
 {
     long long number = 0;
+    short size = 64;
 
     number = get_integer();
 
-    printf("%lli\n", number);
+    char string[size];
+
+    int_to_string(string);
+
+    printf("%s\n", string);
 
     return 0;
 }
@@ -37,4 +42,12 @@ long long get_integer(void)
     while (i < 0);
 
     return i;
+}
+
+/*****************************************
+ * int_to_string()
+*/
+void int_to_string(long long i)
+{
+    
 }
