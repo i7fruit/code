@@ -10,6 +10,7 @@
 
 // Function prototypes
 long long get_integer(void);
+void int_to_string(long long i);
 
 int main(void)
 {
@@ -49,5 +50,16 @@ long long get_integer(void)
 */
 void int_to_string(long long i)
 {
-    
+    // Computes number of digits in the integer
+    long long copy = i;
+
+    short count = 0;
+
+    while (copy != 0)
+    {
+        copy /= 10;
+        count++;
+    }
+
+    printf("size is %hi\n", count);
 }
