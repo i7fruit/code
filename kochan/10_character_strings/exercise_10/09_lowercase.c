@@ -1,10 +1,10 @@
 /**
  * 08_uppercase.c
  *
- * Friday, February 10, 2023 23:43hrs
+ * Saturday, February 11, 2023 00:05hrs
  *
- * This program converts a lowercase letter
- * into its uppercase form.
+ * This program converts an uppercase letter
+ * into its lowercase form.
 */
 #include <stdio.h>
 
@@ -15,11 +15,11 @@ int main(void)
 {
     char character = '@';
 
-    printf("Enter a lowercase character: ");
+    printf("Enter an uppercase character: ");
     character = get_character();
 
     // Converts the lowercase character to uppercase
-    character = character - 'a' + 'A';
+    character = character - 'A' + 'a';
 
     printf("%c\n", character);
 
@@ -41,7 +41,7 @@ char get_character(void)
         // Takes the newline character in the buffer
         getchar();
     }
-    while (c < 'a' || c > 'z');
+    while (c < 'A' || c > 'Z');
 
     return c;
 }
