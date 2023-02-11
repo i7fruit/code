@@ -53,6 +53,9 @@ void int_to_string(long long i, char arr[])
     // Computes number of digits in the integer
     long long copy = i;
 
+    if (copy < 0)
+        copy = -copy;
+
     short count = 0;
 
     while (copy != 0)
