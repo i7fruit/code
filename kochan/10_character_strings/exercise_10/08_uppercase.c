@@ -38,7 +38,7 @@ char get_character(void)
         // Takes the newline character in the buffer
         getchar();
     }
-    while (c >= 'A' && c <= 'Z');
+    while (c < 'a' && c > 'z');
 
     return c;
 }
