@@ -28,9 +28,9 @@ int main(void)
 
     float converted = 0;
 
-    //converted = string_to_float(text);
+    converted = string_to_float(text);
 
-    //printf("%.10f\n", converted);
+    printf("%.10f\n", converted);
 
     printf("%s\n", text);
 
