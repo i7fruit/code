@@ -64,5 +64,17 @@ void int_to_string(long long i, char arr[])
         count++;
     }
 
-    printf("size is %hi\n", count);
+    int j = 0;
+
+    if (i < 0)
+    {
+        arr[j] = '-';
+        i = -i;
+        j++;
+    }
+
+    else
+    {
+        i /= count;
+    }
 }
