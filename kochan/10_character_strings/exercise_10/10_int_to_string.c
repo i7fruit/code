@@ -21,7 +21,7 @@ int main(void)
 
     char string[size];
 
-    int_to_string(string);
+    int_to_string();
 
     printf("%s\n", string);
 
