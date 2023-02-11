@@ -32,8 +32,6 @@ int main(void)
 
     printf("%.10f\n", converted);
 
-    printf("%s\n", text);
-
     return 0;
 }
 
