@@ -70,6 +70,7 @@ void int_to_string(long long i, char arr[])
 
             // Updates value of i
             i /= 10;
+            j++;
         }
     }
 
