@@ -8,12 +8,14 @@
 */
 #include <stdio.h>
 
-// Function prototype
+// Function prototypes
+unsigned long get_integer(void);
 
 int main(void)
 {
     unsigned long number = 0;
 
+    printf("Number to convert to a string: ");
     number = get_integer();
 
     printf("%lu\n", number);
@@ -28,7 +30,7 @@ unsigned long get_integer(void)
 {
     unsigned long i = -1;
 
-    scan("%lu", i);
+    scanf("%lu", &i);
 
     return i;
 }
