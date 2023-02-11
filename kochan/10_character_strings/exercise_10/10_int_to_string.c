@@ -10,7 +10,7 @@
 
 // Function prototypes
 long long get_integer(void);
-void int_to_string(long long i);
+void int_to_string(long long i, char arr[]);
 
 int main(void)
 {
@@ -21,7 +21,7 @@ int main(void)
 
     char string[size];
 
-    int_to_string();
+    int_to_string(number, string);
 
     printf("%s\n", string);
 
@@ -48,7 +48,7 @@ long long get_integer(void)
 /*****************************************
  * int_to_string()
 */
-void int_to_string(long long i)
+void int_to_string(long long i, char arr[])
 {
     // Computes number of digits in the integer
     long long copy = i;
