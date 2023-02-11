@@ -18,6 +18,9 @@ int main(void)
     printf("Enter a lowercase character: ");
     character = get_character();
 
+    // Converts the lowercase character to uppercase
+    character = character - 'a' + 'A';
+
     printf("%c\n", character);
 
     return 0;
