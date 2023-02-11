@@ -9,16 +9,16 @@
 #include <stdio.h>
 
 // Function prototypes
-unsigned long get_integer(void);
+long long get_integer(void);
 
 int main(void)
 {
-    unsigned long number = 0;
+    long long number = 0;
 
     printf("Enter an integer to convert to a string: ");
     number = get_integer();
 
-    printf("%lu\n", number);
+    printf("%lli\n", number);
 
     return 0;
 }
@@ -26,13 +26,13 @@ int main(void)
 /***************************************
  * get_integer()
 */
-unsigned long get_integer(void)
+long long get_integer(void)
 {
-    long i = 0;
+    long long i = 0;
 
     do
     {
-        scanf("%lu", &i);
+        scanf("%lli", &i);
     }
     while (i < 0);
 
