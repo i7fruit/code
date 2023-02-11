@@ -28,7 +28,7 @@ int main(void)
 */
 unsigned long get_integer(void)
 {
-    unsigned long i = 0;
+    long i = 0;
 
     do
     {
