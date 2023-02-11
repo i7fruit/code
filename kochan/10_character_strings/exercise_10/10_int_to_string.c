@@ -14,5 +14,5 @@ int main(void)
 
     char string[size];
 
-    
+    get_text()
 }
