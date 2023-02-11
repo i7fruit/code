@@ -62,17 +62,14 @@ void int_to_string(long long i, char arr[])
         j++;
     }
 
-    else
+    while (i != 0)
     {
-        while (i != 0)
-        {
-            arr[j] = (i % 10) + zero_character;
+        arr[j] = (i % 10) + zero_character;
 
-            // Updates value of i
-            i /= 10;
-            j++;
-        }
+        // Updates value of i
+        i /= 10;
+        j++;
     }
 
-    printf("Conversion complete!");
+    printf("Conversion complete!\n");
 }
