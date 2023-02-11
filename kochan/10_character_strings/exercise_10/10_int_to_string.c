@@ -10,13 +10,23 @@
 
 int main(void)
 {
-    const int size = 64;
+    unsigned long number = 0;
 
-    char string[size];
-
-    get_text(string);
+    number = get_integer();
 
     return 0;
 }
 
-/
+/***************************************
+ * get_integer()
+*/
+unsigned long get_integer(void)
+{
+    int i = -1;
+
+    do
+    {
+        arr[++i] = getchar();
+    }
+    while (arr[i])
+}
