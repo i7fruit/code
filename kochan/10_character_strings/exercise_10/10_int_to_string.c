@@ -8,11 +8,15 @@
 */
 #include <stdio.h>
 
+// Function prototype
+
 int main(void)
 {
     unsigned long number = 0;
 
     number = get_integer();
+
+    printf("%lu\n", number);
 
     return 0;
 }
@@ -22,11 +26,9 @@ int main(void)
 */
 unsigned long get_integer(void)
 {
-    int i = -1;
+    unsigned long i = -1;
 
-    do
-    {
-        arr[++i] = getchar();
-    }
-    while (arr[i])
+    scan("%lu", i);
+
+    return i;
 }
