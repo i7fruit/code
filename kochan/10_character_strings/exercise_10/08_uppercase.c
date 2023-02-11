@@ -12,7 +12,7 @@ int main(void)
 {
     char character = '@';
 
-    character = get_character(character);
+    character = get_character();
 
     printf("%c\n", character);
 
@@ -22,3 +22,7 @@ int main(void)
 /*******************************************************
  * get_character()
 */
+char get_character(void)
+{
+    
+}
