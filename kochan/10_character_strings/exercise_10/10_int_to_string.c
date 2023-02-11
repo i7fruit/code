@@ -30,7 +30,11 @@ unsigned long get_integer(void)
 {
     unsigned long i = -1;
 
-    scanf("%lu", &i);
+    do
+    {
+        scanf("%lu", &i);
+    }
+    while (i < 0);
 
     return i;
 }
