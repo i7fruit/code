@@ -182,12 +182,17 @@ float string_to_float(char arr[])
     // Iterates through the array
     for (int i = 0; arr[i] != '\0'; i++)
     {
+        // Does not convert non-digit character '.'
         if (arr[i] == '.')
         {
             count = 0;
             decimal_found = 1;
             continue;
         }
+
+        // Does not convert non-digit character '-'
+        if (arr[i] == '-')
+            continue;
 
         if (decimal_found)
         {
