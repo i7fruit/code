@@ -105,6 +105,10 @@ void get_text(char arr[])
                 i++; j++;
             }
 
+
+            else if (arr[j] == '-' && found_decimal)
+                j++;
+
             // Skips over subsequent minus characters
             else if (arr[j] == '-' && is_digit)
                 j++;
