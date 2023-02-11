@@ -15,7 +15,7 @@ int main(void)
 {
     unsigned long number = 0;
 
-    printf("Number to convert to a string: ");
+    printf("Enter an integer to convert to a string: ");
     number = get_integer();
 
     printf("%lu\n", number);
