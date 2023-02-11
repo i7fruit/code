@@ -8,10 +8,14 @@
 */
 #include <stdio.h>
 
+// Function prototypes
+char get_character(void);
+
 int main(void)
 {
     char character = '@';
 
+    printf("Enter a lowercase character: ");
     character = get_character();
 
     printf("%c\n", character);
@@ -24,5 +28,17 @@ int main(void)
 */
 char get_character(void)
 {
-    
+    char c = '@';
+
+    do
+    {
+        // Saves character into variable
+        c = getchar();
+
+        // Takes the newline character in the buffer
+        getchar();
+    }
+    while (c >= 'A')
+
+    return c;
 }
