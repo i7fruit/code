@@ -12,7 +12,13 @@ int main(void)
 {
     char character = '@';
 
-    character = uppercase(character);
+    character = get_character(character);
 
     printf("%c\n", character);
+
+    return 0;
 }
+
+/*******************************************************
+ * get_character()
+*/
