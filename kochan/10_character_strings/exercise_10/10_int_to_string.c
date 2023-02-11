@@ -72,4 +72,6 @@ void int_to_string(long long i, char arr[])
             i /= 10;
         }
     }
+
+    printf("Conversion complete!");
 }
