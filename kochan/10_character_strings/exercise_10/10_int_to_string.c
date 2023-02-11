@@ -12,5 +12,7 @@ int main(void)
 {
     const int size = 64;
 
-    char 
+    char string[size];
+
+    
 }
