@@ -105,7 +105,7 @@ void get_text(char arr[])
                 i++; j++;
             }
 
-
+            // Skips the minus sign if decimal already found
             else if (arr[j] == '-' && found_decimal)
                 j++;
 
