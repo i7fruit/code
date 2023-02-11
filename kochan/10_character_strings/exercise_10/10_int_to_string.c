@@ -40,7 +40,7 @@ long long get_integer(void)
         printf("Enter an integer: ");
         scanf("%lli", &i);
     }
-    while (i < -18000000000000000000 || i > 18000000000000000000);
+    while (i < -9000000000000000000 || i > 9000000000000000000);
 
     return i;
 }
