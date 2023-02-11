@@ -9,14 +9,13 @@
 #include <stdio.h>
 
 // Function prototypes
-long long get_integer(void);
+long long get_integer(char arr[]);
 
 int main(void)
 {
     long long number = 0;
 
-    printf("Enter an integer to convert to a string: ");
-    number = get_integer();
+    number = get_integer("Enter an integer to convert to a string: ");
 
     printf("%lli\n", number);
 
@@ -26,7 +25,7 @@ int main(void)
 /***************************************
  * get_integer()
 */
-long long get_integer(void)
+long long get_integer(char arr[])
 {
     long long i = 0;
 
