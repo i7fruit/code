@@ -95,7 +95,7 @@ void int_to_string(long long i, char arr[])
 
     else
     {
-        for (j--; temp[j] != '\0'; j--, k++)
+        for (j--; j >= 0; j--, k++)
             arr[k] = temp[j];
     }
 
