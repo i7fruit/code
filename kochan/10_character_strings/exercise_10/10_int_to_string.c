@@ -58,7 +58,7 @@ void int_to_string(long long i, char arr[])
     {
         int index = 0;
         arr[index] = '0';
-        arr[index++] = '\0';
+        arr[++index] = '\0';
         return;
     }
 
