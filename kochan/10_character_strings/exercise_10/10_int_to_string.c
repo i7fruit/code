@@ -17,10 +17,13 @@ int main(void)
     long long number = 0;
     short size = 64;
 
+    // Prompts user for an integer
     number = get_integer();
 
+    // Array to store the converted string
     char string[size];
 
+    // Converts an integer to a string
     int_to_string(number, string);
 
     printf("%s\n", string);
@@ -52,6 +55,7 @@ void int_to_string(long long i, char arr[])
 {
     int j = 0, size = 64;
 
+    // Tracks if user typed a negative integer
     _Bool is_negative = 0;
 
     // Temporaray array
@@ -70,6 +74,7 @@ void int_to_string(long long i, char arr[])
 
     while (i != 0)
     {
+        // Converts int to char by adding 48 to the into to get its ASCII char equivalent
         temp[j] = (i % 10) + zero_character;
 
         // Updates value of i
