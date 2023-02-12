@@ -87,7 +87,7 @@ void int_to_string(long long i, char arr[])
     // Copies content of temp[] array into arr[] array
     if (is_negative)
     {
-        for (j; j > 0; j--, k++)
+        for (; j > 0; j--, k++)
         {
             arr[k] = temp[j];
         }
@@ -98,6 +98,8 @@ void int_to_string(long long i, char arr[])
         for (j--; temp[j] != '\0'; j--, k++)
             arr[k] = temp[j];
     }
+
+    arr[k] = '\0';
 
     printf("Conversion complete!\n");
 }
