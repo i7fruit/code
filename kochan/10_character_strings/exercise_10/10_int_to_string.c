@@ -50,26 +50,36 @@ long long get_integer(void)
 */
 void int_to_string(long long i, char arr[])
 {
-    int j = 0;
+    int j = 0, size = 64;
+
+    // Temporaray array
+    char temp[size];
 
     // Value to convert integers 0 - 9, to character digits
     long long zero_character = 48;
 
     if (i < 0)
     {
-        arr[j] = '-';
+        temp[j] = '-';
         i = -i;
         j++;
     }
 
     while (i != 0)
     {
-        arr[j] = (i % 10) + zero_character;
+        temp[j] = (i % 10) + zero_character;
 
         // Updates value of i
         i /= 10;
         j++;
     }
+
+    // Terminates the temp string
+    temp[j] = '\0';
+
+    // Copies content of temp[] array into arr[] array
+    for (int k = 0; temp[k] != '\0'; k++)
+        arr[k] = temp[k];
 
     printf("Conversion complete!\n");
 }
