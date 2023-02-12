@@ -77,9 +77,14 @@ void int_to_string(long long i, char arr[])
     // Terminates the temp string
     temp[j] = '\0';
 
+    arr[j] = temp[j];
+
+    // Iterator for arr[] array
+    int k = 0;
+
     // Copies content of temp[] array into arr[] array
-    for (j--; temp[j] != '\0'; j--)
-        arr[j] = temp[j];
+    for (j--; temp[j] != '\0'; j--, k++)
+        arr[k] = temp[j];
 
     printf("Conversion complete!\n");
 }
