@@ -53,6 +53,15 @@ long long get_integer(void)
 */
 void int_to_string(long long i, char arr[])
 {
+    // If user types a zero
+    if (i == 0)
+    {
+        int index = 0;
+        arr[index] = '0';
+        arr[index++] = '\0';
+        return;
+    }
+
     int j = 0, size = 64;
 
     // Tracks if user typed a negative integer
