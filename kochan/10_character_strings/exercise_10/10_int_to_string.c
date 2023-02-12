@@ -88,7 +88,7 @@ void int_to_string(long long i, char arr[])
     // Copies content of temp[] array into arr[] array
     if (is_negative)
     {
-        arr[0] = '-';
+        arr[k++] = '-';
 
         for (j--; j > 0; j--, k++)
         {
