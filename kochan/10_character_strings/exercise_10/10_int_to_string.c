@@ -90,7 +90,7 @@ void int_to_string(long long i, char arr[])
     {
         arr[0] = '-';
 
-        for (j; j > 0; j--, k++)
+        for (j--; j > 0; j--, k++)
         {
             arr[k] = temp[j];
         }
