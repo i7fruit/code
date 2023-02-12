@@ -52,6 +52,8 @@ void int_to_string(long long i, char arr[])
 {
     int j = 0, size = 64;
 
+    _Bool is_negative = 0;
+
     // Temporaray array
     char temp[size];
 
@@ -85,11 +87,17 @@ void int_to_string(long long i, char arr[])
     // Copies content of temp[] array into arr[] array
     if (is_negative)
     {
-        
+        for (j; j > 0; j--, k++)
+        {
+            arr[k] = temp[j];
+        }
     }
-    for (j--; temp[j] != '\0'; j--, k++)
+
+    else
     {
-        arr[k] = temp[j];
+        for (j--; temp[j] != '\0'; j--, k++)
+            arr[k] = temp[j];
+    }
 
     printf("Conversion complete!\n");
 }
