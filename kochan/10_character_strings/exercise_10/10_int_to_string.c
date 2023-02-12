@@ -26,7 +26,7 @@ int main(void)
     // Converts an integer to a string
     int_to_string(number, string);
 
-    printf("%s\n", string);
+    printf("\"%s\"\n", string);
 
     return 0;
 }
