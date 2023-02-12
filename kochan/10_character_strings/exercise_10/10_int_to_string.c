@@ -63,6 +63,7 @@ void int_to_string(long long i, char arr[])
     if (i < 0)
     {
         temp[j] = '-';
+        is_negative = 1;
         i = -i;
         j++;
     }
@@ -88,7 +89,7 @@ void int_to_string(long long i, char arr[])
     if (is_negative)
     {
         arr[0] = '-';
-        
+
         for (; j > 0; j--, k++)
         {
             arr[k] = temp[j];
