@@ -4,7 +4,7 @@ int main(void)
 {
     int arr[] = {1, 4, 3, 2, 5};
 
-    for (int i = 0, j = 1; i < 5; i++)
+    for (int i = 0, j = 1; i < 5; i++, j = i + 1)
     {
         int min = i;
 
