@@ -34,6 +34,7 @@ int main(void)
         }
     }
 
+    // Prints the sorted array
     for (int k = 0; k < size; k++)
         printf("%i ", arr[k]);
 }
