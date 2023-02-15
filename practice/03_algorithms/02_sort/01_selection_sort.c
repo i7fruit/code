@@ -1,3 +1,14 @@
+/**
+ * 01_selection_sort.c
+ *
+ * Tuesday, February 14 2023 18:45hrs
+ *
+ * This program iterates through an array of
+ * values to find the lowest value and places
+ * it in its proper element. It repeats this
+ * process for each subsequent smallest value
+ * until the array is completely sorted.
+*/
 #include <stdio.h>
 
 int main(void)
