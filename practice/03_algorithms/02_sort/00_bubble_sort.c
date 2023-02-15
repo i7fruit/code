@@ -18,16 +18,30 @@ int main(void)
 
     int arr[] = {1, 129, 4, 3, 2, 5, 0};
 
-    counter = -1;
+    int counter = -1;
 
     do
     {
+        counter = 0;
+
         for (int i = 0; i < size - 1; i++)
         {
             for (int j = 1; j < size; j++)
             {
-                if (arr[i])
+                if (arr[j - 1] > arr[j])
+                {
+                    int temp = arr[j - 1];
+                    arr[j - 1] = arr[j];
+                    arr[j] =  temp;
+                    counter++;
+                }
             }
         }
     }
+    while (counter > 0);
+
+    for (int k = 0; k < size; k++)
+        printf("%i ", arr[k]);
+
+    return 0;
 }
