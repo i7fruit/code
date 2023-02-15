@@ -22,7 +22,10 @@ int main(void)
         }
 
         /**
-         *  If after iterating through array, smallest value is
+         *  If after iterating through array, the element with the smallest value
+         * is not the same as the initial element with the smallest value, swap
+         * the contents of these elements
+         */
         if (min != i)
         {
             int temp = arr[min];
