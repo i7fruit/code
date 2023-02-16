@@ -26,10 +26,10 @@ int main(void)
 
         for (int i = 0, j = 1; i < size - 1; i++, j++)
         {
-            if (arr[j - 1] > arr[j])
+            if (arr[i] > arr[j])
             {
-                int temp = arr[j - 1];
-                arr[j - 1] = arr[j];
+                int temp = arr[i];
+                arr[i] = arr[j];
                 arr[j] =  temp;
                 counter++;
             }
