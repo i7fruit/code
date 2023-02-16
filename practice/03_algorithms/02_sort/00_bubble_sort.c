@@ -37,8 +37,10 @@ int main(void)
     }
     while (counter > 0);
 
-    for (int k = 0; k < size; k++)
-        printf("%i ", arr[k]);
+    for (int i = 0; i < size; i++)
+        printf("%i ", arr[i]);
+
+    putchar('\n');
 
     return 0;
 }
