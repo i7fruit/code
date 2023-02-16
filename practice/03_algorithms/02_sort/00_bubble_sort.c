@@ -22,10 +22,13 @@ int main(void)
 
     do
     {
+        // Sets up a counter to track number of swaps
         counter = 0;
 
+        // Iterates from the first to the second to last element
         for (int i = 0, j = 1; i < size - 1; i++, j++)
         {
+            // Compares two adjacent values and swaps them if out of order
             if (arr[i] > arr[j])
             {
                 int temp = arr[i];
@@ -35,8 +38,9 @@ int main(void)
             }
         }
     }
-    while (counter > 0);
+    while (counter > 0); // Iterates through the array again if any swaps occurred
 
+    // Prints the sorted array
     for (int i = 0; i < size; i++)
         printf("%i ", arr[i]);
 
