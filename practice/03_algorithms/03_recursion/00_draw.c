@@ -22,13 +22,13 @@ int main(void)
 void draw(int i)
 {
     if (i == 1)
+    {
+        printf("#");
         return;
+    }
 
     else
     {
-        for (int j = 0; j < i; i++)
-        {
-            draw()
-        }
+        draw(i - 1);
     }
 }
