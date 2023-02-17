@@ -24,12 +24,10 @@ void draw(int i)
     if (i == 0)
         return;
 
-    if (i > 0)
-    {
-        return draw(i - 1);
+    draw(i - 1);
 
-        putchar('\n');
-    }
+    for (int j = 0; j < i; j++)
+        printf("#");
 
-
+    putchar('\n');
 }
