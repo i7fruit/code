@@ -9,14 +9,13 @@
 #include <stdio.h>
 
 // Function prototypes
-char get_character(void);
+char get_character(char arr[]);
 
 int main(void)
 {
     char character = '@';
 
-    printf("Enter a lowercase character: ");
-    character = get_character();
+    character = get_character("Enter a lowercase character: ");
 
     // Converts the lowercase character to uppercase
     character = character - 'a' + 'A';
@@ -29,12 +28,14 @@ int main(void)
 /*******************************************************
  * get_character()
 */
-char get_character(void)
+char get_character(char arr[])
 {
     char c = '@';
 
     do
     {
+        printf("%s\n", arr);
+
         // Saves character into variable
         c = getchar();
 
