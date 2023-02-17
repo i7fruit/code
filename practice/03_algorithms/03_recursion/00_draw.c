@@ -21,15 +21,15 @@ int main(void)
 */
 void draw(int i)
 {
-    if (i == 1)
+    if (i == 0)
     {
         return;
     }
+
+    return draw(i - 1);
 
     for (int j = 0; j < i; j++)
         printf("#");
 
     putchar('\n');
-
-    return draw(i - 1);
 }
