@@ -23,7 +23,6 @@ void draw(int i)
 {
     if (i == 1)
     {
-        printf("#");
         return;
     }
 
@@ -31,4 +30,7 @@ void draw(int i)
     {
         draw(i - 1);
     }
+
+    for (int j = 0; j < i; j++)
+        printf("#");
 }
