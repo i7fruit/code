@@ -24,8 +24,7 @@ void draw(int i)
     if (i == 0)
         return;
 
-    for (int j = 0; j < i; j++)
-        printf("#");
+    return draw(i - 1);
 
     putchar('\n');
 }
