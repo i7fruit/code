@@ -34,6 +34,8 @@ int get_integer(char arr[])
         scanf("%i", &i);
     }
     while (i < 1 || i > 20);
+
+    return i;
 }
 
 /********************************************
