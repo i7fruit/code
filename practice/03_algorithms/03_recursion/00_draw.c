@@ -29,5 +29,7 @@ void draw(int i)
     for (int j = 0; j < i; j++)
         printf("#");
 
+    putchar('\n');
+
     return draw(i - 1);
 }
