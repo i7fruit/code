@@ -24,7 +24,13 @@ void draw(int i)
     if (i == 0)
         return;
 
-    printf("#");
+    if (i > 0)
+    {
+        for (int j = 0; j < i; j++)
+            printf("#");
+
+        putchar('\n');
+    }
 
     return draw(i - 1);
 }
