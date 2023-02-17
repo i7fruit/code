@@ -26,10 +26,7 @@ void draw(int i)
         return;
     }
 
-    else
-    {
-        return draw(i - 1);
-    }
+    return draw(i - 1);
 
     for (int j = 0; j < i; j++)
         printf("#");
