@@ -26,10 +26,13 @@ void draw(int i)
         return;
     }
 
-    return draw(i - 1);
+    else
+    {
+        for (int j = 0; j < i; j++)
+            printf("#");
 
-    for (int j = 0; j < i; j++)
-        printf("#");
+        putchar('\n');
 
-    putchar('\n');
+        return draw(i - 1);
+    }
 }
