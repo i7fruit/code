@@ -1,27 +1,22 @@
 #include <stdio.h>
 
+int get_integer(char arr[]);
+
 int main(void)
 {
-    int arr[] = {1, 4, 3, 2, 5};
+    int x = 0;
 
-    for (int i = 0, j = 1; i < 5; i++, j = i + 1)
-    {
-        int min = i;
+    x = get_integer("x: ");
 
-        for (; j < 5; j++)
-        {
-            if (arr[min] > arr[j])
-                min = j;
-        }
+    printf("%i\n", x);
+}
 
-        if (min != i)
-        {
-            int temp = arr[min];
-            arr[min] = arr[j];
-            arr[j] = temp;
-        }
-    }
+int get_integer(char arr[])
+{
+    int i = 0;
 
-    for (int k = 0; k < 5; k++)
-        printf("%i ", arr[k]);
+    printf("%s", arr);
+    scanf("%i", &i);
+
+    return i;
 }
