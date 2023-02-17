@@ -27,12 +27,4 @@ void draw(int i)
     }
 
     else
-    {
-        for (int j = 0; j < i; j++)
-            printf("#");
-
-        putchar('\n');
-
-        return draw(i - 1);
-    }
 }
