@@ -15,6 +15,11 @@ int main(void)
 */
 int fibonacci(int i)
 {
-    if (i == 1 || i == 2)
+    if (i == 1)
+        return 0;
 
+    else if (i == 2)
+        return 1;
+
+    return fibonacci(i)
 }
