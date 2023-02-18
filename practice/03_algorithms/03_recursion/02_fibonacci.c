@@ -17,10 +17,10 @@ int main(void)
 */
 int fibonacci(int i)
 {
-    if (i == 1)
+    if (i == 0)
         return 0;
 
-    else if (i == 2)
+    else if (i == 1)
         return 1;
 
     return fibonacci(i - 2) + fibonacci(i - 1);
