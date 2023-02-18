@@ -5,6 +5,8 @@
 */
 #include <stdio.h>
 
+int fibonacci(int i);
+
 int main(void)
 {
     fibonacci(3);
@@ -21,5 +23,5 @@ int fibonacci(int i)
     else if (i == 2)
         return 1;
 
-    return fibonacci(i + )
+    return fibonacci(i + (i - 1));
 }
