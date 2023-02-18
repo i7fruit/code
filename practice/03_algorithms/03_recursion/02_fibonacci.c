@@ -5,11 +5,31 @@
 */
 #include <stdio.h>
 
+int get_integer(char arr[]);
 int fibonacci(int i);
 
 int main(void)
 {
-    printf("%i\n", fibonacci(6));
+    int number = get_integer("Fibonacci number: ");
+
+    printf("%i\n", fibonacci(number));
+}
+
+/****************************************
+ * get_integer() prompts the user for an integer
+*/
+int get_integer(char arr[])
+{
+    int i = 0;
+
+    do
+    {
+        printf("%s", arr);
+        scanf("%i", &i);
+    }
+    while (i < 1 || i > 20);
+
+    return i;
 }
 
 /*******************************************
