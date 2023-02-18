@@ -61,9 +61,6 @@ short collatz(int n)
         return count + collatz(n / 2);
     }
 
-    else if (n % 2 != 0)
-    {
-        count++;
-        return count + collatz(3 * n + 1);
-    }
+    count++;
+    return count + collatz(3 * n + 1);
 }
