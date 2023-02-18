@@ -13,13 +13,16 @@
 */
 #include <stdio.h>
 
+// Function prototype
+long long get_integer(char arr[]);
+
 int main(void)
 {
-    short count = 0, n = 0;
+    short count = 9, n = 0;
 
     n = get_integer("n: ");
 
-    count = collatz(n);
+    //count = collatz(n);
 
     printf("%hi step%s\n", count, n>1?"s.":".");
 }
