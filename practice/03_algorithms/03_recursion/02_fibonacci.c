@@ -21,5 +21,5 @@ int fibonacci(int i)
     else if (i == 2)
         return 1;
 
-    return fibonacci(i)
+    return fibonacci(i + )
 }
