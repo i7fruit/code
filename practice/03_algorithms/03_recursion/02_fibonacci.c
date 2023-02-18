@@ -9,7 +9,7 @@ int fibonacci(int i);
 
 int main(void)
 {
-    fibonacci(3);
+    printf("%i\n", fibonacci(3));
 }
 
 /*******************************************
