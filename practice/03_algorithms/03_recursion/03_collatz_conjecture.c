@@ -53,7 +53,7 @@ short collatz(int n)
     short count = 0;
 
     if (n == 1)
-        return 0;
+        return count;
 
     else if (n % 2 == 0)
     {
