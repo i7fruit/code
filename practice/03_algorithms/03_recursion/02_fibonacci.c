@@ -43,6 +43,5 @@ int fibonacci(int i)
     else if (i == 1)
         return 1;
 
-    else
-        return fibonacci(i - 2) + fibonacci(i - 1);
+    return fibonacci(i - 2) + fibonacci(i - 1);
 }
