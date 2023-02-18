@@ -55,12 +55,10 @@ short collatz(int n)
     if (n == 1)
         return count;
 
-    else if (n % 2 == 0)
-    {
-        count++;
-        return count + collatz(n / 2);
-    }
-
     count++;
-    return count + collatz(3 * n + 1);
+
+    else if (n % 2 == 0)
+        return collatz(n / 2);
+
+    return collatz(3 * n + 1);
 }
