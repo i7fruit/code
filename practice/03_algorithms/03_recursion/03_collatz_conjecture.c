@@ -1,0 +1,25 @@
+/**
+ * 03_collatz_conjecture.c
+ *
+ * Saturday, February 18 2023 12:08hrs
+ *
+ * The collatz conjecture applies to positive integers
+ * and speculates that it's always possible to get back to 1
+ * following the steps before
+ *
+ * if n == 1, stop
+ * else if n is even, repeat operation on n/2
+ * else if n is odd, repeate operation on 3n + 1
+*/
+#include <stdio.h>
+
+int main(void)
+{
+    short count = 0, n = 0;
+
+    n = get_integer("n: ");
+
+    count = collatz(n);
+
+    printf("%hi step%s\n", count, n>1?"s.":'.')
+}
