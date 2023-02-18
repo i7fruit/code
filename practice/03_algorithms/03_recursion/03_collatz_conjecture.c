@@ -40,7 +40,7 @@ long long get_integer(char arr[])
         printf("%s", arr);
         scanf("%li!", &i);
     }
-    while (i < 1 || i > 20);
+    while (i < 1 || i > 60);
 
     return i;
 }
