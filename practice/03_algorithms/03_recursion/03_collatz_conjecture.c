@@ -21,5 +21,22 @@ int main(void)
 
     count = collatz(n);
 
-    printf("%hi step%s\n", count, n>1?"s.":'.')
+    printf("%hi step%s\n", count, n>1?"s.":".");
+}
+
+/****************************************
+ * get_integer() prompts the user for an integer
+*/
+long long get_integer(char arr[])
+{
+    long i = 0;
+
+    do
+    {
+        printf("%s", arr);
+        scanf("%li!", &i);
+    }
+    while (i < 1 || i > 20);
+
+    return i;
 }
