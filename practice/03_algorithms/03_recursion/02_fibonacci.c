@@ -33,7 +33,9 @@ int get_integer(char arr[])
 }
 
 /*******************************************
- * fibonacci()
+ * The fibonacci() function returns the sum of
+ * the previous two fibonacci numbers. The first
+ * two numbers are defined to be 0 and 1.
 */
 int fibonacci(int i)
 {
@@ -43,5 +45,6 @@ int fibonacci(int i)
     else if (i == 1)
         return 1;
 
+    // Returns the sum of the last two values
     return fibonacci(i - 2) + fibonacci(i - 1);
 }
