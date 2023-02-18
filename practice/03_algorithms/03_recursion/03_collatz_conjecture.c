@@ -15,6 +15,7 @@
 
 // Function prototype
 long long get_integer(char arr[]);
+short collatz(int n);
 
 int main(void)
 {
@@ -52,5 +53,17 @@ short collatz(int n)
     short count = 0;
 
     if (n == 1)
-        return
+        return 0;
+
+    else if (n % 2 == 0)
+    {
+        count++;
+        return count + collatz(n / 2);
+    }
+
+    else if (n % 2 != 0)
+    {
+        count++;
+        return count + collatz(3 * n + 1);
+    }
 }
