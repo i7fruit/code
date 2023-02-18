@@ -17,7 +17,7 @@ int main(void)
     int size = 7;
 
     int arr[] = {1, 129, 4, 3, 2, 5, 0};
-
+    
     int counter = -1;
 
     do

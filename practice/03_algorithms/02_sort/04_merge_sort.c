@@ -10,3 +10,6 @@
  * after which it merges them in ascending
  * or decending order
 */
+#include <stdio.h>
+
+int main(void)
