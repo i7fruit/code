@@ -22,7 +22,7 @@ int main(void)
 
     n = get_integer("n: ");
 
-    //count = collatz(n);
+    count = collatz(n);
 
     printf("%hi step%s\n", count, count>1?"s.":".");
 }
@@ -42,4 +42,15 @@ long long get_integer(char arr[])
     while (i < 1 || i > 20);
 
     return i;
+}
+
+/*************************************************
+ * collatz()
+*/
+short collatz(int n)
+{
+    short count = 0;
+
+    if (n == 1)
+        return
 }
