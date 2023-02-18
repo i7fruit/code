@@ -50,7 +50,7 @@ long long get_integer(char arr[])
 */
 short collatz(int n)
 {
-    short count = 0;
+    static short count = 0;
 
     if (n == 1)
         return count;
