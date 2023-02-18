@@ -19,6 +19,8 @@ int main(void)
 
     number = get_integer("Number: ");
 
+    number = factorial(number);
+
     return 0;
 }
 
