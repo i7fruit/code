@@ -11,20 +11,20 @@
 #include <stdio.h>
 
 // Function prototypes
-long get_integer(char arr[]);
-long factorial(long n);
+long long get_integer(char arr[]);
+long long factorial(long long n);
 
 int main(void)
 {
-    long number = 0;
+    long long number = 0;
 
     number = get_integer("Number: ");
 
-    printf("%li! = ", number);
+    printf("%lli! = ", number);
 
     number = factorial(number);
 
-    printf("%li\n", number);
+    printf("%lli\n", number);
 
     return 0;
 }
@@ -32,7 +32,7 @@ int main(void)
 /****************************************
  * get_integer() prompts the user for an integer
 */
-long get_integer(char arr[])
+long long get_integer(char arr[])
 {
     long i = 0;
 
@@ -49,7 +49,7 @@ long get_integer(char arr[])
 /******************************************
  * factorial()
 */
-long factorial(long n)
+long long factorial(long long n)
 {
     if (n == 0 || n == 1)
         return 1;
