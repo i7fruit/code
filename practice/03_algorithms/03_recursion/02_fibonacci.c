@@ -13,4 +13,8 @@ int main(void)
 /*******************************************
  * fibonacci()
 */
-int
+int fibonacci(int i)
+{
+    if (i == 0 || i == 1)
+        
+}
