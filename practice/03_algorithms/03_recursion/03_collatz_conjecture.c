@@ -52,10 +52,10 @@ short collatz(int n)
 {
     static short count = 0;
 
-    if (n == 1)
-        return count;
-
     count++;
+
+    if (n == 1)
+        return 0;
 
     else if (n % 2 == 0)
         return collatz(n / 2);
