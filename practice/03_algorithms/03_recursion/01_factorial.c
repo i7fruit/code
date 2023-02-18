@@ -39,7 +39,7 @@ long get_integer(char arr[])
     do
     {
         printf("%s", arr);
-        scanf("%li", &i);
+        scanf("%li!", &i);
     }
     while (i < 1 || i > 20);
 
