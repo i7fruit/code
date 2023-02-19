@@ -92,5 +92,28 @@ void merge(int arr[], int lo, int mid, int hi)
      */
     // Resets indices of both subarrays
     i = 0, j = 0, k = 0;
-    //while ()
+
+    // While both arrays have not been completely iterated through...
+    while (i < size_left_subarray && j < size_right_subarray)
+    {
+        // Compare values in elements of each subarray
+        if (left_subarray[i] < right_subarray[j])
+        {
+            arr[k] = left_subarray[i];
+            i++; k++;
+        }
+
+        else if (right_subarray[j] < left_subarray[i])
+        {
+            arr[k] = right_subarray[j];
+            j++; k++;
+        }
+    }
+
+    // Appends what's left from each subarray if any
+    while (i < size_left_subarray)
+        arr[k] = left_subarray[i]; i++; k++;
+
+    while (j < size_right_subarray)
+        arr[k] = right_subarray[j]; j++; k++;
 }
