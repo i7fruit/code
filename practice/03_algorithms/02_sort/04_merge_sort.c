@@ -86,5 +86,6 @@ void merge(int arr[], int lo, int mid, int hi)
     for (; j < size_right_subarray; j++, k++)
         right_subarray[j] = arr[k];
 
-    // Merges both arrays
+    // Merges both arrays into a sorted order
+    while ()
 }
