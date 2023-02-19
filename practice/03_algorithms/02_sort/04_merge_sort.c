@@ -112,8 +112,12 @@ void merge(int arr[], int lo, int mid, int hi)
 
     // Appends what's left from each subarray if any
     while (i < size_left_subarray)
+    {
         arr[k] = left_subarray[i]; i++; k++;
+    }
 
     while (j < size_right_subarray)
+    {
         arr[k] = right_subarray[j]; j++; k++;
+    }
 }
