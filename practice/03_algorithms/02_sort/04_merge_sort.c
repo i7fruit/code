@@ -169,8 +169,7 @@
      // Prompts the user for input
      for (int i = 0; i < size; i++)
      {
-         printf("Enter an integer\n");
-         Array[i] = get_int();
+         Array[i] = get_int("Enter an integer");
      }
 
      printf("\n");
