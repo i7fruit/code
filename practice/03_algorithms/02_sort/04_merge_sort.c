@@ -13,3 +13,11 @@
 #include <stdio.h>
 
 int main(void)
+{
+    // Array size
+    int size = 7;
+
+    int arr[] = {1, 129, 4, 3, 2, 5, 0};
+
+    merge_sort(arr, )
+}
