@@ -67,10 +67,17 @@ void sort(int arr[], int lo, int hi)
 void merge(int arr[], int lo, int mid, int hi)
 {
     // Computes the sizes of both subarrays
-    int size_left_array = mid - lo + 1;
-    int size_right_array = hi - mid;
+    int size_left_subarray = mid - lo + 1;
+    int size_right_subarray = hi - mid;
 
     // Creates temporary arrays to store subarrays
-    int left_subarray[size_left_array];
-    int right_subarray[size_right_array];
+    int left_subarray[size_left_subarray];
+    int right_subarray[size_right_subarray];
+
+    // Initializes the subarrays
+    int i = 0, j = 0, k = 0;
+    while (i < size_left_subarray)
+    {
+        
+    }
 }
