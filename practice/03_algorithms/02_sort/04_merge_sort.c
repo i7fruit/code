@@ -68,5 +68,5 @@ void merge(int arr[], int lo, int mid, int hi)
 {
     // Computes the sizes of both subarrays
     int size_left_array = mid - lo + 1;
-    int size_right_array = hi + 1;
+    int size_right_array = hi - mid;
 }
