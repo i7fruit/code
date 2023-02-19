@@ -19,5 +19,11 @@ int main(void)
 
     int arr[] = {1, 129, 4, 3, 2, 5, 0};
 
-    merge_sort(arr, )
+    // Computes lowest and highest indices
+    int lo = 0, hi = size - 1;
+
+    merge_sort(arr, lo, hi);
+
+    return 0;
 }
+
