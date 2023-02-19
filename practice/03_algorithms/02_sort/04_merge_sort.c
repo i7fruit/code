@@ -143,6 +143,7 @@
 
  #include <stdio.h>
  #include <cs50.h>
+ #include <stdlib.h>
 
 
  void merge(int Arr[], int l, int mid, int r);
