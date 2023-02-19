@@ -58,8 +58,15 @@ void sort(int arr[], int lo, int hi)
     }
 }
 
-//
+ /********************************************************
+  * The merge function takes in an array, and three
+  * integers. It compares the values of the elements
+  * in the arrays it's merging and sorts them in
+  * ascending or decending order.
+  */
 void merge(int arr[], int lo, int mid, int hi)
 {
-    
+    // Computes the sizes of both subarrays
+    int size_left_array = mid - lo + 1;
+    int size_
 }
