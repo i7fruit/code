@@ -89,5 +89,6 @@ void merge(int arr[], int lo, int mid, int hi)
      * Merges both arrays into a sorted order
      */
     // Resets indices of both subarrays
+    i = 0, j = 0, k = 0;
     //while ()
 }
