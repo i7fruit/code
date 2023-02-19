@@ -12,6 +12,10 @@
 */
 #include <stdio.h>
 
+// Function prototypes
+void sort(int arr[], int lo, int hi);
+void merge(int arr[], int lo, int mid, int hi);
+
 int main(void)
 {
     // Array size
@@ -75,8 +79,10 @@ void merge(int arr[], int lo, int mid, int hi)
     int right_subarray[size_right_subarray];
 
     // Initializes the subarrays
-    for (int i = 0; i < size_left_subarray; i++)
+    int i = 0;
+    for (; i < size_left_subarray; i++)
         left_subarray[i] = arr[i];
 
-    for ()
+    for (; i < size_right_subarray; i++)
+        right_subarray[i] = arr[i];
 }
