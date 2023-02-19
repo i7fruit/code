@@ -38,7 +38,11 @@ int main(void)
  */
 void sort(int arr[], int lo, int hi)
 {
-    while (lo < hi)
+    /**
+     * If the array size is greater than 1 ie if starting index is lower than
+     * ending index, it proceeds to find its midpoint
+    */
+    if (lo < hi)
     {
         // Finds mid point of the array
         int mid = (lo + hi) / 2;
