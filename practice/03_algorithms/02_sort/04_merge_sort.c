@@ -28,6 +28,11 @@ int main(void)
 
     sort(arr, lo, hi);
 
+    for (int i = 0; i < size; i++)
+        printf("%i ", arr[i]);
+
+    putchar('\n');
+
     return 0;
 }
 
