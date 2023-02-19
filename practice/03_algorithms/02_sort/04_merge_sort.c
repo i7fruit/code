@@ -36,3 +36,20 @@ int main(void)
  * merge function to combine the subarrays into a
  * fully sorted array.
  */
+void sort(int arr[], int lo, int hi)
+{
+    while (lo < hi)
+    {
+        // Finds mid point of the array
+        int mid = (lo + hi) / 2;
+
+        // Sorts the left part of the subarray
+        sort(arr, lo, mid);
+
+        // Sorts the right part of the subarray
+        sort(arr, (mid + 1), hi);
+
+        // Merges both subarrays
+        merge(arr, lo, mid, hi);
+    }
+}
