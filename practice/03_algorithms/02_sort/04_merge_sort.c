@@ -21,7 +21,7 @@ int main(void)
     // Array size
     int size = 7;
 
-    int arr[] = {1, 129, 4, 3, 2, 5, 0};
+    int arr[] = {10, 129, 4, 3, 2, 5, 0};
 
     // Computes lowest and highest indices
     int lo = 0, hi = size - 1;
