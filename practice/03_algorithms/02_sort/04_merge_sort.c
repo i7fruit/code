@@ -75,5 +75,8 @@ void merge(int arr[], int lo, int mid, int hi)
     int right_subarray[size_right_subarray];
 
     // Initializes the subarrays
-    for (int i = 0; i < )
+    for (int i = 0; i < size_left_subarray; i++)
+        left_subarray[i] = arr[i];
+
+    for ()
 }
