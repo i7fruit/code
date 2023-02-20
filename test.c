@@ -1,22 +1,93 @@
 #include <stdio.h>
 
-int get_integer(char arr[]);
+// Function prototypes
+void sort(int arr[], int lo, int hi);
+void merge(int arr[], int lo, int med, int hi);
 
 int main(void)
 {
-    int x = 0;
+    int size = 7;
 
-    x = get_integer("x: ");
+    int arr[] = {1, 129, 4, 3, 2, 5, 0};
 
-    printf("%i\n", x);
+    // Declares lowest and highest indices
+    int start = 0, end = size - 1;
+
+    sort(arr, start, end);
+
+    for (int i = 0; i < size; i++)
+        printf("%i ", arr[i]);
+
+    return 0;
 }
 
-int get_integer(char arr[])
+// sort
+void sort(int arr[], int lo, int hi)
 {
-    int i = 0;
+    if (lo < hi)
+    {
+        // Finds mid point
+        int mid = (lo + hi) / 2;
 
-    printf("%s", arr);
-    scanf("%i", &i);
+        // Sorts left half
+        sort(arr, lo, mid);
 
-    return i;
+        // Sorts right half
+        sort(arr, (mid + 1), hi);
+
+        // Merge subarrays
+        merge(arr, lo, mid, hi);
+    }
+}
+
+// merge
+void merge(int arr[], int lo, int med, int hi)
+{
+    // Computes size of subarrays
+    int size_lft_array = lo + (med + 1);
+    int size_rgt_array = hi - med;
+
+    // Declares subarrays
+    char lft_array[size_lft_array];
+    char rgt_array[size_rgt_array];
+
+    // Populates both subarrays
+    for (int i = 0; i < size_lft_array; i++)
+        lft_array[i] = arr[lo + i];
+
+    for (int j = 0; j < size_rgt_array; j++)
+        rgt_array[j] = arr[med + j];
+
+    // Merges the subarrays
+    int i = 0, j = 0, k = lo;
+    while (i < size_lft_array && j < size_rgt_array)
+    {
+        if (lft_array[i] < rgt_array[j])
+        {
+            arr[k] = lft_array[i];
+            i++;
+            k++;
+        }
+        else if (lft_array[i] >= rgt_array[j])
+        {
+            arr[k] = rgt_array[j];
+            j++;
+            k++;
+        }
+    }
+
+    // Adds what ever's left
+    while (i < size_lft_array)
+    {
+        arr[k] = lft_array[i];
+        i++;
+        k++;
+    }
+
+    while (j < size_rgt_array)
+    {
+        arr[k] = rgt_array[j];
+        j++;
+        k++;
+    }
 }
