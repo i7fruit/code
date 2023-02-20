@@ -44,7 +44,7 @@ void sort(int arr[], int lo, int hi)
 void merge(int arr[], int lo, int med, int hi)
 {
     // Computes size of subarrays
-    int size_lft_array = lo + (med + 1);
+    int size_lft_array = med + 1;
     int size_rgt_array = hi - med;
 
     // Declares subarrays
