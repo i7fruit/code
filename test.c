@@ -41,11 +41,11 @@ void sort(int arr[], int lo, int hi)
 }
 
 // merge
-void merge(int arr[], int lo, int med, int hi)
+void merge(int arr[], int lo, int mid, int hi)
 {
     // Computes size of subarrays
-    int size_lft_array = med + 1;
-    int size_rgt_array = hi - med;
+    int size_lft_array = mid - lo + 1;
+    int size_rgt_array = hi - mid;
 
     // Declares subarrays
     char lft_array[size_lft_array];
@@ -56,7 +56,7 @@ void merge(int arr[], int lo, int med, int hi)
         lft_array[i] = arr[lo + i];
 
     for (int j = 0; j < size_rgt_array; j++)
-        rgt_array[j] = arr[med + j];
+        rgt_array[j] = arr[mid + j];
 
     // Merges the subarrays
     int i = 0, j = 0, k = lo;
