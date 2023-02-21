@@ -63,7 +63,8 @@ void merge(int arr[], int lo, int mid, int hi)
         rgt_array[j] = arr[k + j];
 
     // Merges the subarrays
-    int i = 0, j = 0, k = lo;
+    j = 0, k = lo;
+    int i = 0;
     while (i < size_lft_array && j < size_rgt_array)
     {
         if (lft_array[i] < rgt_array[j])
