@@ -8,7 +8,7 @@ int main(void)
 {
     int size = 8;
 
-    int arr[] = {5, 4, };
+    int arr[] = {5, 100, 3, 2, 1, 99, 0, -1};
 
     // Declares lowest and highest indices
     int start = 0, end = size - 1;
@@ -17,6 +17,8 @@ int main(void)
 
     for (int i = 0; i < size; i++)
         printf("%i ", arr[i]);
+
+    putchar('\n');
 
     return 0;
 }
