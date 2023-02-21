@@ -19,9 +19,9 @@ void merge(int arr[], int lo, int mid, int hi);
 int main(void)
 {
     // Array size
-    int size = 7;
+    int size = 8;
 
-    int arr[] = {10, 129, 4, 3, 2, 5, 0};
+    int arr[] = {15, 100, 3, 2, 1, 909, 0, -1};
 
     // Computes lowest and highest indices
     int lo = 0, hi = size - 1;
