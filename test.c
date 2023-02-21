@@ -54,11 +54,13 @@ void merge(int arr[], int lo, int mid, int hi)
     char rgt_array[size_rgt_array];
 
     // Populates both subarrays
+    int k = lo, j = 0;
+
     for (int i = 0; i < size_lft_array; i++)
         lft_array[i] = arr[lo + i];
 
-    for (int j = 0; j < size_rgt_array; j++)
-        rgt_array[j] = arr[(mid + 1) + j];
+    for (k = mid + 1; j < size_rgt_array; j++)
+        rgt_array[j] = arr[k + j];
 
     // Merges the subarrays
     int i = 0, j = 0, k = lo;
