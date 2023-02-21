@@ -8,7 +8,7 @@ int main(void)
 {
     int size = 8;
 
-    int arr[] = {5, 100, 3, 2, 1, 909, 0, -1};
+    int arr[] = {15, 100, 3, 2, 1, 909, 0, -1};
 
     // Declares lowest and highest indices
     int start = 0, end = size - 1;
