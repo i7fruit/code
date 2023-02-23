@@ -50,8 +50,8 @@ void merge(int arr[], int lo, int mid, int hi)
     int size_rgt_array = hi - mid;
 
     // Declares subarrays
-    char lft_array[size_lft_array];
-    char rgt_array[size_rgt_array];
+    int lft_array[size_lft_array];
+    int rgt_array[size_rgt_array];
 
     // Populates both subarrays
     int k = lo, j = 0;
