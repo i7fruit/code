@@ -38,7 +38,7 @@ void sort(int arr[], int lo, int hi)
 void merge(int arr[], int lo, int mid, int hi)
 {
     // Computes sizes of subarrays
-    int nl = lo + (mid + 1);
+    int nl = (mid + 1) - lo;
     int nr = hi - mid;
 
     // Creates subarrays
