@@ -66,7 +66,7 @@ void merge(int arr[], int lo, int mid, int hi)
             arr[k] = lft_arr[i];
             i++;
         }
-        else if (rgt_arr[j] < lft_arr[i])
+        else if (rgt_arr[j] <= lft_arr[i])
         {
             arr[k] = rgt_arr[j];
             j++;
