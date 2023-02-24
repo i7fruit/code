@@ -6,14 +6,18 @@ void merge(int arr[], int lo, int mid, int hi);
 
 int main()
 {
-    int values[] = {-1, 89, 23, 0, -98};
+    int values[] = {-8, 8, 234, 8, 0, 19, 2, 7, 6, 21, 97, -738};
 
-    int lo = 0, hi = 10;
+    int size = sizeof(values) / sizeof(values[0]);
+
+    int lo = 0, hi = size - 1;
 
     sort(values, lo, hi);
 
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < size; i++)
         printf("%i ", values[i]);
+
+    putchar('\n');
 
     return 0;
 }
