@@ -108,7 +108,7 @@ void merge(int arr[], int lo, int mid, int hi)
             i++; k++;
         }
 
-        else if (right_subarray[j] < left_subarray[i])
+        else if (right_subarray[j] <= left_subarray[i])
         {
             arr[k] = right_subarray[j];
             j++; k++;
