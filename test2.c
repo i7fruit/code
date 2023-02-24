@@ -6,9 +6,9 @@ void merge(int arr[], int lo, int mid, int hi);
 
 int main()
 {
-    int values[] = {2, 0, 11, 9, 300, 2};
+    int values[] = {15, 100, 1, 909, 0, -1, 89, 23, 0, -98};
 
-    int lo = 0, hi = 5;
+    int lo = 0, hi = 10;
 
     sort(values, lo, hi);
 
