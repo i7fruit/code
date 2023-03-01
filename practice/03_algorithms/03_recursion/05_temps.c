@@ -55,7 +55,7 @@ int main(void)
 
     for (int i = 0; i < NUM_CITIES; i++)
     {
-        printf("%s: %25i\n", temps[i].city, temps[i].temp);
+        printf("%14s: %i\n", temps[i].city, temps[i].temp);
     }
 }
 
