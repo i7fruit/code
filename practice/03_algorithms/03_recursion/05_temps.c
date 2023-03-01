@@ -63,11 +63,21 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
-    for (int i = 0; i < NUM_CITIES; i++)
-        if (temps[i].temp < temps[i + 1].temp)
+    int counter = -1;
+
+    do
+    {
+        counter = 0;
+
+        for (int i = 0; i < NUM_CITIES; i++)
         {
-            int temporary = temps[i + 1].temp;
-            temps[i + 1].temp = temps[i].temp;
-            temps[i].temp = temporary;
+            if (temps[i].temp < temps[i + 1].temp)
+            {
+                int temporary = temps[i + 1].temp;
+                temps[i + 1].temp = temps[i].temp;
+                temps[i].temp = temporary;
+            }
         }
+    }
+    while (counter != 0);
 }
