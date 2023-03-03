@@ -78,7 +78,7 @@ void add_items(void)
 
     do
     {
-        
+        menu.item = get_string
     }
     return;
 }
