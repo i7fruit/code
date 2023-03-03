@@ -74,13 +74,17 @@ int main(void)
 // Add at least the first four items to the menu array
 void add_items(void)
 {
-    int i = -1;
 
-    do
-    {
-        menu[++i].item = get_string("Menu item: ");
-    }
-    while (i < 1 || i > NUM_ITEMS);
+    menu = {"Burger: ", 9.5
+ * Vegan Burger: $11
+ * Hot Dog: $5
+ * Cheese Dog: $7
+ * Fries: $5
+ * Cheese Fries: $6
+ * Cold Pressed Juice: $7
+ * Cold Brew: $3
+ * Water: $2
+ * Soda: $2
 
     return;
 }
