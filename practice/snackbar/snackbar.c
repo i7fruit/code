@@ -74,12 +74,14 @@ int main(void)
 // Add at least the first four items to the menu array
 void add_items(void)
 {
-    int i = 0;
+    int i = -1;
 
     do
     {
-        menu.item = get_string
+        menu[++i].item = get_string("Menu item: ");
     }
+    while (i < 3 || i > NUM_ITEMS);
+
     return;
 }
 
