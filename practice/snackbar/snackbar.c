@@ -80,7 +80,7 @@ void add_items(void)
     {
         menu[++i].item = get_string("Menu item: ");
     }
-    while (i < 3 || i > NUM_ITEMS);
+    while (i < 1 || i > NUM_ITEMS);
 
     return;
 }
