@@ -71,7 +71,7 @@ int main(void)
     printf("Your total cost is: $%.2f\n", total);
 }
 
-// Add at least the first for items to the menu array
+// Add at least the first four items to the menu array
 void add_items(void)
 {
     return;
