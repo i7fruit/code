@@ -1,5 +1,5 @@
 /**
- * 0_linear_search.c
+ * 00_linear_search.c
  *
  * Sunday, February 12, 2023 21:39hrs
  *
@@ -27,6 +27,6 @@ int main(void)
 
     // Returns 1 if the value was not found
     printf("Value NOT found\n");
-    
+
     return 1;
 }
