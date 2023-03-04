@@ -110,11 +110,9 @@ void add_items(void)
 // Search through the menu array to find an item's cost
 float get_cost(string item)
 {
-    float total = 0.0;
-
     for (int i = 0; i < NUM_ITEMS; i++)
         if (item == menu[i].item)
-            total += menu[i].price;
+            return menu[i].price;
 
-    return total;
+    return 0.0;
 }
