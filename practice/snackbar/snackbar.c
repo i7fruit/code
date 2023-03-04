@@ -74,19 +74,18 @@ int main(void)
 // Add at least the first four items to the menu array
 void add_items(void)
 {
-
-    menu[] =
+    menu =
     {
-        {"Burger: ", 9.5},
-        {"Vegan Burger: ", 11},
-        {"Hot Dog: ", 5},
-        {"Cheese Dog: ", 7},
-        {"Fries: ", 5},
-        {"Cheese Fries: ", 6},
-        {"Cold Pressed Juice: ", 7},
-        {"Cold Brew: ", 3},
-        {"Water: ", 2},
-        {"Soda: ", 2}
+        (menu_item){"Burger: ", 9.5},
+        (menu_item){"Vegan Burger: ", 11},
+        (menu_item){"Hot Dog: ", 5},
+        (menu_item){"Cheese Dog: ", 7},
+        (menu_item){"Fries: ", 5},
+        (menu_item){"Cheese Fries: ", 6},
+        (menu_item){"Cold Pressed Juice: ", 7},
+        (menu_item){"Cold Brew: ", 3},
+        (menu_item){"Water: ", 2},
+        (menu_item){"Soda: ", 2}
     };
 }
 
