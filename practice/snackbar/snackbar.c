@@ -51,7 +51,7 @@ int main(void)
 
     for (int i = 0; i < NUM_ITEMS; i++)
     {
-        printf("%s: $%.2f\n", menu[i].item, menu[i]. price);
+        printf("%19s: $%.2f\n", menu[i].item, menu[i]. price);
     }
     printf("\n");
 
