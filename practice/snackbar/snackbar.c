@@ -74,9 +74,9 @@ int main(void)
 // Add at least the first four items to the menu array
 void add_items(void)
 {
-    menu[] =
+    menu =
     {
-        (menu_item){"Burger: ", 9.5}
+        {[0].item = "Burger: ", [0].price = 9.5}
         //{"Vegan Burger: ", 11},
         //{"Hot Dog: ", 5},
         //{"Cheese Dog: ", 7},
