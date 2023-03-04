@@ -88,7 +88,7 @@ void add_items(void)
     //    {"Soda: ", 2}
     //};
 
-    menu =
+    menu[] =
     {
         (menu_item){"Burger: ", 9.5}
     };
