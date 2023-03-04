@@ -110,11 +110,14 @@ void add_items(void)
 // Search through the menu array to find an item's cost
 float get_cost(string item)
 {
-    _Bool not_on_menu = 0;
+    _Bool not_on_menu = 1;
 
     for (int i = 0; i < NUM_ITEMS; i++)
         if (strcmp(item, menu[i].item) == 0)
+        {
+            not_on_menu = 0;
             return menu[i].price;
+        }
 
     if (not_on_menu)
         printf("%s is not on the menu\n", item);
