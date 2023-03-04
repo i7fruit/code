@@ -116,7 +116,5 @@ float get_cost(string item)
         if (item == menu[i].item)
             total += menu[i].price;
 
-    
-
-    return 0.0;
+    return total;
 }
