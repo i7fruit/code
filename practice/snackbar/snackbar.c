@@ -75,8 +75,7 @@ int main(void)
 void add_items(void)
 {
     menu =
-    {
-        {[0].item = "Burger: ", [0].price = 9.5}
+        {[0].item = "Burger: ", [0].price = 9.5};
         //{"Vegan Burger: ", 11},
         //{"Hot Dog: ", 5},
         //{"Cheese Dog: ", 7},
@@ -86,7 +85,6 @@ void add_items(void)
         //{"Cold Brew: ", 3},
         //{"Water: ", 2},
         //{"Soda: ", 2}
-    };
 
     return;
 }
