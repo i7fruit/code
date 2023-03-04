@@ -74,15 +74,25 @@ int main(void)
 // Add at least the first four items to the menu array
 void add_items(void)
 {
-    menu[0].item = "Burger: ";
+    menu[0].item = "Burger";
     menu[0].price = 9.5;
-    
-        //{"Vegan Burger: ", 11},
-        //{"Hot Dog: ", 5},
-        //{"Cheese Dog: ", 7},
-        //{"Fries: ", 5},
-        //{"Cheese Fries: ", 6},
-        //{"Cold Pressed Juice: ", 7},
+
+    menu[1].item = "Vegan Burger"
+    menu[11].price = 11;
+
+    menu[2].item = "Hot Dog:";
+    menu[2].price = 5;
+
+    menu[3].item = "Cheese Dog";
+    menu[3].price = 7;
+
+    menu[4].item = "Fries";
+    menu[4].price = 5;
+
+    menu[5].item = "Cheese Fries";
+    menu[5].price = 6;
+
+    "Cold Pressed Juice: ", 7},
         //{"Cold Brew: ", 3},
         //{"Water: ", 2},
         //{"Soda: ", 2}
