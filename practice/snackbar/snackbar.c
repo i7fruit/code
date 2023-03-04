@@ -90,7 +90,7 @@ void add_items(void)
 
     menu =
     {
-        {[0] = .item"Burger: ", 9.5}
+        (menu_item){"Burger: ", 9.5}
     };
 }
 
