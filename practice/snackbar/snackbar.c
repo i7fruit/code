@@ -74,18 +74,23 @@ int main(void)
 // Add at least the first four items to the menu array
 void add_items(void)
 {
+    //menu =
+    //{
+    //    {"Burger: ", 9.5},
+    //    {"Vegan Burger: ", 11},
+    //    {"Hot Dog: ", 5},
+    //    {"Cheese Dog: ", 7},
+    //    {"Fries: ", 5},
+    //    {"Cheese Fries: ", 6},
+    //    {"Cold Pressed Juice: ", 7},
+    //    {"Cold Brew: ", 3},
+    //    {"Water: ", 2},
+    //    {"Soda: ", 2}
+    //};
+
     menu =
     {
-        {"Burger: ", 9.5},
-        {"Vegan Burger: ", 11},
-        {"Hot Dog: ", 5},
-        {"Cheese Dog: ", 7},
-        {"Fries: ", 5},
-        {"Cheese Fries: ", 6},
-        {"Cold Pressed Juice: ", 7},
-        {"Cold Brew: ", 3},
-        {"Water: ", 2},
-        {"Soda: ", 2}
+        {[0] = .item"Burger: ", 9.5}
     };
 }
 
