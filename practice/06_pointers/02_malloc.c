@@ -20,7 +20,7 @@ int main(void)
 
     char word[size];
 
-    get_text()
+    get_text(word);
 
     /**
      * malloc returns the memory address of the number of bytes
@@ -47,4 +47,12 @@ int main(void)
     free(copy);
 
     return 0;
+}
+
+/******************************************
+ * get_text()
+*/
+void get_text(char arr[])
+{
+    
 }
