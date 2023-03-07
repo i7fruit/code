@@ -14,13 +14,16 @@
 #include <ctype.h>
 #include <string.h>
 
+// Function prototypes
+void get_text(char prompt[], char arr[]);
+
 int main(void)
 {
     int size = 64;
 
     char word[size];
 
-    get_text(word);
+    get_text("Enter text: ", word);
 
     /**
      * malloc returns the memory address of the number of bytes
@@ -52,7 +55,17 @@ int main(void)
 /******************************************
  * get_text()
 */
-void get_text(char arr[])
+void get_text(char prompt[], char arr[])
 {
-    
+    printf("%s", prompt);
+
+    int i = -1;
+
+    do
+    {
+        arr[++i] = getchar();
+    }
+    while (arr[i] != '\n');
+
+    arr[i] = '\0';
 }
