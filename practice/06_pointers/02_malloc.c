@@ -20,7 +20,7 @@ int main(void)
 
     char word[size];
 
-    word[] = get_string("Enter text: ");
+    get_text()
 
     /**
      * malloc returns the memory address of the number of bytes
