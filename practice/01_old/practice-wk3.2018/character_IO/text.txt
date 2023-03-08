@@ -1,0 +1,6 @@
+Robin in the hood
+
+This is a test of the file copy program
+that we have just developed using the
+fopen, fclose, fgetc, and fputc functions
+123
