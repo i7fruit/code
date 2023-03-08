@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <p style="font-size: 15px; color: blue">
+        CONTACTS LIST FORM
+    </p>
+    <form action="/push" method="post">
+        Full Name<br />
+        <input type="text" name="name" /><br />
+        Phone number<br />
+        <input type="number" id="tel" name="phone" /><br />
+        <select name="country">
+            <option disabled selected value="">select country</option>
+            <option value="Taiwan">Taiwan</option>
+            <option value="Canada">Canada</option>
+            <option value="Ghana">Ghana</option>
+        </select>
+        <input type="submit" value="Enter" /><br />
+    </form>
+    <p style="font-size: 8px">
+        <a href="/friends">View Contacts List</a>
+    </p>
+
+    <script>
+        document.querySelector("form").onsubmit = function()
+        {
+            if (!document.querySelector("input").value)
+            {
+                alert("Please enter your name");
+                return false;
+            }
+
+            else if (!document.querySelector("#tel").value)
+            {
+                alert("Please give a valid phone number");
+                return false;
+            }
+
+            else if (!document.querySelector("select").value)
+            {
+                alert("Please choose a country of origin");
+                return false;
+            }
+
+            return true;
+        };
+    </script>
+{% endblock %}

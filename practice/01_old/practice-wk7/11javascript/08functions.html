@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functions 4</title>
+    <!-- Declares a function that takes arguments -->
+    <script>
+        /**
+         * This function takes two arguments and
+         * computes the value of the first argument
+         * to the power of the second. That is a^b
+         */
+        function squared(a, b)
+        {
+            let c = 1;
+            while (b != 0)
+            {
+                c = c * a;
+                b--;
+            }
+
+            return c;
+        }
+    </script>
+</head>
+<body>
+    <script>
+        let first = prompt("First Number: ");
+        let second = prompt("Second Number: ");
+
+        alert(first + "^" + second + " = " + squared(first, second));
+    </script>
+</body>
+</html>

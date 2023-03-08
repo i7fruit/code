@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>Devices</h1>
+    <form action="/reg" method="post">
+        <input name="efa" autofocus type="text" />
+        <select name="device">
+            <option disabled selected value="">select device</option>
+            <option value="Laptop">Laptop</option>
+            <option value="Phone">Phone</option>
+            <option value="Tablet">Tablet</option>
+        </select>
+        <input type="submit" value="Enter" />
+    </form>
+{% endblock %}

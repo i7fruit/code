@@ -1,0 +1,18 @@
+table
+{
+    border: solid red 5px;
+}
+
+tr
+{
+    height: 50px;
+}
+
+td
+{
+    background-color: black;
+    color: yellow;
+    font-size: 22pt;
+    text-align: center;
+    width: 50px;
+}

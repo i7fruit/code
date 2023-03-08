@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>List of Residents</h1>
+            <form action="/register" method="post">
+                Full Name:<input type="text" name="name" />
+                Age:<input type="number" name="age" />
+                Male:<input type="radio" name="gender" value="Male" />
+                Female:<input type="radio" name="gender" value="Female" />
+                <select name="block">
+                    <option disabled selected value="">select block</option>
+                    <option value="block 1">Block 1</option>
+                    <option value="block 2">Block 2</option>
+                    <option value="block 3">Block 3</option>
+                </select>
+                <input type="submit" value="Enter" />
+            </form>
+{% endblock %}

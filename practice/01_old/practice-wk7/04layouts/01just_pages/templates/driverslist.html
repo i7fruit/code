@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <ul>
+        {% for driver in drivers %}
+            <li>{{ driver }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

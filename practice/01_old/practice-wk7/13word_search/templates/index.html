@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <p>Search for a word below</p><br />
+    <form action="/search" method="get">
+        <input type="text" name="q" placeholder="Word to search for" />
+        <br /><input type="submit" value="search" />
+    </form>
+{% endblock %}

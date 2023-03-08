@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>Residents</h1>
+    <ul>
+        {% for student in students %}
+            <li>{{ student["name"] }} , {{ student["gender"] }} ,
+            age {{ student["age"] }} , lives in {{ student["block"] }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

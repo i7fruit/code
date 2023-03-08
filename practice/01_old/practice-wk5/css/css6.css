@@ -1,0 +1,27 @@
+/* css6.css */
+body
+{
+    text-align: center;
+    background: cyan;
+}
+
+header
+{
+    font-size: large;
+}
+
+main
+{
+    font-size: medium;
+}
+
+footer
+{
+    font-size: small;
+}
+
+img
+{
+    width: 40%;
+    height: 40%;
+}

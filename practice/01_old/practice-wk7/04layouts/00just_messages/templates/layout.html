@@ -1,0 +1,23 @@
+<!-- If you build a web app that will follow the same structural pattern
+or commonalities across all of your pages, you can have a layout.html page -->
+
+<!-- This layout.html file is the template that all the other pages
+will be structured on, but they will only vary on the content of the
+layout body -->
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Devices</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1, width=device-width scale-to-fit=no" />
+        <style>
+            body
+            {
+                background-color: lightgrey;
+            }
+        </style>
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+</html>

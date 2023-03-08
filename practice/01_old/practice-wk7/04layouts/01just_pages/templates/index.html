@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>What Vehicle Do You Own?</h1>
+    <form action="/ride" method="post">
+        Name: <input type="text" autofocus placeholder="Enter your name" name="efa" />
+        <br />
+        <select name="car">
+            <option disabled selected value="">select car make</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Mazda">Mazda</option>
+            <option value="bmw">BMW</option>
+            <option value="Jeep">Jeep</option>
+            <option value="Volkswagen">Volkswagen</option>
+        </select>
+        <br />
+
+        Manual<input type="radio" name="transmission" value="manual" />
+        Automatic<input type="radio" name="transmission" value="automatic" />
+        <input type="submit" value="Go" />
+    </form>
+{% endblock %}
