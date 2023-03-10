@@ -26,12 +26,12 @@ int main(void)
 /**************************************
  * swap()
 */
-void swap(int &x, int &y)
+void swap(int &a, int &b)
 {
-    int temp = *x;
+    int temp = *a;
 
-    *x = *y;
+    *a = *b;
 
-    *y = temp;
+    *b = temp;
 
 }
