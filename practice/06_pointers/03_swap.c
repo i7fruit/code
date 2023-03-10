@@ -8,7 +8,7 @@
 #include <stdio.h>
 
 // Function prototype
-void swap(int &a, int &b);
+void swap(int *a, int *b);
 
 int main(void)
 {
@@ -26,7 +26,7 @@ int main(void)
 /**************************************
  * swap()
 */
-void swap(int &a, int &b)
+void swap(int *a, int *b)
 {
     int temp = *a;
 
