@@ -12,10 +12,12 @@ void swap(int *a, int *b);
 
 int main(void)
 {
+    // Declears and initializes two variables
     int x = 1, y = 2;
 
     printf("x = %i, y = %i\n", x, y);
 
+    // Swaps the values
     swap(&x, &y);
 
     printf("x = %i, y = %i\n", x, y);
@@ -24,7 +26,9 @@ int main(void)
 }
 
 /**************************************
- * swap()
+ * The swap() function takes two pointers as
+ * its arguments, and swaps the values located
+ * at those addresses.
 */
 void swap(int *a, int *b)
 {
