@@ -31,7 +31,7 @@ int main(void)
      * newly assigned values have to be typecast to the data type
      * of the structure
      */
-    man = (person){&x, &y};
+    man = (person){&x, &y};  // Also *man.age = x, *man.height = y
 
     printf("%i, %.2f\n", *man.age, *man.height);
 
