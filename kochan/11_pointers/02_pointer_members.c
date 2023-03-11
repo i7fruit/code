@@ -12,5 +12,28 @@
 typedef struct
 {
     int *age;
-    float 
+    float *height;
+}
+person;
+
+int main(void)
+{
+    // Structure definition
+    person man;
+
+    // Regular int variables
+    int x = 23;
+    float y = 1.76;
+
+    // Initializes the struct variable man
+    /**
+     * NOTE: If a structure is not initialized during declaration,
+     * newly assigned values have to be typecast to the data type
+     * of the structure
+     */
+    man = (person){&x, &y};
+
+    printf("%i, %.2f\n", *man.age, *man.height);
+
+    return 0;
 }
