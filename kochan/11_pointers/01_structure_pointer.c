@@ -40,7 +40,7 @@ int main(void)
     (*date_ptr).day = 11;
     (*date_ptr).year = 2023;
 
-    printf("The date is %.2i.%.2i.%.2i\n", today.month, (*date_ptr).day, ((*date_ptr).year)% 100);
+    printf("The date is %.2i.%.2i.%.2i\n", today.month, date_ptr->day, ((*date_ptr).year)% 100);
 
     return 0;
 }
