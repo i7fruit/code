@@ -21,10 +21,10 @@ date;
 int main(void)
 {
     // Declares a struct date variable
-    date today = {0, 0, 0};
+    date today = {10, 0, 0};
 
     // Declares a structure pointer and sets it to the address of today
-    date *date_ptr = &today
+    date *date_ptr = &today;
 
     // Initializes the today struct date variable
     /**
@@ -40,7 +40,7 @@ int main(void)
     (*date_ptr).day = 11;
     (*date_ptr).year = 2023;
 
-    printf("The date is %i.%i.%.2i\n", today.month, (*date_ptr).day, ((*date_ptr).year)/ 100);
+    printf("The date is %.2i.%.2i.%.2i\n", today.month, (*date_ptr).day, ((*date_ptr).year)% 100);
 
     return 0;
 }
