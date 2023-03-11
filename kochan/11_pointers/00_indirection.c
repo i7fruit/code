@@ -14,4 +14,6 @@ int main(void)
 
     // Declares a pointer to the variable, value
     int *ptr = &value;
+
+    // 
 }
