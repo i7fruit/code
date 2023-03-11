@@ -11,5 +11,6 @@
 // Structure definition
 typedef struct
 {
-    
+    int *age;
+    float 
 }
