@@ -13,11 +13,20 @@
 typedef struct entry
 {
     int value;
-    entry *next;
+    struct entry *next;
 }
 entry;
 
 int main(void)
 {
-    // Declares 
+    // Declares three struct entry variables
+    entry first, second, third = {.value = 200, .next = NULL};
+
+    first = {100, &second};
+    second.value = (entry)200;
+
+    // Prints all three values
+    printf("%i, %i, %i\n", first.value, first->next, *(second.next));
+
+    return 0;
 }
