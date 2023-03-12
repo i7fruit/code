@@ -20,7 +20,7 @@ entry;
 int main(void)
 {
     // Declares three struct entry variables
-    entry first, second, third = {.value = 200, .next = NULL};
+    entry first, second, third = {.value = 300, .next = NULL};
 
     first = (entry){100, &second};
 
@@ -28,7 +28,7 @@ int main(void)
     second.next = &third;
 
     // Prints all three values
-    printf("%i, %i, %i\n", first.value, second.value, *(second.next));
+    printf("%i, %i, %i.\n", first.value, second.value, third.value);
 
     return 0;
 }
