@@ -28,7 +28,7 @@ int main(void)
     second.next = &third;
 
     // Prints all three values
-    printf("%i, %i, %i\n", first.value, first->next, *(second.next));
+    printf("%i, %i, %i\n", first.value, *first.next, *(second.next));
 
     return 0;
 }
