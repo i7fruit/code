@@ -24,7 +24,7 @@ int main(void)
 
     first = (entry){100, &second};
 
-    second.value = (entry)200;
+    second.value = 200;
     second.next = &third;
 
     // Prints all three values
