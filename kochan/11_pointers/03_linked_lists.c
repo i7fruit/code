@@ -22,8 +22,10 @@ int main(void)
     // Declares three struct entry variables
     entry first, second, third = {.value = 200, .next = NULL};
 
-    first = {100, &second};
+    first = (entry){100, &second};
+
     second.value = (entry)200;
+    second.next = &third;
 
     // Prints all three values
     printf("%i, %i, %i\n", first.value, first->next, *(second.next));
