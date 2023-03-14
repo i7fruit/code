@@ -30,5 +30,11 @@ int main(void)
     third = (entry){300, (struct entry *)0};
 
     // Traverses the list
-    
+    entry *tracker = list_ptr;
+
+    while (tracker != (struct entry *)0)
+    {
+        printf("%i\n", tracker->value);
+        tracker
+    }
 }
