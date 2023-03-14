@@ -34,9 +34,11 @@ int main(void)
 
     while (tracker != (struct entry *)0)
     {
-        printf("%i\n", tracker->value);
+        printf("%i ", tracker->value);
         tracker = tracker->next;
     }
+
+    printf("\n");
 
     // Inserts a node into the linked list between second and third
     entry inserted = {400, (struct entry *)0};
@@ -52,9 +54,11 @@ int main(void)
 
     while (tracker != (struct entry *)0)
     {
-        printf("%i\n", tracker->value);
+        printf("%i ", tracker->value);
         tracker = tracker->next;
     }
+
+    putchar('\n');
 
     return 0;
 }
