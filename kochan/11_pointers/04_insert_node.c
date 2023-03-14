@@ -38,5 +38,23 @@ int main(void)
         tracker = tracker->next;
     }
 
+    // Inserts a node into the linked list between second and third
+    entry inserted = {400, (struct entry *)0};
+
+    // First sets the new node to point to third
+    inserted.next = second.next;
+
+    // Sets second to point to new node
+    second.next = &inserted;
+
+    // Traverses the new list
+    tracker = list_ptr;
+
+    while (tracker != (struct entry *)0)
+    {
+        printf("%i\n", tracker->value);
+        tracker = tracker->next;
+    }
+
     return 0;
 }
