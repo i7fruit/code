@@ -35,6 +35,6 @@ int main(void)
     while (tracker != (struct entry *)0)
     {
         printf("%i\n", tracker->value);
-        tracker
+        tracker->next
     }
 }
