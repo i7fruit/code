@@ -14,7 +14,7 @@ int main(void)
     char initial = 'm';
     char other_initial = 'n';
 
-    // A constant pointer to the initial variable
+    // A constant pointer to a character
     char *const ptr = &initial; // <--- ptr will always point to initial
 
     printf("%c\n", initial);
