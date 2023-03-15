@@ -3,7 +3,7 @@
  *
  * Tuesday, March 14 2023 21:54hrs
  *
- * If the location will not change through
+ * If the value will not change through
  * the pointer variable, the pointer can be
  * declared as pointing to a constant variable
  */
@@ -11,5 +11,15 @@
 
 int main(void)
 {
-    
+    char initial = 'm';
+
+    const char *ptr = &initial;
+
+    // The value can be changed through the variable like so...
+    initial = 'n';
+
+    // ...but cannot be changed through the pointer like so
+    *ptr = 'o'; // <--- This will throw an error
+
+    return 0;
 }
