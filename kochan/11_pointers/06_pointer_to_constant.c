@@ -1,5 +1,5 @@
 /**
- * 05_pointer_to_constant.c
+ * 06_pointer_to_constant.c
  *
  * Tuesday, March 14 2023 21:54hrs
  *
