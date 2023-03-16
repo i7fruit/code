@@ -18,5 +18,14 @@ int main(void)
 
     printf("%c\n", *ptr);
 
+    // Cannot change value through pointer
+    *ptr = 'd';
+
+    // Cannot change location
+    char letter = 's';
+    ptr = &letter; // <---- Will cause error
+
+    printf("%c\n", *ptr);
+
     return 0;
 }
