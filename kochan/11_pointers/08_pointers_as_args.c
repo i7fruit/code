@@ -14,7 +14,30 @@
 */
 #include <stdio.h>
 
+// Function prototype
+void mult_by_two(short *pointer);
+
 int main(void)
 {
-    short
+    short value = 40;
+    short *ptr = &value;
+
+    printf("%hi x 2 = ", *ptr);
+
+    mult_by_two(ptr);
+
+    printf("%hi\n", *ptr);
+
+    return 0;
+}
+
+/********************************************
+ * The mult_by_two() function takes a pointer
+ * argument that points to an integer. It changes
+ * the value in the location pointed to by the pointer
+ * by multiplying the value by two.
+*/
+void mult_by_two(short *pointer)
+{
+    *pointer *= 2;
 }
