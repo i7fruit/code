@@ -1,29 +1,48 @@
 #include <stdio.h>
 #include <limits.h>
+#include <stdbool.h>
+#include <stdlib.h>
 
 int get_int(char arr[]);
 
 int main(void)
 {
-    int numbers[5];
+    int *numbers = NULL;
+    int capacity = 0;
 
-    int i = 0, count = 0;
 
-    while (i < 5)
+    int size = 0;
+
+    while (true)
     {
         int number = get_int("Number: ");
 
         if (number == INT_MAX)
             break;
 
-        numbers[i] = number;
-        count++;
+        int *nu = realloc(numbers, sizeof(int) * (size + 1));
 
-        i++;
+        if (!nu)
+        {
+            fprintf(stderr, "Insufficient memory\n");
+            if (numbers)
+               free(numbers);
+            return 1;
+        }
+
+        numbers = nu;
+        capacity++;
+
+        numbers[size] = number;
+        size++;
     }
 
-    for (int j = 0; j < count; j++)
-        printf("%i ", numbers[j]);
+    for (int z = 0; z < size; z++)
+        printf("%i ", numbers[z]);
+
+    putchar('\n');
+
+    return 0;
 }
 
 int get_int(char arr[])
