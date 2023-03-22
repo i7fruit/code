@@ -20,5 +20,6 @@ int get_int(char arr[])
     int i = 0;
     scanf("%s", &i);
 
-    if (i ==)
+    if (i == INT_MAX)
+       return INT_MAX;
 }
