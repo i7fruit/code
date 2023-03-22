@@ -1,16 +1,29 @@
 #include <stdio.h>
+#include <limits.h>
+
+int get_int(char arr[]);
 
 int main(void)
 {
-    int *numbers = NULL;
-    int capacity = 0;
+    int numbers[5];
 
-    int size = 0;
+    int i = 0, count = 0;
 
-    while (true)
+    while (i < 5)
     {
         int number = get_int("Number: ");
+
+        if (number == INT_MAX)
+            break;
+
+        numbers[i] = number;
+        count++;
+
+        i++;
     }
+
+    for (int j = 0; j < count; j++)
+        printf("%i ", numbers[j]);
 }
 
 int get_int(char arr[])
@@ -18,8 +31,10 @@ int get_int(char arr[])
     printf("%s", arr);
 
     int i = 0;
-    scanf("%s", &i);
+    scanf("%i", &i);
 
-    if (i == INT_MAX)
-       return INT_MAX;
+    if (feof(stdin))
+        return INT_MAX;
+
+    return i;
 }
