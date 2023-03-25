@@ -20,7 +20,7 @@ entry;
 
 // Function prototypes
 int get_integer(char arr[]);
-entry *ptr find_entry(entry *start, int search_item);
+entry *find_entry(entry *start, int search_item);
 
 int main(void)
 {
@@ -70,14 +70,14 @@ int get_integer(char arr[])
  * the node that contains that value, otherwise it returns a
  * null pointer.
 */
-entry *ptr find_entry(entry *start, int search_item)
+entry *find_entry(entry *start, int search_item)
 {
     // Traverses through the linked list
     while (start != (struct entry *) 0)
     {
         entry *ptr = start;
 
-        if (ptr->value == number)
+        if (ptr->value == search_item)
             return ptr;
 
         start = ptr->next;
