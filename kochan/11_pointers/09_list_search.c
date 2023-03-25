@@ -36,8 +36,14 @@ int main(void)
     while (list_start != (struct entry *) 0)
     {
         entry *ptr = list_start;
-        if (ptr->value )
+        if (ptr->value == number)
+        {
+            printf("%i found.\n", ptr->value);
+            return 0;
+        }
     }
+
+    return 1;
 }
 
 /*************************************************************
