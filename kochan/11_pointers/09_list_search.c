@@ -20,6 +20,7 @@ entry;
 
 // Function prototypes
 int get_integer(char arr[]);
+entry *ptr find_entry(entry *start, int search_item);
 
 int main(void)
 {
@@ -82,5 +83,5 @@ entry *ptr find_entry(entry *start, int search_item)
         start = ptr->next;
     }
 
-    printf("%i not found.\n", number);
+    return (struct entry *) 0;
 }
