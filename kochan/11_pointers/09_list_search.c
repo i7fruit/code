@@ -64,5 +64,26 @@ int get_integer(char arr[])
 
 /**************************************************************
  * The find_entry() function takes a pointer to the start of a
- * linked list as well as a
+ * linked list as well as a value to search for within the list
+ * as arguments. If the value is found, it returns a pointer to
+ * the node that contains that value, otherwise it returns a
+ * null pointer.
 */
+entry *ptr find_entry(entry *start, int search_item)
+{
+    // Traverses through the linked list
+    entry *list_start = start; // Points to the start of the list
+
+    while (list_start != (struct entry *) 0)
+    {
+        entry *ptr = list_start;
+        if (ptr->value == number)
+        {
+            printf("%i found.\n", ptr->value);
+            return 0;
+        }
+        list_start = ptr->next;
+    }
+
+    printf("%i not found.\n", number);
+}
