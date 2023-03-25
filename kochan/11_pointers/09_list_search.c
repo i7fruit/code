@@ -30,22 +30,16 @@ int main(void)
 
     int number = get_integer("Number: ");
 
-    // Traverses through the linked list
-    entry *list_start = &first; // Points to the start of the list
+    entry *ptr = find_entry(&first, number);
 
-    while (list_start != (struct entry *) 0)
+    if (ptr)
     {
-        entry *ptr = list_start;
-        if (ptr->value == number)
-        {
-            printf("%i found.\n", ptr->value);
-            return 0;
-        }
-        list_start = ptr->next;
+        printf("%i found.\n", ptr->value);
+        return 0;
     }
 
     printf("%i not found.\n", number);
-    
+
     return 1;
 }
 
@@ -67,3 +61,8 @@ int get_integer(char arr[])
 
     return i;
 }
+
+/**************************************************************
+ * The find_entry() function takes a pointer to the start of a
+ * linked list as well as a
+*/
