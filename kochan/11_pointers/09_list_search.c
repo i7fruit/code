@@ -19,7 +19,7 @@ typedef struct entry
 entry;
 
 // Function prototypes
-
+int get_integer(char arr[]);
 
 int main(void)
 {
@@ -36,7 +36,7 @@ int main(void)
     while (list_start != (struct entry *) 0)
     {
         entry *ptr = list_start;
-        if (ptr->)
+        if (ptr->value )
     }
 }
 
