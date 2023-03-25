@@ -72,17 +72,15 @@ int get_integer(char arr[])
 entry *ptr find_entry(entry *start, int search_item)
 {
     // Traverses through the linked list
-    entry *list_start = start; // Points to the start of the list
-
-    while (list_start != (struct entry *) 0)
+    while (start != (struct entry *) 0)
     {
-        entry *ptr = list_start;
+        entry *ptr = start;
         if (ptr->value == number)
         {
             printf("%i found.\n", ptr->value);
             return 0;
         }
-        list_start = ptr->next;
+        start = ptr->next;
     }
 
     printf("%i not found.\n", number);
