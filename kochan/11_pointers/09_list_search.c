@@ -41,8 +41,11 @@ int main(void)
             printf("%i found.\n", ptr->value);
             return 0;
         }
+        list_start = ptr->next;
     }
 
+    printf("%i not found.\n", number);
+    
     return 1;
 }
 
