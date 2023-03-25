@@ -75,11 +75,10 @@ entry *ptr find_entry(entry *start, int search_item)
     while (start != (struct entry *) 0)
     {
         entry *ptr = start;
+
         if (ptr->value == number)
-        {
-            printf("%i found.\n", ptr->value);
-            return 0;
-        }
+            return ptr;
+
         start = ptr->next;
     }
 
