@@ -43,8 +43,7 @@ int main()
       nu->next = NULL;
 
       // Adds new node to front of list
-      point *list_start = mypoint;
-      nu = mypoint;
+      point *add = begin(nu, mypoint);
   printf("mypoint coordinates: %d, %d\n", mypoint->x, mypoint->y);
 
   free(mypoint);
