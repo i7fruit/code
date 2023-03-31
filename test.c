@@ -2,7 +2,7 @@
 
 int main() {
   char *filename = "collins.txt";
-  char *write = 'w';
+  char *write = "w";
 
   // Create a file on your computer (filename.txt)
   FILE *fptr = fopen(filename, write);
