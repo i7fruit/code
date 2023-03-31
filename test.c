@@ -12,7 +12,7 @@ point;
 
 // Function prototypes
 int get_int(char arr[]);
-point *begin(point *new_node, point *list);
+//point *begin(point *new_node, point *list);
 
 int main()
 {
@@ -47,7 +47,7 @@ int main()
         nu->next = NULL;
 
         // Adds new node to front of list
-        add = begin(nu, mypoint);
+        //add = begin(nu, mypoint);
       }
       else
       {
@@ -81,11 +81,11 @@ int get_int(char arr[])
     return i;
 }
 
-point *begin(point *new_node, point *list)
-{
-    // Points new node to same address as start of list
-    new_node = list;
-    list->next = new_node;
+//point *begin(point *new_node, point *list)
+//{
+//    // Points new node to same address as start of list
+//    new_node = list;
+//    list->next = new_node;
 
-    return list;
-}
+//    return list;
+//}
