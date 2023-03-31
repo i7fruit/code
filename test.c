@@ -79,7 +79,7 @@ point *begin(point *new_node, point *list)
 {
     // Points new node to same address as start of list
     new_node = list;
-    list->next = new_node->x;
+    list->next = new_node;
 
     return list;
 }
