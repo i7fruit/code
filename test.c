@@ -52,6 +52,8 @@ int main()
       else
       {
           mypoint = nu;
+          mypoint->x = nu->x;
+          mypoint->next = nu->next;
       }
   }
 
