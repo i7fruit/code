@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#inlude <stdbool.h>
+#include <stdbool.h>
+#include <limits.h>
 
 typedef struct point
 {
@@ -16,6 +17,7 @@ point *begin(point *new_node, point *list);
 int main()
 {
   point * mypoint = NULL;
+  point *add = NULL;
 
   /**
    * Dynamically allocate a new point
@@ -26,7 +28,7 @@ int main()
   {
       int number = get_int("Enter number: ");
 
-      if (number = INT_MAX)
+      if (number == INT_MAX)
           break;
 
       // Create space for new node
@@ -43,10 +45,18 @@ int main()
       nu->next = NULL;
 
       // Adds new node to front of list
-      point *add = begin(nu, mypoint);
-  printf("mypoint coordinates: %d, %d\n", mypoint->x, mypoint->y);
+      add = begin(nu, mypoint);
+  }
+
+  // Prints list
+  for (point *ptr = add; ptr != NULL; ptr = ptr->next)
+  {
+      printf("%i ", ptr->x);
+  }
 
   free(mypoint);
+  free(add);
+
   return 0;
 }
 
