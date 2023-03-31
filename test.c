@@ -75,11 +75,7 @@ int get_int(char arr[])
 
     int i = 0;
 
-    do
-    {
-        scanf("%i", &i);
-    }
-    while (i > INT_MAX);
+    scanf("%i", &i);
 
     if (i == INT_MAX)
         return INT_MAX;
