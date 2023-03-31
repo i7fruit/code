@@ -31,14 +31,17 @@ int main(void)
 
     int number = get_integer("Number: ");
 
+    // Returns a pointer to the struct that contains the value searched for
     entry *ptr = find_entry(&first, number);
 
+    // Prints value found if non-null pointer is returned
     if (ptr)
     {
         printf("%i found.\n", ptr->value);
         return 0;
     }
 
+    // Prints if null pointer is returned
     printf("%i not found.\n", number);
 
     return 1;
