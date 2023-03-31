@@ -81,6 +81,9 @@ int get_int(char arr[])
     }
     while (i > INT_MAX);
 
+    if (i == INT_MAX)
+        return INT_MAX;
+
     return i;
 }
 
