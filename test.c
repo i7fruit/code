@@ -48,6 +48,8 @@ int main()
 
         // Adds new node to front of list
         //add = begin(nu, mypoint);
+        for (point *ptr = mypoint; ptr != NULL; ptr = ptr->next)
+        
       }
       else
       {
