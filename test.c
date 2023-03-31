@@ -40,12 +40,19 @@ int main()
           return 1;
       }
 
-      // Populate new node
-      nu->x = number;
-      nu->next = NULL;
+      if (mypoint)
+      {
+        // Populate new node
+        nu->x = number;
+        nu->next = NULL;
 
-      // Adds new node to front of list
-      add = begin(nu, mypoint);
+        // Adds new node to front of list
+        add = begin(nu, mypoint);
+      }
+      else
+      {
+          mypoint = nu;
+      }
   }
 
   // Prints list
