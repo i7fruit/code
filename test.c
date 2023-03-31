@@ -1,15 +1,76 @@
 #include <stdio.h>
+#include <stdlib.h>
+#inlude <stdbool.h>
 
-int main() {
-  char *filename = "collins.txt";
+typedef struct point
+{
+  int x;
+  struct point *next;
+}
+point;
 
-  // Create a file on your computer (filename.txt)
-  FILE *fptr = fopen(filename, "a");
+// Function prototypes
+int get_int(char arr[]);
+point *begin(point *new_node, point *list);
 
-  fprintf(fptr, "I don't know. Find out.\n");
+int main()
+{
+  point * mypoint = NULL;
 
-  // Close the file
-  fclose(fptr);
+  /**
+   * Dynamically allocate a new point
+   * struct which mypoint points to here
+   */
 
+  while (true)
+  {
+      int number = get_int("Enter number: ");
+
+      if (number = INT_MAX)
+          break;
+
+      // Create space for new node
+      point *nu = (point *)malloc(sizeof(point));
+
+      if (!nu)
+      {
+          fprintf(stderr, "Insufficient memory\n");
+          return 1;
+      }
+
+      // Populate new node
+      nu->x = number;
+      nu->next = NULL;
+
+      // Adds new node to front of list
+      point *list_start = mypoint;
+      nu = mypoint;
+  printf("mypoint coordinates: %d, %d\n", mypoint->x, mypoint->y);
+
+  free(mypoint);
   return 0;
+}
+
+int get_int(char arr[])
+{
+    printf("%s", arr);
+
+    int i = 0;
+
+    do
+    {
+        scanf("%i", &i);
+    }
+    while (i > INT_MAX);
+
+    return i;
+}
+
+point *begin(point *new_node, point *list)
+{
+    // Points new node to same address as start of list
+    new_node = list;
+    list->next = new_node->x;
+
+    return list;
 }
