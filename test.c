@@ -49,10 +49,13 @@ int main()
             point *ptr = mypoint;
             while (ptr != NULL)
             {
-                ptr = ptr->next;
+                if (!ptr->next)
+                {
+                    ptr->next = nu;
+                }
+                else
+                    ptr = ptr->next;
             }
-
-            ptr->next = nu;
         }
         else
         {
