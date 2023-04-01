@@ -84,7 +84,7 @@ int get_int(char arr[])
 
     scanf("%i", &i);
 
-    if (i == INT_MAX)
+    if (feof(stdin))
         return INT_MAX;
 
     return i;
