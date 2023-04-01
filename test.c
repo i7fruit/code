@@ -40,21 +40,23 @@ int main()
           return 1;
       }
 
+      // Populate new node
+      nu->x = number;
+      nu->next = NULL;
+
       if (mypoint)
       {
-        // Populate new node
-        nu->x = number;
-        nu->next = NULL;
-
-        // Adds new node to front of list
-        //add = begin(nu, mypoint);
-        for (point *ptr = mypoint; ptr != NULL; ptr = ptr->next)
-            ptr->x =
+          // Appends new node to list
       }
       else
       {
+          // Make node first node in list
           mypoint = nu;
       }
+
+
+      // Adds new node to front of list
+      //add = begin(nu, mypoint);
   }
 
   // Prints list
