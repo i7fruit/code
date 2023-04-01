@@ -68,7 +68,7 @@ int main()
   point *start = mypoint;
   while (start != NULL)
   {
-      start
+      start->next = 
   }
 
   return 0;
