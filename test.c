@@ -46,6 +46,10 @@ int main()
       if (mypoint)
       {
           // Appends new node to list
+          for (point *ptr = mypoint; ptr != NULL; ptr = ptr->next)
+          {
+               
+          }
       }
       else
       {
