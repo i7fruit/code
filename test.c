@@ -46,11 +46,13 @@ int main()
       if (mypoint)
       {
           // Appends new node to list
-          for (point *ptr = mypoint; ptr != NULL; ptr = ptr->next)
+          point *ptr = mypoint;
+          while (ptr != NULL)
           {
-               printf("%i ", ptr->x);
+               ptr = ptr->next;
           }
-          
+
+          nu = ptr;
       }
       else
       {
