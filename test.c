@@ -59,7 +59,7 @@ int main()
   }
 
   // Prints list
-  for (point *ptr = add; ptr != NULL; ptr = ptr->next)
+  for (point *ptr = mypoint; ptr != NULL; ptr = ptr->next)
   {
       printf("%i ", ptr->x);
   }
