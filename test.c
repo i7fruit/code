@@ -48,7 +48,7 @@ int main()
           // Appends new node to list
           for (point *ptr = mypoint; ptr != NULL; ptr = ptr->next)
           {
-               
+               printf("%i ", ptr->x);
           }
       }
       else
