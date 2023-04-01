@@ -17,7 +17,6 @@ int get_int(char arr[]);
 int main()
 {
   point * mypoint = NULL;
-  point *add = NULL;
 
   /**
    * Dynamically allocate a new point
@@ -65,8 +64,12 @@ int main()
       printf("%i ", ptr->x);
   }
 
-  free(mypoint);
-  free(add);
+  // Frees all nodes
+  point *start = mypoint;
+  while (start != NULL)
+  {
+      start
+  }
 
   return 0;
 }
