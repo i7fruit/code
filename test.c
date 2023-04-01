@@ -50,6 +50,7 @@ int main()
           {
                printf("%i ", ptr->x);
           }
+          
       }
       else
       {
