@@ -16,71 +16,71 @@ int get_int(char arr[]);
 
 int main()
 {
-  point * mypoint = NULL;
+    point * mypoint = NULL;
 
-  /**
-   * Dynamically allocate a new point
-   * struct which mypoint points to here
-   */
+    /**
+     * Dynamically allocate a new point
+     * struct which mypoint points to here
+     */
 
-  while (true)
-  {
-      int number = get_int("Enter number: ");
+    while (true)
+    {
+        int number = get_int("Enter number: ");
 
-      if (number == INT_MAX)
-          break;
+        if (number == INT_MAX)
+            break;
 
-      // Create space for new node
-      point *nu = (point *)malloc(sizeof(point));
+        // Create space for new node
+        point *nu = (point *)malloc(sizeof(point));
 
-      if (!nu)
-      {
-          fprintf(stderr, "Insufficient memory\n");
-          return 1;
-      }
+        if (!nu)
+        {
+            fprintf(stderr, "Insufficient memory\n");
+            return 1;
+        }
 
-      // Populate new node
-      nu->x = number;
-      nu->next = NULL;
+        // Populate new node
+        nu->x = number;
+        nu->next = NULL;
 
-      if (mypoint)
-      {
-          // Appends new node to list
-          point *ptr = mypoint;
-          while (ptr != NULL)
-          {
-               ptr = ptr->next;
-          }
+        if (mypoint)
+        {
+            // Appends new node to list
+            point *ptr = mypoint;
+            while (ptr != NULL)
+            {
+                ptr = ptr->next;
+            }
 
-          nu = ptr;
-      }
-      else
-      {
-          // Make node first node in list
-          mypoint = nu;
-      }
+            nu = ptr;
+        }
+        else
+        {
+            // Make node first node in list
+            mypoint = nu;
+        }
 
 
-      // Adds new node to front of list
-      //add = begin(nu, mypoint);
-  }
+        // Adds new node to front of list
+        //add = begin(nu, mypoint);
+    }
 
-  // Prints list
-  for (point *ptr = mypoint; ptr != NULL; ptr = ptr->next)
-  {
-      printf("%i ", ptr->x);
-  }
+    // Prints list
+    for (point *ptr = mypoint; ptr != NULL; ptr = ptr->next)
+    {
+        printf("%i ", ptr->x);
+    }
 
-  // Frees all nodes
-  point *start = mypoint;
-  while (start != NULL)
-  {
-      start->next = mypoint;
-      free(start);
-      start = mypoint;
-  }
+    // Frees all nodes
+    point *start = mypoint;
+    while (start != NULL)
+    {
+        start->next = mypoint;
+        free(start);
+        start = mypoint;
+    }
 
-  return 0;
+    return 0;
 }
 
 int get_int(char arr[])
