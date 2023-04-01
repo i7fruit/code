@@ -52,7 +52,7 @@ int main()
                 ptr = ptr->next;
             }
 
-            nu = ptr;
+            ptr = nu;
         }
         else
         {
