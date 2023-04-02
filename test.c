@@ -52,6 +52,7 @@ int main()
               break;
           }
       }
+  }
 
       // Prints the list
       for (point *ptr = mypoint; ptr != NULL; ptr = ptr->next)
@@ -65,6 +66,8 @@ int main()
           free(track);
           track = ptr;
       }
+
+      return 0;
 }
 
 int get_int(char arr[])
@@ -79,13 +82,4 @@ int get_int(char arr[])
         return INT_MAX;
 
     return i;
-}
-
-point *begin(point *new_node, point *list)
-{
-    // Points new node to same address as start of list
-    new_node = list;
-    list->next = new_node->x;
-
-    return list;
 }
