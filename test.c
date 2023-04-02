@@ -59,7 +59,12 @@ int main()
 
       // Free nodes
       point *track = mypoint;
-      while (track !=)
+      while (track != NULL)
+      {
+          point *ptr = track->next;
+          free(track);
+          track = ptr;
+      }
 }
 
 int get_int(char arr[])
