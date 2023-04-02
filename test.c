@@ -45,10 +45,21 @@ int main()
       // Adds new node to front of list
       for (point *ptr = mypoint; ptr != NULL; ptr = ptr->next)
       {
-          // If the current node has a null pointer, add new node to the list
+          // If the current node has a null pointer, connect new node to it
           if (ptr->next == NULL)
+          {
+              ptr->next = nu;
+              break;
+          }
       }
-  return 0;
+
+      // Prints the list
+      for (point *ptr = mypoint; ptr != NULL; ptr = ptr->next)
+          printf("%i ", ptr->x);
+
+      // Free nodes
+      point *track = mypoint;
+      while (track !=)
 }
 
 int get_int(char arr[])
