@@ -31,7 +31,7 @@ int main(void)
         // Adds value to array
         if (element == size)
         {
-            int *nu = realloc(values, sizeof(int) * (size + 1));
+            int *nu = realloc(values, sizeof(int) * (element + 1));
 
             // Returns if pointer is null
             if (!nu)
@@ -49,8 +49,20 @@ int main(void)
 
             values = nu;
             size++;
+
+            values[element] = number;
+            element++;
         }
     }
+
+    // Prints the array
+    for (int i = 0; i < size; i++)
+        printf("%i ", values[i]);
+
+    // Frees used memory
+    free(values);
+
+    return 0;
 }
 
 /*********************************************
