@@ -18,12 +18,38 @@ int main(void)
 {
     // Pointer to memory location for array
     int *values = NULL;
-    int size = 0;
+    int size = 0, element = 0;
 
     // Prompts the user for input
     while (true)
     {
         int number = get_int("Number: ");
+
+        if (number == INT_MAX)
+            break;
+
+        // Adds value to array
+        if (element == size)
+        {
+            int *nu = realloc(values, sizeof(int) * (size + 1));
+
+            // Returns if pointer is null
+            if (!nu)
+            {
+                fprintf(stderr, "Insufficient memory\n");
+
+                // Free memory of array is not null
+                if (values)
+                {
+                    free(values);
+                }
+
+                return 1;
+            }
+
+            values = nu;
+            size++;
+        }
     }
 }
 
