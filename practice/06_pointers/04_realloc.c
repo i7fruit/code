@@ -61,6 +61,8 @@ int main(void)
     for (int i = 0; i < size; i++)
         printf("%i ", values[i]);
 
+    putchar('\n');
+
     // Frees used memory
     free(values);
 
