@@ -55,6 +55,8 @@ int main(void)
         }
     }
 
+    putchar('\n');
+
     // Prints the array
     for (int i = 0; i < size; i++)
         printf("%i ", values[i]);
