@@ -11,6 +11,9 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+// Function prototypes
+int get_int(char *arr);
+
 int main(void)
 {
     // Pointer to memory location for array
@@ -22,4 +25,19 @@ int main(void)
     {
         int number = get_int("Number: ");
     }
+}
+
+/*********************************************
+ * get_int()
+*/
+int get_int(char *arr)
+{
+    printf("%s", arr);
+    int i = 0;
+    scanf("%i", &i);
+
+    if (feof(stdin))
+        return INT_MAX;
+
+    return i;
 }
