@@ -51,10 +51,11 @@ int main(void)
         node->value = number;
         node->next = NULL;
 
-        // Adds the node to the list
+        // Adds the node to beginning of the list
         if (list_start)
         {
-            
+            // First points to first node on list
+            node->next = list_start;
         }
     }
 
