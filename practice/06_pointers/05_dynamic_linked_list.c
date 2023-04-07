@@ -19,6 +19,9 @@ typedef struct entry
 }
 entry;
 
+// Function prototype
+int get_int(char *arr);
+
 int main(void)
 {
     // Creates a pointer to the start of the list
@@ -28,6 +31,31 @@ int main(void)
     {
         // Prompts user for input
         int number = get_int("Number: ");
+
+        // Stop prompting for numbers if user hits ctrl+d
+        if (number == INT_MAX)
+            break;
+
+        // Creates a node in the list
+        entry *node = (entry *)malloc(sizeof(entry));
+
+        // Checks if pointer is null
+        if (!node)
+        {
+            // Prints error to standar error
+            fprintf(stderr, "Insufficient memory\n");
+            return 1;
+        }
+
+        // Initializes the node
+        node->value = number;
+        node->next = NULL;
+
+        // Adds the node to the list
+        if (list_start)
+        {
+            
+        }
     }
 
     return 0;
@@ -47,4 +75,6 @@ int get_int(char *arr)
     // If the user hits ctrl+d, return 2147483647
     if (feof(stdin))
         return INT_MAX;
+
+    return i;
 }
