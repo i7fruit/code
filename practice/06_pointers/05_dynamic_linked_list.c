@@ -56,7 +56,7 @@ int main(void)
         if (list_start)
         {
             // First points to first node on list...
-            node = list_start;
+            node->next = list_start;
             // ...then points start of list to new node
             list_start->next = node;
         }
