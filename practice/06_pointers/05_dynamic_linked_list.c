@@ -44,7 +44,7 @@ int get_int(char *arr)
 
     scanf("%i", &i);
 
-    // If the user hits ctrl+d, return 2147483547
+    // If the user hits ctrl+d, return 2147483647
     if (feof(stdin))
         return INT_MAX;
 }
