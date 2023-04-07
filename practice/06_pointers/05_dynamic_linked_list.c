@@ -54,9 +54,30 @@ int main(void)
         // Adds the node to beginning of the list
         if (list_start)
         {
-            // First points to first node on list
-            node->next = list_start;
+            // First points to first node on list...
+            node = list_start;
+            // ...then points start of list to new node
+            list_start->next = node;
         }
+        // Otherwise, create first node of the list
+        else
+        {
+            list_start = nu;
+        }
+    }
+
+    // Prints the list
+    for (entry *ptr = list_start; ptr != NULL; ptr = ptr->next)
+        printf("%i ", ptr->value);
+
+    // Frees all nodes
+    entry *ptr = list_start;
+    while (ptr != NULL)
+    {
+        // Creats a pointer to traverse the list
+        entry *trav = ptr->next;
+        free(ptr);
+        ptr = trav;
     }
 
     return 0;
