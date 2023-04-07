@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <limits.h>
 #include <stdbool.h>
+#include <stdlib.h>
 
 // Structure definition
 typedef struct entry
@@ -62,7 +63,7 @@ int main(void)
         // Otherwise, create first node of the list
         else
         {
-            list_start = nu;
+            list_start = node;
         }
     }
 
