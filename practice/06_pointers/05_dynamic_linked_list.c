@@ -58,7 +58,7 @@ int main(void)
             // First points to first node on list...
             node->next = list_start;
             // ...then points start of list to new node
-            list_start->next = node;
+            list_start = node;
         }
         // Otherwise, create first node of the list
         else
