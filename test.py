@@ -1,3 +1,3 @@
-import sys.maxint
+import sys
 
 print(sys.maxint)
