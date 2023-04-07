@@ -1,3 +1,3 @@
-import sys
+from sys import maxsize
 
-print(sys.maxint)
+print(-maxsize - 1)
