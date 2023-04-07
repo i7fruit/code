@@ -68,7 +68,6 @@ int main(void)
     }
 
     // Prints the list
-    putchar('\n');
     for (entry *ptr = list_start; ptr != NULL; ptr = ptr->next)
         printf("%i ", ptr->value);
     putchar('\n');
@@ -99,7 +98,10 @@ int get_int(char *arr)
 
     // If the user hits ctrl+d, return 2147483647
     if (feof(stdin))
+    {
+        printf("END\n");
         return INT_MAX;
+    }
 
     return i;
 }
