@@ -22,6 +22,9 @@ int main(void)
     for (char *ptr = text, *nu = string; *ptr != '\0'; ptr++, nu++)
         *nu = *ptr;
 
+    // Terminates the string array
+    string[length + 1] = '\0';
+
     // Prints the contents of the string array
     for (char *ptr = string; *ptr != '\0'; ptr++)
         printf("%c", *ptr);
