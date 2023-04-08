@@ -20,7 +20,7 @@ int main(void)
     // Marks memory location just outside the last element
     int *const end = values + size;
 
-    printf("%p\n%p\n", &values[size - 1], end);
+    printf("%i\n%p\n%p\n", size, &values[size - 1], end);
 
     return 0;
 }
