@@ -3,7 +3,7 @@ import sys
 
 def get_int(word):
     i = int(input(word))
-    if not i:
+    if i is None:
         return sys.maxsize
     return i
 
