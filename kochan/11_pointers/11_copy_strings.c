@@ -19,8 +19,8 @@ int main(void)
     char string[length];
 
     // Iterates through text and copies contents to string
-    for (char *ptr = text; ptr != NULL; ptr++, string++)
-        *string = *ptr;
+    for (char *ptr = text, *nu = string; ptr != NULL; ptr++, nu++)
+        *nu = *ptr;
 
     // Prints contents of newly copied array
     for (char *ptr = string; ptr != (char *)0; ptr++)
