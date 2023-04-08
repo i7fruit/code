@@ -17,10 +17,10 @@ def main():
     print(values)
 
 def get_int(word):
-    i = int(input(word))
+    i = input(word).read()
     if not i:
-        sys.exit(1)
-    return i
+        return sys.maxsize
+    return int(i)
 
 if __name__ == "__main__":
     main()
