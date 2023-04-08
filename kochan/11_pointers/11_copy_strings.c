@@ -19,8 +19,14 @@ int main(void)
     char string[length];
 
     // Iterates through text and copies contents to string
-    for (char *ptr = text; *ptr != '\0'; ptr++, (&string)++)
-        *string = *ptr; printf("%c", *string);
+    for (char *ptr = text, *nu = string; *ptr != '\0'; ptr++, nu++)
+        *nu = *ptr;
+
+    // Prints the contents of the string array
+    for (char *ptr = string; *ptr != '\0'; ptr++)
+        printf("%c", *ptr);
+
+    putchar('\n');
 
     return 0;
 }
