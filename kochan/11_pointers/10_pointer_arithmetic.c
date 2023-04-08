@@ -11,5 +11,9 @@
 
 int main(void)
 {
-    int 
+    // Array to store values
+    int values[] = {1, 2, 8, 2, 7};
+
+    // Marks memory location just outside the last element
+    int *const end = 
 }
