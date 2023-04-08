@@ -14,6 +14,13 @@ int main(void)
     // Array to store values
     int values[] = {1, 2, 8, 2, 7};
 
+    // Length of values array
+    const int size = sizeof(values) / sizeof(values[0]);
+
     // Marks memory location just outside the last element
-    int *const end = 
+    int *const end = values + size;
+
+    printf("%p\n%p\n", &values[size - 1], end);
+
+    return 0;
 }
