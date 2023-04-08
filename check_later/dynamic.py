@@ -20,7 +20,7 @@ def get_int(word):
     try:
         i = int(input(word))
         return i
-    except:
+    except EOFError:
         return sys.maxsize
 
 if __name__ == "__main__":
