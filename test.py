@@ -9,7 +9,7 @@ def main():
     while True:
         number = get_int("number: ")
 
-        if not number:
+        if number == sys.maxsize:
             break
 
         values.insert(0, number)
@@ -18,6 +18,8 @@ def main():
 
 def get_int(word):
     i = int(input(word))
+    if not i:
+        return sys.maxsize
     return i
 
 if __name__ == "__main__":
