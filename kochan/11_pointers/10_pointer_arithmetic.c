@@ -12,7 +12,7 @@
 int main(void)
 {
     // Array to store values
-    int values[] = {1, 2, 8, 2, 7};
+    int values[] = {1, 2, 8, 2, 7, 100};
 
     // Length of values array
     const int size = sizeof(values) / sizeof(values[0]);
@@ -27,9 +27,12 @@ int main(void)
      * the scope of the array, the loop terminates
      */
     int *ptr = (int *)0; // Sets pointer value to null. Also int *ptr = NULL;
+    int sum = 0;
 
     for (ptr = values; ptr < end; ptr++)
-        static int sum += *ptr;
+        sum += *ptr;
+
+    printf("Sum of values in array is %i\n", sum);
 
     return 0;
 }
