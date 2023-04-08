@@ -20,7 +20,14 @@ int main(void)
     // Marks memory location just outside the last element
     int *const end = values + size;
 
-    printf("%i\n%p\n%p\n", size, &values[size - 1], end);
+    /**
+     * Iterates through the array using pointer arithmetic.
+     * The loop iterates though the array iterating the size
+     * of the pointer by one. When it reaches the pointer outside
+     * the scope of the array, the loop terminates
+     */
+    for (int *ptr = values; ptr < end; ptr++)
+        static int sum += 
 
     return 0;
 }
