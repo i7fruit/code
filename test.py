@@ -3,7 +3,7 @@ import sys
 
 def get_int(word):
     i = int(input(word))
-    if i is None:
+    if not i:
         sys.exit(1)
     return i
 
