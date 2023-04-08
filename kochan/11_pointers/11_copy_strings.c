@@ -12,10 +12,19 @@ int main(void)
 {
     char text[] = "Copy this string.";
 
+    // Computes length of string to be copied
     int length = sizeof(text) / sizeof(text[0]);
 
+    // Array to store copied string
     char string[length];
 
-    for (char *ptr = text; ptr != '\0'; ptr++)
-        *(string
+    // Iterates through text and copies contents to string
+    for (char *ptr = text; ptr != NULL; ptr++, string++)
+        *string = *ptr;
+
+    // Prints contents of newly copied array
+    for (char *ptr = string; ptr != (char *)0; ptr++)
+        printf("%c", *ptr);
+
+    return 0;
 }
