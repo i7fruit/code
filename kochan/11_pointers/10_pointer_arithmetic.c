@@ -26,8 +26,10 @@ int main(void)
      * of the pointer by one. When it reaches the pointer outside
      * the scope of the array, the loop terminates
      */
-    for (int *ptr = values; ptr < end; ptr++)
-        static int sum += 
+    int *ptr = (int *)0; // Sets pointer value to null. Also int *ptr = NULL;
+
+    for (ptr = values; ptr < end; ptr++)
+        static int sum += *ptr;
 
     return 0;
 }
