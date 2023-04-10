@@ -3,9 +3,11 @@
 
 int main(void)
 {
-    char *string = "Constant string.";
+    char string[] = "Constant string.";
 
-    *string = "New";
+    char *ptr = string;
+
+    ptr = "New";
 
     printf("%s\n", string);
 
