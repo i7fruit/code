@@ -45,5 +45,8 @@ int main(void)
 */
 void copy_str(char *to, char *from)
 {
-    for (cha)
+    while (*from != '\0')
+    {
+        
+    }
 }
