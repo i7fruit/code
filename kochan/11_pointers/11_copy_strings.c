@@ -26,7 +26,7 @@ int main(void)
     copy_str(string, text);
 
     // Prints the contents of the string[] array
-    print_str(string);
+    print_string(string);
 
     putchar('\n');
 
