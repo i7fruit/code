@@ -10,5 +10,9 @@
 
 int main(void)
 {
-    
+    // Declares and initializes an array of character pointers
+    char *days_of_the_week[] =
+    {
+        {"Mon}
+    }
 }
