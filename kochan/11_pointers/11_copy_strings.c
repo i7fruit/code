@@ -13,7 +13,7 @@ void copy_str(char *to, char *from);
 
 int main(void)
 {
-    char text[] = "Copy this string.";
+    char text[] = "Copy this string to a new location.";
 
     // Computes length of string to be copied
     int length = sizeof(text) / sizeof(text[0]);
@@ -24,14 +24,11 @@ int main(void)
     // Iterates through text and copies contents to string
     copy_str(string, text);
 
-    // Terminates the string array
-    string[length + 1] = '\0';
+    // Prints the contents of the string[] array
+    for (char *ptr = string; *ptr != '\0'; ptr++)
+        printf("%c", *ptr);
 
-    //// Prints the contents of the string array
-    //for (char *ptr = string; *ptr != '\0'; ptr++)
-    //    printf("%c", *ptr);
-
-    //putchar('\n');
+    putchar('\n');
 
     return 0;
 }
@@ -52,4 +49,7 @@ void copy_str(char *to, char *from)
         *to = *from;
         to++; from++;
     }
+
+    // Terminates the copied string
+    *to = '\0';
 }
