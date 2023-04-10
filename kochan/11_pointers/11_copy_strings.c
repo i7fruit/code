@@ -8,6 +8,9 @@
 */
 #include <stdio.h>
 
+// Function prototype
+void copy_str(char *to, char *from);
+
 int main(void)
 {
     char text[] = "Copy this string.";
@@ -18,12 +21,11 @@ int main(void)
     // Array to store copied string
     char string[length];
 
-    //// Iterates through text and copies contents to string
-    //for (char *ptr = text, *nu = string; *ptr != '\0'; ptr++, nu++)
-    //    *nu = *ptr;
+    // Iterates through text and copies contents to string
+    copy_str(string, text);
 
-    //// Terminates the string array
-    //string[length + 1] = '\0';
+    // Terminates the string array
+    string[length + 1] = '\0';
 
     //// Prints the contents of the string array
     //for (char *ptr = string; *ptr != '\0'; ptr++)
