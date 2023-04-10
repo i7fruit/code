@@ -13,10 +13,10 @@ int main(void)
     // Declares and initializes an array of character pointers
     char *days_of_the_week[] =
     {
-        "Monday", "Tuesday", "Wednesday"
+        "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
     };
 
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 7; i++)
         printf("%s\n", days_of_the_week[i]);
 
     return 0;
