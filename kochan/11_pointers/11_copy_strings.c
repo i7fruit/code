@@ -33,3 +33,17 @@ int main(void)
 
     return 0;
 }
+
+/******************************************
+ * The copy_str() function takes as arguments
+ * two pointers; one to a string to be copied,
+ * and the other to the location that string is
+ * to be copied to. It uses a for loop to iterate
+ * through the string to be copied, and assigns
+ * the string to its new location by dereferencing
+ * the pointer that points to the new location.
+*/
+void copy_str(char *to, char *from)
+{
+    for (cha)
+}
