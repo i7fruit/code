@@ -10,6 +10,7 @@
 
 // Function prototype
 void copy_str(char *to, char *from);
+void print_string(char *str);
 
 int main(void)
 {
@@ -25,8 +26,7 @@ int main(void)
     copy_str(string, text);
 
     // Prints the contents of the string[] array
-    for (char *ptr = string; *ptr != '\0'; ptr++)
-        printf("%c", *ptr);
+    print_str(string);
 
     putchar('\n');
 
@@ -52,4 +52,16 @@ void copy_str(char *to, char *from)
 
     // Terminates the copied string
     *to = '\0';
+}
+
+/**********************************
+ * print_string()
+*/
+void print_string(char *str)
+{
+    while (*str != '\0')
+    {
+       printf("%c", *str);
+       str++;
+    }
 }
