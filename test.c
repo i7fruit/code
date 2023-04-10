@@ -9,7 +9,7 @@ int main(void)
 
     ptr = "New";
 
-    printf("%s\n", string);
+    printf("%s\n", ptr);
 
     return 0;
 }
