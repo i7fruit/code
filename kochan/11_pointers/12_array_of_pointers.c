@@ -16,6 +16,9 @@ int main(void)
         "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
     };
 
+    int size = sizeof(days_of_the_week) / sizeof(days_of_the_week[0]);
+    printf("%i\n", size);
+
     for (int i = 0; i < 7; i++)
         printf("%s\n", days_of_the_week[i]);
 
