@@ -35,6 +35,8 @@ int main(void)
             return 1;
         }
 
+        word = nu;
+
         word[size] = c;
         size++;
     }
