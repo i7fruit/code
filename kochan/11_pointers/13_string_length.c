@@ -52,7 +52,9 @@ int main(void)
         ptr++;
 
     // Finds difference between pointer at end and pointer at start or string
-    int length = printf("%p", ptr) - printf("%p", word);
+    printf("%x - %x\n", printf("%p", ptr), printf("%p", word));
+
+    int length = ptr - word;
 
     printf("The length of \"%s\" is %i\n", word, length);
 
