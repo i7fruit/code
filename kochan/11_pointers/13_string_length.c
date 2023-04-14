@@ -50,7 +50,10 @@ int main(void)
     char *ptr = word;
     static int count = 0;
     while (*ptr != '\0')
+    {
         count++;
+        ptr++;
+    }
 
     printf("The length of \"%s\" is %i\n", word, count);
 
