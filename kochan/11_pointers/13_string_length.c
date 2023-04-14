@@ -51,7 +51,7 @@ int main(void)
     while (*ptr != '\0')
         ptr++;
 
-    
+    // Finds difference between pointer at end and pointer at start or string
     int length = ptr - word;
 
     printf("The length of \"%s\" is %i\n", word, length);
