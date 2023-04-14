@@ -42,9 +42,12 @@ int main(void)
     }
 
     // Computes the length of the string
-    
+    char *ptr = word;
+    static int count = 0;
+    while (*ptr != '\0')
+        count++;
 
-    printf("%s\n", word);
+    printf("The length of \"%s\" is %i\n", word, count);
 
     free(word);
 
