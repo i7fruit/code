@@ -43,8 +43,9 @@ int main(void)
         size++;
     }
 
-    // Terminates the string
-    word[size] = '\0';
+    // Terminates the string if any
+    if (word)
+        word[size] = '\0';
 
     // Computes the length of the string
     char *ptr = word;
