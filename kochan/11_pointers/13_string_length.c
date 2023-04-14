@@ -41,6 +41,9 @@ int main(void)
         size++;
     }
 
+    // Computes the length of the string
+    
+
     printf("%s\n", word);
 
     free(word);
