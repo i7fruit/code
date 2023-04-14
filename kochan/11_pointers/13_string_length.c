@@ -14,9 +14,28 @@
 int main(void)
 {
     char *word = NULL;
+    int size = 0;
 
     while (true)
     {
-        
+        char c = getchar();
+
+        if (c == '\n')
+            break;
+
+        char *nu = realloc(word, (sizeof(char) * (size + 1)));
+        if (!nu)
+        {
+            fprintf(stderr, "Insufficient memory\n");
+            if (word)
+                free(word);
+
+            return 1;
+        }
+
+        if (word)
+        {
+            
+        }
     }
 }
