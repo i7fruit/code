@@ -7,9 +7,7 @@ int main(void)
 
     char *ptr = string;
 
-    ptr = "New";
-
-    printf("%s\n", ptr);
+    printf("%c\n", *(ptr+3));
 
     return 0;
 }

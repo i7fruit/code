@@ -16,11 +16,18 @@ int main(void)
         "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
     };
 
+    // Computes the size of the array of pointers
     int size = sizeof(days_of_the_week) / sizeof(days_of_the_week[0]);
-    printf("%i\n", size);
 
-    for (int i = 0; i < 7; i++)
-        printf("%s\n", days_of_the_week[i]);
+    // Iterates through the array
+    for (int i = 0; i < size; i++)
+    {
+        // Iterates through each character in each element
+        for (char *ptr = days_of_the_week[i]; *ptr != '\0'; ptr++)
+            printf("%c ", *ptr);
+
+        putchar('\n');
+    }
 
     return 0;
 }
