@@ -1,0 +1,28 @@
+/*********** TAG SELECTORS **********/
+h1 {
+  color: red;
+  font-size: 70px;
+}
+
+img {
+  background-color: aquamarine;
+}
+
+img:hover {
+  height: 50%;
+  width: 50%;
+}
+
+/*********** CLASS SELECTORS **********/
+.bacon {
+  background-color: aquamarine;
+}
+
+.apple {
+  background-color: black;
+}
+
+/*********** ID SELECTORS **********/
+#title {
+  color: blue;
+}
