@@ -52,7 +52,6 @@ int main(void)
         ptr++;
 
     // Finds difference between pointer at end and pointer at start or string
-
     printf("%p -", ptr);
     printf(" %p\n", word);
 
