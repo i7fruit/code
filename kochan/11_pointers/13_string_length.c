@@ -18,6 +18,8 @@ int main(void)
     char *word = NULL;
     int size = 0;
 
+    printf("Enter a string\n");
+
     while (true)
     {
         char c = getchar();
