@@ -10,6 +10,8 @@
  * string
 */
 #include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
 
 int main(void)
 {
@@ -33,9 +35,13 @@ int main(void)
             return 1;
         }
 
-        if (word)
-        {
-            
-        }
+        word[size] = c;
+        size++;
     }
+
+    printf("%s\n", word);
+
+    free(word);
+
+    return 0;
 }
