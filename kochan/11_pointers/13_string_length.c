@@ -47,6 +47,15 @@ int main(void)
     if (word)
         word[size] = '\0';
 
+    else
+    {
+        char *ptr = word;
+        int length = ptr - word;
+
+        printf("The length of \"\" is %i\n", length);
+        return 0;
+    }
+
     // Computes the length of the string
     char *ptr = word;
     while (*ptr != '\0')
