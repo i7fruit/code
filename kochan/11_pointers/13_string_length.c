@@ -16,4 +16,7 @@ int main(void)
     char *word = NULL;
 
     while (true)
+    {
+        
+    }
 }
