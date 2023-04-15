@@ -13,8 +13,8 @@ void get_values(int *num, int *mult);
 
 int main(void)
 {
-    int *value = NULL;
-    int *multiplier = NULL;
+    int value = 0;
+    int multiplier = 0;
 
     get_values(value, multiplier);
 
