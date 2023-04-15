@@ -8,6 +8,9 @@
 */
 #include <stdio.h>
 
+// Function prototypes
+void get_values(int *num, int *mult);
+
 int main(void)
 {
     int *value = NULL;
