@@ -10,5 +10,6 @@
 
 int main(void)
 {
-    
+    int *value = NULL;
+    int *multiplier = 0;
 }
