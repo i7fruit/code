@@ -22,7 +22,8 @@ int main(void)
     // Sets the fnptr pointer to the get_values() function
     fnptr = get_values;
 
-    //int result = get_values(value, multiplier);
+    // Calls the get_values() function which is indirectly referenced by the fnptr pointer
+    int result = fnptr(value, multiplier);
 
     printf("%i\n", result);
 
