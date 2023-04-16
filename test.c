@@ -5,9 +5,7 @@ int main(void)
 {
     char string[] = "Constant string.";
 
-    char *ptr = string;
-
-    printf("%c\n", *(ptr+3));
+    printf("%s\n", **string);
 
     return 0;
 }
