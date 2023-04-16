@@ -19,7 +19,8 @@ int main(void)
     // Creates a pointer to the get_values function
     int (*fnptr) (int, int);
 
-    int result = fnptr;
+    // Sets the fnptr pointer to the get_values() function
+    fnptr = get_values;
 
     //int result = get_values(value, multiplier);
 
