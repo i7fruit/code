@@ -9,16 +9,21 @@
 #include <stdio.h>
 
 // Function prototypes
-void get_values(int *num, int *mult);
+int get_values(int num, int mult);
 
 int main(void)
 {
-    int value = 0;
-    int multiplier = 0;
+    int value = 2;
+    int multiplier = 7;
 
-    get_values(value, multiplier);
+    // Creates a pointer to the get_values function
+    int (*fnptr) (int, int);
 
-    printf("%i\n%i\n", value, multiplier);
+    int result = fnptr;
+
+    //int result = get_values(value, multiplier);
+
+    printf("%i\n", result);
 
     return 0;
 }
@@ -26,26 +31,7 @@ int main(void)
 /**********************************************
  * get_values()
 */
-void get_values(int *num, int *mult)
+int get_values(int num, int mult)
 {
-    int i = 0, j = 0;
-
-    num = malloc(sizeof(int));
-    if (!num)
-    {
-        fprintf(stderr, "Insufficient memory\n");
-        return 1;
-    }
-
-    mult = malloc(sizeof(int));
-    if (!mult)
-    {
-        fprintf(stderr, "Insufficient memory\n");
-        return 2;
-    }
-
-    scanf("%i", &i);
-    *num = i;
-    scanf("%i", &j);
-    *mult = j;
+    return num * mult;
 }
