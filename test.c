@@ -5,9 +5,9 @@ int main(void)
 {
     char *string = "Constant string";
 
-    char *nu = string;
+    char **nu = &string;
 
-    printf("%s\n", nu);
+    printf("%s\n", *nu);
 
     return 0;
 }
