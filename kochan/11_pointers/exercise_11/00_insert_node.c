@@ -11,8 +11,10 @@
 // Structure definition
 typedef struct entry
 {
-    int position;
+    int id;
     int value;
     struct entry *next;
 }
 entry;
+
+int main(void)
