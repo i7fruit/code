@@ -7,6 +7,9 @@
  * to insert a node into a linked list
 */
 #include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <limits.h>
 
 // Structure definition
 typedef struct entry
@@ -18,3 +21,19 @@ typedef struct entry
 entry;
 
 int main(void)
+{
+    int value = 0, id = 0;
+
+    // Pointer to the start of the linked list
+    entry *start = NULL;
+
+    while (true)
+    {
+        // Prompts user for data
+        get_data(&id, &value);
+    }
+}
+
+/*********************************
+ * get_data()
+*/
