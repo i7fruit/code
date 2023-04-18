@@ -37,3 +37,11 @@ int main(void)
 /*********************************
  * get_data()
 */
+void get_data(int *id, int *val)
+{
+    do
+    {
+        scanf("%i %i", id, val);
+    }
+    while (id < 1);
+}
