@@ -61,6 +61,11 @@ int main(void)
                 return 1;
             }
 
+            // Initializes the node
+            nu->id = id;
+            nu->value = value;
+            nu->next = NULL;
+
             if (start)
             {
                 nu->next = start;
