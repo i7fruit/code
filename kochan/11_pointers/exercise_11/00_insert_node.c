@@ -77,6 +77,7 @@ int main(void)
     }
 
     // Prints the list
+    putchar('\n');
     for (entry *trav = start; trav != NULL; trav = trav->next)
         printf("ID: %3i, Value: %3i\n", trav->id, trav->value);
 
