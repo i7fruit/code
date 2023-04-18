@@ -20,6 +20,9 @@ typedef struct entry
 }
 entry;
 
+// Function prototypes
+void get_data(int *id, int *val);
+
 int main(void)
 {
     int value = 0, id = 0;
@@ -30,8 +33,16 @@ int main(void)
     while (true)
     {
         // Prompts user for data
+        printf("Enter an ID and a value: ");
         get_data(&id, &value);
+
+        if (value == INT_MAX)
+            break;
     }
+
+    printf("%i %i\n", id, value);
+
+    return 0;
 }
 
 /*********************************
@@ -42,6 +53,12 @@ void get_data(int *id, int *val)
     do
     {
         scanf("%i %i", id, val);
+
+        if (feof(stdin))
+        {
+            *val = INT_MAX;
+            break;
+        }
     }
-    while (id < 1);
+    while (*id < 1);
 }
