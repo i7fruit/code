@@ -38,9 +38,47 @@ int main(void)
 
         if (value == INT_MAX)
             break;
+
+        // Checks if the ID has previously been used
+        bool is_used = false;
+
+        for (entry *ptr = start; ptr != NULL; ptr = ptr->next)
+        {
+            if (ptr->id == id)
+            {
+                is_used = true;
+                break;
+            }
+        }
+
+        if (!is_used)
+        {
+            // Create new node for data
+            entry *nu = malloc(sizeof(entry));
+            if (!nu)
+            {
+                fprintf(stderr, "Insufficient memory\n");
+                return 1;
+            }
+
+            if (start)
+            {
+                nu->next = start;
+                start = nu;
+            }
+            else
+                start = nu;
+        }
     }
 
-    printf("%i %i\n", id, value);
+    // Free nodes
+    entry *ptr = start;
+    while (ptr != NULL)
+    {
+        entry *trav = ptr->next;
+        free(ptr);
+        ptr = trav;
+    }
 
     return 0;
 }
