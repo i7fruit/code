@@ -88,7 +88,7 @@ int main(void)
     for (entry *trav = start; trav != NULL; trav = trav->next)
         printf("ID: %3i, Value: %3i\n", trav->id, trav->value);
 
-    
+    // Prompts the user for a position to insert a new node
 
     // Free nodes
     entry *ptr = start;
