@@ -38,7 +38,10 @@ int main(void)
 
         // Stops the loop if the user hits ctrl+d
         if (value == INT_MAX)
+        {
+            printf("Linked list completed\n");
             break;
+        }
 
         // Checks if the ID has previously been used
         bool is_used = false;
@@ -84,6 +87,8 @@ int main(void)
     putchar('\n');
     for (entry *trav = start; trav != NULL; trav = trav->next)
         printf("ID: %3i, Value: %3i\n", trav->id, trav->value);
+
+    
 
     // Free nodes
     entry *ptr = start;
