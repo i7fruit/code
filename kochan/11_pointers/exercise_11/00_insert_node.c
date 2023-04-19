@@ -52,6 +52,7 @@ int main(void)
             }
         }
 
+        // Appends the data to the list if the ID is unique
         if (!is_used)
         {
             // Create new node for data
@@ -67,12 +68,14 @@ int main(void)
             nu->value = value;
             nu->next = NULL;
 
+            // Appends node if list isn't null
             if (start)
             {
                 nu->next = start;
                 start = nu;
             }
             else
+                // Appends first node if list is null
                 start = nu;
         }
     }
