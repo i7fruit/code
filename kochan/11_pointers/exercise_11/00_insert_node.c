@@ -36,6 +36,7 @@ int main(void)
         printf("Enter an ID and a value: ");
         get_data(&id, &value);
 
+        // Stops the loop if the user hits ctrl+d
         if (value == INT_MAX)
             break;
 
@@ -102,6 +103,7 @@ void get_data(int *id, int *val)
     {
         scanf("%i %i", id, val);
 
+        // Exits the do-while loop if the user hits ctrl+d
         if (feof(stdin))
         {
             *val = INT_MAX;
