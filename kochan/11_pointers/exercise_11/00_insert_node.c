@@ -127,7 +127,7 @@ void get_data(int *id, int *val)
         scanf("%i %i", id, val);
 
         // Exits the do-while loop if the user hits ctrl+d
-        if (fgets(stdin) == EOF)
+        if (feof(stdin))
         {
             *val = INT_MAX;
             break;
