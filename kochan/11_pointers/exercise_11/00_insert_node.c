@@ -91,14 +91,12 @@ int main(void)
 
     // Prompts the user for a position to insert a new node
     char answer[] = "   ";
-    static int size = 0;
+    int size = 0;
 
     do
     {
         printf("Do you want to insert a new node? (y/n): ");
         answer[size++] = getchar();
-        char c = getchar();
-        printf("%c", c);
     }
     while (answer[size] != '\n');
 
