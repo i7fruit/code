@@ -90,7 +90,7 @@ int main(void)
     print_list(start);
 
     // Prompts the user for a position to insert a new node
-    unsigned char c = ' ';
+    char *answer = NULL;
 
 
     do
