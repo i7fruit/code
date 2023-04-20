@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    char word[12];
+    char word[] = "   ";
 
     int i = 0;
 
@@ -11,7 +11,7 @@ int main(void)
     {
         word[i] = getchar();
     }
-    while (word[i] != '\n');
+    while (word[i++] != '\n');
 
     printf("%s\n", word);
 
