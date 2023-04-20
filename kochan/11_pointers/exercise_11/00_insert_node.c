@@ -93,8 +93,8 @@ int main(void)
     char answer[] = "   ";
     int size = 0;
 
-    answer[0] = getchar();
-    answer[1] = getchar();
+    // Flushes the buffer of EOF after user first typed ctrl+d
+    fflush(stdin);
 
     do
     {
