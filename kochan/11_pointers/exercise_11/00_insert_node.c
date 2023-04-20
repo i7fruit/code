@@ -90,11 +90,19 @@ int main(void)
     print_list(start);
 
     printf("Do you want to insert a new node? (y/n): ");
-    int c;
-    while ((c = getchar()) != '\n' || c == EOF) { }
+    char buffer[100];
+    int value;
 
-    char a = getchar();
-    printf("%c\n", a);
+    printf("Enter a value: ");
+    if (fgets(buffer, sizeof(buffer), stdin) != NULL) {
+        if (sscanf(buffer, "%d", &value) != 1) {
+            printf("Invalid input\n");
+        } else {
+            printf("Value entered: %d\n", value);
+        }
+    } else {
+        printf("End of file reached\n");
+    }
 
     // Free nodes
     entry *ptr = start;
