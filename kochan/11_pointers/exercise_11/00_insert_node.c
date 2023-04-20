@@ -93,11 +93,12 @@ int main(void)
     char answer[] = "   ";
     static int size = -1;
 
+    getchar();
+
     do
     {
         printf("Do you want to insert a new node? (y/n): ");
         answer[++size] = getchar();
-        getchar();
     }
     while (!isalpha(answer[size]));
 
