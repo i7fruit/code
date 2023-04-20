@@ -93,8 +93,6 @@ int main(void)
     char answer[] = "   ";
     static int size = 0;
 
-    getchar();
-
     do
     {
         printf("Do you want to insert a new node? (y/n): ");
