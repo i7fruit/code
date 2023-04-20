@@ -91,6 +91,7 @@ int main(void)
 
     printf("Do you want to insert a new node? (y/n): ");
     char answer;
+    getchar();
     scanf("%c", &answer);
 
     printf("%c\n", answer);
