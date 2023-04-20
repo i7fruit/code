@@ -90,8 +90,12 @@ int main(void)
 
     // Prompts the user for a position to insert a new node
     bool yes = false, no = false;
+    
 
-    printf("Do you want to insert a new node? (y/n): ");
+    do
+    {
+        printf("Do you want to insert a new node? (y/n): ");
+        char c =
 
     // Free nodes
     entry *ptr = start;
