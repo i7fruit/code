@@ -10,6 +10,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <limits.h>
+#include <ctype.h>
 
 // Structure definition
 typedef struct entry
@@ -89,13 +90,18 @@ int main(void)
     print_list(start);
 
     // Prompts the user for a position to insert a new node
-    bool yes = false, no = false;
-    
+    char c = ' ';
+
 
     do
     {
         printf("Do you want to insert a new node? (y/n): ");
-        char c =
+        c = getchar();
+        getchar();
+    }
+    while (!isalpha(c));
+
+    printf("%c\n", c);
 
     // Free nodes
     entry *ptr = start;
