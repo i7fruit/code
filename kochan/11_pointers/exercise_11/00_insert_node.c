@@ -121,7 +121,7 @@ void get_data(int *id, int *val)
         if (feof(stdin))
         {
             *val = INT_MAX;
-            printf(")
+            fflush(stdin)
             break;
         }
     }
