@@ -94,7 +94,8 @@ int main(void)
     int size = 0;
 
     // Flushes the buffer of EOF after user first typed ctrl+d
-    fflush(stdin);
+    int c;
+    while ((c = getchar()) != '\n'){}
 
     do
     {
