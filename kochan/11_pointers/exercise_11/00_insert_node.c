@@ -91,8 +91,11 @@ int main(void)
 
     printf("Do you want to insert a new node? (y/n): ");
     char answer;
-    if ((answer = fgetc(stdin)) != EOF)
+    if ((answer = fgetc(stdin)) == EOF)
+    {
+        scanf("%c", &answer);
         printf("%c\n", answer);
+    }
 
     // Free nodes
     entry *ptr = start;
