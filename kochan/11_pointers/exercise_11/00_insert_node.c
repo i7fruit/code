@@ -89,6 +89,12 @@ int main(void)
     putchar('\n');
     print_list(start);
 
+    printf("Do you want to insert a new node? (y/n): ");
+    char answer;
+    scanf("%c", &answer);
+
+    printf("%c\n", answer);
+
     // Free nodes
     entry *ptr = start;
     while (ptr != NULL)
