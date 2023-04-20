@@ -93,7 +93,7 @@ int main(void)
     char answer;
     if ((answer = fgetc(stdin)) == EOF)
     {
-        fflush(stdin);
+        fflush(stdout);
         scanf("%c", &answer);
         printf("%c\n", answer);
     }
