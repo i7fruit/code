@@ -102,7 +102,7 @@ int main(void)
         char c = getchar();
         printf("%c", c);
     }
-    while (!isalpha(answer[size]));
+    while (answer[size] != '\n');
 
     printf("%c\n", answer[size]);
 

@@ -3,11 +3,15 @@
 
 int main(void)
 {
-    char *string = "Constant string";
+    char word[12];
 
-    char **nu = &string;
+    int i = 0;
 
-    printf("%s\n", *nu);
+    do
+    {
+        word[i] = getchar();
+    }
+    while (word[i])
 
     return 0;
 }
