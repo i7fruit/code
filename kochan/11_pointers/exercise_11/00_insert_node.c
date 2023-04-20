@@ -89,23 +89,6 @@ int main(void)
     putchar('\n');
     print_list(start);
 
-    // Prompts the user for a position to insert a new node
-    char answer[] = "   ";
-    int size = 0;
-
-    // Flushes the buffer of EOF after user first typed ctrl+d
-    int c;
-    fflush(stdout);
-
-    do
-    {
-        printf("Do you want to insert a new node? (y/n): ");
-        answer[size++] = getchar();
-    }
-    while (answer[size] != '\n');
-
-    printf("%c\n", answer[size]);
-
     // Free nodes
     entry *ptr = start;
     while (ptr != NULL)
