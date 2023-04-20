@@ -95,8 +95,9 @@ int main(void)
 
     do
     {
+        static size = -1;
         printf("Do you want to insert a new node? (y/n): ");
-        c = getchar();
+        answer[++size] = getchar();
     }
     while (!isalpha(c));
 
