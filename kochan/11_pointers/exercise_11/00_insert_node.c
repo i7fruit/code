@@ -91,7 +91,7 @@ int main(void)
 
     printf("Do you want to insert a new node? (y/n): ");
     int c;
-    while ((c = getchar()) != '\n' && c != EOF) { }
+    while ((c = getchar()) != '\n' && c == EOF) { }
 
     char a = getchar();
     printf("%c\n", a);
