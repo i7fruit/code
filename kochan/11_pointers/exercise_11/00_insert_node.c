@@ -95,11 +95,7 @@ int main(void)
 
     // Flushes the buffer of EOF after user first typed ctrl+d
     int c;
-    while ((c = getchar()) != '\n')
-    {
-        printf("%i\n", c);
-        getchar();
-    }
+    fflush(stdout);
 
     do
     {
