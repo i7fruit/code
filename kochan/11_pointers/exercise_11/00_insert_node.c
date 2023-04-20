@@ -91,14 +91,14 @@ int main(void)
 
     printf("Do you want to insert a new node? (y/n): ");
     char buffer[100];
-    int value;
+    int v;
 
-    printf("Enter a value: ");
-    if (fgets(buffer, sizeof(buffer), stdin) != NULL) {
-        if (sscanf(buffer, "%d", &value) != 1) {
+    if (fgets(buffer, sizeof(buffer), stdin) != NULL)
+    {
+        if (sscanf(buffer, "%d", &v) != 1) {
             printf("Invalid input\n");
         } else {
-            printf("Value entered: %d\n", value);
+            printf("Value entered: %d\n", v);
         }
     } else {
         printf("End of file reached\n");
