@@ -98,6 +98,7 @@ int main(void)
     while ((c = getchar()) != '\n')
     {
         printf("%i\n", c);
+        getchar();
     }
 
     do
