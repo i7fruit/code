@@ -22,6 +22,7 @@ entry;
 
 // Function prototypes
 void get_data(int *id, int *val);
+void print_list(entry *list);
 
 int main(void)
 {
@@ -85,8 +86,7 @@ int main(void)
 
     // Prints the list
     putchar('\n');
-    for (entry *trav = start; trav != NULL; trav = trav->next)
-        printf("ID: %3i, Value: %3i\n", trav->id, trav->value);
+    print_list(start);
 
     // Prompts the user for a position to insert a new node
 
@@ -119,4 +119,13 @@ void get_data(int *id, int *val)
         }
     }
     while (*id < 1);
+}
+
+/***********************************
+ * print_list()
+*/
+void print_list(entry *list)
+{
+    for (entry *trav = list; trav != NULL; trav = trav->next)
+        printf("ID: %3i, Value: %3i\n", trav->id, trav->value);
 }
