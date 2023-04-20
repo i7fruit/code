@@ -90,7 +90,7 @@ int main(void)
     print_list(start);
 
     // Prompts the user for a position to insert a new node
-    char *answer = NULL;
+    char answer[] = "   ";
     static int size = -1;
 
     do
@@ -100,7 +100,7 @@ int main(void)
     }
     while (!isalpha(answer[size]));
 
-    printf("%c\n", *answer);
+    printf("%c\n", answer[size]);
 
     // Free nodes
     entry *ptr = start;
