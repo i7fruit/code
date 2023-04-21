@@ -115,8 +115,11 @@ int main(void)
 
     switch (tolower(answer[0]))
     {
+        int position = 0;
         case 'y':
-            printf("\n");
+            printf("What position would you like to insert the node\n" \
+            "Choose between position_%2i and position_%2i\n", 1, node_count);
+            position = get_position();
             break;
         case 'n':
             printf("No\n");
