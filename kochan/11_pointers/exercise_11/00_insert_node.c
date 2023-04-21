@@ -90,6 +90,10 @@ int main(void)
     print_list(start);
 
     printf("Do you want to insert a new node? (y/n): ");
+    clearerr(stdin);
+    int i = 0;
+    scanf("%i", &i);
+    printf("%i\n", i);
 
     // Free nodes
     entry *ptr = start;
