@@ -89,10 +89,10 @@ int main(void)
     //}
 
     // Prints the list
-    putchar('\n');
-    print_list(start);
+    //putchar('\n');
+    //print_list(start);
 
-    printf("Do you want to insert a new node? (y/n): ");
+    //printf("Do you want to insert a new node? (y/n): ");
 
     // Free nodes
     entry *ptr = start;
@@ -192,6 +192,9 @@ int build_list(entry *start, int id, int value)
                 start = nu;
         }
     }
+
+    putchar('\n');
+    print_list(start);
 
     return 0;
 }
