@@ -83,7 +83,7 @@ int build_list(entry *start, int *id, int *value)
     {
         // Prompts user for data
         printf("Enter an ID and a value: ");
-        get_data(&id, &value);
+        get_data(*id, *value);
 
         // Stops the loop if the user hits ctrl+d
         if (value == INT_MAX)
