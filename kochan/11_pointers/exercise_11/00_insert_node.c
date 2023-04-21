@@ -33,6 +33,8 @@ int main(void)
     // Pointer to the start of the linked list
     entry *start = NULL;
 
+    int i = build_list(start, id, value);
+
     //while (true)
     //{
     //    // Prompts user for data
@@ -136,7 +138,7 @@ void print_list(entry *list)
 /***********************************
  * build_list()
 */
-int build_list(entry *start, int *id, int *value)
+int build_list(entry *start, int id, int value)
 {
      while (true)
     {
