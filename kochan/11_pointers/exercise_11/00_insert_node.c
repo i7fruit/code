@@ -24,7 +24,7 @@ entry;
 // Function prototypes
 void get_data(int *id, int *val);
 void print_list(entry *list);
-int build_list(entry *start, int *id, int *value);
+int build_list(entry *start, int id, int value);
 
 int main(void)
 {
