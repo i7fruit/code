@@ -91,7 +91,7 @@ int main(void)
 
     // Asks the user if they wish to insert a new node
     printf("Do you want to insert a new node? (y/n): ");
-    int size = 4;
+    int size = 10;
     char answer[size];
     fgets(answer, size, stdin);
 
@@ -106,7 +106,7 @@ int main(void)
         i++;
     }
 
-    for (int f = 0; f < 3; f++)
+    for (int f = 0; f < size; f++)
         printf("%c", answer[f]);
 
     // Free nodes
