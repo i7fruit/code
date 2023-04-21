@@ -34,6 +34,7 @@ int main(void)
     entry *start = NULL;
 
     int i = build_list(start, id, value);
+    fopen("/dev/tty", "r");
 
     printf("Enter a value for i\n");
     getchar();
