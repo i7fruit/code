@@ -97,13 +97,13 @@ int main(void)
     fgets(temp, size, stdin);
 
     // Clears non-alphabets from entered text
-    int i = -1;
+    int i = -1, j = -1;
     while (temp[++i] != '\0')
     {
         if (!isalpha(temp[i]))
             continue;
 
-        answer[i] = temp[i];
+        answer[++j] = temp[i];
     }
 
     for (int f = 0; f < size; f++)
