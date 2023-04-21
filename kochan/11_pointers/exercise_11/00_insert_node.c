@@ -27,7 +27,7 @@ entry;
 // Function prototypes
 void get_data(int *id, int *val);
 void print_list(entry *list);
-int get_position(void);
+//int get_position(void);
 
 int main(void)
 {
@@ -119,9 +119,9 @@ int main(void)
 
     switch (tolower(answer[0]))
     {
-        int position = 0;
+        //int position = 0;
         case 'y':
-            position = get_position();
+            //position = get_position();
             break;
         case 'n':
             printf("No\n");
@@ -184,15 +184,15 @@ void insert_node(entry *start, entry *position)
 /************************************
  * get_position()
 */
-int get_position(void)
-{
-    int i = 0;
+//int get_position(void)
+//{
+//    int i = 0;
 
-    do
-    {
-        printf("What position would you like to insert the node\n" \
-    "Choose between position_%2i and position_%2i\n", 1, node_count);
-        scanf("%i", &i);
-    }
-    while (i < 1 || i > node_count);
-}
+//    do
+//    {
+//        printf("What position would you like to insert the node\n" \
+//    "Choose between position_%2i and position_%2i\n", 1, node_count);
+//        scanf("%i", &i);
+//    }
+//    while (i < 1 || i > node_count);
+//}
