@@ -96,6 +96,7 @@ int main(void)
     fgets(answer, size - 1, stdin);
 
     // Clears non-alphabets from entered text
+    int i = 0, j = 0;
     while (answer[i] != '\0')
     {
         if (!isalpha(answer[i]))
