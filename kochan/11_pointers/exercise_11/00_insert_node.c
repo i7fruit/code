@@ -164,5 +164,8 @@ void print_list(entry *list)
 /************************************
  * insert_node()
 */
-void insert_node()
+void insert_node(entry *start, entry *position)
+{
+    
+}
 
