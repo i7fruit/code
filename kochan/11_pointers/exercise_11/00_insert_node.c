@@ -94,7 +94,7 @@ int main(void)
     int size = 10;
     char temp[size];
     char answer[size];
-    fgets(answer, size, stdin);
+    fgets(temp, size, stdin);
 
     // Clears non-alphabets from entered text
     int i = -1;
@@ -102,7 +102,7 @@ int main(void)
     {
         if (!isalpha(temp[i]))
             continue;
-            
+
         answer[i] = temp[i];
     }
 
