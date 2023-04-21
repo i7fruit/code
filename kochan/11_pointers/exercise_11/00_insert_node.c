@@ -22,9 +22,8 @@ typedef struct entry
 entry;
 
 // Function prototypes
-void get_data(int **id, int **val);
+void get_data(int *id, int *val);
 void print_list(entry *list);
-int build_list(entry *start, int *id, int *value);
 
 int main(void)
 {
@@ -33,60 +32,14 @@ int main(void)
     // Pointer to the start of the linked list
     entry *start = NULL;
 
-    int i = build_list(start, &id, &value);
-    fopen("/dev/tty", "r");
-
-    printf("Enter a value for i\n");
-    getchar();
-    scanf("%i", &i);
-
-    printf("%i\n", i);
-
-    return 0;
-}
-
-/*********************************
- * get_data()
-*/
-void get_data(int **id, int **val)
-{
-    do
-    {
-        scanf("%i %i", *id, *val);
-
-        // Exits the do-while loop if the user hits ctrl+d
-        if (feof(stdin))
-        {
-
-            **val = INT_MAX;
-            break;
-        }
-    }
-    while (**id < 1);
-}
-
-/***********************************
- * print_list()
-*/
-void print_list(entry *list)
-{
-    for (entry *trav = list; trav != NULL; trav = trav->next)
-        printf("ID: %3i, Value: %3i\n", trav->id, trav->value);
-}
-
-/***********************************
- * build_list()
-*/
-int build_list(entry *start, int *id, int *value)
-{
-     while (true)
+    while (true)
     {
         // Prompts user for data
         printf("Enter an ID and a value: ");
-        get_data(**id, **value);
+        get_data(&id, &value);
 
         // Stops the loop if the user hits ctrl+d
-        if (**value == INT_MAX)
+        if (value == INT_MAX)
         {
             printf("Linked list completed\n");
             break;
@@ -97,7 +50,7 @@ int build_list(entry *start, int *id, int *value)
 
         for (entry *ptr = start; ptr != NULL; ptr = ptr->next)
         {
-            if (ptr->id == **id)
+            if (ptr->id == id)
             {
                 is_used = true;
                 break;
@@ -132,9 +85,13 @@ int build_list(entry *start, int *id, int *value)
         }
     }
 
+    // Prints the list
     putchar('\n');
     print_list(start);
 
+    printf("Do you want to insert a new node? (y/n): ");
+
+    // Free nodes
     entry *ptr = start;
     while (ptr != NULL)
     {
@@ -145,3 +102,33 @@ int build_list(entry *start, int *id, int *value)
 
     return 0;
 }
+
+/*********************************
+ * get_data()
+*/
+void get_data(int *id, int *val)
+{
+    do
+    {
+        scanf("%i %i", id, val);
+
+        // Exits the do-while loop if the user hits ctrl+d
+        if (feof(stdin))
+        {
+
+            *val = INT_MAX;
+            break;
+        }
+    }
+    while (*id < 1);
+}
+
+/***********************************
+ * print_list()
+*/
+void print_list(entry *list)
+{
+    for (entry *trav = list; trav != NULL; trav = trav->next)
+        printf("ID: %3i, Value: %3i\n", trav->id, trav->value);
+}
+
