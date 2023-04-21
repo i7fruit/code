@@ -91,9 +91,9 @@ int main(void)
 
     printf("Do you want to insert a new node? (y/n): ");
     clearerr(stdin);
-    int i = 0;
-    scanf("%i", &i);
-    printf("%i\n", i);
+    char i = ' ';
+    scanf("%c", &i);
+    printf("%c\n", i);
 
     // Free nodes
     entry *ptr = start;
