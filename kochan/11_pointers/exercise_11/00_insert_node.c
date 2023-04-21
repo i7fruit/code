@@ -133,6 +133,8 @@ void get_data(int *id, int *val)
         }
     }
     while (*id < 1);
+
+    return
 }
 
 /***********************************
