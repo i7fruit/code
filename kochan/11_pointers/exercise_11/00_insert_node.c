@@ -22,7 +22,7 @@ typedef struct entry
 entry;
 
 // Function prototypes
-void get_data(int *id, int *val);
+int get_data(int *id, int *val);
 void print_list(entry *list);
 
 int main(void)
@@ -119,7 +119,7 @@ int main(void)
 /*********************************
  * get_data()
 */
-void get_data(int *id, int *val)
+int get_data(int *id, int *val)
 {
     do
     {
@@ -134,7 +134,7 @@ void get_data(int *id, int *val)
     }
     while (*id < 1);
 
-    return
+    return 0;
 }
 
 /***********************************
