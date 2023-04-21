@@ -95,13 +95,13 @@ int main(void)
     //printf("Do you want to insert a new node? (y/n): ");
 
     // Free nodes
-    entry *ptr = start;
-    while (ptr != NULL)
-    {
-        entry *trav = ptr->next;
-        free(ptr);
-        ptr = trav;
-    }
+    //entry *ptr = start;
+    //while (ptr != NULL)
+    //{
+    //    entry *trav = ptr->next;
+    //    free(ptr);
+    //    ptr = trav;
+    //}
 
     return 0;
 }
@@ -195,6 +195,14 @@ int build_list(entry *start, int id, int value)
 
     putchar('\n');
     print_list(start);
+
+    entry *ptr = start;
+    while (ptr != NULL)
+    {
+        entry *trav = ptr->next;
+        free(ptr);
+        ptr = trav;
+    }
 
     return 0;
 }
