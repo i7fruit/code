@@ -35,13 +35,13 @@ int main(void)
     while (true)
     {
         // Prompts user for data
-        printf("Enter an ID and a value: ");
+        printf("Enter an ID and a value. Press ctrl+d to quit entering data.\n");
         get_data(&id, &value);
 
         // Stops the loop if the user hits ctrl+d
         if (value == INT_MAX)
         {
-            printf("Linked list completed\n");
+            printf("\nLinked list completed\n");
             break;
         }
 
