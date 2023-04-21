@@ -162,6 +162,7 @@ void print_list(entry *list)
 }
 
 /************************************
- * 
+ * insert_node()
 */
+void insert_node()
 
