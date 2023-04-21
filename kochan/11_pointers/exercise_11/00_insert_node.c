@@ -90,7 +90,7 @@ int main(void)
     print_list(start);
 
     printf("Do you want to insert a new node? (y/n): ");
-    clearerr(stdin);
+
     char i = ' ';
     scanf("%c", &i);
     printf("%c\n", i);
@@ -119,7 +119,8 @@ void get_data(int *id, int *val)
         // Exits the do-while loop if the user hits ctrl+d
         if (feof(stdin))
         {
-
+            // Clears the EOF indicator for the stdin so that further input can be made if needed
+            clearerr(stdin);
             *val = INT_MAX;
             break;
         }
