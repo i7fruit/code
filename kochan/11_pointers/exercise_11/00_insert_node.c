@@ -93,7 +93,7 @@ int main(void)
     printf("Do you want to insert a new node? (y/n): ");
     int size = 4;
     char answer[size];
-    fgets(answer, size - 1, stdin);
+    fgets(answer, size, stdin);
 
     // Clears non-alphabets from entered text
     int i = 0, j = 0;
