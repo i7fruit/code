@@ -131,3 +131,11 @@ void print_list(entry *list)
     for (entry *trav = list; trav != NULL; trav = trav->next)
         printf("ID: %3i, Value: %3i\n", trav->id, trav->value);
 }
+
+/***********************************
+ * build_list()
+*/
+int build_list(entry *start)
+{
+    
+}
