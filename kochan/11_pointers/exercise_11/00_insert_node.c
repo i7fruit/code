@@ -49,6 +49,9 @@ int main(void)
             break;
         }
 
+        if (ferror(stdin))
+            printf("ERROR IN BUFFER\n");
+
         // Checks if the ID has previously been used
         bool is_used = false;
 
