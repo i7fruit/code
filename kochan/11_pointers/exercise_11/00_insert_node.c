@@ -93,7 +93,7 @@ int main(void)
     char buffer[100];
     int v;
 
-    if (fgets(buffer, sizeof(buffer), stdin) != NULL)
+    if (fgets(buffer, sizeof(buffer), stdin) == NULL)
     {
         if (sscanf(buffer, "%d", &v) != 1) {
             printf("Invalid input\n");
