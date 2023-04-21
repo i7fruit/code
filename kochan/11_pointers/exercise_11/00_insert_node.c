@@ -35,6 +35,11 @@ int main(void)
 
     int i = build_list(start, id, value);
 
+    printf("Enter a value for i\n");
+    scanf("%i", &i);
+
+    printf("%i\n", i);
+
     return 0;
 }
 
