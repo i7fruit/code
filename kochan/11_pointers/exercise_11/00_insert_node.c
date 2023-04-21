@@ -12,6 +12,9 @@
 #include <limits.h>
 #include <ctype.h>
 
+// Global variable
+int node_count;
+
 // Structure definition
 typedef struct entry
 {
