@@ -24,7 +24,7 @@ entry;
 // Function prototypes
 void get_data(int *id, int *val);
 void print_list(entry *list);
-int build_list(entry *start, int id, int value);
+int build_list(entry *start, int *id, int *value);
 
 int main(void)
 {
@@ -33,7 +33,7 @@ int main(void)
     // Pointer to the start of the linked list
     entry *start = NULL;
 
-    int i = build_list(start, id, value);
+    int i = build_list(start, &id, &value);
     fopen("/dev/tty", "r");
 
     printf("Enter a value for i\n");
@@ -77,7 +77,7 @@ void print_list(entry *list)
 /***********************************
  * build_list()
 */
-int build_list(entry *start, int id, int value)
+int build_list(entry *start, int *id, int *value)
 {
      while (true)
     {
