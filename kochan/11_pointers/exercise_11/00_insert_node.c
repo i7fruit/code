@@ -27,7 +27,7 @@ entry;
 // Function prototypes
 void get_data(int *id, int *val);
 void print_list(entry *list);
-//int get_position(void);
+int get_position(void);
 
 int main(void)
 {
@@ -48,9 +48,6 @@ int main(void)
             printf("\nLinked list completed\n");
             break;
         }
-
-        if (ferror(stdin))
-            printf("ERROR IN BUFFER\n");
 
         // Checks if the ID has previously been used
         bool is_used = false;
@@ -119,9 +116,9 @@ int main(void)
 
     switch (tolower(answer[0]))
     {
-        //int position = 0;
+        int position = 0;
         case 'y':
-            //position = get_position();
+            position = get_position();
             break;
         case 'n':
             printf("No\n");
