@@ -92,7 +92,7 @@ int main(void)
     printf("Do you want to insert a new node? (y/n): ");
 
     char answer[4];
-    fgets(stdin, 3, answer);
+    fgets(answer, 3, stdin);
     if (answer[0] == 'Y')
        printf("Yes\n");
     else if (answer[0] == 'N')
