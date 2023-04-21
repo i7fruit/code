@@ -106,8 +106,18 @@ int main(void)
         answer[++j] = temp[i];
     }
 
-    for (char *ptr = answer; *ptr != '\0'; ptr++)
-        printf("%c", *ptr);
+    switch (tolower(answer[0]))
+    {
+        case 'y':
+            printf("Yes\n");
+            break;
+        case 'n':
+            printf("No\n");
+            break;
+        default:
+            printf("Invalid entry\n");
+            break;
+    }
 
     // Free nodes
     entry *ptr = start;
