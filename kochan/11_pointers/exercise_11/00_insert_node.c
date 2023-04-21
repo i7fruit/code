@@ -106,8 +106,8 @@ int main(void)
         answer[++j] = temp[i];
     }
 
-    for (char *ptr = answer; f < size; f++)
-        printf("%c", answer[f]);
+    for (char *ptr = answer; *ptr != '\0'; ptr++)
+        printf("%c", *ptr);
 
     // Free nodes
     entry *ptr = start;
