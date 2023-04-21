@@ -100,14 +100,14 @@ int main(void)
     while (answer[i] != '\0')
     {
         if (!isalpha(answer[i]))
+        {
+            answer[i] = answer[i + 1];
+        }
+        i++;
     }
 
-    if (answer[0] == 'Y')
-       printf("Yes\n");
-    else if (answer[0] == 'N')
-        printf("No\n");
-    else
-        printf("Invalid input\n");
+    for (int f = 0; f < 3; f++)
+        printf("%c", answer[f]);
 
     // Free nodes
     entry *ptr = start;
