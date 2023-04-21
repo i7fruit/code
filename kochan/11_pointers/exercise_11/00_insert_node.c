@@ -22,7 +22,7 @@ typedef struct entry
 entry;
 
 // Function prototypes
-void get_data(int *id, int *val);
+void get_data(int **id, int **val);
 void print_list(entry *list);
 int build_list(entry *start, int *id, int *value);
 
@@ -48,21 +48,21 @@ int main(void)
 /*********************************
  * get_data()
 */
-void get_data(int *id, int *val)
+void get_data(int **id, int **val)
 {
     do
     {
-        scanf("%i %i", id, val);
+        scanf("%i %i", *id, *val);
 
         // Exits the do-while loop if the user hits ctrl+d
         if (feof(stdin))
         {
 
-            *val = INT_MAX;
+            **val = INT_MAX;
             break;
         }
     }
-    while (*id < 1);
+    while (**id < 1);
 }
 
 /***********************************
@@ -83,10 +83,10 @@ int build_list(entry *start, int *id, int *value)
     {
         // Prompts user for data
         printf("Enter an ID and a value: ");
-        get_data(*id, *value);
+        get_data(**id, **value);
 
         // Stops the loop if the user hits ctrl+d
-        if (value == INT_MAX)
+        if (**value == INT_MAX)
         {
             printf("Linked list completed\n");
             break;
@@ -97,7 +97,7 @@ int build_list(entry *start, int *id, int *value)
 
         for (entry *ptr = start; ptr != NULL; ptr = ptr->next)
         {
-            if (ptr->id == id)
+            if (ptr->id == **id)
             {
                 is_used = true;
                 break;
