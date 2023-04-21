@@ -22,7 +22,7 @@ typedef struct entry
 entry;
 
 // Function prototypes
-int get_data(int *id, int *val);
+void get_data(int *id, int *val);
 void print_list(entry *list);
 
 int main(void)
@@ -119,7 +119,7 @@ int main(void)
 /*********************************
  * get_data()
 */
-int get_data(int *id, int *val)
+void get_data(int *id, int *val)
 {
     do
     {
@@ -128,13 +128,12 @@ int get_data(int *id, int *val)
         // Exits the do-while loop if the user hits ctrl+d
         if (feof(stdin))
         {
+            
             *val = INT_MAX;
-            return *val;
+            break;
         }
     }
     while (*id < 1);
-
-    return 0;
 }
 
 /***********************************
