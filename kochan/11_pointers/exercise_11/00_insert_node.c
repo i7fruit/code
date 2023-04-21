@@ -81,10 +81,14 @@ int main(void)
             {
                 nu->next = start;
                 start = nu;
+                node_count++;
             }
             else
+            {
                 // Appends first node if list is null
                 start = nu;
+                node_count++;
+            }
         }
     }
 
