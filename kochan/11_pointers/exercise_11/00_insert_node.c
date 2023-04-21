@@ -109,7 +109,7 @@ int main(void)
     switch (tolower(answer[0]))
     {
         case 'y':
-            printf("Yes\n");
+            printf("\n");
             break;
         case 'n':
             printf("No\n");
@@ -166,6 +166,6 @@ void print_list(entry *list)
 */
 void insert_node(entry *start, entry *position)
 {
-    
+
 }
 
