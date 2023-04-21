@@ -92,20 +92,18 @@ int main(void)
     // Asks the user if they wish to insert a new node
     printf("Do you want to insert a new node? (y/n): ");
     int size = 10;
+    char temp[size];
     char answer[size];
     fgets(answer, size, stdin);
 
     // Clears non-alphabets from entered text
-    int i = 0, j = 0;
-    while (answer[i] != '\0')
+    int i = -1;
+    while (temp[++i] != '\0')
     {
-        if (!isalpha(answer[i]))
-        {
-            char temp = answer[i];
-            answer[i] = answer[i + 1];
-            answer[i + 1] = temp;
-        }
-        i++;
+        if (!isalpha(temp[i]))
+            continue;
+            
+        answer[i] = temp[i];
     }
 
     for (int f = 0; f < size; f++)
