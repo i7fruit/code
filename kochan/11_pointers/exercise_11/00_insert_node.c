@@ -90,19 +90,6 @@ int main(void)
     print_list(start);
 
     printf("Do you want to insert a new node? (y/n): ");
-    char buffer[100];
-    int v;
-
-    if (fgets(buffer, sizeof(buffer), stdin) == NULL)
-    {
-        if (sscanf(buffer, "%d", &v) != 1) {
-            printf("Invalid input\n");
-        } else {
-            printf("Value entered: %d\n", v);
-        }
-    } else {
-        printf("End of file reached\n");
-    }
 
     // Free nodes
     entry *ptr = start;
@@ -128,7 +115,7 @@ void get_data(int *id, int *val)
         // Exits the do-while loop if the user hits ctrl+d
         if (feof(stdin))
         {
-            
+
             *val = INT_MAX;
             break;
         }
