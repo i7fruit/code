@@ -28,7 +28,7 @@ entry;
 void get_data(int *id, int *val);
 void print_list(entry *list);
 entry *get_position(entry *list);
-void insert_node(entry *start, entry *position);
+bool insert_node(entry *start, entry *position);
 
 int main(void)
 {
@@ -121,7 +121,11 @@ int main(void)
         {
             entry *position = NULL;
             position = get_position(start);
-            insert_node(start, position);
+            bool quit = insert_node(start, position);
+
+            // Quits the switch and frees the list if
+            if (quit)
+                break;
             break;
         }
         case 'n':
@@ -179,15 +183,16 @@ void print_list(entry *list)
 /************************************
  * insert_node()
 */
-void insert_node(entry *start, entry *position)
+bool insert_node(entry *start, entry *position)
 {
     // Creates new node to insert
     entry *nu = malloc(sizeof(entry));
     if (!nu)
     {
         fprintf(stderr, "Insufficient memory\n");
+        return 1;
     }
-    
+
     int id = 0, val = 0;
     bool in_list = false;
     while (true)
@@ -211,6 +216,7 @@ void insert_node(entry *start, entry *position)
             break;
         }
     }
+    return 0;
 }
 
 /************************************
