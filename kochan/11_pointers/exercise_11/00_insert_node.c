@@ -260,6 +260,8 @@ entry *get_position(entry *list)
         count = 0;
         if (count == insertion_point - 2)
             return ptr;
+
+        count++;
     }
 
     // To silence error warning in compiler
