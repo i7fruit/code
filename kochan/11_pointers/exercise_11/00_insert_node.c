@@ -238,7 +238,7 @@ entry *get_position(entry *list)
     for (entry *ptr = list; ptr != NULL; ptr = ptr->next)
     {
         static int count = 0;
-        if (count + 1 == i)
+        if (count == i)
             return ptr;
 
         count++;
