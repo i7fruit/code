@@ -188,7 +188,7 @@ int get_position(void)
     do
     {
         printf("What position would you like to insert the node\n" \
-    "Choose between position_%2i and position_%2i\n", 1, node_count);
+    "Choose between position_%.2i and position_%.2i\n", 1, node_count);
         scanf("%i", &i);
     }
     while (i < 1 || i > node_count);
