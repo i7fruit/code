@@ -256,10 +256,12 @@ entry *get_position(entry *list)
     }
     while (insertion_point < 1 || insertion_point > node_count);
 
+    insertion_point--;
+
     // Iterates through the list to find a pointer to the node before the insertion point
     for (entry *ptr = list; ptr != NULL; ptr = ptr->next)
     {
-        if (count == insertion_point - 2)
+        if (count == insertion_point)
             return ptr;
 
         count++;
