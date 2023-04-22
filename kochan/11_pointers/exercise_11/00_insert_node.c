@@ -117,10 +117,12 @@ int main(void)
     switch (tolower(answer[0]))
     {
         case 'y':
+        {
             entry *position = NULL;
             position = get_position(start);
             insert_node(start, position);
             break;
+        }
         case 'n':
             printf("No\n");
             break;
