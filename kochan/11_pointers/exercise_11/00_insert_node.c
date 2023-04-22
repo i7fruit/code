@@ -123,7 +123,7 @@ int main(void)
             position = get_position(start);
             bool quit = insert_node(start, position);
 
-            // Quits the switch and frees the list if
+            // Quits the switch and frees the list if pointer is null
             if (quit)
                 break;
             break;
