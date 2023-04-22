@@ -220,12 +220,17 @@ bool insert_node(entry *start, entry *position)
             }
             else if (i == 1)
             {
+                nu->id = id;
+                nu->value = val;
                 nu->next = start;
                 start = nu;
             }
             else
             {
-                position
+                nu->id = id;
+                nu->value = val;
+                position->next = nu;
+                nu->next = NULL;
             }
         }
     }
