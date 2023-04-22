@@ -192,4 +192,6 @@ int get_position(void)
         scanf("%i", &i);
     }
     while (i < 1 || i > node_count);
+
+    return i;
 }
