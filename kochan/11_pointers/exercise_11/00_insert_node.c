@@ -201,7 +201,9 @@ void insert_node(entry *start, entry *position)
 
         if (!in_list)
         {
-            
+            nu->id = *id;
+            nu->value = *val;
+            nu->
         }
 }
 
