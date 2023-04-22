@@ -184,8 +184,9 @@ void insert_node(entry *start, entry *position)
     if (!nu)
     {
         fprintf(stderr, "Insufficient memory\n");
-        
     }
+    // Initializes the new node
+    nu->id
 }
 
 /************************************
