@@ -186,7 +186,13 @@ void insert_node(entry *start, entry *position)
         fprintf(stderr, "Insufficient memory\n");
     }
     // Initializes the new node
-    nu->id
+    while (true)
+    {
+        int id = 0, val = 0;
+        get_data(&id, &val);
+        // Checks for id in list
+        for (entry *ptr = start; ptr != NULL; ptr = ptr->next)
+            if (ptr->id == *id)
 }
 
 /************************************
