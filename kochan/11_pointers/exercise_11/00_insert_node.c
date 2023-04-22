@@ -224,7 +224,7 @@ bool insert_node(entry *start, entry *position)
 */
 entry *get_position(entry *list)
 {
-    int i = 1;
+    int i = 0;
 
     do
     {
