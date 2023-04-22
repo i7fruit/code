@@ -116,9 +116,8 @@ int main(void)
 
     switch (tolower(answer[0]))
     {
-        int position = 0;
         case 'y':
-            position = get_position();
+            entry *position = get_position();
             break;
         case 'n':
             printf("No\n");
