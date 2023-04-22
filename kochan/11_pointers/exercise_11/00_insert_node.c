@@ -12,8 +12,10 @@
 #include <limits.h>
 #include <ctype.h>
 
-// Global variable
+// Global variables
 int node_count;
+int count;
+int insertion_point;
 
 // Structure definition
 typedef struct entry
@@ -210,7 +212,7 @@ bool insert_node(entry *start, entry *position)
 
         if (!in_list)
         {
-            if (i > 1 && i < node_count)
+            if (insertion_point > 1 && insertion_point < node_count)
             {
                 nu->id = id;
                 nu->value = val;
@@ -218,7 +220,7 @@ bool insert_node(entry *start, entry *position)
                 position->next = nu;
                 break;
             }
-            else if (i == 1)
+            else if (insertion_point == 1)
             {
                 nu->id = id;
                 nu->value = val;
@@ -242,7 +244,7 @@ bool insert_node(entry *start, entry *position)
 */
 entry *get_position(entry *list)
 {
-    int i = 0;
+    //int i = 0;
 
     do
     {
@@ -250,13 +252,13 @@ entry *get_position(entry *list)
     "Choose any position from position_%.2i to position_%.2i\n", 1, node_count);
         scanf("%i", &i);
     }
-    while (i < 1 || i > node_count);
+    while (insertion_point < 1 || insertion_point > node_count);
 
     // Iterates through the list to find a pointer to the node before the insertion point
     for (entry *ptr = list; ptr != NULL; ptr = ptr->next)
     {
-        static int count = 0;
-        if (count == i - 2)
+        count = 0;
+        if (count == insertion_point - 2)
             return ptr;
     }
 
