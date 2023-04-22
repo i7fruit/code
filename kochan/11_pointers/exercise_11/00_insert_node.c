@@ -208,6 +208,7 @@ void insert_node(entry *start, entry *position)
             nu->value = val;
             nu->next = position->next;
             position->next = nu;
+            break;
         }
     }
 }
