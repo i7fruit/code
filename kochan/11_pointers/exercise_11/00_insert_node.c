@@ -27,7 +27,7 @@ entry;
 // Function prototypes
 void get_data(int *id, int *val);
 void print_list(entry *list);
-int get_position(void);
+entry *get_position(void)
 
 int main(void)
 {
@@ -181,7 +181,7 @@ void insert_node(entry *start, entry *position)
 /************************************
  * get_position()
 */
-int get_position(void)
+entry *get_position(void)
 {
     int i = 0;
 
