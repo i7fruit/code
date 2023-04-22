@@ -218,6 +218,15 @@ bool insert_node(entry *start, entry *position)
                 position->next = nu;
                 break;
             }
+            else if (i == 1)
+            {
+                nu->next = start;
+                start = nu;
+            }
+            else
+            {
+                position
+            }
         }
     }
     return 0;
