@@ -187,7 +187,7 @@ void insert_node(entry *start, entry *position)
     {
         fprintf(stderr, "Insufficient memory\n");
     }
-    // Initializes the new node
+    
     int id = 0, val = 0;
     bool in_list = false;
     while (true)
