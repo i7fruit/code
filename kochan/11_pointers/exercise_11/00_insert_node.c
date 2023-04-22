@@ -226,6 +226,7 @@ bool insert_node(entry *start, entry *position)
                 nu->value = val;
                 nu->next = start;
                 start = nu;
+                break;
             }
             else
             {
@@ -233,6 +234,7 @@ bool insert_node(entry *start, entry *position)
                 nu->value = val;
                 position->next = nu;
                 nu->next = NULL;
+                break;
             }
         }
     }
