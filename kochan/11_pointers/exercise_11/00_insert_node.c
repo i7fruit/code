@@ -201,5 +201,4 @@ entry *get_position(entry *list)
 
         count++;
     }
-
 }
