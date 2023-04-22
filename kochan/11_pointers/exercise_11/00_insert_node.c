@@ -28,6 +28,7 @@ entry;
 void get_data(int *id, int *val);
 void print_list(entry *list);
 entry *get_position(entry *list);
+void insert_node(entry *start, entry *position);
 
 int main(void)
 {
@@ -178,7 +179,13 @@ void print_list(entry *list)
 */
 void insert_node(entry *start, entry *position)
 {
-
+    // Creates new node to insert
+    entry *nu = malloc(sizeof(entry));
+    if (!nu)
+    {
+        fprintf(stderr, "Insufficient memory\n");
+        
+    }
 }
 
 /************************************
@@ -205,4 +212,7 @@ entry *get_position(entry *list)
 
         count++;
     }
+
+    // To silence error warning in compiler
+    return (entry *)0;
 }
