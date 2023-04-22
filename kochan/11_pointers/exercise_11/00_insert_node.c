@@ -238,7 +238,8 @@ entry *get_position(entry *list)
     for (entry *ptr = list; ptr != NULL; ptr = ptr->next)
     {
         if (i == 1)
-            return
+            return ptr;
+        else if (i =)
     }
 
     // To silence error warning in compiler
