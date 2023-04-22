@@ -193,6 +193,7 @@ void insert_node(entry *start, entry *position)
     entry *ptr;
     while (true)
     {
+        printf("Enter an ID and a value: ");
         get_data(&id, &val);
         // Checks for id in list
         for (ptr = start; ptr != NULL; ptr = ptr->next)
@@ -206,6 +207,7 @@ void insert_node(entry *start, entry *position)
         {
             nu->id = id;
             nu->value = val;
+            nu->next = NULL;
             nu->next = ptr->next;
             ptr = nu;
         }
