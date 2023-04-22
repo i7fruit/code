@@ -27,7 +27,7 @@ entry;
 // Function prototypes
 void get_data(int *id, int *val);
 void print_list(entry *list);
-entry *get_position(entry *list)
+entry *get_position(entry *list);
 
 int main(void)
 {
@@ -118,6 +118,7 @@ int main(void)
     {
         case 'y':
             entry *position = get_position(start);
+            insert_node(start, position);
             break;
         case 'n':
             printf("No\n");
