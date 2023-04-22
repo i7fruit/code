@@ -218,6 +218,7 @@ bool insert_node(entry *start, entry *position)
                 nu->value = val;
                 nu->next = position->next;
                 position->next = nu;
+                node_count++;
                 break;
             }
             else if (insertion_point == 1)
@@ -226,6 +227,7 @@ bool insert_node(entry *start, entry *position)
                 nu->value = val;
                 nu->next = start;
                 start = nu;
+                node_count++;
                 break;
             }
             else
@@ -234,6 +236,7 @@ bool insert_node(entry *start, entry *position)
                 nu->value = val;
                 position->next = nu;
                 nu->next = NULL;
+                node_count++;
                 break;
             }
         }
