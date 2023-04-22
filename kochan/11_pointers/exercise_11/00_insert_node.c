@@ -125,7 +125,7 @@ int main(void)
             break;
         }
         case 'n':
-            printf("No\n");
+            printf("You have chosen to make no insertions to the linked list.\n");
             break;
         default:
             printf("Invalid entry\n");
