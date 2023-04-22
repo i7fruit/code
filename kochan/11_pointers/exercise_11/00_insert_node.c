@@ -27,7 +27,7 @@ entry;
 // Function prototypes
 void get_data(int *id, int *val);
 void print_list(entry *list);
-entry *get_position(void)
+entry *get_position(entry *list)
 
 int main(void)
 {
@@ -117,7 +117,7 @@ int main(void)
     switch (tolower(answer[0]))
     {
         case 'y':
-            entry *position = get_position();
+            entry *position = get_position(start);
             break;
         case 'n':
             printf("No\n");
@@ -180,7 +180,7 @@ void insert_node(entry *start, entry *position)
 /************************************
  * get_position()
 */
-entry *get_position(void)
+entry *get_position(entry *list)
 {
     int i = 0;
 
@@ -193,5 +193,8 @@ entry *get_position(void)
     while (i < 1 || i > node_count);
 
     // Iterates through the list to find a pointer to the node before the insertion point
-    for (entry *ptr = )
+    for (entry *ptr = list; ptr != NULL; ptr = ptr->next)
+    {
+        static int count = 0;
+        
 }
