@@ -190,7 +190,7 @@ void insert_node(entry *start, entry *position)
     // Initializes the new node
     int id = 0, val = 0;
     bool in_list = false;
-    entry *ptr;
+    entry *ptr = NULL;
     while (true)
     {
         printf("Enter an ID and a value: ");
@@ -207,7 +207,6 @@ void insert_node(entry *start, entry *position)
         {
             nu->id = id;
             nu->value = val;
-            nu->next = NULL;
             nu->next = ptr->next;
             ptr = nu;
         }
