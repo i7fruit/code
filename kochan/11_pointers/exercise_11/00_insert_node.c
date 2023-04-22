@@ -182,7 +182,7 @@ void insert_node(entry *start, entry *position)
 */
 entry *get_position(entry *list)
 {
-    int i = 0;
+    int i = 1;
 
     do
     {
@@ -196,5 +196,5 @@ entry *get_position(entry *list)
     for (entry *ptr = list; ptr != NULL; ptr = ptr->next)
     {
         static int count = 0;
-        
+
 }
