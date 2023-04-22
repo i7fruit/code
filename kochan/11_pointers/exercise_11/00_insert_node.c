@@ -210,7 +210,14 @@ bool insert_node(entry *start, entry *position)
 
         if (!in_list)
         {
-            if (i > 1 && i < )
+            if (i > 1 && i < node_count)
+            {
+                nu->id = id;
+                nu->value = val;
+                nu->next = position->next;
+                position->next = nu;
+                break;
+            }
         }
     }
     return 0;
