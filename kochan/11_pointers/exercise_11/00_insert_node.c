@@ -192,5 +192,6 @@ entry *get_position(void)
     }
     while (i < 1 || i > node_count);
 
-    return i;
+    // Iterates through the list to find a pointer to the node before the insertion point
+    for (entry *ptr = )
 }
