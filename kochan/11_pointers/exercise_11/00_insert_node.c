@@ -260,8 +260,12 @@ entry *get_position(entry *list)
     // Iterates through the list to find a pointer to the node before the insertion point
     for (entry *ptr = list; ptr != NULL; ptr = ptr->next)
     {
-        if (count == insertion_point)
-            return ptr;
+        static int count = -1;
+
+        if (count + 1 == insertion_point)
+            return start;
+
+        else if (count + 1 == )
 
         count++;
     }
