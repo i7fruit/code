@@ -243,37 +243,37 @@ bool insert_node(entry *start, entry *position)
 /************************************
  * get_position()
 */
-entry *get_position(entry *list)
-{
-    //int i = 0;
+//entry *get_position(entry *list)
+//{
+//    //int i = 0;
 
-    do
-    {
-        printf("What position would you like to insert the node\n" \
-    "Choose any position from position_%.2i to position_%.2i\n", 1, node_count);
-        scanf("%i", &insertion_point);
-    }
-    while (insertion_point < 1 || insertion_point > node_count);
+//    do
+//    {
+//        printf("What position would you like to insert the node\n" \
+//    "Choose any position from position_%.2i to position_%.2i\n", 1, node_count);
+//        scanf("%i", &insertion_point);
+//    }
+//    while (insertion_point < 1 || insertion_point > node_count);
 
-    insertion_point--;
+//    insertion_point--;
 
-    // Iterates through the list to find a pointer to the node before the insertion point
-    for (entry *ptr = list; ptr != NULL; ptr = ptr->next)
-    {
-        static int count = 0;
+//    // Iterates through the list to find a pointer to the node before the insertion point
+//    for (entry *ptr = list; ptr != NULL; ptr = ptr->next)
+//    {
+//        static int count = 0;
 
-        if (insertion_point == 0)
-            return list;
+//        if (insertion_point == 0)
+//            return list;
 
-        else if (insertion_point == node_count)
-            return ptr->next;
+//        else if (insertion_point == node_count)
+//            return ptr->next;
 
-        else if (count + 1 == insertion_point)
-            return ptr;
+//        else if (count + 1 == insertion_point)
+//            return ptr;
 
-        count++;
-    }
+//        count++;
+//    }
 
-    // To silence error warning in compiler
-    return (entry *)0;
-}
+//    // To silence error warning in compiler
+//    return (entry *)0;
+//}
