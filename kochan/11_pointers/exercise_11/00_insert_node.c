@@ -14,7 +14,6 @@
 
 // Global variables
 int node_count;
-int count;
 int insertion_point;
 
 // Structure definition
