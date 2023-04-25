@@ -263,7 +263,7 @@ entry *get_position(entry *list)
         static int count = 0;
 
         if (insertion_point == 0)
-            return list;
+            return (entry *)0;
 
         else if (insertion_point == node_count)
             return ptr->next;
