@@ -29,7 +29,7 @@ entry;
 void get_data(int *id, int *val);
 void print_list(entry *list);
 entry *get_position(entry *list);
-bool insert_node(entry *start, entry *position);
+//bool insert_node(entry *start, entry *position);
 
 int main(void)
 {
@@ -184,96 +184,96 @@ void print_list(entry *list)
 /************************************
  * insert_node()
 */
-bool insert_node(entry *start, entry *position)
-{
-    // Creates new node to insert
-    entry *nu = malloc(sizeof(entry));
-    if (!nu)
-    {
-        fprintf(stderr, "Insufficient memory\n");
-        return 1;
-    }
+//bool insert_node(entry *start, entry *position)
+//{
+//    // Creates new node to insert
+//    entry *nu = malloc(sizeof(entry));
+//    if (!nu)
+//    {
+//        fprintf(stderr, "Insufficient memory\n");
+//        return 1;
+//    }
 
-    int id = 0, val = 0;
-    while (true)
-    {
-        printf("Enter an ID and a value: ");
-        get_data(&id, &val);
+//    int id = 0, val = 0;
+//    while (true)
+//    {
+//        printf("Enter an ID and a value: ");
+//        get_data(&id, &val);
 
-        // Checks for id in list
-        bool in_list = false;
-        for (entry *ptr = start; ptr != NULL; ptr = ptr->next)
-            if (ptr->id == id)
-            {
-                in_list = true;
-                break;
-            }
+//        // Checks for id in list
+//        bool in_list = false;
+//        for (entry *ptr = start; ptr != NULL; ptr = ptr->next)
+//            if (ptr->id == id)
+//            {
+//                in_list = true;
+//                break;
+//            }
 
-        if (!in_list)
-        {
-            if (insertion_point > 1 && insertion_point < node_count)
-            {
-                nu->id = id;
-                nu->value = val;
-                nu->next = position->next;
-                position->next = nu;
-                break;
-            }
-            else if (insertion_point == 0)
-            {
-                nu->id = id;
-                nu->value = val;
-                nu->next = start;
-                start = nu;
-                break;
-            }
-            else
-            {
-                nu->id = id;
-                nu->value = val;
-                position->next = nu;
-                nu->next = NULL;
-                break;
-            }
-        }
-    }
-    return 0;
-}
+//        if (!in_list)
+//        {
+//            if (insertion_point > 1 && insertion_point < node_count)
+//            {
+//                nu->id = id;
+//                nu->value = val;
+//                nu->next = position->next;
+//                position->next = nu;
+//                break;
+//            }
+//            else if (insertion_point == 0)
+//            {
+//                nu->id = id;
+//                nu->value = val;
+//                nu->next = start;
+//                start = nu;
+//                break;
+//            }
+//            else
+//            {
+//                nu->id = id;
+//                nu->value = val;
+//                position->next = nu;
+//                nu->next = NULL;
+//                break;
+//            }
+//        }
+//    }
+//    return 0;
+//}
 
 /************************************
  * get_position()
 */
-//entry *get_position(entry *list)
-//{
-//    //int i = 0;
+entry *get_position(entry *list)
+{
+    //int i = 0;
 
-//    do
-//    {
-//        printf("What position would you like to insert the node\n" \
-//    "Choose any position from position_%.2i to position_%.2i\n", 1, node_count);
-//        scanf("%i", &insertion_point);
-//    }
-//    while (insertion_point < 1 || insertion_point > node_count);
+    do
+    {
+        printf("What position would you like to insert the node\n" \
+    "Choose any position from position_%.2i to position_%.2i\n", 1, node_count);
+        scanf("%i", &insertion_point);
+    }
+    while (insertion_point < 1 || insertion_point > node_count);
 
-//    insertion_point--;
+    insertion_point--;
 
-//    // Iterates through the list to find a pointer to the node before the insertion point
-//    for (entry *ptr = list; ptr != NULL; ptr = ptr->next)
-//    {
-//        static int count = 0;
+    // Iterates through the list to find a pointer to the node before the insertion point
+    for (entry *ptr = list; ptr != NULL; ptr = ptr->next)
+    {
+        static int count = 0;
 
-//        if (insertion_point == 0)
-//            return list;
+        if (insertion_point == 0)
+            return list;
 
-//        else if (insertion_point == node_count)
-//            return ptr->next;
+        else if (insertion_point == node_count)
+            return ptr->next;
 
-//        else if (count + 1 == insertion_point)
-//            return ptr;
+        else if (count + 1 == insertion_point)
+            return ptr;
 
-//        count++;
-//    }
+        count++;
+    }
 
-//    // To silence error warning in compiler
-//    return (entry *)0;
-//}
+    // To silence error warning in compiler
+    return (entry *)0;
+}
