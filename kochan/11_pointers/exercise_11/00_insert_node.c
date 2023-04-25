@@ -122,11 +122,11 @@ int main(void)
         {
             entry *position = NULL;
             position = get_position(start);
-            bool quit = insert_node(start, position);
+            //bool quit = insert_node(start, position);
 
             // Quits the switch and frees the list if pointer is null
-            if (quit)
-                break;
+            //if (quit)
+            //    break;
             break;
         }
         case 'n':
