@@ -211,30 +211,39 @@ bool insert_node(entry *start, entry *position)
 
         if (!in_list)
         {
-            if (insertion_point > 1 && insertion_point < node_count)
+            if (!position)
             {
-                nu->id = id;
-                nu->value = val;
-                nu->next = position->next;
-                position->next = nu;
-                break;
-            }
-            else if (insertion_point == 0)
-            {
+                // Inserts node at beginning of list
                 nu->id = id;
                 nu->value = val;
                 nu->next = start;
                 start = nu;
-                break;
             }
-            else
-            {
-                nu->id = id;
-                nu->value = val;
-                position->next = nu;
-                nu->next = NULL;
-                break;
-            }
+
+            //if (insertion_point > 1 && insertion_point < node_count)
+            //{
+            //    nu->id = id;
+            //    nu->value = val;
+            //    nu->next = position->next;
+            //    position->next = nu;
+            //    break;
+            //}
+            //else if (insertion_point == 0)
+            //{
+            //    nu->id = id;
+            //    nu->value = val;
+            //    nu->next = start;
+            //    start = nu;
+            //    break;
+            //}
+            //else
+            //{
+            //    nu->id = id;
+            //    nu->value = val;
+            //    position->next = nu;
+            //    nu->next = NULL;
+            //    break;
+            //}
         }
     }
     return 0;
