@@ -184,61 +184,61 @@ void print_list(entry *list)
 /************************************
  * insert_node()
 */
-//bool insert_node(entry *start, entry *position)
-//{
-//    // Creates new node to insert
-//    entry *nu = malloc(sizeof(entry));
-//    if (!nu)
-//    {
-//        fprintf(stderr, "Insufficient memory\n");
-//        return 1;
-//    }
+bool insert_node(entry *start, entry *position)
+{
+    // Creates new node to insert
+    entry *nu = malloc(sizeof(entry));
+    if (!nu)
+    {
+        fprintf(stderr, "Insufficient memory\n");
+        return 1;
+    }
 
-//    int id = 0, val = 0;
-//    while (true)
-//    {
-//        printf("Enter an ID and a value: ");
-//        get_data(&id, &val);
+    int id = 0, val = 0;
+    while (true)
+    {
+        printf("Enter an ID and a value: ");
+        get_data(&id, &val);
 
-//        // Checks for id in list
-//        bool in_list = false;
-//        for (entry *ptr = start; ptr != NULL; ptr = ptr->next)
-//            if (ptr->id == id)
-//            {
-//                in_list = true;
-//                break;
-//            }
+        // Checks for id in list
+        bool in_list = false;
+        for (entry *ptr = start; ptr != NULL; ptr = ptr->next)
+            if (ptr->id == id)
+            {
+                in_list = true;
+                break;
+            }
 
-//        if (!in_list)
-//        {
-//            if (insertion_point > 1 && insertion_point < node_count)
-//            {
-//                nu->id = id;
-//                nu->value = val;
-//                nu->next = position->next;
-//                position->next = nu;
-//                break;
-//            }
-//            else if (insertion_point == 0)
-//            {
-//                nu->id = id;
-//                nu->value = val;
-//                nu->next = start;
-//                start = nu;
-//                break;
-//            }
-//            else
-//            {
-//                nu->id = id;
-//                nu->value = val;
-//                position->next = nu;
-//                nu->next = NULL;
-//                break;
-//            }
-//        }
-//    }
-//    return 0;
-//}
+        if (!in_list)
+        {
+            if (insertion_point > 1 && insertion_point < node_count)
+            {
+                nu->id = id;
+                nu->value = val;
+                nu->next = position->next;
+                position->next = nu;
+                break;
+            }
+            else if (insertion_point == 0)
+            {
+                nu->id = id;
+                nu->value = val;
+                nu->next = start;
+                start = nu;
+                break;
+            }
+            else
+            {
+                nu->id = id;
+                nu->value = val;
+                position->next = nu;
+                nu->next = NULL;
+                break;
+            }
+        }
+    }
+    return 0;
+}
 
 /************************************
  * get_position()
