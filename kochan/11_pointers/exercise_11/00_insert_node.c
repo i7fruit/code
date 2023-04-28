@@ -120,7 +120,7 @@ int main(void)
     {
         entry *position = get_position(start);
         printf("%i\n", position->value);
-        //insert_node(start, position);
+        insert_node(start, position);
     }
 
 
