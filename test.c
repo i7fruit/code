@@ -8,6 +8,8 @@ typedef struct node
 }
 node;
 
+void insert(node *start, node *ptr);
+
 int main(void)
 {
     node one, two, three;
@@ -35,7 +37,8 @@ void insert(node *start, node *ptr)
     {
         if (trav == ptr)
         {
-            nu = ptr->next;
+            nu->next = ptr->next;
+            ptr->next = nu;
         }
     }
 }
