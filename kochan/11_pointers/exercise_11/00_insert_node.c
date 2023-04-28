@@ -244,6 +244,7 @@ bool insert_node(entry *start, entry *position)
             //    nu->next = NULL;
             //    break;
             //}
+            else
         }
     }
     return 0;
