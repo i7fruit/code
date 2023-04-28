@@ -29,7 +29,7 @@ entry;
 void get_data(int *id, int *val);
 void print_list(entry *list);
 entry *get_position(entry *list);
-bool insert_node(entry *start, entry *position);
+void insert_node(entry *start, entry *position);
 
 int main(void)
 {
@@ -116,11 +116,10 @@ int main(void)
         answer[++j] = temp[i];
     }
 
-    entry *position = NULL;
-    position = get_position(start);
-    bool quit = insert_node(start, position);
+    //position = get_position(start);
+    insert_node(start, position);
 
-    
+
 
     print_list(start);
 
@@ -169,7 +168,7 @@ void print_list(entry *list)
 /************************************
  * insert_node()
 */
-bool insert_node(entry *start, entry *position)
+void insert_node(entry *start, entry *position)
 {
     // Creates new node to insert
     entry *nu = malloc(sizeof(entry));
