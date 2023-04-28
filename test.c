@@ -37,8 +37,8 @@ void insert(node *start, node *ptr)
     {
         if (trav == ptr)
         {
-            nu->next = ptr->next;
-            ptr->next = nu;
+            nu.next = ptr->next;
+            ptr->next = &nu;
         }
     }
 }
