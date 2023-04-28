@@ -16,9 +16,10 @@ int main(void)
     two = (node){2, &three};
     three = (node){3, NULL};
 
-    printf("%i\n%i\n%i\n", one.val, two.val, three.val);
+    for (node *ptr = list; ptr != NULL; ptr = ptr->next)
+        printf("%i ", ptr->val);
 
-    insert(list, )
+    insert()
 
     return 0;
 }
