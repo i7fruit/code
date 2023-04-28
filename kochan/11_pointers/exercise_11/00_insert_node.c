@@ -29,7 +29,7 @@ entry;
 void get_data(int *id, int *val);
 void print_list(entry *list);
 entry *get_position(entry *list);
-bool insert_node(entry *start, entry *position);
+void insert_node(entry *start, entry *position);
 
 int main(void)
 {
@@ -122,7 +122,7 @@ int main(void)
         {
             entry *position = NULL;
             position = get_position(start);
-            bool quit = insert_node(start, position);
+            insert_node(start, position);
 
             // Quits the switch and frees the list if pointer is null
             if (quit)
@@ -184,7 +184,7 @@ void print_list(entry *list)
 /***************************************************************************************************
  * insert_node()
 */
-bool insert_node(entry *start, entry *position)
+void insert_node(entry *start, entry *position)
 {
     // Creates new node to insert
     entry *nu = malloc(sizeof(entry));
