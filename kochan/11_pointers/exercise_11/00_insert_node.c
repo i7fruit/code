@@ -251,6 +251,7 @@ bool insert_node(entry *start, entry *position)
                 nu->value = val;
                 nu->next = start;
                 start = nu;
+                break;
             }
         }
     }
