@@ -123,10 +123,6 @@ int main(void)
             entry *position = NULL;
             position = get_position(start);
             insert_node(start, position);
-
-            // Quits the switch and frees the list if pointer is null
-            if (quit)
-                break;
             break;
         }
         case 'n':
@@ -216,13 +212,12 @@ void insert_node(entry *start, entry *position)
 
         if (!in_list)
         {
-            if (position)
+            if (position == start)
             {
                 // Inserts node at beginning of list
-                nu->id = id;
-                nu->value = val;
                 nu->next = start;
                 start = nu;
+                break;
             }
 
             //if (insertion_point > 1 && insertion_point < node_count)
