@@ -172,7 +172,7 @@ void get_data(int *id, int *val)
     while (*id < 1);
 }
 
-/***********************************
+/***************************************************************************************************
  * print_list()
 */
 void print_list(entry *list)
@@ -181,7 +181,7 @@ void print_list(entry *list)
         printf("ID: %3i, Value: %3i\n", trav->id, trav->value);
 }
 
-/************************************
+/***************************************************************************************************
  * insert_node()
 */
 bool insert_node(entry *start, entry *position)
@@ -249,7 +249,7 @@ bool insert_node(entry *start, entry *position)
     return 0;
 }
 
-/************************************
+/***************************************************************************************************
  * get_position()
 */
 entry *get_position(entry *list)
