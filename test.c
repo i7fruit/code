@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <limits.h>
 
-typedef strut node
+typedef struct node
 {
     int val;
     struct node *next;
@@ -10,17 +10,9 @@ node;
 
 int main(void)
 {
-    node 
+    node three = {1, &two}, two = {2, &three}, one = {3, NULL};
 
-    int i = 0;
-
-    do
-    {
-        word[i] = getchar();
-    }
-    while (word[i++] != '\n');
-
-    printf("%s\n", word);
+    printf("%i\n%i\n%i\n", one->val, two->val, three->val);
 
     return 0;
 }
