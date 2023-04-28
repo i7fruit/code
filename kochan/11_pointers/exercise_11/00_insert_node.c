@@ -254,8 +254,6 @@ void insert_node(entry *start, entry *position)
 */
 entry *get_position(entry *list)
 {
-    //int i = 0;
-
     do
     {
         printf("What position would you like to insert the node\n" \
