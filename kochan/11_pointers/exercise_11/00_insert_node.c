@@ -247,6 +247,8 @@ bool insert_node(entry *start, entry *position)
             else
             {
                 // Attaches the node in the first element
+                nu->id = id;
+                nu->value = val;
                 nu->next = start;
                 start = nu;
             }
