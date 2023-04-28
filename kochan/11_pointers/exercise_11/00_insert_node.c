@@ -187,7 +187,7 @@ void insert_node(entry *start, entry *position)
     if (!nu)
     {
         fprintf(stderr, "Insufficient memory\n");
-        return 1;
+        exit(1);
     }
 
     int id = 0, val = 0;
@@ -246,7 +246,6 @@ void insert_node(entry *start, entry *position)
             //}
         }
     }
-    return 0;
 }
 
 /***************************************************************************************************
