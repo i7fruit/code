@@ -211,7 +211,7 @@ bool insert_node(entry *start, entry *position)
 
         if (!in_list)
         {
-            if (!position)
+            if (position)
             {
                 // Inserts node at beginning of list
                 nu->id = id;
@@ -245,6 +245,11 @@ bool insert_node(entry *start, entry *position)
             //    break;
             //}
             else
+            {
+                // Attaches the node in the first element
+                nu->next = start;
+                start = nu;
+            }
         }
     }
     return 0;
