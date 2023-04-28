@@ -116,6 +116,10 @@ int main(void)
         answer[++j] = temp[i];
     }
 
+    entry *position = NULL;
+    position = get_position(start);
+    bool quit = insert_node(start, position);
+
     switch (tolower(answer[0]))
     {
         case 'y':
