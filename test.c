@@ -19,7 +19,10 @@ int main(void)
     for (node *ptr = list; ptr != NULL; ptr = ptr->next)
         printf("%i ", ptr->val);
 
-    insert(list, )
+    insert(list, &two);
+
+    for (node *ptr = list; ptr != NULL; ptr = ptr->next)
+        printf("%i ", ptr->val);
 
     return 0;
 }
