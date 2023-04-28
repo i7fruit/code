@@ -4,12 +4,13 @@
 typedef strut node
 {
     int val;
-    struct node 
+    struct node *next;
 }
+node;
 
 int main(void)
 {
-    char word[] = "   ";
+    node 
 
     int i = 0;
 
