@@ -29,7 +29,7 @@ entry;
 void get_data(int *id, int *val);
 void print_list(entry *list);
 entry *get_position(entry *list);
-void insert_node(entry *start, entry *position);
+bool insert_node(entry *start, entry *position);
 
 int main(void)
 {
@@ -116,14 +116,26 @@ int main(void)
         answer[++j] = temp[i];
     }
 
-    if (tolower(answer[0]) == 'y')
+    switch (tolower(answer[0]))
     {
-        entry *position = get_position(start);
-        printf("%i\n", position->value);
-        insert_node(start, position);
+        case 'y':
+        {
+            entry *position = NULL;
+            position = get_position(start);
+            bool quit = insert_node(start, position);
+
+            // Quits the switch and frees the list if pointer is null
+            if (quit)
+                break;
+            break;
+        }
+        case 'n':
+            printf("You have chosen to make no insertions to the linked list.\n");
+            break;
+        default:
+            printf("Invalid entry\n");
+            break;
     }
-
-
 
     print_list(start);
 
@@ -139,7 +151,7 @@ int main(void)
     return 0;
 }
 
-/************************************************************************************************
+/*********************************
  * get_data()
 */
 void get_data(int *id, int *val)
@@ -160,7 +172,7 @@ void get_data(int *id, int *val)
     while (*id < 1);
 }
 
-/************************************************************************************************
+/***********************************
  * print_list()
 */
 void print_list(entry *list)
@@ -169,17 +181,17 @@ void print_list(entry *list)
         printf("ID: %3i, Value: %3i\n", trav->id, trav->value);
 }
 
-/************************************************************************************************
+/************************************
  * insert_node()
 */
-void insert_node(entry *start, entry *position)
+bool insert_node(entry *start, entry *position)
 {
     // Creates new node to insert
     entry *nu = malloc(sizeof(entry));
     if (!nu)
     {
         fprintf(stderr, "Insufficient memory\n");
-        exit(1);
+        return 1;
     }
 
     int id = 0, val = 0;
@@ -199,14 +211,13 @@ void insert_node(entry *start, entry *position)
 
         if (!in_list)
         {
-            if (position == start)
+            if (!position)
             {
                 // Inserts node at beginning of list
                 nu->id = id;
                 nu->value = val;
                 nu->next = start;
                 start = nu;
-                break;
             }
 
             //if (insertion_point > 1 && insertion_point < node_count)
@@ -233,20 +244,12 @@ void insert_node(entry *start, entry *position)
             //    nu->next = NULL;
             //    break;
             //}
-            else
-            {
-                // Attaches the node in the first element
-                nu->id = id;
-                nu->value = val;
-                nu->next = start;
-                start = nu;
-                break;
-            }
         }
     }
+    return 0;
 }
 
-/************************************************************************************************
+/************************************
  * get_position()
 */
 entry *get_position(entry *list)
@@ -269,7 +272,7 @@ entry *get_position(entry *list)
         static int count = 0;
 
         if (insertion_point == 0)
-            return list;
+            return (entry *)0;
 
         else if (insertion_point == node_count)
             return ptr->next;
