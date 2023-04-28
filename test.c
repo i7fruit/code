@@ -29,5 +29,10 @@ int main(void)
 
 void insert(node *start, node *ptr)
 {
-    
+    node nu = {40, NULL};
+
+    for (node *trav = start; trav != NULL; trav = trav->next)
+    {
+        if (trav == ptr)
+    }
 }
