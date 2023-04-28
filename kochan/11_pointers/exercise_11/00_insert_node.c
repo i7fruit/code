@@ -120,26 +120,26 @@ int main(void)
     position = get_position(start);
     bool quit = insert_node(start, position);
 
-    switch (tolower(answer[0]))
-    {
-        case 'y':
-        {
-            entry *position = NULL;
-            position = get_position(start);
-            bool quit = insert_node(start, position);
+    //switch (tolower(answer[0]))
+    //{
+    //    case 'y':
+    //    {
+    //        entry *position = NULL;
+    //        position = get_position(start);
+    //        bool quit = insert_node(start, position);
 
-            // Quits the switch and frees the list if pointer is null
-            if (quit)
-                break;
-            break;
-        }
-        case 'n':
-            printf("You have chosen to make no insertions to the linked list.\n");
-            break;
-        default:
-            printf("Invalid entry\n");
-            break;
-    }
+    //        // Quits the switch and frees the list if pointer is null
+    //        if (quit)
+    //            break;
+    //        break;
+    //    }
+    //    case 'n':
+    //        printf("You have chosen to make no insertions to the linked list.\n");
+    //        break;
+    //    default:
+    //        printf("Invalid entry\n");
+    //        break;
+    //}
 
     print_list(start);
 
