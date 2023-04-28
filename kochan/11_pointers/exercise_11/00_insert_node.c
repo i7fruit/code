@@ -209,9 +209,14 @@ void insert_node(entry *start, entry *position)
                 break;
             }
 
+        // Initializes the node
+        nu->id = id;
+        nu->value = val;
+        nu->next = NULL;
+
         if (!in_list)
         {
-            if (!position)
+            if (position)
             {
                 // Inserts node at beginning of list
                 nu->id = id;
@@ -270,7 +275,7 @@ entry *get_position(entry *list)
         static int count = 0;
 
         if (insertion_point == 0)
-            return (entry *)0;
+            return list;
 
         else if (insertion_point == node_count)
             return ptr->next;
