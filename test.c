@@ -34,5 +34,8 @@ void insert(node *start, node *ptr)
     for (node *trav = start; trav != NULL; trav = trav->next)
     {
         if (trav == ptr)
+        {
+            nu = ptr->next;
+        }
     }
 }
