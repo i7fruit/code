@@ -116,8 +116,12 @@ int main(void)
         answer[++j] = temp[i];
     }
 
-    entry *position = get_position(start);
-    insert_node(start, position);
+    if (tolower(answer[0]) == 'y')
+    {
+        entry *position = get_position(start);
+        printf("%i\n", position->value);
+        //insert_node(start, position);
+    }
 
 
 
@@ -265,7 +269,7 @@ entry *get_position(entry *list)
         static int count = 0;
 
         if (insertion_point == 0)
-            return &list;
+            return list;
 
         else if (insertion_point == node_count)
             return ptr->next;
