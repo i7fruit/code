@@ -21,7 +21,7 @@ int main(void)
     for (node *ptr = list; ptr != NULL; ptr = ptr->next)
         printf("%i ", ptr->val);
 
-    insert(list, &two);
+    insert(list, list);
 
     for (node *ptr = list; ptr != NULL; ptr = ptr->next)
         printf("%i ", ptr->val);
