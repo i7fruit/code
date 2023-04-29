@@ -8,7 +8,7 @@ typedef struct node
 }
 node;
 
-void insert(node *start, node *ptr);
+node *insert(node *start, node *ptr);
 
 int main(void)
 {
@@ -23,7 +23,7 @@ int main(void)
 
     putchar('\n');
 
-    insert(list, list);
+    list = insert(list, list);
 
     for (node *ptr = list; ptr != NULL; ptr = ptr->next)
         printf("%i ", ptr->val);
@@ -33,7 +33,7 @@ int main(void)
     return 0;
 }
 
-void insert(node *start, node *ptr)
+node *insert(node *start, node *ptr)
 {
     node nu = {40, NULL};
 
@@ -43,7 +43,9 @@ void insert(node *start, node *ptr)
         {
             nu.next = start;
             start = &nu;
-            break;
+            return start;
         }
     }
+
+    return start;
 }
