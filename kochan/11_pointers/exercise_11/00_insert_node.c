@@ -220,17 +220,15 @@ entry *insert_node(entry *start, entry *position)
                 // Inserts node at beginning of list
                 nu->next = start;
                 start = nu;
-                return start;
+                break;
             }
 
-            //if (insertion_point > 1 && insertion_point < node_count)
-            //{
-            //    nu->id = id;
-            //    nu->value = val;
-            //    nu->next = position->next;
-            //    position->next = nu;
-            //    break;
-            //}
+            else if (insertion_point > 1 && insertion_point < node_count)
+            {
+                nu->next = position->next;
+                position->next = nu;
+                break;
+            }
             //else if (insertion_point == 0)
             //{
             //    nu->id = id;
@@ -249,6 +247,8 @@ entry *insert_node(entry *start, entry *position)
             //}
         }
     }
+
+    return start;
 }
 
 /***************************************************************************************************
