@@ -190,9 +190,11 @@ void insert_node(entry *start, entry *position)
         exit(1);
     }
 
+    // Variables to store data
     int id = 0, val = 0;
     while (true)
     {
+        // Prompts user for additional data
         printf("Enter an ID and a value: ");
         get_data(&id, &val);
 
@@ -205,11 +207,12 @@ void insert_node(entry *start, entry *position)
                 break;
             }
 
-        // Initializes the node
+        // Initializes the new node
         nu->id = id;
         nu->value = val;
         nu->next = NULL;
 
+        // Adds node with unique ID to the list
         if (!in_list)
         {
             if (position == start)
