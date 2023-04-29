@@ -21,7 +21,6 @@ typedef struct entry
 {
     int id;
     int value;
-    struct entry *prev;
     struct entry *next;
 }
 entry;
@@ -78,7 +77,6 @@ int main(void)
             // Initializes the node
             nu->id = id;
             nu->value = value;
-            nu->prev = NULL;
             nu->next = NULL;
 
             // Appends node if list isn't null
