@@ -29,7 +29,7 @@ entry;
 void get_data(int *id, int *val);
 void print_list(entry *list);
 entry *get_position(entry *list);
-void insert_node(entry *const start, entry *position);
+void insert_node(const entry *start, entry *position);
 
 int main(void)
 {
@@ -180,7 +180,7 @@ void print_list(entry *list)
 /***************************************************************************************************
  * insert_node()
 */
-void insert_node(entry *const start, entry *position)
+void insert_node(const entry *start, entry *position)
 {
     // Creates new node to insert
     entry *nu = malloc(sizeof(entry));
