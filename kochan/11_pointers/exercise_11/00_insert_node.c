@@ -84,6 +84,7 @@ int main(void)
             // Appends node if list isn't null
             if (start)
             {
+                nu->prev = NULL;
                 nu->next = start;
                 start = nu;
                 node_count++;
