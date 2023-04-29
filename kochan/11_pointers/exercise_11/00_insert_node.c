@@ -29,7 +29,7 @@ entry;
 void get_data(int *id, int *val);
 void print_list(entry *list);
 entry *get_position(entry *list);
-void insert_node(entry *start, entry *position);
+entry *insert_node(entry *start, entry *position);
 
 int main(void)
 {
@@ -122,7 +122,7 @@ int main(void)
         {
             entry *position = NULL;
             position = get_position(start);
-            insert_node(start, position);
+            start = insert_node(start, position);
             break;
         }
         case 'n':
@@ -180,7 +180,7 @@ void print_list(entry *list)
 /***************************************************************************************************
  * insert_node()
 */
-void insert_node(entry *start, entry *position)
+entry *insert_node(entry *start, entry *position)
 {
     // Creates new node to insert
     entry *nu = malloc(sizeof(entry));
@@ -220,7 +220,7 @@ void insert_node(entry *start, entry *position)
                 // Inserts node at beginning of list
                 nu->next = start;
                 start = nu;
-                break;
+                return start;
             }
 
             //if (insertion_point > 1 && insertion_point < node_count)
