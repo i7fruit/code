@@ -255,7 +255,7 @@ entry *get_position(entry *list)
 {
     do
     {
-        printf("What position would you like to insert the node\n" \
+        printf("Enter position after which you would like to insert the node\n" \
     "Choose any position from position_%.2i to position_%.2i\n", 1, node_count);
         scanf("%i", &insertion_point);
     }
