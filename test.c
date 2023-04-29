@@ -21,6 +21,8 @@ int main(void)
     for (node *ptr = list; ptr != NULL; ptr = ptr->next)
         printf("%i ", ptr->val);
 
+    putchar('\n');
+
     insert(list, list);
 
     for (node *ptr = list; ptr != NULL; ptr = ptr->next)
@@ -39,6 +41,7 @@ void insert(node *start, node *ptr)
         {
             nu.next = ptr->next;
             ptr->next = &nu;
+            break;
         }
     }
 }
