@@ -198,7 +198,7 @@ void insert_node(const entry *start, entry *position)
 
         // Checks for id in list
         bool in_list = false;
-        for (entry *ptr = start; ptr != NULL; ptr = ptr->next)
+        for (const entry *ptr = start; ptr != NULL; ptr = ptr->next)
             if (ptr->id == id)
             {
                 in_list = true;
