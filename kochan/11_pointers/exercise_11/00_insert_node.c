@@ -21,6 +21,7 @@ typedef struct entry
 {
     int id;
     int value;
+    struct entry *prev;
     struct entry *next;
 }
 entry;
