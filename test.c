@@ -28,6 +28,8 @@ int main(void)
     for (node *ptr = list; ptr != NULL; ptr = ptr->next)
         printf("%i ", ptr->val);
 
+    putchar('\n');
+
     return 0;
 }
 
@@ -37,10 +39,10 @@ void insert(node *start, node *ptr)
 
     for (node *trav = start; trav != NULL; trav = trav->next)
     {
-        if (trav == ptr)
+        if (trav == start)
         {
-            nu.next = ptr->next;
-            ptr->next = &nu;
+            nu.next = start;
+            start = &nu;
             break;
         }
     }
