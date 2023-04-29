@@ -180,7 +180,7 @@ void print_list(entry *list)
 /***************************************************************************************************
  * insert_node()
 */
-void insert_node(entry *start, entry *position)
+void insert_node(const entry *start, entry *position)
 {
     // Creates new node to insert
     entry *nu = malloc(sizeof(entry));
