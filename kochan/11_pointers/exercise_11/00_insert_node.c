@@ -271,14 +271,11 @@ entry *get_position(entry *list)
     {
         static int count = -1;
 
-        if (insertion_point == 0)
-            return list;
+        if (count + 1 == insertion_point)
+            return ptr;
 
         else if (insertion_point == node_count)
             break;
-
-        else if (count + 1 == insertion_point)
-            return ptr;
 
         count++;
     }
