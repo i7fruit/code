@@ -274,7 +274,7 @@ entry *get_position(entry *list)
         if (insertion_point == 0)
             return list;
 
-        else if (count + 1 == insertion_point)
+        else if ((count + 1 == insertion_point) && (insertion_point != 0))
             return ptr;
 
         else if (insertion_point == node_count)
