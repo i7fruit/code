@@ -264,7 +264,7 @@ entry *get_position(entry *list)
     "Choose any position from position_%.2i to position_%.2i\n", 1, (node_count + 1));
         scanf("%i", &insertion_point);
     }
-    while (insertion_point < 1 || insertion_point > node_count);
+    while (insertion_point < 1 || insertion_point > (node_count + 1));
 
     if (insertion_point == node_count + 1)
         add_at_end = true;
