@@ -233,6 +233,7 @@ entry *insert_node(entry *start, entry *position)
 
             else if (insertion_point >= 1 && insertion_point < node_count)
             {
+                if (insertion_point + 1 == node_count)
                 nu->next = position->next;
                 position->next = nu;
                 break;
