@@ -261,12 +261,12 @@ entry *get_position(entry *list)
     do
     {
         printf("Enter position you would like to insert the node\n" \
-    "Choose any position from position_%.2i to position_%.2i\n", 1, node_count);
+    "Choose any position from position_%.2i to position_%.2i\n", 1, (node_count + 1));
         scanf("%i", &insertion_point);
     }
     while (insertion_point < 1 || insertion_point > node_count);
 
-    if (insertion_point == node_count)
+    if (insertion_point == node_count + 1)
         add_at_end = true;
 
     insertion_point--;
