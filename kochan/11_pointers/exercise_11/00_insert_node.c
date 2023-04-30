@@ -15,6 +15,7 @@
 // Global variables
 int node_count;
 int insertion_point;
+bool add_at_end;
 
 // Structure definition
 typedef struct entry
