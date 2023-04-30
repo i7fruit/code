@@ -215,9 +215,16 @@ entry *insert_node(entry *start, entry *position)
         // Adds node with unique ID to the list
         if (!in_list)
         {
-            if (position == start && )
+            if (position == start && insertion_point != 0)
             {
                 // Inserts node at beginning of list
+                nu->next = start;
+                start = nu;
+                break;
+            }
+
+            else if (position == start)
+            {
                 nu->next = start;
                 start = nu;
                 break;
