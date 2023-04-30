@@ -247,6 +247,8 @@ entry *insert_node(entry *start, entry *position)
                     break;
                 }
             }
+
+            else if (insertion_point == node)
         }
     }
 
