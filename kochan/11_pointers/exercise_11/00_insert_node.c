@@ -232,7 +232,7 @@ entry *insert_node(entry *start, entry *position)
                 break;
             }
 
-            else if (insertion_point >= 1 && insertion_point < node_count)
+            else if (insertion_point >= 1 && insertion_point <= node_count)
             {
                 if (add_at_end)
                 {
@@ -248,7 +248,10 @@ entry *insert_node(entry *start, entry *position)
                 }
             }
 
-            else if (insertion_point == node)
+            else if (insertion_point == (node_count + 1))
+            {
+                
+            }
         }
     }
 
