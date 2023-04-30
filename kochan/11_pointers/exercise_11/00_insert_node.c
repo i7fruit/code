@@ -271,7 +271,7 @@ entry *get_position(entry *list)
     {
         static int count = 0;
 
-        if (count == insertion_point)
+        if (count == insertion_point && insertion_point != 0)
             return prev;
 
         else if (insertion_point == 0)
