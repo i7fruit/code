@@ -250,7 +250,7 @@ entry *insert_node(entry *start, entry *position)
 
             else if (insertion_point == (node_count + 1))
             {
-                
+
             }
         }
     }
@@ -299,6 +299,5 @@ entry *get_position(entry *list)
         prev = ptr;
     }
 
-    // To silence error warning in compiler
-    return (entry *)0;
+    return ptr;
 }
