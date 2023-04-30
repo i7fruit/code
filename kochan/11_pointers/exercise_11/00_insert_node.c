@@ -218,8 +218,8 @@ entry *insert_node(entry *start, entry *position)
             if (position == start && insertion_point != 0)
             {
                 // Inserts node at beginning of list
-                nu->next = start;
-                start = nu;
+                nu->next = position;
+                position = nu;
                 break;
             }
 
