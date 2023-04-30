@@ -281,9 +281,8 @@ entry *get_position(entry *list)
             {
                 if (add_at_end)
                     return ptr;
-
-                return prev;
             }
+            
 
         else if (insertion_point == 0)
             return list;
