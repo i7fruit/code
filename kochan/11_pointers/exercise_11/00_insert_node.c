@@ -275,6 +275,8 @@ entry *get_position(entry *list)
         {
             return ptr;
         }
+
+        count++;
     }
 
     // To silence error warning in compiler
