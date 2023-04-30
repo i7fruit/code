@@ -267,7 +267,7 @@ entry *get_position(entry *list)
     insertion_point--;
 
     // Iterates through the list to find a pointer to the node before the insertion point
-    for (entry *ptr = list, *prev = list->next; ptr != NULL; prev = ptr, ptr = ptr->next)
+    for (entry *ptr = list, *prev = list; ptr != NULL; ptr = ptr->next)
     {
         static int count = 0;
 
@@ -278,6 +278,7 @@ entry *get_position(entry *list)
             return list;
 
         count++;
+        prev = ptr;
     }
 
     // To silence error warning in compiler
