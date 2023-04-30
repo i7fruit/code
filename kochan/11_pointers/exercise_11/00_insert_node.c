@@ -234,10 +234,18 @@ entry *insert_node(entry *start, entry *position)
 
             else if (insertion_point >= 1 && insertion_point < node_count)
             {
-                if (insertion_point + 1 == node_count)
-                nu->next = position->next;
-                position->next = nu;
-                break;
+                if (add_at_end)
+                {
+                    position->next = nu;
+                    break;
+                }
+
+                else
+                {
+                    nu->next = position->next;
+                    position->next = nu;
+                    break;
+                }
             }
         }
     }
@@ -257,6 +265,9 @@ entry *get_position(entry *list)
         scanf("%i", &insertion_point);
     }
     while (insertion_point < 1 || insertion_point > node_count);
+
+    if (insertion_point == node_count)
+        add_at_end = true;
 
     insertion_point--;
 
