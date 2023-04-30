@@ -236,22 +236,6 @@ entry *insert_node(entry *start, entry *position)
                 position->next = nu;
                 break;
             }
-            //else if (insertion_point == 0)
-            //{
-            //    nu->id = id;
-            //    nu->value = val;
-            //    nu->next = start;
-            //    start = nu;
-            //    break;
-            //}
-            //else
-            //{
-            //    nu->id = id;
-            //    nu->value = val;
-            //    position->next = nu;
-            //    nu->next = NULL;
-            //    break;
-            //}
         }
     }
 
