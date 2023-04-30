@@ -217,12 +217,13 @@ entry *insert_node(entry *start, entry *position)
         {
             if (position == start && insertion_point != 0)
             {
-                // Inserts node at beginning of list
+                // Inserts node at second element of list
                 nu->next = position->next;
-                position = nu;
+                start->next = nu;
                 break;
             }
 
+            // Inserts node at start of list
             else if (position == start)
             {
                 nu->next = start;
