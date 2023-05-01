@@ -290,7 +290,7 @@ entry *get_position(entry *list)
             if (insertion_point == 0 || insertion_point == 1)
                 return list;
 
-            else if (insertion_point == 1)
+            else if (insertion_point > 1 && (insertion_point < outer_element))
                 return list->next;
         }
     }
