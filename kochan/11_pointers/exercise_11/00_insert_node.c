@@ -217,7 +217,7 @@ entry *insert_node(entry *start, entry *position)
         // Adds node with unique ID to the list
         if (!in_list)
         {
-            if (position == start && insertion_point != 0)
+            if (add_at_01)
             {
                 // Inserts node at second element of list
                 nu->next = position->next;
