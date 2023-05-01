@@ -279,6 +279,9 @@ entry *get_position(entry *list)
         // Accounting for iteration from zero
         insertion_point--;
 
+        if (insertion_point == 1)
+            add_at_01 = true;
+
         // Iterates through list to find spot to insert new node
         for (entry *ptr = list, *prev = list; ptr != NULL; ptr = ptr->next)
         {
