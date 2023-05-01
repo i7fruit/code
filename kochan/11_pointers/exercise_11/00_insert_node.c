@@ -16,6 +16,7 @@
 int node_count;
 int insertion_point;
 bool add_at_end;
+bool add_at_01;
 
 // Structure definition
 typedef struct entry
