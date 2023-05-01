@@ -288,9 +288,11 @@ entry *get_position(entry *list)
         {
             static int count = 0;
 
+            // Returns pointer to list in inserting at first or second position
             if (insertion_point == 0 || insertion_point == 1)
                 return list;
 
+            // Inserts anywhere between second position and last position
             else if (insertion_point > 1 && (insertion_point < outer_element))
             {
                 if (count + 1 == insertion_point)
