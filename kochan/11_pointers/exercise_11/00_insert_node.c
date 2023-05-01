@@ -279,6 +279,7 @@ entry *get_position(entry *list)
         // Accounting for iteration from zero
         insertion_point--;
 
+        // Flag to signal insertion at second node
         if (insertion_point == 1)
             add_at_01 = true;
 
