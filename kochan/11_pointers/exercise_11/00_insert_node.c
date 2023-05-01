@@ -276,6 +276,9 @@ entry *get_position(entry *list)
     if (insertion_point != outer_element)
     {
         // Iterates through list to find spot to insert new node
-        for (entry *ptr = list)
+        for (entry *ptr = list, *prev = list; ptr != NULL; ptr = ptr->next)
+        {
+            static int count = 0;
+        }
     }
 }
