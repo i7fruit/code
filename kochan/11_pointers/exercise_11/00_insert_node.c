@@ -263,6 +263,7 @@ entry *insert_node(entry *start, entry *position)
 */
 entry *get_position(entry *list)
 {
+    int 
     do
     {
         printf("Enter position you would like to insert the node\n" \
@@ -271,33 +272,5 @@ entry *get_position(entry *list)
     }
     while (insertion_point < 1 || insertion_point > (node_count + 1));
 
-    if (insertion_point == node_count + 1)
-        add_at_end = true;
-
-    insertion_point--;
-
-    // Iterates through the list to find a pointer to the node before the insertion point
-    for (entry *ptr = list, *prev = list; ptr != NULL; ptr = ptr->next)
-    {
-        static int count = 0;
-
-        if (count == insertion_point)
-        {
-            if (insertion_point != 0)
-            {
-                if (add_at_end)
-                    return ptr;
-            }
-            return prev;
-        }
-
-
-        else if (insertion_point == 0)
-            return list;
-
-        count++;
-        prev = ptr;
-    }
-
-    return ptr;
+    if (insertion_point != )
 }
