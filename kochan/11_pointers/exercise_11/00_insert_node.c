@@ -275,10 +275,19 @@ entry *get_position(entry *list)
 
     if (insertion_point != outer_element)
     {
+        // Accounting for iteration from zero
+        insertion_point--;
+
         // Iterates through list to find spot to insert new node
         for (entry *ptr = list, *prev = list; ptr != NULL; ptr = ptr->next)
         {
             static int count = 0;
+
+            if (insertion_point == 0)
+                return list;
+
+            else if (insertion_point == 1)
+                return list->next;
         }
     }
 }
