@@ -283,7 +283,7 @@ entry *get_position(entry *list)
         {
             static int count = 0;
 
-            if (insertion_point == 0)
+            if (insertion_point == 0 || insertion_point == 1)
                 return list;
 
             else if (insertion_point == 1)
