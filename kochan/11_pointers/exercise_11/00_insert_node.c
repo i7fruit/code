@@ -297,4 +297,5 @@ entry *get_position(entry *list)
             }
         }
     }
+    return (entry *)0;
 }
