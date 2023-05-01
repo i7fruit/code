@@ -263,14 +263,19 @@ entry *insert_node(entry *start, entry *position)
 */
 entry *get_position(entry *list)
 {
-    int 
+    int outer_element = node_count + 1;
+
     do
     {
         printf("Enter position you would like to insert the node\n" \
     "Choose any position from position_%.2i to position_%.2i\n", 1, (node_count + 1));
         scanf("%i", &insertion_point);
     }
-    while (insertion_point < 1 || insertion_point > (node_count + 1));
+    while (insertion_point < 1 || insertion_point > outer_element);
 
-    if (insertion_point != )
+    if (insertion_point != outer_element)
+    {
+        // Iterates through list to find spot to insert new node
+        for (entry *ptr = list)
+    }
 }
