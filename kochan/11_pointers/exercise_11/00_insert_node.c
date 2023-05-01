@@ -291,7 +291,10 @@ entry *get_position(entry *list)
                 return list;
 
             else if (insertion_point > 1 && (insertion_point < outer_element))
-                return list->next;
+            {
+                if (count + 1 == insertion_point)
+                    return prev;
+            }
         }
     }
 }
