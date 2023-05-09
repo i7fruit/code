@@ -288,7 +288,7 @@ entry *get_position(entry *list)
         {
             static int count = 0;
 
-            // Returns pointer to list in inserting at first or second position
+            // Returns pointer to list if inserting at first or second position
             if (insertion_point == 0 || insertion_point == 1)
                 return list;
 
@@ -303,6 +303,6 @@ entry *get_position(entry *list)
 
     else
         add_at_end;
-        
+
     return (entry *)0;
 }
