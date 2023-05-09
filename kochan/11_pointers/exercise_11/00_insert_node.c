@@ -308,7 +308,16 @@ entry *get_position(entry *list)
         }
     }
 
-    //else
+    else
+    {
+        // Returns pointer to last node in list
+        for (entry *ptr = list; ptr != NULL; ptr = ptr->next)
+            if (ptr->next == NULL)
+            {
+                prev = ptr;
+                break;
+            }
+    }
         //add_at_end;
 
     return prev;
