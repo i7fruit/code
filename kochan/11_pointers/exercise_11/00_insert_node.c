@@ -226,7 +226,7 @@ entry *insert_node(entry *start, entry *position)
             }
 
             // Inserts node at start of list
-            else if (position == start)
+            else if (position == start && (insertion_point == 0))
             {
                 nu->next = start;
                 start = nu;
