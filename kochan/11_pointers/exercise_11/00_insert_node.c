@@ -252,7 +252,7 @@ entry *insert_node(entry *start, entry *position)
             else if (insertion_point == (node_count + 1))
             {
                 // Adds node at end of list
-                
+
             }
         }
     }
@@ -285,7 +285,8 @@ entry *get_position(entry *list)
             add_at_01 = true;
 
         // Iterates through list to find spot to insert new node
-        for (entry *ptr = list, *prev = list; ptr != NULL; ptr = ptr->next)
+        entry *ptr;
+        for (ptr = list, *prev = list; ptr != NULL; ptr = ptr->next)
         {
             static int count = 0;
 
@@ -305,5 +306,5 @@ entry *get_position(entry *list)
     //else
         //add_at_end;
 
-    return (entry *)0;
+    return ptr;
 }
