@@ -253,7 +253,7 @@ entry *insert_node(entry *start, entry *position)
             {
                 // Adds node at end of list
                 position->next = nu;
-
+                break;
             }
         }
     }
