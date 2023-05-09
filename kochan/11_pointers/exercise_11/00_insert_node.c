@@ -123,8 +123,8 @@ int main(void)
         case 'y':
         {
             entry *position = NULL;
-            position = get_position(start);
-            start = insert_node(start, position);
+            // position = get_position(start);
+            // start = insert_node(start, position);
             break;
         }
         case 'n':
@@ -184,6 +184,7 @@ void print_list(entry *list)
 */
 entry *insert_node(entry *start, entry *position)
 {
+    return (entry *)0;
 }
 
 /***************************************************************************************************
@@ -191,4 +192,5 @@ entry *insert_node(entry *start, entry *position)
 */
 entry *get_position(entry *list)
 {
+    return (entry *)0;
 }
