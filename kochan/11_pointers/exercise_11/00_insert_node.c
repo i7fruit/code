@@ -302,6 +302,8 @@ entry *get_position(entry *list)
                 if (count + 1 == insertion_point)
                     return prev;
             }
+
+            prev = 
         }
     }
 
