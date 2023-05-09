@@ -301,8 +301,8 @@ entry *get_position(entry *list)
         }
     }
 
-    else
-        add_at_end;
+    //else
+        //add_at_end;
 
     return (entry *)0;
 }
