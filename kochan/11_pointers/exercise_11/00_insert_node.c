@@ -275,6 +275,9 @@ entry *get_position(entry *list)
     }
     while (insertion_point < 1 || insertion_point > outer_element);
 
+    // Pointer to traverse list
+    entry *trav = NULL;
+
     if (insertion_point != outer_element)
     {
         // Accounting for iteration from zero
@@ -285,8 +288,7 @@ entry *get_position(entry *list)
             add_at_01 = true;
 
         // Iterates through list to find spot to insert new node
-        entry *ptr;
-        for (ptr = list, *prev = list; ptr != NULL; ptr = ptr->next)
+        for (trav = list, *prev = list; trav != NULL; trav = trav->next)
         {
             static int count = 0;
 
@@ -306,5 +308,5 @@ entry *get_position(entry *list)
     //else
         //add_at_end;
 
-    return ptr;
+    return trav;
 }
