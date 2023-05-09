@@ -243,9 +243,10 @@ entry *insert_node(entry *start, entry *position)
 
                 else
                 {
+                    // nu->next = position->next;
+                    // position->next = nu;
+                    // break;
                     nu->next = position->next;
-                    position->next = nu;
-                    break;
                 }
             }
 
