@@ -252,6 +252,7 @@ entry *insert_node(entry *start, entry *position)
             else if (insertion_point == (node_count + 1))
             {
                 // Adds node at end of list
+                position->next = nu;
 
             }
         }
@@ -275,8 +276,8 @@ entry *get_position(entry *list)
     }
     while (insertion_point < 1 || insertion_point > outer_element);
 
-    // Pointer to traverse list
-    entry *trav = NULL;
+    // Pointers to traverse list
+    entry *trav = NULL, *prev = NULL;
 
     if (insertion_point != outer_element)
     {
@@ -288,7 +289,7 @@ entry *get_position(entry *list)
             add_at_01 = true;
 
         // Iterates through list to find spot to insert new node
-        for (trav = list, *prev = list; trav != NULL; trav = trav->next)
+        for (trav = list, prev = list; trav != NULL; trav = trav->next)
         {
             static int count = 0;
 
@@ -303,12 +304,12 @@ entry *get_position(entry *list)
                     return prev;
             }
 
-            prev = 
+            prev = trav;
         }
     }
 
     //else
         //add_at_end;
 
-    return trav;
+    return prev;
 }
