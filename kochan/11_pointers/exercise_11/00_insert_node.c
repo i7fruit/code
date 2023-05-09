@@ -251,7 +251,8 @@ entry *insert_node(entry *start, entry *position)
 
             else if (insertion_point == (node_count + 1))
             {
-
+                // Adds node at end of list
+                
             }
         }
     }
