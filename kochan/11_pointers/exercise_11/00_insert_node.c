@@ -305,6 +305,7 @@ entry *get_position(entry *list)
             }
 
             prev = trav;
+            count++;
         }
     }
 
