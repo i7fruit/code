@@ -196,8 +196,10 @@ entry *get_position(entry *list)
     int j = node_count + 1;
     do
     {
-        printf("Enter element to insert node: (%i - %i)", (i + 1), j);
+        printf("Enter element to insert node: (%2i - %2i)", (i + 1), j);
         scanf("%i", &i);
     }
     while (i < 1 || i > j);
+
+    return 0;
 }
