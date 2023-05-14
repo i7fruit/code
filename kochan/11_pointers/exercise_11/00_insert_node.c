@@ -123,7 +123,7 @@ int main(void)
         case 'y':
         {
             entry *position = NULL;
-            // position = get_position(start);
+            position = get_position(start);
             // start = insert_node(start, position);
             break;
         }
@@ -196,7 +196,7 @@ entry *get_position(entry *list)
     int j = node_count + 1;
     do
     {
-        printf("Enter element to insert node: (%2i - %2i)", (i + 1), j);
+        printf("Enter element to insert node: (Element_%.2i - Element_%.2i)", (i + 1), j);
         scanf("%i", &i);
     }
     while (i < 1 || i > j);
