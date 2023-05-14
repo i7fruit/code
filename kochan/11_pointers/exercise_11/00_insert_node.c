@@ -192,5 +192,11 @@ entry *insert_node(entry *start, entry *position)
 */
 entry *get_position(entry *list)
 {
-    return (entry *)0;
+    int i = 0;
+    do
+    {
+        printf("Enter element to insert node: ");
+        scanf("%i", &i);
+    }
+    while (i < 1 || i > )
 }
