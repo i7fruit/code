@@ -194,6 +194,8 @@ entry *get_position(entry *list)
 {
     int insertion_point = 0;
     int j = node_count + 1;
+    add_at_1 = false, add_at_end = false;
+    
     do
     {
         printf("Enter element to insert node (Element_%.2i - Element_%.2i): ", (i + 1), j);
