@@ -201,5 +201,7 @@ entry *get_position(entry *list)
     }
     while (insertion_point < 1 || insertion_point > j);
 
+    // Turns on the add_at_1 flag if
+
     return 0;
 }
