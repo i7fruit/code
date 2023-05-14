@@ -201,7 +201,12 @@ entry *get_position(entry *list)
     }
     while (insertion_point < 1 || insertion_point > j);
 
-    // Turns on the add_at_1 flag if
+    // Turns on the add_at_1 flag if user wants to insert node at start of list
+    if (insertion_point == 1)
+    {
+        add_at_1 = true;
+        return list;
+    }
 
     return 0;
 }
