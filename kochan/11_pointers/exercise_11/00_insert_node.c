@@ -184,7 +184,7 @@ void print_list(entry *list)
 */
 entry *insert_node(entry *start, entry *position)
 {
-    return (entry *)0;
+    if ()
 }
 
 /***************************************************************************************************
