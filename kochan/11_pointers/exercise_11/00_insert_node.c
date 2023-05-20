@@ -196,6 +196,19 @@ entry *insert_node(entry *start, entry *position)
         fprintf(stderr, "Insufficient memory\n");
         exit(1); // <--- Check if this line causes a memory leak <<<<<<<<<<<<<<<<<<<<<<<<<<|||||||||||||
     }
+
+    // Initializes the node
+    nu->id = id;
+    nu->value = val;
+    nu->next = NULL;
+
+    if (add_at_01)
+    {
+        nu->next = start;
+        start = nu;
+    }
+
+    else if (add_at_end)
 }
 
 /***************************************************************************************************
