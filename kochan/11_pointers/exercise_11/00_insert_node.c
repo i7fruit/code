@@ -124,7 +124,7 @@ int main(void)
         {
             entry *position = NULL;
             position = get_position(start);
-            // start = insert_node(start, position);
+            start = insert_node(start, position);
             break;
         }
         case 'n':
