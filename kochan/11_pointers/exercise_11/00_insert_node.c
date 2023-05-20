@@ -210,5 +210,10 @@ entry *get_position(entry *list)
         return list;
     }
 
+    else if (insertion_point == 2)
+    {
+        return list;
+    }
+
     return 0;
 }
