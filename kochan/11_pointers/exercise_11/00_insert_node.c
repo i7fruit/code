@@ -195,7 +195,7 @@ entry *get_position(entry *list)
     int insertion_point = 0;
     int j = node_count + 1;
     add_at_1 = false, add_at_end = false;
-    
+
     do
     {
         printf("Enter element to insert node (Element_%.2i - Element_%.2i): ", (i + 1), j);
@@ -203,10 +203,10 @@ entry *get_position(entry *list)
     }
     while (insertion_point < 1 || insertion_point > j);
 
-    // Turns on the add_at_1 flag if user wants to insert node at start of list
+    // Turns on the add_at_01 flag if user wants to insert node at start of list
     if (insertion_point == 1)
     {
-        add_at_1 = true;
+        add_at_01 = true;
         return list;
     }
 
