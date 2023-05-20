@@ -215,5 +215,13 @@ entry *get_position(entry *list)
         return list;
     }
 
+    // Finds node to return if insertion point is beyond the second node
+    for (entry *ptr = list, *prev = list; ptr != NULL; ptr = ptr->next)
+    {
+        static int count = 1;
+
+        
+    }
+
     return 0;
 }
