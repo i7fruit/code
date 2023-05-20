@@ -184,7 +184,10 @@ void print_list(entry *list)
 */
 entry *insert_node(entry *start, entry *position)
 {
-    if ()
+    if (add_at_01)
+    {
+        
+    }
 }
 
 /***************************************************************************************************
