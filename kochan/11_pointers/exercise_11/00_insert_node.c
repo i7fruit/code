@@ -273,5 +273,5 @@ entry *get_position(entry *list)
 
     // Returns null if insertion is after last node in list
     add_at_end = true;
-    return ptr;
+    return prev;
 }
