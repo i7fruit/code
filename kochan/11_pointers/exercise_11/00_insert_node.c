@@ -194,7 +194,7 @@ entry *insert_node(entry *start, entry *position)
     if (!nu)
     {
         fprintf(stderr, "Insufficient memory\n");
-        
+        exit(1); // <--- Check if this line causes a memory leak <<<<<<<<<<<<<<<<<<<<<<<<<<|||||||||||||
     }
 }
 
