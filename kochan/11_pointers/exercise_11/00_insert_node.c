@@ -219,7 +219,13 @@ entry *insert_node(entry *start, entry *position)
 
     else if (add_at_end)
     {
-        p
+        position->next = nu;
+    }
+
+    else
+    {
+        nu->next = position->next;
+        position->next = nu;
     }
 }
 
@@ -251,7 +257,8 @@ entry *get_position(entry *list)
     }
 
     // Finds node to return if insertion point is beyond the second node
-    for (entry *ptr = list, *prev = list; ptr != NULL; ptr = ptr->next)
+    entry *ptr = NULL, *prev = NULL;
+    for (ptr = list, prev = list; ptr != NULL; ptr = ptr->next)
     {
         static int count = 1;
 
@@ -264,5 +271,5 @@ entry *get_position(entry *list)
 
     // Returns null if insertion is after last node in list
     add_at_end = true;
-    return (entry *)0;
+    return ptr;
 }
