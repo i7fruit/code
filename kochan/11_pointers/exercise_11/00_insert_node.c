@@ -186,6 +186,7 @@ entry *insert_node(entry *start, entry *position)
 {
     // Prompts user for data to insert
     int id = 0, val = 0;
+    printf("Enter data for node to insert: ");
     get_data(&id, &val);
 }
 
