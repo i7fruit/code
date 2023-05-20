@@ -184,10 +184,9 @@ void print_list(entry *list)
 */
 entry *insert_node(entry *start, entry *position)
 {
-    if (add_at_01)
-    {
-        
-    }
+    // Prompts user for data to insert
+    int id = 0, val = 0;
+    get_data(&id, &val);
 }
 
 /***************************************************************************************************
