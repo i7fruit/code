@@ -188,6 +188,14 @@ entry *insert_node(entry *start, entry *position)
     int id = 0, val = 0;
     printf("Enter data for node to insert: ");
     get_data(&id, &val);
+
+    // Allocates memory for the new node
+    entry *nu = malloc(sizeof(entry));
+    if (!nu)
+    {
+        fprintf(stderr, "Insufficient memory\n");
+        
+    }
 }
 
 /***************************************************************************************************
