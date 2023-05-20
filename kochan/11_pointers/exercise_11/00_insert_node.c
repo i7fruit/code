@@ -192,7 +192,6 @@ entry *insert_node(entry *start, entry *position)
 */
 entry *get_position(entry *list)
 {
-    int insertion_point = 0;
     int j = node_count + 1;
     add_at_1 = false, add_at_end = false;
 
