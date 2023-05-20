@@ -202,13 +202,25 @@ entry *insert_node(entry *start, entry *position)
     nu->value = val;
     nu->next = NULL;
 
-    if (add_at_01)
+    if (position == start)
     {
-        nu->next = start;
-        start = nu;
+        if (add_at_01)
+        {
+            nu->next = start;
+            start = nu;
+        }
+
+        else
+        {
+            nu->next = start->next;
+            start->next = nu;
+        }
     }
 
     else if (add_at_end)
+    {
+        p
+    }
 }
 
 /***************************************************************************************************
