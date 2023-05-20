@@ -227,6 +227,8 @@ entry *insert_node(entry *start, entry *position)
         nu->next = position->next;
         position->next = nu;
     }
+
+    return start;
 }
 
 /***************************************************************************************************
