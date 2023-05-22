@@ -88,7 +88,8 @@ int main(void)
             if (start)
             {
                 nu->next = start;
-                nu->prev = start->prev;
+                nu->prev = NULL;
+                start->prev = nu;
                 start = nu;
                 node_count++;
             }
