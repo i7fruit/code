@@ -1,10 +1,11 @@
 /**
- * 00_insert_node.c
+ * 01_insert_node_dll.c
  *
- * Sunday, April 16 2023 21:55hrs
+ * Saturday, May 20 2023 18:52hrs
  *
  * This program prompts the user for a position
- * to insert a node into a linked list
+ * to insert a node into a linked list using a
+ * doubly-linked list
 */
 #include <stdio.h>
 #include <stdbool.h>
@@ -23,6 +24,7 @@ typedef struct entry
 {
     int id;
     int value;
+    struct entry *prev;
     struct entry *next;
 }
 entry;
@@ -79,12 +81,14 @@ int main(void)
             // Initializes the node
             nu->id = id;
             nu->value = value;
+            nu->prev = NULL;
             nu->next = NULL;
 
             // Appends node if list isn't null
             if (start)
             {
                 nu->next = start;
+                nu->prev = start->prev;
                 start = nu;
                 node_count++;
             }
@@ -92,6 +96,7 @@ int main(void)
             {
                 // Appends first node if list is null
                 start = nu;
+                nu->prev = NULL;
                 node_count++;
             }
         }
@@ -194,7 +199,7 @@ entry *insert_node(entry *start, entry *position)
     if (!nu)
     {
         fprintf(stderr, "Insufficient memory\n");
-        exit(1); // <--- Fix later. May cause memory leak
+        exit(1); // <--- Check if this line causes a memory leak <<<<<<<<<<<<<<<<<<<<<<<<<<|||||||||||||
     }
 
     // Initializes the node
@@ -260,15 +265,15 @@ entry *get_position(entry *list)
 
     // Finds node to return if insertion point is beyond the second node
     entry *ptr = NULL, *prev = NULL;
-    for (ptr = list, prev = list; ptr != NULL; ptr = ptr->next)
+    for (ptr = list; ptr != NULL; ptr = ptr->next)
     {
         static int count = 1;
 
         if (count == insertion_point)
-            return prev;
+            return ptr->prev;
 
         count++;
-        prev = ptr;
+        prev = ptr->prev;
     }
 
     // Returns null if insertion is after last node in list
