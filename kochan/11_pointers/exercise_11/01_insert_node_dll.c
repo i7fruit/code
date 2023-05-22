@@ -29,18 +29,18 @@ typedef struct entry
 }
 entry;
 
-// // Function prototypes
+// Function prototypes
 // void get_data(int *id, int *val);
 // void print_list(entry *list);
 // entry *get_position(entry *list);
 // entry *insert_node(entry *start, entry *position);
 
-// int main(void)
-// {
-//     int value = 0, id = 0;
+int main(void)
+{
+    int value = 0, id = 0;
 
-//     // Pointer to the start of the linked list
-//     entry *start = NULL;
+    // Pointer to the start of the linked list
+    entry *start = NULL;
 
 //     while (true)
 //     {
@@ -152,8 +152,8 @@ entry;
 //         ptr = trav;
 //     }
 
-//     return 0;
-// }
+    return 0;
+}
 
 // /***************************************************************************************************
 //  * get_data()
