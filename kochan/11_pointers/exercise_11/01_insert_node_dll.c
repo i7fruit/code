@@ -67,28 +67,27 @@ int main(void)
              }
          }
 
-//         // Appends the data to the list if the ID is unique
-//         if (!is_used)
-//         {
-//             // Create new node for data
-//             entry *nu = malloc(sizeof(entry));
-//             if (!nu)
-//             {
-//                 fprintf(stderr, "Insufficient memory\n");
-//                 return 1;
-//             }
+         // Appends the data to the list if the ID is unique
+         if (!is_used)
+         {
+             // Create new node for data
+             entry *nu = malloc(sizeof(entry));
+             if (!nu)
+             {
+                 fprintf(stderr, "Insufficient memory\n");
+                 return 1;
+             }
 
-//             // Initializes the node
-//             nu->id = id;
-//             nu->value = value;
-//             nu->prev = NULL;
-//             nu->next = NULL;
+             // Initializes the node
+             nu->id = id;
+             nu->value = value;
+             nu->prev = NULL;
+             nu->next = NULL;
 
 //             // Appends node if list isn't null
 //             if (start)
 //             {
 //                 nu->next = start;
-//                 nu->prev = NULL;
 //                 start->prev = nu;
 //                 start = nu;
 //                 node_count++;
