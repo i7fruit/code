@@ -250,17 +250,23 @@ int main(void)
      }
      while (insertion_point < 1 || insertion_point > j);
 
-     // Turns on the add_at_01 flag if user wants to insert node at start of list
+     /**
+      * Turns on the add_at_01 flag and returns
+      * a pointer to the start of the listif user
+      * wants to insert node at start of list
+      */
      if (insertion_point == 1)
      {
          add_at_01 = true;
          return list;
      }
 
-//     else if (insertion_point == 2)
-//     {
-//         return list;
-//     }
+     /**
+      * Otherwise, returns pointer to start of list
+      * if insertion is at second node in list
+      */
+     else if (insertion_point == 2)
+         return list;
 
 //     // Finds node to return if insertion point is beyond the second node
 //     entry *ptr = NULL, *prev = NULL;
