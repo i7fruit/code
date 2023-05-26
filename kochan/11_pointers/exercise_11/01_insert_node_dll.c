@@ -48,24 +48,24 @@ int main(void)
          printf("Enter an ID and a value. Press ctrl+d to quit entering data.\n");
          get_data(&id, &value);
 
-//         // Stops the loop if the user hits ctrl+d
-//         if (value == INT_MAX)
-//         {
-//             printf("\nLinked list completed\n");
-//             break;
-//         }
+         // Stops the loop if the user hits ctrl+d
+         if (value == INT_MAX)
+         {
+             printf("\nLinked list completed\n");
+             break;
+         }
 
-//         // Checks if the ID has previously been used
-//         bool is_used = false;
+         // Checks if the ID has previously been used
+         bool is_used = false;
 
-//         for (entry *ptr = start; ptr != NULL; ptr = ptr->next)
-//         {
-//             if (ptr->id == id)
-//             {
-//                 is_used = true;
-//                 break;
-//             }
-//         }
+         for (entry *ptr = start; ptr != NULL; ptr = ptr->next)
+         {
+             if (ptr->id == id)
+             {
+                 is_used = true;
+                 break;
+             }
+         }
 
 //         // Appends the data to the list if the ID is unique
 //         if (!is_used)
