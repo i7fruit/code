@@ -30,7 +30,7 @@ typedef struct entry
 entry;
 
 // Function prototypes
-// void get_data(int *id, int *val);
+void get_data(int *id, int *val);
 // void print_list(entry *list);
 // entry *get_position(entry *list);
 // entry *insert_node(entry *start, entry *position);
@@ -44,9 +44,9 @@ int main(void)
 
      while (true)
      {
-//         // Prompts user for data
-//         printf("Enter an ID and a value. Press ctrl+d to quit entering data.\n");
-//         get_data(&id, &value);
+         // Prompts user for data
+         printf("Enter an ID and a value. Press ctrl+d to quit entering data.\n");
+         get_data(&id, &value);
 
 //         // Stops the loop if the user hits ctrl+d
 //         if (value == INT_MAX)
@@ -155,26 +155,26 @@ int main(void)
     return 0;
 }
 
-// /***************************************************************************************************
-//  * get_data()
-// */
-// void get_data(int *id, int *val)
-// {
-//     do
-//     {
-//         scanf("%i %i", id, val);
+ /***************************************************************************************************
+  * get_data()
+ */
+ void get_data(int *id, int *val)
+ {
+     do
+     {
+         scanf("%i %i", id, val);
 
-//         // Exits the do-while loop if the user hits ctrl+d
-//         if (feof(stdin))
-//         {
-//             // Clears the EOF indicator for the stdin so that further input can be made if needed
-//             clearerr(stdin);
-//             *val = INT_MAX;
-//             break;
-//         }
-//     }
-//     while (*id < 1);
-// }
+         // Exits the do-while loop if the user hits ctrl+d
+         if (feof(stdin))
+         {
+             // Clears the EOF indicator for the stdin so that further input can be made if needed
+             clearerr(stdin);
+             *val = INT_MAX;
+             break;
+         }
+     }
+     while (*id < 1);
+ }
 
 // /***************************************************************************************************
 //  * print_list()
