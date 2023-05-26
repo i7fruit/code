@@ -14,10 +14,10 @@
 #include <ctype.h>
 
 // Global variables
- int node_count;
-// int insertion_point;
-// bool add_at_end;
-// bool add_at_01;
+int node_count;
+int insertion_point;
+bool add_at_end;
+bool add_at_01;
 
 // Structure definition
 typedef struct entry
@@ -105,27 +105,29 @@ int main(void)
      putchar('\n');
      print_list(start);
 
-//     // Asks the user if they wish to insert a new node
-//     printf("Do you want to insert a new node? (y/n): ");
-//     int size = 10;
-//     char temp[size];
-//     char answer[size];
-//     fgets(temp, size, stdin);
+     // Asks the user if they wish to insert a new node
+     printf("Do you want to insert a new node? (y/n): ");
+     int size = 10;
+     char temp[size];
+     char answer[size];
+     fgets(temp, size, stdin);
 
-//     // Clears non-alphabets from entered text
-//     int i = -1, j = -1;
-//     while (temp[++i] != '\0')
-//     {
-//         if (!isalpha(temp[i]))
-//             continue;
+     // Clears non-alphabets from entered text
+     int i = -1, j = -1;
+     while (temp[++i] != '\0')
+     {
+         if (!isalpha(temp[i]))
+             continue;
 
-//         answer[++j] = temp[i];
-//     }
+         answer[++j] = temp[i];
+     }
 
-//     switch (tolower(answer[0]))
-//     {
-//         case 'y':
-//         {
+     switch (tolower(answer[0]))
+     {
+         case 'y':
+         {
+            printf("Yes\n");
+            break;
 //             entry *position = NULL;
 //             position = get_position(start);
 //             start = insert_node(start, position);
