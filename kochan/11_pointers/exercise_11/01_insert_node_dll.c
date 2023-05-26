@@ -238,24 +238,24 @@ int main(void)
  /***************************************************************************************************
   * get_position()
  */
-// entry *get_position(entry *list)
-// {
-//     int j = node_count + 1;
-//     add_at_01 = false, add_at_end = false;
+ entry *get_position(entry *list)
+ {
+     int j = node_count + 1;
+     add_at_01 = false, add_at_end = false;
 
-//     do
-//     {
-//         printf("Enter element to insert node (Element_%.2i - Element_%.2i): ", (insertion_point + 1), j);
-//         scanf("%i", &insertion_point);
-//     }
-//     while (insertion_point < 1 || insertion_point > j);
+     do
+     {
+         printf("Enter element to insert node (Element_%.2i - Element_%.2i): ", (insertion_point + 1), j);
+         scanf("%i", &insertion_point);
+     }
+     while (insertion_point < 1 || insertion_point > j);
 
-//     // Turns on the add_at_01 flag if user wants to insert node at start of list
-//     if (insertion_point == 1)
-//     {
-//         add_at_01 = true;
-//         return list;
-//     }
+     // Turns on the add_at_01 flag if user wants to insert node at start of list
+     if (insertion_point == 1)
+     {
+         add_at_01 = true;
+         return list;
+     }
 
 //     else if (insertion_point == 2)
 //     {
