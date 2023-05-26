@@ -14,7 +14,7 @@
 #include <ctype.h>
 
 // Global variables
-// int node_count;
+ int node_count;
 // int insertion_point;
 // bool add_at_end;
 // bool add_at_01;
@@ -101,9 +101,9 @@ int main(void)
          }
      }
 
-//     // Prints the list
-//     putchar('\n');
-//     print_list(start);
+     // Prints the list
+     putchar('\n');
+     print_list(start);
 
 //     // Asks the user if they wish to insert a new node
 //     printf("Do you want to insert a new node? (y/n): ");
@@ -174,14 +174,14 @@ int main(void)
      while (*id < 1);
  }
 
-// /***************************************************************************************************
-//  * print_list()
-// */
-// void print_list(entry *list)
-// {
-//     for (entry *trav = list; trav != NULL; trav = trav->next)
-//         printf("ID: %3i, Value: %3i\n", trav->id, trav->value);
-// }
+ /***************************************************************************************************
+  * print_list()
+ */
+ void print_list(entry *list)
+ {
+     for (entry *trav = list; trav != NULL; trav = trav->next)
+         printf("ID: %3i, Value: %3i\n", trav->id, trav->value);
+ }
 
 // /***************************************************************************************************
 //  * insert_node()
