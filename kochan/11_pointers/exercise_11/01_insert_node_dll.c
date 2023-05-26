@@ -31,7 +31,7 @@ entry;
 
 // Function prototypes
 void get_data(int *id, int *val);
-// void print_list(entry *list);
+void print_list(entry *list);
 // entry *get_position(entry *list);
 // entry *insert_node(entry *start, entry *position);
 
