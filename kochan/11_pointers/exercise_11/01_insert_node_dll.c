@@ -84,22 +84,21 @@ int main(void)
              nu->prev = NULL;
              nu->next = NULL;
 
-//             // Appends node if list isn't null
-//             if (start)
-//             {
-//                 nu->next = start;
-//                 start->prev = nu;
-//                 start = nu;
-//                 node_count++;
-//             }
-//             else
-//             {
-//                 // Appends first node if list is null
-//                 start = nu;
-//                 nu->prev = NULL;
-//                 node_count++;
-//             }
-//         }
+             // Appends node if list isn't null
+             if (start)
+             {
+                 nu->next = start;
+                 start->prev = nu;
+                 start = nu;
+                 node_count++;
+             }
+             else
+             {
+                 // Appends first node if list is null
+                 start = nu;
+                 node_count++;
+             }
+         }
      }
 
 //     // Prints the list
