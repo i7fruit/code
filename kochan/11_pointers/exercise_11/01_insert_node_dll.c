@@ -132,14 +132,14 @@ int main(void)
 //             position = get_position(start);
 //             start = insert_node(start, position);
 //             break;
-//         }
-//         case 'n':
-//             printf("You have chosen to make no insertions to the linked list.\n");
-//             break;
-//         default:
-//             printf("Invalid entry\n");
-//             break;
-//     }
+         }
+         case 'n':
+             printf("You have chosen to make no insertions to the linked list.\n");
+             break;
+         default:
+             printf("Invalid entry\n");
+             break;
+     }
 
 //     print_list(start);
 
