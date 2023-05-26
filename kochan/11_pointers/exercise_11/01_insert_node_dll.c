@@ -141,16 +141,16 @@ int main(void)
              break;
      }
 
-//     print_list(start);
+     print_list(start);
 
-//     // Free nodes
-//     entry *ptr = start;
-//     while (ptr != NULL)
-//     {
-//         entry *trav = ptr->next;
-//         free(ptr);
-//         ptr = trav;
-//     }
+     // Free nodes
+     entry *ptr = start;
+     while (ptr != NULL)
+     {
+         entry *trav = ptr->next;
+         free(ptr);
+         ptr = trav;
+     }
 
     return 0;
 }
