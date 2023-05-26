@@ -246,17 +246,23 @@ entry *get_position(entry *list)
     }
     while (insertion_point < 1 || insertion_point > j);
 
-    // Turns on the add_at_01 flag if user wants to insert node at start of list
+    /**
+      * Turns on the add_at_01 flag and returns
+      * a pointer to the start of the list if user
+      * wants to insert node at start of list
+      */
     if (insertion_point == 1)
     {
         add_at_01 = true;
         return list;
     }
 
+    /**
+     * Otherwise, returns pointer to start of list
+     * if insertion is at second node in list
+     */
     else if (insertion_point == 2)
-    {
         return list;
-    }
 
     // Finds node to return if insertion point is beyond the second node
     entry *ptr = NULL, *prev = NULL;
@@ -264,6 +270,7 @@ entry *get_position(entry *list)
     {
         static int count = 1;
 
+        // Returns node prior to insertion point
         if (count == insertion_point)
             return prev;
 
@@ -271,7 +278,7 @@ entry *get_position(entry *list)
         prev = ptr;
     }
 
-    // Returns null if insertion is after last node in list
+    // Returns last node in list if insertion is after last node in list
     add_at_end = true;
     return prev;
 }

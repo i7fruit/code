@@ -32,7 +32,7 @@ entry;
 // Function prototypes
 void get_data(int *id, int *val);
 void print_list(entry *list);
-// entry *get_position(entry *list);
+entry *get_position(entry *list);
 // entry *insert_node(entry *start, entry *position);
 
 int main(void)
@@ -127,9 +127,9 @@ int main(void)
          case 'y':
          {
             entry *position = NULL;
-//             position = get_position(start);
+            position = get_position(start);
 //             start = insert_node(start, position);
-//             break;
+            break;
          }
          case 'n':
              printf("You have chosen to make no insertions to the linked list.\n");
@@ -252,7 +252,7 @@ int main(void)
 
      /**
       * Turns on the add_at_01 flag and returns
-      * a pointer to the start of the listif user
+      * a pointer to the start of the list if user
       * wants to insert node at start of list
       */
      if (insertion_point == 1)
