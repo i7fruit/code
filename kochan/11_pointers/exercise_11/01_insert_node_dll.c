@@ -268,18 +268,19 @@ int main(void)
      else if (insertion_point == 2)
          return list;
 
-//     // Finds node to return if insertion point is beyond the second node
-//     entry *ptr = NULL, *prev = NULL;
-//     for (ptr = list; ptr != NULL; ptr = ptr->next)
-//     {
-//         static int count = 1;
+     // Finds node to return if insertion point is beyond the second node
+     entry *ptr = NULL, *prev = NULL;
+     for (ptr = list; ptr != NULL; ptr = ptr->next)
+     {
+         static int count = 1;
 
-//         if (count == insertion_point)
-//             return ptr->prev;
+         // Returns node prior to insertion point
+         if (count == insertion_point)
+             return ptr->prev;
 
-//         count++;
-//         prev = ptr->prev;
-//     }
+         count++;
+         prev = ptr->prev;
+     }
 
 //     // Returns null if insertion is after last node in list
 //     add_at_end = true;
