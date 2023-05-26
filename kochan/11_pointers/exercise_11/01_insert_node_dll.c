@@ -282,7 +282,7 @@ int main(void)
          prev = ptr->prev;
      }
 
-//     // Returns null if insertion is after last node in list
-//     add_at_end = true;
-//     return prev;
-// }
+     // Returns last node in list if insertion is after last node in list
+     add_at_end = true;
+     return prev;
+ }
