@@ -126,9 +126,7 @@ int main(void)
      {
          case 'y':
          {
-            printf("Yes\n");
-            break;
-//             entry *position = NULL;
+            entry *position = NULL;
 //             position = get_position(start);
 //             start = insert_node(start, position);
 //             break;
@@ -182,7 +180,7 @@ int main(void)
  void print_list(entry *list)
  {
      for (entry *trav = list; trav != NULL; trav = trav->next)
-         printf("ID: %3i, Value: %3i\n", trav->id, trav->value);
+         printf("ID: %2i, Value: %3i\n", trav->id, trav->value);
  }
 
 // /***************************************************************************************************
