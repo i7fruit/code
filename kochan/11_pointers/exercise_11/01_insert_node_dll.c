@@ -42,8 +42,8 @@ int main(void)
     // Pointer to the start of the linked list
     entry *start = NULL;
 
-//     while (true)
-//     {
+     while (true)
+     {
 //         // Prompts user for data
 //         printf("Enter an ID and a value. Press ctrl+d to quit entering data.\n");
 //         get_data(&id, &value);
@@ -101,7 +101,7 @@ int main(void)
 //                 node_count++;
 //             }
 //         }
-//     }
+     }
 
 //     // Prints the list
 //     putchar('\n');
