@@ -233,10 +233,11 @@ int main(void)
      {
          nu->next = position->next;
          position->next = nu;
+         nu->prev = position;
      }
 
-//     return start;
-// }
+     return start;
+ }
 
  /***************************************************************************************************
   * get_position()
