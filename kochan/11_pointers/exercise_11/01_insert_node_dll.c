@@ -33,7 +33,7 @@ entry;
 void get_data(int *id, int *val);
 void print_list(entry *list);
 entry *get_position(entry *list);
-// entry *insert_node(entry *start, entry *position);
+entry *insert_node(entry *start, entry *position);
 
 int main(void)
 {
@@ -128,7 +128,7 @@ int main(void)
          {
             entry *position = NULL;
             position = get_position(start);
-//             start = insert_node(start, position);
+            start = insert_node(start, position);
             break;
          }
          case 'n':
@@ -183,28 +183,29 @@ int main(void)
          printf("ID: %2i, Value: %3i\n", trav->id, trav->value);
  }
 
-// /***************************************************************************************************
-//  * insert_node()
-// */
-// entry *insert_node(entry *start, entry *position)
-// {
-//     // Prompts user for data to insert
-//     int id = 0, val = 0;
-//     printf("Enter data for node to insert: ");
-//     get_data(&id, &val);
+ /***************************************************************************************************
+  * insert_node()
+ */
+ entry *insert_node(entry *start, entry *position)
+ {
+     // Prompts user for data to insert
+     int id = 0, val = 0;
+     printf("Enter data for node to insert: ");
+     get_data(&id, &val);
 
-//     // Allocates memory for the new node
-//     entry *nu = malloc(sizeof(entry));
-//     if (!nu)
-//     {
-//         fprintf(stderr, "Insufficient memory\n");
-//         exit(1); // <--- Check if this line causes a memory leak <<<<<<<<<<<<<<<<<<<<<<<<<<|||||||||||||
-//     }
+     // Allocates memory for the new node
+     entry *nu = malloc(sizeof(entry));
+     if (!nu)
+     {
+         fprintf(stderr, "Insufficient memory\n");
+         exit(1); // <--- Check if this line causes a memory leak <<<<<<<<<<<<<<<<<<<<<<<<<<|||||||||||||
+     }
 
-//     // Initializes the node
-//     nu->id = id;
-//     nu->value = val;
-//     nu->next = NULL;
+     // Initializes the node
+     nu->id = id;
+     nu->value = val;
+     nu->prev = NULL;
+     nu->next = NULL;
 
 //     if (position == start)
 //     {
