@@ -207,13 +207,13 @@ int main(void)
      nu->prev = NULL;
      nu->next = NULL;
 
-//     if (position == start)
-//     {
-//         if (add_at_01)
-//         {
-//             nu->next = start;
-//             start = nu;
-//         }
+     if (position == start)
+     {
+         if (add_at_01)
+         {
+             nu->next = start;
+             start = nu;
+         }
 
 //         else
 //         {
