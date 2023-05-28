@@ -215,23 +215,25 @@ int main(void)
              start = nu;
          }
 
-//         else
-//         {
-//             nu->next = start->next;
-//             start->next = nu;
-//         }
-//     }
+         else
+         {
+             nu->next = start->next;
+             start->next = nu;
+             nu->prev = start;
+         }
+     }
 
-//     else if (add_at_end)
-//     {
-//         position->next = nu;
-//     }
+     else if (add_at_end)
+     {
+         position->next = nu;
+         nu->prev = position;
+     }
 
-//     else
-//     {
-//         nu->next = position->next;
-//         position->next = nu;
-//     }
+     else
+     {
+         nu->next = position->next;
+         position->next = nu;
+     }
 
 //     return start;
 // }
