@@ -105,8 +105,8 @@ int main(void)
      putchar('\n');
      print_list(start);
 
-     // Asks the user if they wish to insert a new node
-     printf("Do you want to insert a new node? (y/n): ");
+     // Asks the user if they wish to continue with other operations
+     printf(";
      int size = 10;
      char temp[size];
      char answer[size];
