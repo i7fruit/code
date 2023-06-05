@@ -106,7 +106,7 @@ int main(void)
      print_list(start);
 
      // Asks the user if they wish to continue with other operations
-     printf(";
+     printf("\nOPTIONS MENU\nInsert node (i)\nRemove node (r)\nQuit (q)\n\nSelect option: ");
      int size = 10;
      char temp[size];
      char answer[size];
