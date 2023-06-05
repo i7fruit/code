@@ -4,8 +4,8 @@
  * Sunday, June 04 2023 21:33hrs
  *
  * This program prompts the user for a position
- * to remove a node from a linked list using a
- * doubly-linked list
+ * to remove a node from, or insert a node into a
+ * linked list using a doubly-linked list
 */
 #include <stdio.h>
 #include <stdbool.h>
