@@ -124,14 +124,21 @@ int main(void)
 
      switch (tolower(answer[0]))
      {
-         case 'y':
+         case 'i':
          {
             entry *position = NULL;
             position = get_position(start);
             start = insert_node(start, position);
             break;
          }
-         case 'n':
+         case 'r':
+         {
+            entry *position = NULL;
+            position = get_position(start);
+            //start = insert_node(start, position);
+            break;
+         }
+         case 'q':
              printf("You have chosen to make no insertions to the linked list.\n");
              break;
          default:
