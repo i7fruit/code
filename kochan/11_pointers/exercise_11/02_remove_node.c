@@ -297,7 +297,7 @@ int main(void)
          return list;
 
      // Finds node to return if insertion point is beyond the second node
-     entry *ptr = NULL, *prev = NULL;
+     entry *ptr = NULL, *prv = NULL;
      for (ptr = list; ptr != NULL; ptr = ptr->next)
      {
          static int count = 1;
@@ -307,12 +307,12 @@ int main(void)
              return ptr->prev;
 
          count++;
-         prev = ptr->prev;
+         prv = ptr->prev;
      }
 
      // Returns last node in list if insertion is after last node in list
      add_at_end = true;
-     return prev;
+     return prv->next;
  }
 
   /***************************************************************************************************
