@@ -202,12 +202,6 @@ int main(void)
         {
             if (trav->id != id)
                 continue;
-
-            else
-            {
-                is_present = false;
-                break;
-            }
         }
      }
 
