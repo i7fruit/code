@@ -200,7 +200,7 @@ int main(void)
         // Checks if ID already exists in the list
         for (entry *trav = start; trav != NULL; trav = trav->next)
         {
-            if (trav->id != id)
+            if (trav->id == id)
                 continue;
         }
      }
