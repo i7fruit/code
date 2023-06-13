@@ -193,6 +193,9 @@ int main(void)
      printf("Enter data for node to insert: ");
      get_data(&id, &val);
 
+     // Checks if ID already exists in the list
+     for (entry *trav = start; trav != NULL; trav = trav->next)
+
      // Allocates memory for the new node
      entry *nu = malloc(sizeof(entry));
      if (!nu)
