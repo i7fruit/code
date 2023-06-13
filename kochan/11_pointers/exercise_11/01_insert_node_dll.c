@@ -195,6 +195,9 @@ int main(void)
 
      // Checks if ID already exists in the list
      for (entry *trav = start; trav != NULL; trav = trav->next)
+     {
+         if (trav->id == id)
+     }
 
      // Allocates memory for the new node
      entry *nu = malloc(sizeof(entry));
