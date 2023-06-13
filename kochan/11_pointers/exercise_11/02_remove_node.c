@@ -305,7 +305,7 @@ int main(void)
  {
      // Prompts user for node to remove
      int id = 0, val = 0;
-     printf("Enter data for node to insert: ");
+     printf("Enter data for node to delete: ");
      get_data(&id, &val);
 
      // Allocates memory for the new node
