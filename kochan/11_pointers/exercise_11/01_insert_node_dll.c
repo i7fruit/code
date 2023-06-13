@@ -209,6 +209,7 @@ int main(void)
                 break;
             }
         }
+     }
 
      // Allocates memory for the new node
      entry *nu = malloc(sizeof(entry));
