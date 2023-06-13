@@ -303,7 +303,7 @@ int main(void)
  */
  entry *remove_node(entry *start, entry *position)
  {
-     // Prompts user for data to insert
+     // Prompts user for node to remove
      int id = 0, val = 0;
      printf("Enter data for node to insert: ");
      get_data(&id, &val);
