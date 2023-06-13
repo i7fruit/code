@@ -297,3 +297,59 @@ int main(void)
      add_at_end = true;
      return prev;
  }
+
+  /***************************************************************************************************
+  * remove_node()
+ */
+ entry *remove_node(entry *start, entry *position)
+ {
+     // Prompts user for data to insert
+     int id = 0, val = 0;
+     printf("Enter data for node to insert: ");
+     get_data(&id, &val);
+
+     // Allocates memory for the new node
+     entry *nu = malloc(sizeof(entry));
+     if (!nu)
+     {
+         fprintf(stderr, "Insufficient memory\n");
+         exit(1); // <--- Check if this line causes a memory leak <<<<<<<<<<<<<<<<<<<<<<<<<<|||||||||||||
+     }
+
+     // Initializes the node
+     nu->id = id;
+     nu->value = val;
+     nu->prev = NULL;
+     nu->next = NULL;
+
+     if (position == start)
+     {
+         if (add_at_01)
+         {
+             nu->next = start;
+             start = nu;
+         }
+
+         else
+         {
+             nu->next = start->next;
+             start->next = nu;
+             nu->prev = start;
+         }
+     }
+
+     else if (add_at_end)
+     {
+         position->next = nu;
+         nu->prev = position;
+     }
+
+     else
+     {
+         nu->next = position->next;
+         position->next = nu;
+         nu->prev = position;
+     }
+
+     return start;
+ }
