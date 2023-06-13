@@ -192,7 +192,7 @@ int main(void)
      int id = 0, val = 0;
      bool is_present = true;
 
-     while (is_present)
+     do
      {
         printf("Enter data for node to insert: ");
         get_data(&id, &val);
@@ -201,9 +201,10 @@ int main(void)
         for (entry *trav = start; trav != NULL; trav = trav->next)
         {
             if (trav->id == id)
-                continue;
+                ;
         }
      }
+     while (is_present);
 
      // Allocates memory for the new node
      entry *nu = malloc(sizeof(entry));
