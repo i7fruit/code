@@ -305,5 +305,5 @@ int main(void)
 
      // Returns last node in list if insertion is after last node in list
      add_at_end = true;
-     return prv;
+     return prv->next;
  }
