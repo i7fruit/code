@@ -190,14 +190,21 @@ int main(void)
  {
      // Prompts user for data to insert
      int id = 0, val = 0;
-     printf("Enter data for node to insert: ");
-     get_data(&id, &val);
+     bool is_present = true;
 
-     // Checks if ID already exists in the list
-     for (entry *trav = start; trav != NULL; trav = trav->next)
+     while (is_present)
      {
-         if (trav->id == id)
-     }
+        printf("Enter data for node to insert: ");
+        get_data(&id, &val);
+
+        // Checks if ID already exists in the list
+        for (entry *trav = start; trav != NULL; trav = trav->next)
+        {
+            if (trav->id == id)
+                continue;
+
+            else
+        }
 
      // Allocates memory for the new node
      entry *nu = malloc(sizeof(entry));
