@@ -327,7 +327,7 @@ int main(void)
 
      do
      {
-        printf("Enter data for node to insert: ");
+        printf("Enter data for node to remove: ");
         get_data(&id, &val);
 
         // Checks if ID already exists in the list
