@@ -343,7 +343,7 @@ int main(void)
         if (!trav)
             is_present = false;
      }
-     while (!is_present);
+     while (!is_present); CONTINUE FROM HERE <<<<<<<<<<<<<<<<<<||||||||||||||||||||||||||||||||||||||||||||||||||
 
     // // Allocates memory for the new node
     // entry *nu = malloc(sizeof(entry));
