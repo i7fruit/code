@@ -322,7 +322,7 @@ int main(void)
  {
      // Prompts user for node to remove
      int id = 0, val = 0;
-     bool is_present = true;
+     bool is_present = false;
      entry *trav = NULL;
 
      do
@@ -334,27 +334,30 @@ int main(void)
         for (trav = start; trav != NULL; trav = trav->next)
         {
             if (trav->id == id)
+            {
+                is_present = true;
                 break;
+            }
         }
 
         if (!trav)
             is_present = false;
      }
-     while (is_present);
+     while (!is_present);
 
-     // Allocates memory for the new node
-     entry *nu = malloc(sizeof(entry));
-     if (!nu)
-     {
-         fprintf(stderr, "Insufficient memory\n");
-         exit(1); // <--- Check if this line causes a memory leak <<<<<<<<<<<<<<<<<<<<<<<<<<|||||||||||||
-     }
+    // // Allocates memory for the new node
+    // entry *nu = malloc(sizeof(entry));
+    // if (!nu)
+    // {
+    //     fprintf(stderr, "Insufficient memory\n");
+    //     exit(1); // <--- Check if this line causes a memory leak <<<<<<<<<<<<<<<<<<<<<<<<<<|||||||||||||
+    // }
 
-     // Initializes the node
-     nu->id = id;
-     nu->value = val;
-     nu->prev = NULL;
-     nu->next = NULL;
+    // // Initializes the node
+    // nu->id = id;
+    // nu->value = val;
+    // nu->prev = NULL;
+    // nu->next = NULL;
 
      if (position == start)
      {
