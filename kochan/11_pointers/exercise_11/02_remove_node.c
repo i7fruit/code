@@ -346,22 +346,9 @@ int main(void)
      }
      while (!is_present);
 
-    // // Allocates memory for the new node
-    // entry *nu = malloc(sizeof(entry));
-    // if (!nu)
-    // {
-    //     fprintf(stderr, "Insufficient memory\n");
-    //     exit(1); // <--- Check if this line causes a memory leak <<<<<<<<<<<<<<<<<<<<<<<<<<|||||||||||||
-    // }
-
-    // // Initializes the node
-    // nu->id = id;
-    // nu->value = val;
-    // nu->prev = NULL;
-    // nu->next = NULL;
-
      if (position == start)
      {
+         // Removes first node in the list
          if (add_at_01)
          {
             entry *temp = start->next;
@@ -369,6 +356,7 @@ int main(void)
             start = temp;
          }
 
+         // Removes the second node in the list
          else
          {
             entry *temp = start->next->next;
@@ -377,11 +365,12 @@ int main(void)
          }
      }
 
-    // else if (add_at_end)
-    // {
-    //     position->next = nu;
-    //     nu->prev = position;
-    // }
+     // Removes last node in the list
+     else if (add_at_end)
+     {
+         position->next = nu;
+         nu->prev = position;
+     }
 
     // else
     // {
