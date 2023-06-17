@@ -365,7 +365,7 @@ int main(void)
          {
             // nu->next = start;
             // start = nu;
-            
+            start
          }
 
          else
