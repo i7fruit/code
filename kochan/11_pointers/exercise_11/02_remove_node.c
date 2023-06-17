@@ -366,7 +366,7 @@ int main(void)
      }
 
      // Removes last node in the list
-     else if (add_at_end)
+     else if (add_at_end)  <<<<<<<<<|||||||||||| Start here
      {
          position->next = nu;
          nu->prev = position;
