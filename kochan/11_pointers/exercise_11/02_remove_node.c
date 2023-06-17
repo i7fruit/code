@@ -34,6 +34,7 @@ void get_data(int *id, int *val);
 void print_list(entry *list);
 entry *get_position(entry *list);
 entry *insert_node(entry *start, entry *position);
+entry *remove_node(entry *start, entry *position);
 
 int main(void)
 {
@@ -135,7 +136,7 @@ int main(void)
          {
             entry *position = NULL;
             position = get_position(start);
-            //start = insert_node(start, position);
+            start = remove_node(start, position);
             break;
          }
          case 'q':
