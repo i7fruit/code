@@ -372,24 +372,24 @@ int main(void)
 
          else
          {
-             nu->next = start->next;
-             start->next = nu;
-             nu->prev = start;
+            // nu->next = start->next;
+            // start->next = nu;
+            // nu->prev = start;
          }
      }
 
-     else if (add_at_end)
-     {
-         position->next = nu;
-         nu->prev = position;
-     }
+    // else if (add_at_end)
+    // {
+    //     position->next = nu;
+    //     nu->prev = position;
+    // }
 
-     else
-     {
-         nu->next = position->next;
-         position->next = nu;
-         nu->prev = position;
-     }
+    // else
+    // {
+    //     nu->next = position->next;
+    //     position->next = nu;
+    //     nu->prev = position;
+    // }
 
      return start;
  }
