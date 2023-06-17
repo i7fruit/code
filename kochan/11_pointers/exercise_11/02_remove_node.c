@@ -374,6 +374,7 @@ int main(void)
             // nu->next = start->next;
             // start->next = nu;
             // nu->prev = start;
+            entry *temp = start->next;
             
          }
      }
