@@ -364,8 +364,6 @@ int main(void)
      {
          if (add_at_01)
          {
-            // nu->next = start;
-            // start = nu;
             entry *temp = start->next;
             free(start);
             start = temp;
