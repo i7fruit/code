@@ -363,8 +363,9 @@ int main(void)
      {
          if (add_at_01)
          {
-             nu->next = start;
-             start = nu;
+            // nu->next = start;
+            // start = nu;
+            
          }
 
          else
