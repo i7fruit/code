@@ -375,7 +375,8 @@ int main(void)
             // start->next = nu;
             // nu->prev = start;
             entry *temp = start->next->next;
-            start
+            free(start->next);
+            start->next = temp;
          }
      }
 
