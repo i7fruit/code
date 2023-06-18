@@ -417,7 +417,7 @@ int main(void)
      }
 
      // Removes last node in the list
-     else if (add_at_end)
+     else if (/*add_at_end*/!position)
      {
         // position->next = nu;
         // nu->prev = position;
@@ -430,7 +430,10 @@ int main(void)
         // nu->next = position->next;
         // position->next = nu;
         // nu->prev = position;
-        
+        entry *temp = position->next;
+        position->next = position->next->next;
+        free(temp);
+        position->next->next->prev = position;
      }
 
      return start;
