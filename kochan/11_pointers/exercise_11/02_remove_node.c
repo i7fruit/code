@@ -425,12 +425,13 @@ int main(void)
         free(position);
      }
 
-    // else
-    // {
-    //     nu->next = position->next;
-    //     position->next = nu;
-    //     nu->prev = position;
-    // }
+     else
+     {
+        // nu->next = position->next;
+        // position->next = nu;
+        // nu->prev = position;
+        
+     }
 
      return start;
  }
