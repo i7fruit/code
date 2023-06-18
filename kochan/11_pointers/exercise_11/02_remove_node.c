@@ -361,7 +361,7 @@ int main(void)
             prv = ptr->prev;
         }
 
-        // Returns last node in list if insertion is after last node in list
+        // Returns last node in list if removal is last node in list
         add_at_end = true;
         return prv->next;
      }
