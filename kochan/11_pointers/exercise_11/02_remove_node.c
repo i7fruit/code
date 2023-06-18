@@ -324,15 +324,15 @@ int main(void)
      {
         do
         {
-            printf("Enter element to insert node (Element_%.2i - Element_%.2i): ", (insertion_point + 1), j);
+            printf("Enter element to insert node (Element_%.2i - Element_%.2i): ", (insertion_point + 1), node_count);
             scanf("%i", &insertion_point);
         }
-        while (insertion_point < 1 || insertion_point > j);
+        while (insertion_point < 1 || insertion_point > node_count);
 
         /**
          * Turns on the add_at_01 flag and returns
          * a pointer to the start of the list if user
-         * wants to insert node at start of list
+         * wants to remove node at start of list
          */
         if (insertion_point == 1)
         {
@@ -342,12 +342,12 @@ int main(void)
 
         /**
          * Otherwise, returns pointer to start of list
-         * if insertion is at second node in list
+         * if removal is at second node in list
          */
         else if (insertion_point == 2)
             return list;
 
-        // Finds node to return if insertion point is beyond the second node
+        // Finds node to return if removal point is beyond the second node
         entry *ptr = NULL, *prv = NULL;
         for (ptr = list; ptr != NULL; ptr = ptr->next)
         {
