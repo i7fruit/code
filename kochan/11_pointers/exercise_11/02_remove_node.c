@@ -324,7 +324,7 @@ int main(void)
      {
         do
         {
-            printf("Enter element to insert node (Element_%.2i - Element_%.2i): ", (insertion_point + 1), node_count);
+            printf("Enter element to remove node (Element_%.2i - Element_%.2i): ", (insertion_point + 1), node_count);
             scanf("%i", &insertion_point);
         }
         while (insertion_point < 1 || insertion_point > node_count);
