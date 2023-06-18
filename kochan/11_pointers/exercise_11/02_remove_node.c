@@ -433,7 +433,7 @@ int main(void)
         entry *temp = position->next;
         position->next = position->next->next;
         free(temp);
-        position->next->next->prev = position;
+        position->next->next->prev = position;  <----- FIX THIS PROBLEM
      }
 
      return start;
