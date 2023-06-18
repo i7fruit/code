@@ -32,7 +32,7 @@ entry;
 // Function prototypes
 void get_data(int *id, int *val);
 void print_list(entry *list);
-entry *get_position(entry *list);
+entry *get_position(entry *list, char operation);
 entry *insert_node(entry *start, entry *position);
 entry *remove_node(entry *start, entry *position);
 
@@ -128,7 +128,7 @@ int main(void)
          case 'i':
          {
             entry *position = NULL;
-            position = get_position(start);
+            position = get_position(start, );
             start = insert_node(start, position);
             break;
          }
