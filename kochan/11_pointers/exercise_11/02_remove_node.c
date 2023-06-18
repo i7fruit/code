@@ -123,19 +123,21 @@ int main(void)
          answer[++j] = temp[i];
      }
 
-     switch (tolower(answer[0]))
+     char operation = tolower(answer[0]);
+
+     switch (operation)
      {
          case 'i':
          {
             entry *position = NULL;
-            position = get_position(start, );
+            position = get_position(start, operation);
             start = insert_node(start, position);
             break;
          }
          case 'r':
          {
             entry *position = NULL;
-            position = get_position(start);
+            position = get_position(start, operation);
             start = remove_node(start, position);
             break;
          }
@@ -267,53 +269,61 @@ int main(void)
  /***************************************************************************************************
   * get_position()
  */
- entry *get_position(entry *list)
+ entry *get_position(entry *list, char operation)
  {
      int j = node_count + 1;
      add_at_01 = false, add_at_end = false;
 
-     do
+     if (operation == 'i')
      {
-         printf("Enter element to insert node (Element_%.2i - Element_%.2i): ", (insertion_point + 1), j);
-         scanf("%i", &insertion_point);
-     }
-     while (insertion_point < 1 || insertion_point > j);
+        do
+        {
+            printf("Enter element to insert node (Element_%.2i - Element_%.2i): ", (insertion_point + 1), j);
+            scanf("%i", &insertion_point);
+        }
+        while (insertion_point < 1 || insertion_point > j);
 
-     /**
-      * Turns on the add_at_01 flag and returns
-      * a pointer to the start of the list if user
-      * wants to insert node at start of list
-      */
-     if (insertion_point == 1)
+        /**
+         * Turns on the add_at_01 flag and returns
+         * a pointer to the start of the list if user
+         * wants to insert node at start of list
+         */
+        if (insertion_point == 1)
+        {
+            add_at_01 = true;
+            return list;
+        }
+
+        /**
+         * Otherwise, returns pointer to start of list
+         * if insertion is at second node in list
+         */
+        else if (insertion_point == 2)
+            return list;
+
+        // Finds node to return if insertion point is beyond the second node
+        entry *ptr = NULL, *prv = NULL;
+        for (ptr = list; ptr != NULL; ptr = ptr->next)
+        {
+            static int count = 1;
+
+            // Returns node prior to insertion point
+            if (count == insertion_point)
+                return ptr->prev;
+
+            count++;
+            prv = ptr->prev;
+        }
+
+        // Returns last node in list if insertion is after last node in list
+        add_at_end = true;
+        return prv->next;
+     }
+
+     else
      {
-         add_at_01 = true;
-         return list;
+        
      }
-
-     /**
-      * Otherwise, returns pointer to start of list
-      * if insertion is at second node in list
-      */
-     else if (insertion_point == 2)
-         return list;
-
-     // Finds node to return if insertion point is beyond the second node
-     entry *ptr = NULL, *prv = NULL;
-     for (ptr = list; ptr != NULL; ptr = ptr->next)
-     {
-         static int count = 1;
-
-         // Returns node prior to insertion point
-         if (count == insertion_point)
-             return ptr->prev;
-
-         count++;
-         prv = ptr->prev;
-     }
-
-     // Returns last node in list if insertion is after last node in list
-     add_at_end = true;
-     return prv->next;
  }
 
   /***************************************************************************************************
