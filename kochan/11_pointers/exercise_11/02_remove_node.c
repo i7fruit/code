@@ -361,7 +361,7 @@ int main(void)
             prv = ptr->prev;
         }
 
-        // Returns last node in list if removal is last node in list
+        // Returns last node in list if removal is last node in list <------------ Check this
         add_at_end = true;
         return prv->next;
      }
@@ -433,7 +433,7 @@ int main(void)
         entry *temp = position->next;
         position->next = position->next->next;
         free(temp);
-        position->next->next->prev = position;  <----- FIX THIS PROBLEM
+        position->next->next->prev = position;  //<----- FIX THIS PROBLEM
      }
 
      return start;
