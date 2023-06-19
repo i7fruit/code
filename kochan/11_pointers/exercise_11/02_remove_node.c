@@ -431,9 +431,8 @@ int main(void)
         // position->next = nu;
         // nu->prev = position;
         entry *temp = position->next;
-        position->next = position->next->next;
-        free(temp);
-        position->next->next->prev = position;  //<----- FIX THIS PROBLEM
+        position->prev->next = temp;
+        free(position); <-------------------------------Test when you get home
      }
 
      return start;
