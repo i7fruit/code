@@ -432,7 +432,7 @@ int main(void)
         // nu->prev = position;
         entry *temp = position->next;
         position->prev->next = temp;
-        free(position); <-------------------------------Test when you get home
+        free(position); //<-------------------------------Test when you get home
      }
 
      return start;
