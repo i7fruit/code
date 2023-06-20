@@ -421,7 +421,7 @@ int main(void)
      {
         // position->next = nu;
         // nu->prev = position;
-        position->prev->next = NULL;
+        position->next = NULL;
         free(position);
      }
 
