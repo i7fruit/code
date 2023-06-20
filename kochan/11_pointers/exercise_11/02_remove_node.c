@@ -385,7 +385,7 @@ int main(void)
         // Checks if ID already exists in the list
         for (trav = start; trav != NULL; trav = trav->next)
         {
-            if (trav->id == id && id == position->next->id)
+            if (trav->id == position->next->id)
             {
                 is_present = true;
                 break;
