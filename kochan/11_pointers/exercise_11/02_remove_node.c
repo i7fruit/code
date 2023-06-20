@@ -421,8 +421,9 @@ int main(void)
      {
         // position->next = nu;
         // nu->prev = position;
+        entry *temp = position->next;
         position->next = NULL;
-        free(position);
+        free(temp);
      }
 
      else
