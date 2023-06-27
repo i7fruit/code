@@ -379,7 +379,7 @@ int main(void)
 
      do
      {
-        printf("Enter data for node to remove: ");
+        printf("Enter ID for node to remove: ");
         get_data(&id, &val);
 
         // Checks if ID already exists in the list
@@ -432,8 +432,8 @@ int main(void)
         // position->next = nu;
         // nu->prev = position;
         entry *temp = position->next;
-        position->prev->next = temp;
-        free(position); //<-------------------------------Test when you get home
+        position = temp->next;
+        free(temp); //<-------------------------------Test when you get home
      }
 
      return start;
