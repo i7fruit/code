@@ -379,13 +379,13 @@ int main(void)
 
      do
      {
-        printf("Enter ID for node to remove: ");
+        printf("Enter ID and Value for node to remove: ");
         get_data(&id, &val);
 
         // Checks if ID already exists in the list
         for (trav = start; trav != NULL; trav = trav->next)
         {
-            if (trav->id == position->next->id)
+            if ((trav->id == position->next->id) && (trav->value == position->next->value))
             {
                 is_present = true;
                 break;
@@ -417,23 +417,19 @@ int main(void)
      }
 
      // Removes last node in the list
-     else if (/*add_at_end*/!position->next->next)
+     else if (!position->next->next)
      {
-        // position->next = nu;
-        // nu->prev = position;
         entry *temp = position->next;
         position->next = NULL;
         free(temp);
      }
 
+     // Removes node inbetween
      else
      {
-        // nu->next = position->next;
-        // position->next = nu;
-        // nu->prev = position;
         entry *temp = position->next;
-        position = temp->next;
-        free(temp); //<-------------------------------Test when you get home
+        position->next = temp->next;
+        free(temp);
      }
 
      return start;
