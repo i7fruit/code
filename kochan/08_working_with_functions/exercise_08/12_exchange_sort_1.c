@@ -13,8 +13,8 @@
 #include <ctype.h>
 
 // Function prototypes
-int get_integer(void);
-char get_character(void);
+int get_integer(char text[]);
+char get_character(char text[]);
 void fill_array(int arr[], int n);
 void print_array(int arr[], int size);
 void exchange_sort(int arr[], int n, char o);
@@ -24,13 +24,11 @@ int main(void)
     int size = 0;
     char order = ' ';
 
-    printf("Enter an array size no greater than 7: ");
-    size = get_integer();
+    size = get_integer("Enter an array size no greater than 7: ");
 
     int values[size];
 
-    printf("Sort in ascending (A/a) or descending (D/d): ");
-    order = get_character();
+    order = get_character("Sort in ascending (A/a) or descending (D/d): ");
 
     // Prompts user to initialize array
     fill_array(values, size);
@@ -51,12 +49,13 @@ int main(void)
  * positive integer from the user and
  * returns it to main()
  */
-int get_integer(void)
+int get_integer(char text[])
 {
     int i = 0;
 
     do
     {
+        printf("%s ", text);
         scanf("%i", &i);
     }
     while (i < 1 || i > 7);
@@ -67,14 +66,15 @@ int get_integer(void)
 /******************************
  * get_character()
  */
-char get_character(void)
+char get_character(char text[])
 {
     char c = ' ';
 
     do
     {
+        printf("%s ", text);
         scanf("%c", &c);
-    } 
+    }
     while (c != 'a' && c != 'A' && c != 'd' && c != 'D');
 
     return c;
