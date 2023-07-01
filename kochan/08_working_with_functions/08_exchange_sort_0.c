@@ -49,7 +49,7 @@ int get_integer(char text[])
 
     do
     {
-        printf("%s");
+        printf("%s", text);
         scanf("%i", &i);
     }
     while (i < 1 || i > 7);
