@@ -11,7 +11,7 @@
 #include <stdio.h>
 
 // Function prototypes
-int get_integer(void);
+int get_integer(char text[]);
 void fill_array(int arr[], int n);
 void print_array(int arr[], int size);
 void exchange_sort(int arr[], int n);
@@ -20,7 +20,7 @@ int main(void)
 {
     int size = 0;
 
-    size = get_integer();
+    size = get_integer("How many numbers do you want to sort? ");
 
     int values[size];
 
@@ -43,13 +43,13 @@ int main(void)
  * positive integer from the user and
  * returns it to main()
  */
-int get_integer(void)
+int get_integer(char text[])
 {
     int i = 0;
 
     do
     {
-        printf("How many numbers do you want to sort? ");
+        printf("%s");
         scanf("%i", &i);
     }
     while (i < 1 || i > 7);
