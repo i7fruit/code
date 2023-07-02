@@ -9,7 +9,7 @@ void print(int *arr[], int n)
 int main(void)
 {
     int values[] = {1, 2, 3};
-    int *ptr = values;
+    int *ptr = &values;
 
     print(&ptr, 3);
 
