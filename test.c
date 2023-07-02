@@ -3,8 +3,9 @@
 int main(void)
 {
     int values[] = {1, 2, 3};
+    int *ptr = values;
 
-    printf("%s\n", ptr);
+    printf("%i\n", *(ptr + 2));
 
     return 0;
 }
