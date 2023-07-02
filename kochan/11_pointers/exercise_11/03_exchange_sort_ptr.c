@@ -37,10 +37,10 @@ int main(void)
     // Array before sort
     print_array(&ptr, size);
 
-    exchange_sort(values, size, order);
+    exchange_sort(&ptr, size, order);
 
     // Array after sort
-    print_array(values, size);
+    print_array(&ptr, size);
 
     return 0;
 }
@@ -127,17 +127,17 @@ void exchange_sort(int *arr[], int n, char o)
                 if (*(arr + i) > *(arr + j))
                 {
                     int temp = *(arr + i);
-                    *(arr + i) = arr[j];
-                    arr[j] = temp;
+                    *(arr + i) = *(arr + j);
+                    (arr + j) = temp;
                 }
             }
             else if (o == 'd' || o == 'D')
             {
-                if (arr[i] < arr[j])
+                if (*(arr + i) < *(arr + j))
                 {
-                    int temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
+                    int temp = *(arr + i);
+                    *(arr + i) = *(arr + j);
+                    *(arr + j) = temp;
                 }
             }
         }
