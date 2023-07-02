@@ -16,8 +16,8 @@
 int get_integer(char *text);
 char get_character(char *text);
 void fill_array(int *arr[], int n);
-void print_array(int *arr[], int size);
-void exchange_sort(int *arr[], int n, char o);
+void print_array(int *arr, int size);
+void exchange_sort(int *arr, int n, char o);
 
 int main(void)
 {
@@ -35,12 +35,12 @@ int main(void)
     fill_array(&ptr, size);
 
     // Array before sort
-    print_array(&ptr, size);
+    print_array(ptr, size);
 
-    exchange_sort(&ptr, size, order);
+    exchange_sort(ptr, size, order);
 
     // Array after sort
-    print_array(&ptr, size);
+    print_array(ptr, size);
 
     return 0;
 }
@@ -117,7 +117,7 @@ void print_array(int *arr, int size)
 /***************************************
  * exchange_sort()
  */
-void exchange_sort(int *arr[], int n, char o)
+void exchange_sort(int *arr, int n, char o)
 {
     for (short i = 0; i < (n - 1); i++)
         for (short j = i + 1; j < n; j++)
