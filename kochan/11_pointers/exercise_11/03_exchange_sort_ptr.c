@@ -89,7 +89,7 @@ char get_character(char *text)
  * to get integers from the user and
  * populates an array.
  */
-void fill_array(int *arr[], int n)
+void fill_array(int *arr, int n)
 {
     for (short i = 0; i < n; i++)
     {
