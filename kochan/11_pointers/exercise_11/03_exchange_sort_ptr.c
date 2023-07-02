@@ -94,7 +94,7 @@ void fill_array(int *arr, int n)
     for (short i = 0; i < n; i++)
     {
         printf("Value[%i]: ", i);
-        scanf("%i", *(arr + i));
+        scanf("%i", (arr + i));
     }
 }
 
