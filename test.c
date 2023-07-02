@@ -15,6 +15,8 @@ int main(void)
 void print(char *arr[], int n)
 {
     for (int i = 0; i < n; i++)
-       for(int j = 0; j < )
-        printf("%c ", *(arr + i));
+       for(int j = 0; *(arr + (i*j)) != '\0'; j++)
+            printf("%c ", *(arr + (i*j));
+
+        putchar('\0');
 }
