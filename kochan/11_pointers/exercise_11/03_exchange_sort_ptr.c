@@ -52,15 +52,16 @@ int main(void)
 int get_integer(char *text)
 {
     int i = 0;
+    int *ptr = &i;
 
     do
     {
         printf("%s ", text);
-        scanf("%i", &i);
+        scanf("%i", ptr);
     }
-    while (i < 1 || i > 7);
+    while (*ptr < 1 || *ptr > 7);
 
-    return i;
+    return *ptr;
 }
 
 /******************************
