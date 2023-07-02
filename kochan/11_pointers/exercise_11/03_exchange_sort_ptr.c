@@ -13,7 +13,7 @@
 #include <ctype.h>
 
 // Function prototypes
-int get_integer(char text[]);
+int get_integer(char *text);
 char get_character(char text[]);
 void fill_array(int arr[], int n);
 void print_array(int arr[], int size);
@@ -49,7 +49,7 @@ int main(void)
  * positive integer from the user and
  * returns it to main()
  */
-int get_integer(char text[])
+int get_integer(char *text)
 {
     int i = 0;
 
