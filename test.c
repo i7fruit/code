@@ -8,10 +8,10 @@
 
 int main(void)
 {
-    int values[] = {1, 2, 3};
+    int values[] = {1, 12, 300};
     int *ptr = values;
 
-    printf("%i ", *ptr);
+    printf("%i ", (*ptr + 1));
 
     return 0;
 }
