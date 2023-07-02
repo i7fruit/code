@@ -5,7 +5,8 @@ int main(void)
     int values[] = {1, 2, 3};
     int *ptr = values;
 
-    printf("%i\n", *(ptr + 2));
+    for (int i = 0; i < 3; i++)
+        printf("%i ", *(ptr + i));
 
     return 0;
 }
