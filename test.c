@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-//void print(int *arr[], int n)
-//{
-//    for (int i = 0; i < n; i++)
-//        printf("%i ", (arr + i));
-//}
+void print(int *arr[], int n)
+{
+    for (int i = 0; i < n; i++)
+        printf("%p ", (arr + i));
+}
 
 int main(void)
 {
