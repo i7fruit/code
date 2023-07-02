@@ -27,6 +27,7 @@ int main(void)
     size = get_integer("Enter an array size no greater than 7: ");
 
     int values[size];
+    int *ptr = &values;
 
     order = get_character("Sort in ascending (A/a) or descending (D/d): ");
 
