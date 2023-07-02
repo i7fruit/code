@@ -16,7 +16,7 @@
 int get_integer(char *text);
 char get_character(char *text);
 void fill_array(int *arr[], int n);
-void print_array(int arr[], int size);
+void print_array(int *arr[], int size);
 void exchange_sort(int arr[], int n, char o);
 
 int main(void)
@@ -32,10 +32,10 @@ int main(void)
     order = get_character("Sort in ascending (A/a) or descending (D/d): ");
 
     // Prompts user to initialize array
-    fill_array(ptr, size);
+    fill_array(&ptr, size);
 
     // Array before sort
-    print_array(values, size);
+    print_array(&ptr, size);
 
     exchange_sort(values, size, order);
 
@@ -104,10 +104,10 @@ void fill_array(int *arr[], int n)
  * to print values of the array to standard
  * output.
  */
-void print_array(int arr[], int size)
+void print_array(int *arr[], int size)
 {
     for (short i = 0; i < size; i++)
-        printf("%i ", arr[i]);
+        printf("%i ", *(arr + i));
 
     putchar('\n');
 
