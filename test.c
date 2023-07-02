@@ -4,8 +4,8 @@ void print(char *arr, int n);
 
 int main(void)
 {
-    char values[3][10] = {"one", "twelve", "three"};
-    char *ptr = values[];
+    char values[] = {"one"};
+    char *ptr = values;
 
     print(ptr, 3);
 
