@@ -2,8 +2,7 @@
 
 int main(void)
 {
-    char string[] = "ball";
-    char *ptr = string;
+    int values[] = {1, 2, 3};
 
     printf("%s\n", ptr);
 
