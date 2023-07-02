@@ -128,7 +128,7 @@ void exchange_sort(int *arr, int n, char o)
                 {
                     int temp = *(arr + i);
                     *(arr + i) = *(arr + j);
-                    (arr + j) = temp;
+                    *(arr + j) = temp;
                 }
             }
             else if (o == 'd' || o == 'D')
