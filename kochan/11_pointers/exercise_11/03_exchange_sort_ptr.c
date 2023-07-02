@@ -17,7 +17,7 @@ int get_integer(char *text);
 char get_character(char *text);
 void fill_array(int *arr[], int n);
 void print_array(int *arr[], int size);
-void exchange_sort(int arr[], int n, char o);
+void exchange_sort(int *arr[], int n, char o);
 
 int main(void)
 {
