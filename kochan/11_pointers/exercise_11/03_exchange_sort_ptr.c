@@ -107,7 +107,7 @@ void fill_array(int *arr[], int n)
 void print_array(int *arr[], int size)
 {
     for (short i = 0; i < size; i++)
-        printf("%i ", *(arr + i));
+        printf("%i ", (arr + i));
 
     putchar('\n');
 
