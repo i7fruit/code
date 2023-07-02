@@ -104,10 +104,10 @@ void fill_array(int *arr[], int n)
  * to print values of the array to standard
  * output.
  */
-void print_array(int *arr[], int size)
+void print_array(int *arr, int size)
 {
     for (short i = 0; i < size; i++)
-        printf("%i ", (arr + i));
+        printf("%i ", *(arr + i));
 
     putchar('\n');
 
