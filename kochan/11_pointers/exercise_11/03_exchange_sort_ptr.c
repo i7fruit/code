@@ -14,7 +14,7 @@
 
 // Function prototypes
 int get_integer(char *text);
-char get_character(char text[]);
+char get_character(char *text);
 void fill_array(int arr[], int n);
 void print_array(int arr[], int size);
 void exchange_sort(int arr[], int n, char o);
@@ -67,18 +67,19 @@ int get_integer(char *text)
 /******************************
  * get_character()
  */
-char get_character(char text[])
+char get_character(char *text)
 {
     char c = ' ';
+    char *ptr = &c;
 
     do
     {
         printf("%s ", text);
-        scanf("%c", &c);
+        scanf("%c", ptr);
     }
-    while (c != 'a' && c != 'A' && c != 'd' && c != 'D');
+    while (*ptr != 'a' && *ptr != 'A' && *ptr != 'd' && *ptr != 'D');
 
-    return c;
+    return *ptr;
 }
 
 /**********************************
