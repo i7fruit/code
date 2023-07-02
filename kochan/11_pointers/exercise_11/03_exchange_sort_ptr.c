@@ -117,17 +117,17 @@ void print_array(int *arr[], int size)
 /***************************************
  * exchange_sort()
  */
-void exchange_sort(int arr[], int n, char o)
+void exchange_sort(int *arr[], int n, char o)
 {
     for (short i = 0; i < (n - 1); i++)
         for (short j = i + 1; j < n; j++)
         {
             if (o == 'a' || o == 'A')
             {
-                if (arr[i] > arr[j])
+                if (*(arr + i) > *(arr + j))
                 {
-                    int temp = arr[i];
-                    arr[i] = arr[j];
+                    int temp = *(arr + i);
+                    *(arr + i) = arr[j];
                     arr[j] = temp;
                 }
             }
