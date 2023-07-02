@@ -11,7 +11,7 @@ int main(void)
     int values[] = {1, 12, 300};
     int *ptr = values;
 
-    printf("%i ", (*ptr + 1));
+    print(ptr, 3);
 
     return 0;
 }
