@@ -9,8 +9,8 @@
  * into positions of ascending or descending order
  * specified by the user.
  */
-#include <stdio.h>
 #include <ctype.h>
+#include <stdio.h>
 
 // Function prototypes
 int get_integer(char text[]);
