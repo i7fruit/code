@@ -17,7 +17,16 @@ int main(void)
     {
         if (a < c)
             printf("%i ", a);
-        else if (c < a)
-            printf("%i ", c);
+        else if (c < b)
+            printf("%i %i\n", c, b);
+        else
+            printf("%i %i\n", b, c);
+    }
+
+    else if (b < a)
+    {
+        if (b < c)
+            printf("%i ", b);
+        e
     }
 }
