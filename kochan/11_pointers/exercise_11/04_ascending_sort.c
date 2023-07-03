@@ -13,7 +13,7 @@ int main(void)
 {
     short a = 3, b = 1, c = 8;
 
-    if (a > b && a > c)
+    if (a < b && a < c)
         printf("%i ", a);
     else if (b > a && b > c)
         printf("%i ", b);
