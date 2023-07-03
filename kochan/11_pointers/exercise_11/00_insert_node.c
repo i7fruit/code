@@ -151,7 +151,7 @@ int main(void)
 
 /***************************************************************************************************
  * get_data()
-*/
+ */
 void get_data(int *id, int *val)
 {
     do
@@ -172,7 +172,7 @@ void get_data(int *id, int *val)
 
 /***************************************************************************************************
  * print_list()
-*/
+ */
 void print_list(entry *list)
 {
     for (entry *trav = list; trav != NULL; trav = trav->next)
@@ -181,7 +181,7 @@ void print_list(entry *list)
 
 /***************************************************************************************************
  * insert_node()
-*/
+ */
 entry *insert_node(entry *start, entry *position)
 {
     // Prompts user for data to insert
@@ -203,8 +203,8 @@ entry *insert_node(entry *start, entry *position)
 
         if (!trav)
             is_present = false;
-     }
-     while (is_present);
+    }
+    while (is_present);
 
     // Allocates memory for the new node
     entry *nu = malloc(sizeof(entry));
@@ -250,7 +250,7 @@ entry *insert_node(entry *start, entry *position)
 
 /***************************************************************************************************
  * get_position()
-*/
+ */
 entry *get_position(entry *list)
 {
     int j = node_count + 1;
@@ -264,10 +264,10 @@ entry *get_position(entry *list)
     while (insertion_point < 1 || insertion_point > j);
 
     /**
-      * Turns on the add_at_01 flag and returns
-      * a pointer to the start of the list if user
-      * wants to insert node at start of list
-      */
+     * Turns on the add_at_01 flag and returns
+     * a pointer to the start of the list if user
+     * wants to insert node at start of list
+     */
     if (insertion_point == 1)
     {
         add_at_01 = true;
