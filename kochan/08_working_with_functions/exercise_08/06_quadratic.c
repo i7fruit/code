@@ -1,8 +1,8 @@
-/** 
+/**
  * 06_quadratic.c
- * 
+ *
  * Tuesday, July 05 2022 16:01hrs
- * 
+ *
  * This program solves a quadratic equation.
  */
 #include <stdio.h>
@@ -122,9 +122,9 @@ double get_square_root(double number, double epsilon)
     while (absolute_value(1 - square_of_guess / number) >= epsilon)
     {
         // Prints result of comparison of the ratio to 1
-        //double comparison = absolute_value(1 - square_of_guess / number);
-        //printf("Ratio of guess^2 and number, to 1: %.10f\n", comparison);
-        
+        // double comparison = absolute_value(1 - square_of_guess / number);
+        // printf("Ratio of guess^2 and number, to 1: %.10f\n", comparison);
+
         // Tracks number of iterations
         static short iteration;
 
@@ -133,7 +133,7 @@ double get_square_root(double number, double epsilon)
         square_of_guess = guess * guess;
 
         // Prints out values of guess with each iteration
-        //printf("Iteration %i Guess = %20.10f\n", iteration + 1, guess);
+        // printf("Iteration %i Guess = %20.10f\n", iteration + 1, guess);
         iteration++;
     }
 
