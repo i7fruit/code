@@ -5,7 +5,7 @@
  *
  * This program illustrates the use
  * of pointers
-*/
+ */
 #include <stdio.h>
 
 int main(void)

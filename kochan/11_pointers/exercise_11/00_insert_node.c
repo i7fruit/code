@@ -5,12 +5,12 @@
  *
  * This program prompts the user for a position
  * to insert a node into a linked list
-*/
-#include <stdio.h>
-#include <stdbool.h>
-#include <stdlib.h>
-#include <limits.h>
+ */
 #include <ctype.h>
+#include <limits.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 // Global variables
 int node_count;
