@@ -23,10 +23,13 @@ int main(void)
             printf("%i %i\n", b, c);
     }
 
-    else if (b < a)
+    else if (a < c)
     {
-        if (b < c)
-            printf("%i ", b);
-        e
+        if (a < c)
+            printf("%i ", a);
+        else if (c < b)
+            printf("%i %i\n", c, b);
+        else
+            printf("%i %i\n", b, c);
     }
 }
