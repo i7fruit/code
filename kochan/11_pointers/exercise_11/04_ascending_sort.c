@@ -30,6 +30,8 @@ int main(void)
                 swap(c, b);
             }
         }
+
+        printf("%i %i %i\n", c, b, a);
     }
 
     // Checks b
@@ -54,10 +56,10 @@ int main(void)
         swap(c, a);
         if (c > b)
         {
-            swap(c, c);
-            if (c > a)
+            swap(c, b);
+            if (b > a)
             {
-                swap(c, a);
+                swap(b, a);
             }
         }
     }
