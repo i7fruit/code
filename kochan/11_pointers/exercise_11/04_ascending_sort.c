@@ -16,7 +16,7 @@ int main(void)
     if (a < b)
     {
        if (a < c)
-           printf("%i ", a);
+           printf("%i %i %i\n", a, );
         else
             printf("%i %i %i\n", c, a, b);
     }
