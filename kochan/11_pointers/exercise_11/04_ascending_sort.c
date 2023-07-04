@@ -31,5 +31,5 @@ int main(void)
 void swap(int *ptr0, int *ptr1)
 {
     int temp = *ptr0;
-
+    *ptr0 = 
 }
