@@ -21,13 +21,13 @@ int main(void)
     if (a > b)
     {
         // Switches values
-        swap(a, b);
+        swap(&a, &b);
         if (a > c)
         {
-            swap(a, c);
+            swap(&a, &c);
             if (c > b)
             {
-                swap(c, b);
+                swap(&c, &b);
                 printf("%i %i %i\n", c, b, a);
             }
         }
@@ -37,13 +37,13 @@ int main(void)
     if (b > a)
     {
         // Switches values
-        swap(b, a);
+        swap(&b, &a);
         if (b > c)
         {
-            swap(b, c);
+            swap(&b, &c);
             if (c > a)
             {
-                swap(c, a);
+                swap(&c, &a);
                 printf("%i %i %i\n", c, a, b);
             }
         }
@@ -53,13 +53,13 @@ int main(void)
     if (c > a)
     {
         // Switches values
-        swap(c, a);
+        swap(&c, &a);
         if (c > b)
         {
-            swap(c, b);
+            swap(&c, &b);
             if (b > a)
             {
-                swap(b, a);
+                swap(&b, &a);
                 printf("%i %i %i\n", a, b, c);
             }
         }
