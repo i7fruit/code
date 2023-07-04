@@ -28,10 +28,9 @@ int main(void)
             if (c > b)
             {
                 swap(c, b);
+                printf("%i %i %i\n", c, b, a);
             }
         }
-
-        printf("%i %i %i\n", c, b, a);
     }
 
     // Checks b
@@ -45,6 +44,7 @@ int main(void)
             if (c > a)
             {
                 swap(c, a);
+                printf("%i %i %i\n", c, a, b);
             }
         }
     }
@@ -60,6 +60,7 @@ int main(void)
             if (b > a)
             {
                 swap(b, a);
+                printf("%i %i %i\n", a, b, c);
             }
         }
     }
