@@ -21,6 +21,15 @@ int main(void)
     if (a > b)
     {
         // Switches values
+        swap(a, b);
+        if (a > c)
+        {
+            swap(a, c);
+            if (c > b)
+            {
+                swap(c, b);
+            }
+        }
     }
 }
 
@@ -31,5 +40,6 @@ int main(void)
 void swap(int *ptr0, int *ptr1)
 {
     int temp = *ptr0;
-    *ptr0 = 
+    *ptr0 = *ptr1;
+    *ptr1 = temp;
 }
