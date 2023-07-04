@@ -13,23 +13,10 @@ int main(void)
 {
     short a = 3, b = 1, c = 8;
 
-    if (a < b)
-    {
-        if (a < c)
-            printf("%i ", a);
-        else if (c < b)
-            printf("%i %i\n", c, b);
-        else
-            printf("%i %i\n", b, c);
-    }
+    int i = 0;
 
-    else if (a < c)
+    do
     {
-        if (a < c)
-            printf("%i ", a);
-        else if (c < b)
-            printf("%i %i\n", c, b);
-        else
-            printf("%i %i\n", b, c);
+        for
     }
 }
