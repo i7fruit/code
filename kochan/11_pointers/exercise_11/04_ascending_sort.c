@@ -15,7 +15,7 @@ void swap(int *ptr0, int *ptr1);
 int main(void)
 {
     // Variables to store three integers
-    int a = 1, b = 2, c = 0;
+    int a = 1, b = 2, c = 70;
 
     // Checks a
     if (a > b)
