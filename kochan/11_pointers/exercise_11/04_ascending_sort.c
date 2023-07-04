@@ -16,13 +16,11 @@ int main(void)
 {
     // Variables to store three integers
     int a = 1, b = 2, c = 0;
-    int temp = 0;
 
     // First finds smallest number
     if (a > b)
     {
         // Switches values
-        temp = a
     }
 }
 
@@ -32,6 +30,6 @@ int main(void)
 */
 void swap(int *ptr0, int *ptr1)
 {
-    int temp = 0;
-    
+    int temp = *ptr0;
+
 }
