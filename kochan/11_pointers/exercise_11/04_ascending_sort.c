@@ -17,7 +17,7 @@ int main(void)
     // Variables to store three integers
     int a = 1, b = 2, c = 0;
 
-    // First finds smallest number
+    // Checks a
     if (a > b)
     {
         // Switches values
@@ -28,6 +28,36 @@ int main(void)
             if (c > b)
             {
                 swap(c, b);
+            }
+        }
+    }
+
+    // Checks b
+    if (b > a)
+    {
+        // Switches values
+        swap(b, a);
+        if (b > c)
+        {
+            swap(b, c);
+            if (c > a)
+            {
+                swap(c, a);
+            }
+        }
+    }
+
+    // Checks c
+    if (c > a)
+    {
+        // Switches values
+        swap(c, a);
+        if (c > b)
+        {
+            swap(c, c);
+            if (c > a)
+            {
+                swap(c, a);
             }
         }
     }
