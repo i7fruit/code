@@ -9,10 +9,29 @@
 */
 #include <stdio.h>
 
+// Function prototypes
+void swap(int *ptr0, int *ptr1);
+
 int main(void)
 {
     // Variables to store three integers
     int a = 1, b = 2, c = 0;
+    int temp = 0;
 
-    // First finds
+    // First finds smallest number
+    if (a > b)
+    {
+        // Switches values
+        temp = a
+    }
+}
+
+/************************************
+ * The swap() function swaps two
+ * values
+*/
+void swap(int *ptr0, int *ptr1)
+{
+    int temp = 0;
+    
 }
