@@ -20,8 +20,8 @@ int main(void)
     int a = 0, b = 0, c = 0;
 
     a = get_integer("Enter first value: ");
-    b = get_integer("Enter first value: ");
-    c = get_integer("Enter first value: ");
+    b = get_integer("Enter second value: ");
+    c = get_integer("Enter third value: ");
 
     if (a <= b && a <= c)
     {
