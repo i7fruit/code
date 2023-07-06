@@ -11,6 +11,7 @@
 
 // Function prototypes
 void swap(int *ptr0, int *ptr1);
+void get_integer(char *text);
 
 int main(void)
 {
@@ -59,4 +60,14 @@ void swap(int *ptr0, int *ptr1)
     int temp = *ptr0;
     *ptr0 = *ptr1;
     *ptr1 = temp;
+}
+
+/*************************************
+ * get_integer()
+*/
+void get_integer(char *text)
+{
+    printf("%s: ", text);
+    int number = 0;
+    scanf("%i", &number);
 }
