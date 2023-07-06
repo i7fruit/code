@@ -19,6 +19,8 @@ int main(void)
     // Variables to store three integers
     int a = 0, b = 0, c = 0;
 
+    for (int i = 0)
+
     if (a <= b && a <= c)
     {
         printf("%i ", a);
