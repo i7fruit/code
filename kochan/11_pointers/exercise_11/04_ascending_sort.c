@@ -8,6 +8,7 @@
  * of arrays
 */
 #include <stdio.h>
+#include <limits.h>
 
 // Function prototypes
 void swap(int *ptr0, int *ptr1);
@@ -67,7 +68,12 @@ void swap(int *ptr0, int *ptr1)
 */
 void get_integer(char *text)
 {
-    printf("%s: ", text);
     int number = 0;
-    scanf("%i", &number);
+
+    do
+    {
+        printf("%s: ", text);
+        scanf("%i", &number);
+    }
+    while (number < -INT_MAX || number > INT_MAX);
 }
