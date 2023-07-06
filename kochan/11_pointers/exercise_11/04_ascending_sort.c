@@ -15,55 +15,39 @@ void swap(int *ptr0, int *ptr1);
 int main(void)
 {
     // Variables to store three integers
-    int a = 1, b = 2, c = 70;
+    int a = 11, b = 200, c = 7;
 
-    // Checks a
-    if (a > b)
+    if (a < b && a < c)
     {
-        // Switches values
-        swap(&a, &b);
-        if (a > c)
-        {
-            swap(&a, &c);
-            if (c > b)
-            {
-                swap(&c, &b);
-                printf("%i %i %i\n", c, b, a);
-            }
-        }
+        printf("%i ", a);
+
+        if (b < c)
+            printf("%i %i\n", b, c);
+        else
+            printf("%i %i\n", c, b);
     }
 
-    // Checks b
-    if (b > a)
+    if (b < a && b < c)
     {
-        // Switches values
-        swap(&b, &a);
-        if (b > c)
-        {
-            swap(&b, &c);
-            if (c > a)
-            {
-                swap(&c, &a);
-                printf("%i %i %i\n", c, a, b);
-            }
-        }
+        printf("%i ", b);
+
+        if (a < c)
+            printf("%i %i\n", a, c);
+        else
+            printf("%i %i\n", c, a);
     }
 
-    // Checks c
-    if (c > a)
+    if (c < a && c < b)
     {
-        // Switches values
-        swap(&c, &a);
-        if (c > b)
-        {
-            swap(&c, &b);
-            if (b > a)
-            {
-                swap(&b, &a);
-                printf("%i %i %i\n", a, b, c);
-            }
-        }
+        printf("%i ", c);
+
+        if (a < b)
+            printf("%i %i\n", a, b);
+        else
+            printf("%i %i\n", b, a);
     }
+
+    return 0;
 }
 
 /************************************
