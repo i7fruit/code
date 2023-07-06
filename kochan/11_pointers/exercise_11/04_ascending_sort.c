@@ -27,6 +27,8 @@ int main(void)
             printf("%i %i\n", b, c);
         else
             printf("%i %i\n", c, b);
+
+        return 0;
     }
 
     if (b <= a && b <= c)
@@ -37,6 +39,8 @@ int main(void)
             printf("%i %i\n", a, c);
         else
             printf("%i %i\n", c, a);
+
+        return 0;
     }
 
     if (c <= a && c <= b)
@@ -47,9 +51,11 @@ int main(void)
             printf("%i %i\n", a, b);
         else
             printf("%i %i\n", b, a);
+
+        return 0;
     }
 
-    return 0;
+    return 1;
 }
 
 /************************************
