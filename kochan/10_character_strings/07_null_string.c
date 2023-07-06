@@ -5,7 +5,7 @@
  *
  * This program counts the number of words in a string
  * of text that spans several lines. The user taps the
- * Return/Enter key twice to indicat to the program that
+ * Return/Enter key twice to indicate to the program that
  * data entry has ended.
  */
 #include <stdio.h>
@@ -26,7 +26,7 @@ int main(void)
     char text[size];
 
     printf("Enter text\n\n");
-    
+
     while (is_reading)
     {
         readline(text, size - 1);
