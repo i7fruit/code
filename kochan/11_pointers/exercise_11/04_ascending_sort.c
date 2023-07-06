@@ -19,7 +19,9 @@ int main(void)
     // Variables to store three integers
     int a = 0, b = 0, c = 0;
 
-    a = get_integer("Enter value: ");
+    a = get_integer("Enter first value: ");
+    b = get_integer("Enter first value: ");
+    c = get_integer("Enter first value: ");
 
     if (a <= b && a <= c)
     {
