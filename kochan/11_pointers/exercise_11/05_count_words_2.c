@@ -3,17 +3,6 @@
  *
  * Thursday, July 06 2023 23:26hrs
  *
- * This program counts the number of words
- * in a line of text entered by a user.
- *
- * It also identifies integers separated by
- * commas
- */
-/**
- * 07_null_string.c
- *
- * Wednesday, August 17 2022 22:15hrs
- *
  * This program counts the number of words in a string
  * of text that spans several lines. The user taps the
  * Return/Enter key twice to indicate to the program that
@@ -23,7 +12,7 @@
 #include <stdbool.h>
 #include <ctype.h>
 
-void readline(char arr[], int limit);
+void readline(char *arr, int limit);
 int count_words(char array[]);
 
 int main(void)
@@ -36,11 +25,14 @@ int main(void)
     // Array to store string of text entered by the user
     char text[size];
 
+    // A pointer to the array
+    char *ptr = text;
+
     printf("Enter text\n\n");
 
     while (is_reading)
     {
-        readline(text, size - 1);
+        readline(ptr, size - 1);
 
         // Checks for the null string
         if (text[0] == '\0')
@@ -63,18 +55,18 @@ int main(void)
  * the number of characters the user is limited to storing
  * in the array. This way the user does not exceed the buffer.
  */
-void readline(char arr[], int limit)
+void readline(char *arr, int limit)
 {
     short i = -1;
 
     do
     {
-        arr[++i] = getchar();
+        *(arr + (++i)) = getchar();
     }
-    while (arr[i] != '\n' && i != limit);
+    while *(arr + i) != '\n' && i != limit);
 
     // Overwrites '\n' with '\0'
-    arr[i] = '\0';
+    *(arr + i) = '\0';
 }
 
 /*******************************************************
