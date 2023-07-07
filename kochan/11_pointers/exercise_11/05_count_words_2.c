@@ -13,7 +13,7 @@
 #include <ctype.h>
 
 void readline(char *arr, int limit);
-int count_words(char array[]);
+int count_words(char *array);
 
 int main(void)
 {
@@ -35,12 +35,12 @@ int main(void)
         readline(ptr, size - 1);
 
         // Checks for the null string
-        if (text[0] == '\0')
+        if (*ptr == '\0')
             is_reading = false;
 
         else
             // Counts words in each line
-            count += count_words(text);
+            count += count_words(ptr);
     }
 
     printf("Count = %i\n", count);
@@ -63,7 +63,7 @@ void readline(char *arr, int limit)
     {
         *(arr + (++i)) = getchar();
     }
-    while *(arr + i) != '\n' && i != limit);
+    while (*(arr + i) != '\n' && i != limit);
 
     // Overwrites '\n' with '\0'
     *(arr + i) = '\0';
@@ -77,20 +77,20 @@ void readline(char *arr, int limit)
  * It keeps track of this by updating a counter variable, and
  * repeats the process until the end of the array is reached.
  */
-int count_words(char array[])
+int count_words(char *array)
 {
     int count = 0;
     bool is_counting = false;
 
-    for (short i = 0; array[i] != '\0'; i++)
+    for (short i = 0; *(array + i) != '\0'; i++)
     {
-        if (isalpha(array[i]) && !is_counting)
+        if (isalpha(*(array + i)) && !is_counting)
         {
             is_counting = true;
             count++;
         }
 
-        else if (!isalpha(array[i]))
+        else if (!isalpha(*(array + i)))
             is_counting = false;
     }
 
