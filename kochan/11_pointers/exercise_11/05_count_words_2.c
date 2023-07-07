@@ -43,7 +43,7 @@ int main(void)
             count += count_words(ptr);
     }
 
-    printf("Count = %i\n", count);
+    printf("Count = %i word%s\n", count, (count > 1? "s.":"."));
 
     return 0;
 }
