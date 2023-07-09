@@ -13,5 +13,5 @@
 
 int main(void)
 {
-    
+    char *string0 = malloc()
 }
