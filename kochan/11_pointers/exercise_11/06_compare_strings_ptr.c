@@ -44,12 +44,6 @@ int main(void)
             free(string0);
             return 1;
         }
-
-        else
-        {
-            free(string1);
-            return 2;
-        }
     }
 
     printf("%s\n%s\n", string0, string1);
@@ -97,3 +91,10 @@ char *get_text(const char *prompt, const int limit)
 
     return nu;
 }
+
+/*************************************************************
+ * The compare_string() function compares two strings to see
+ * if they're both equal. The function returns 0 if they're
+ * equal, -1 if the first string comes before the second, and
+ * +1 if it comes after the second
+*/
