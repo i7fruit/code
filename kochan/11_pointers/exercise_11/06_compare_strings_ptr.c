@@ -44,7 +44,18 @@ char *get_text(const char *prompt, const int limit)
 {
     // Size of the amount of characters to store in a string
     const int size = 64;
-    
+
+    // Temporary array to store text entered by user.
+    char temp[size];
+
+    int i = -1;
+
+    do
+    {
+        temp[++i] = getchar();
+    }
+    while (temp[i] != '\n' && i <= limit);
+
     // Allocates memory for string
     char *nu = malloc(sizeof(char) * limit);
     if (!nu)
@@ -54,14 +65,6 @@ char *get_text(const char *prompt, const int limit)
     }
 
     printf("%s", prompt);
-
-    int i = -1;
-
-    do
-    {
-        *(nu + (++i)) = getchar();
-    }
-    while (*(nu + i) != '\n' && i <= limit);
 
     return nu;
 }
