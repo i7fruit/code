@@ -18,6 +18,7 @@ const int size = 64;
 
 // Function prototypes
 char *get_text(const char *prompt, const int limit);
+int compare_strings(const char *str0, const char *str1);
 
 int main(void)
 {
@@ -98,3 +99,19 @@ char *get_text(const char *prompt, const int limit)
  * equal, -1 if the first string comes before the second, and
  * +1 if it comes after the second
 */
+int compare_strings(const char *str0, const char *str1)
+{
+    int i = 0;
+
+    while ((*(str0 + i) == *(str1 + i)) && *(str0 + i) != '\0')
+        i++;
+
+    // Checks if they're both equal
+    if (*(str0 + i) == *(str1 + i))
+        return 0;
+
+    if (*(str0 + i) < *(str1 + i))
+        return -1;
+
+    return 1;
+}
