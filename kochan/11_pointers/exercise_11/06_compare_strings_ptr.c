@@ -37,6 +37,7 @@ int main(void)
 */
 char *get_text(const char *prompt, const int limit)
 {
+    // Allocates memory for string
     printf("%s", prompt);
 
     int i = -1;
