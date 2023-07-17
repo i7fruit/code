@@ -23,8 +23,8 @@ int main(void)
     char *string0 = NULL;
     char *string1 = NULL;
 
-    string0 = get_text("Enter first string: ", size);
-    string1 = get_text("Enter second string: ", size);
+    string0 = get_text("Enter first string: ", (size - 1));
+    string1 = get_text("Enter second string: ", (size - 1));
 
     return 0;
 }
@@ -37,8 +37,7 @@ int main(void)
 */
 char *get_text(const char *prompt, const int limit)
 {
-    // Subtracts 1 from limit to account for binary zero ('\0')
-    limit--;
-
     printf("%s", prompt);
+
+    return char ()
 }
