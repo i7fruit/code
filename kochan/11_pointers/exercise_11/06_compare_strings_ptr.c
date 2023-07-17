@@ -56,17 +56,21 @@ char *get_text(const char *prompt, const int limit)
     }
     while (temp[i] != '\n' && i <= (limit - 1);
 
-    
+    // Terminates string
+    temp[i] = '\0';
+
+    // Calculates length of string entered
+    int length = strlen(temp);
 
     // Allocates memory for string
-    char *nu = malloc(sizeof(char) * (limit - 1));
+    char *nu = malloc(sizeof(char) * length);
     if (!nu)
     {
         fprintf(stderr, "Insufficient memory\n");
         return (char *)0;
     }
 
-    printf("%s", prompt);
+    printf("%s", );
 
     return nu;
 }
