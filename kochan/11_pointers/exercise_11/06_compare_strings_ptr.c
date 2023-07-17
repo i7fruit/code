@@ -39,5 +39,13 @@ char *get_text(const char *prompt, const int limit)
 {
     printf("%s", prompt);
 
+    int i = -1;
+
+    do
+    {
+        *(prompt + (++i)) = getchar();
+    }
+    while (*(prompt + i) != '\n' && i <= limit);
+
     return (char *)0;
 }
