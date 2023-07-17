@@ -29,6 +29,9 @@ int main(void)
 
     printf("%s\n%s\n", string0, string1);
 
+    free(string0);
+    free(string1);
+
     return 0;
 }
 
