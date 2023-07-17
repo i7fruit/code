@@ -34,5 +34,5 @@ int main(void)
 */
 char *get_text(const char *prompt)
 {
-
+    
 }
