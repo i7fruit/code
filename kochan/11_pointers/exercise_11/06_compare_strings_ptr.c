@@ -13,5 +13,22 @@
 
 int main(void)
 {
-    char *string0 = malloc()
+    char *string0 = NULL;
+    char *string1 = NULL;
+
+    string0 = get_text("Enter first string: ");
+    string1 = get_text("Enter second string: ");
+
+    return 0;
+}
+
+/************************************************
+ * The get_text() function uses a do_while loop and
+ * the getchar() function to get text from a user
+ * and returns a pointer to where that text is stored
+ * in memory.
+*/
+char *get_text(const char *prompt)
+{
+    
 }
