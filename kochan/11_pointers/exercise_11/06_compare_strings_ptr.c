@@ -27,6 +27,8 @@ int main(void)
     string0 = get_text("Enter first string: ", (size - 1));
     string1 = get_text("Enter second string: ", (size - 1));
 
+    printf("%s\n%s\n", string0, string1);
+
     return 0;
 }
 
