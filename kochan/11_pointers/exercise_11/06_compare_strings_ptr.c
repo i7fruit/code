@@ -10,6 +10,7 @@
  * This function uses pointers.
 */
 #include <stdio.h>
+#include <stdlib.h>
 
 // Function prototypes
 char *get_text(const char *prompt, const int limit);
@@ -38,15 +39,22 @@ int main(void)
 char *get_text(const char *prompt, const int limit)
 {
     // Allocates memory for string
+    char *nu = malloc(sizeof(char) * limit);
+    if (!nu)
+    {
+        fprintf(stderr, "Insufficient memory\n");
+        return (char *)0;
+    }
+
     printf("%s", prompt);
 
     int i = -1;
 
     do
     {
-        *(prompt + (++i)) = getchar();
+        *(nu + (++i)) = getchar();
     }
-    while (*(prompt + i) != '\n' && i <= limit);
+    while (*(nu + i) != '\n' && i <= limit);
 
-    return (char *)0;
+    return nu;
 }
