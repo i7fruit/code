@@ -11,6 +11,7 @@
 */
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 // Global variables
 const int size = 64;
@@ -73,7 +74,7 @@ char *get_text(const char *prompt, const int limit)
     {
         temp[++i] = getchar();
     }
-    while (temp[i] != '\n' && i <= (limit - 1);
+    while (temp[i] != '\n' && i <= (limit - 1));
 
     // Terminates string
     temp[i] = '\0';
