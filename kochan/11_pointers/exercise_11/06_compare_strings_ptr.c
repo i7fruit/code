@@ -90,7 +90,7 @@ char *get_text(const char *prompt, const int limit)
         return (char *)0;
 
     // Copies string from tempoary array to alloted location
-    strcpy()
+    strcpy(nu, temp);
 
     return nu;
 }
