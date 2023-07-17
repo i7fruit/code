@@ -12,13 +12,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Global variables
+const int size = 64;
+
 // Function prototypes
 char *get_text(const char *prompt, const int limit);
 
 int main(void)
 {
-
-
     // Pointer
     char *string0 = NULL;
     char *string1 = NULL;
@@ -42,7 +43,7 @@ int main(void)
 
         else
         {
-            free(string1)
+            free(string1);
             return 2;
         }
     }
@@ -63,9 +64,6 @@ int main(void)
 */
 char *get_text(const char *prompt, const int limit)
 {
-    // Size of the amount of characters to store in a string
-    const int size = 64;
-
     // Temporary array to store text entered by user.
     char temp[size];
 
