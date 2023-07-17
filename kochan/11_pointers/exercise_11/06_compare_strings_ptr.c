@@ -68,6 +68,8 @@ char *get_text(const char *prompt, const int limit)
     // Temporary array to store text entered by user.
     char temp[size];
 
+    printf("%s", prompt);
+
     int i = -1;
 
     do
