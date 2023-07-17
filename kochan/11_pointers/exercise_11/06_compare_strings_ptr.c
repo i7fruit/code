@@ -13,6 +13,10 @@
 
 int main(void)
 {
+    // Size of the amount of characters to store in a string
+    const int size = 64;
+
+    // Pointer
     char *string0 = NULL;
     char *string1 = NULL;
 
@@ -30,5 +34,5 @@ int main(void)
 */
 char *get_text(const char *prompt)
 {
-    
+
 }
