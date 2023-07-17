@@ -11,6 +11,9 @@
 */
 #include <stdio.h>
 
+// Function prototypes
+char *get_text(const char *prompt, const int limit);
+
 int main(void)
 {
     // Size of the amount of characters to store in a string
@@ -32,7 +35,10 @@ int main(void)
  * and returns a pointer to where that text is stored
  * in memory.
 */
-char *get_text(const char *prompt)
+char *get_text(const char *prompt, const int limit)
 {
-    
+    // Subtracts 1 from limit to account for binary zero ('\0')
+    limit--;
+
+    printf("%s", prompt);
 }
