@@ -100,7 +100,7 @@ char *get_text(const char *prompt, const int limit)
     strcpy(nu, temp);
 
     // Clears the buffer
-    clearerr(stdin);
+    while (getchar() != '\n');
 
     return nu;
 }
