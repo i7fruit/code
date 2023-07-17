@@ -39,5 +39,5 @@ char *get_text(const char *prompt, const int limit)
 {
     printf("%s", prompt);
 
-    return char ()
+    return (char *)0;
 }
