@@ -26,6 +26,27 @@ int main(void)
     string0 = get_text("Enter first string: ", size);
     string1 = get_text("Enter second string: ", size);
 
+    if (!string0)
+    {
+        fprintf(stderr, "Insufficient memory\n");
+        return 1;
+    }
+
+    if (!string1)
+    {
+        if (string0)
+        {
+            free(string0);
+            return 1;
+        }
+
+        else
+        {
+            free(string1)
+            return 2;
+        }
+    }
+
     printf("%s\n%s\n", string0, string1);
 
     free(string0);
@@ -65,12 +86,7 @@ char *get_text(const char *prompt, const int limit)
     // Allocates memory for string
     char *nu = malloc(sizeof(char) * length);
     if (!nu)
-    {
-        fprintf(stderr, "Insufficient memory\n");
         return (char *)0;
-    }
-
-    printf("%s", );
 
     return nu;
 }
