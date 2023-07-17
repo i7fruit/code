@@ -89,5 +89,8 @@ char *get_text(const char *prompt, const int limit)
     if (!nu)
         return (char *)0;
 
+    // Copies string from tempoary array to alloted location
+    strcpy()
+
     return nu;
 }
