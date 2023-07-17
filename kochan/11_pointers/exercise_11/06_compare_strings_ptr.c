@@ -21,21 +21,24 @@ char *get_text(const char *prompt, const int limit);
 
 int main(void)
 {
-    // Pointer
+    // Pointer to memory location to store string
     char *string0 = NULL;
     char *string1 = NULL;
 
     string0 = get_text("Enter first string: ", size);
     string1 = get_text("Enter second string: ", size);
 
+    // Checks to make sure pointer doesn't return a null value
     if (!string0)
     {
         fprintf(stderr, "Insufficient memory\n");
         return 1;
     }
 
+    // Checks to make sure pointer doesn't return a null value
     if (!string1)
     {
+        // Returns heap memory for first string if pointer for storing second string returns null
         if (string0)
         {
             free(string0);
