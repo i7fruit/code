@@ -23,8 +23,8 @@ int main(void)
     char *string0 = NULL;
     char *string1 = NULL;
 
-    string0 = get_text("Enter first string: ");
-    string1 = get_text("Enter second string: ");
+    string0 = get_text("Enter first string: ", size);
+    string1 = get_text("Enter second string: ", size);
 
     return 0;
 }
