@@ -17,8 +17,7 @@ char *get_text(const char *prompt, const int limit);
 
 int main(void)
 {
-    // Size of the amount of characters to store in a string
-    const int size = 64;
+
 
     // Pointer
     char *string0 = NULL;
@@ -43,6 +42,9 @@ int main(void)
 */
 char *get_text(const char *prompt, const int limit)
 {
+    // Size of the amount of characters to store in a string
+    const int size = 64;
+    
     // Allocates memory for string
     char *nu = malloc(sizeof(char) * limit);
     if (!nu)
