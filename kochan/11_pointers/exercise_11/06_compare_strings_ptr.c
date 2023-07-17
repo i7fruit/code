@@ -23,8 +23,8 @@ int main(void)
     char *string0 = NULL;
     char *string1 = NULL;
 
-    string0 = get_text("Enter first string: ", (size - 1));
-    string1 = get_text("Enter second string: ", (size - 1));
+    string0 = get_text("Enter first string: ", size);
+    string1 = get_text("Enter second string: ", size);
 
     printf("%s\n%s\n", string0, string1);
 
@@ -54,10 +54,12 @@ char *get_text(const char *prompt, const int limit)
     {
         temp[++i] = getchar();
     }
-    while (temp[i] != '\n' && i <= limit);
+    while (temp[i] != '\n' && i <= (limit - 1);
+
+    
 
     // Allocates memory for string
-    char *nu = malloc(sizeof(char) * limit);
+    char *nu = malloc(sizeof(char) * (limit - 1));
     if (!nu)
     {
         fprintf(stderr, "Insufficient memory\n");
