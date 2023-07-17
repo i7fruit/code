@@ -49,6 +49,15 @@ int main(void)
 
     printf("%s\n%s\n", string0, string1);
 
+    if (compare_strings(string0, string1) == 0)
+        printf("Both strings are the same.\n");
+
+    else if (compare_strings(string0, string1) == -1)
+        printf("The first string comes before the second one.\n");
+
+    else
+        printf("The second string comes before the first one.\n");
+
     free(string0);
     free(string1);
 
