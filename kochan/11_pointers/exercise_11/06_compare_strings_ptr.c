@@ -85,6 +85,8 @@ char *get_text(const char *prompt, const int limit)
     }
     while (temp[i] != '\n' && i <= (limit - 1));
 
+    getchar();
+
     // Terminates string
     temp[i] = '\0';
 
