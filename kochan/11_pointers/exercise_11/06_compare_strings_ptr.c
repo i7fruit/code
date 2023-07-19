@@ -99,6 +99,9 @@ char *get_text(const char *prompt, const int limit)
     // Copies string from tempoary array to alloted location
     strcpy(nu, temp);
 
+    // Clears the buffer
+    while (getchar() != '\n');
+
     return nu;
 }
 
