@@ -84,7 +84,7 @@ char *get_text(const char *prompt, const int limit)
         temp[++i] = getchar();
     }
     while (temp[i] != '\n' && i <= (limit - 1));
-    
+
     // Terminates string
     temp[i] = '\0';
 
@@ -101,7 +101,6 @@ char *get_text(const char *prompt, const int limit)
 
     // Clears the buffer
     while (getchar() != '\n');
-    getchar();
 
     return nu;
 }
