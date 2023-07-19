@@ -101,6 +101,8 @@ char *get_text(const char *prompt, const int limit)
 
     // Clears the buffer
     while (getchar() != '\n');
+    if (getchar() == '\n')
+         break;
 
     return nu;
 }
